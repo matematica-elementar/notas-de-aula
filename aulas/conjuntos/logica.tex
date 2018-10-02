@@ -1,0 +1,110 @@
+\section{Conjuntos e Lógica}
+
+\begin{remark}
+Em toda esta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$. Considere, também, $A = \set {x \tq x \text{ possui } P}$ e $B= \set {x \tq x \text{ possui } Q}$.
+\end{remark}
+
+\noindent Em Matemática, a Teoria de Conjuntos está intimamente relacionada à Lógica. Como evidência disso, existem diversas equivalências entre relações e operadpres de conjuntos e conectivos lógicos. Apresentar-se-ão quatro delas.
+
+\begin{equivalence}[Inclusão e implicação] 
+$A \subset B$ é equivalente a $P \implies Q$.
+\end{equivalence}
+
+\begin{equivalence}[Igualdade e bi-implicação] 
+$A=B$ é equivalente a $P\iff Q$.
+\end{equivalence}
+
+\begin{example}
+Analise as implicações abaixo:
+\begin{equation*}
+\begin{aligned}
+x^2+1=0 & \implies \left(x^2 +1 \right) \left( x^2-1 \right) = 0
+\cdot \left( x^2-1 \right) \\
+& \implies x^4 - 1 = 0 \\
+& \implies x^4 = 1 \\
+& \implies x \in \set {-1, 1}
+\end{aligned}
+\end{equation*}
+%
+Isso quer dizer que o conjunto solução de $x^2 +1 = 0$ é $\set{-1,
+1}$?
+\end{example}
+
+\begin{solution}
+O conjunto-solução de $x^2 + 1 = 0$ é $S = \set{x \in \R \tq x^2 + 1 = 0} = \emptyset$, o que implica que $S \ne \set{-1,1}$.
+\end{solution}
+
+\begin{equivalence}[Complementar e negação] 
+$A^C$ é equivalente a $\neg P$.
+\end{equivalence}
+%TO-DO: change i. and i..
+Podemos combinar os itens i. e i.. da Proposição \ref{prop-complementar} e obter que:
+%
+\begin{align*}
+P \implies Q \text{ se, e somente se, } \neg P \implies \neg Q.	
+\end{align*}
+%
+Chamamos $Q \implies P$ de \textdef{recíproca} de $P \implies Q$, e $P \land \neg Q$ de \textdef{negação}\newline de $P \implies Q$. São dados exemplos no Exercício \ref{ex-reciproca}.
+
+\begin{example}
+Observe as afirmações:
+
+\begin{enumerate}
+	\item Todo número primo maior do que 2 é ímpar;
+	\item Todo número par maior do que 2 é composto.
+\end{enumerate}
+%
+Essas afirmações dizem exatamente a mesma coisa, ou seja, exprimem a mesma ideia; só que com diferentes termos. Podemos reescrevê-las na forma de implicações vendo claramente que uma é contrapositiva da outra, e todas estão sob a hipótese de que $n \in \N$, com $n > 2$:
+%
+\begin{nofleqn}{align*}
+n \text{ primo 	} & \implies n \text{ ímpar}\\
+\neg (\text{ }n \text{ ímpar } )& \implies \neg (\text{ }n \text{ primo } )\\
+n \text{ par } & \implies n \text{ composto}
+\end{nofleqn}
+\end{example}
+
+\begin{equivalence}[Reunião e disjunção]
+$A \cup B$ é equivalente a $P \lor Q$ ($P \text{ ou } Q$).
+\end{equivalence}
+
+\begin{equivalence}[Interseção e conjunção]
+$A \cup B$ é equivalente a $P \land Q$ ($P \text{ e } Q$).
+\end{equivalence}
+
+\begin{remark}
+O conectivo lógico \textit{ou} tem significado diferente do usado normalmente no português. Na linguagem coloquial, usamos $P$ \textit{ou} $Q$ sem permitir que sejam as duas coisas ao mesmo tempo. Analise a seguinte história:\newline
+
+\textit{Um obstetra que também era matemático acabara de realizar um parto quando o pai perguntou: ``É menino ou menina, doutor?''. E ele respondeu: ``sim''}.
+\end{remark}
+
+As equivalências entre as relações e os operadores da Teoria dos Conjuntos e conectivos da Lógica são resumidas na Tabela \ref{tbl:equiv-conj-logc}.
+
+\begin{table}[h]
+\begin{center}
+\caption{Equivalências entre as relações e operadores de conjuntos e conectivos lógicos.}
+\label{tbl:equiv-conj-logc}
+\begin{tabular}{|c|c|}
+	\hline
+	Operação/relação em Conjuntos & Fórmula de Lógica \\\hline
+	$A=B$ & $P \iff Q$ \\ \hline
+	$A \subset B$ & $P \implies Q$ \\ \hline
+	$A^C$ & $\neg P$ \\ \hline
+	$A \cup B$ & $P \lor Q$ \\ \hline
+	$A \cap B$ & $P \land Q$ \\
+	\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{problem}
+A polícia prende quatro homens, um dos quais cometeu um furto. Eles fazem as seguintes declarações:
+%
+\begin{itemize}[leftmargin=*]
+  \item Arnaldo: Bernaldo fez o furto.
+  \item Bernaldo: Cernaldo fez o furto.
+  \item Dernaldo: eu não fiz o furto.
+  \item Cernaldo: Bernaldo mente ao dizer que eu fiz o furto.
+\end{itemize}
+%
+Se sabemos que só uma destas declarações é a verdadeira, quem é culpado pelo furto?
+\end{problem}

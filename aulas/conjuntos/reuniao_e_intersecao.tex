@@ -1,0 +1,58 @@
+\section{Reunião e Interseção}
+
+\begin{definition}
+Dados os conjuntos $A$ e $B$, definem-se:
+%
+\begin{enumerate}
+	\item A \textdef{reunião} $A \cup B$ como sendo o conjunto formado pelos elementos que pertencem a pelo menos um dos conjuntos $A$ e $B$;
+	\item A \textdef{interseção} $A \cap B$ como sendo o conjunto formado pelos elementos que pertencem a ambos $A$ e $B$.
+\end{enumerate}
+\end{definition}
+
+\begin{example}
+Sejam $A = \set{1, 2, 3}$ e $ B = \set{2,5}$. Determine $A \cup B$, $A \cap B$, $A \setminus B$ e $B \setminus A$.
+\end{example}
+
+\begin{solution}
+\begin{align*}
+	&A \cup B = \{1,2,3,5\};\\
+	&A \cap B = \{2\};\\
+	&A \setminus B = \{1,3\};\\
+	&B \setminus A = \{5\}.
+\end{align*}
+\end{solution}
+
+\begin{proposition}[Propriedades da reunião e interseção]
+Sejam $A$, $B$ e $C$ conjuntos. Tem-se:
+\begin{enumerate}
+  \item \textdef{Comutatividade}: $A \cup B = B \cup A$ e $A \cap B = B \cap A$;
+  \item \textdef{Associatividade}: $\left(A \cup B \right) \cup C = A
+  \cup \left( B \cup C \right)$ e $\left(A \cap B \right) \cap C = A
+  \cap \left( B \cap C \right)$;
+  \item \textdef{Distributividade}, de uma em relação à outra: $A \cap
+  \left( B \cup C \right) = \left(A \cap B \right) \cup \left( A \cap C
+  \right)$ e $A \cup \left( B \cap C \right) = \left(A \cup B \right) \cap
+  \left( A \cup C  \right)$;
+  \item $A \subset \prn{A \cup B}$ e $\prn{A \cap B} \subset A$;
+  \item \textdef{Leis de DeMorgan}: $\left( A \cup B \right)^C = A^C \cap
+  B^C$ e $\left(A \cap B \right)^C = A^C \cup B^C$.
+
+  \end{enumerate}
+\end{proposition}
+
+% Proposição 21
+\begin{proof}
+\begin{enumerate}
+	\item[]
+	\item Exercício.
+	\item Provemos que $A \cap (B \cap C) \subset (A \cap B) \cap C$. Para tal, seja $x \in A \cap (B \cap C)$, ou seja, $x \in A$ e $x \in B \cap C$. De $x \in B \cap C$, temos $x \in B$ e $x \in C$. Como $x \in A$ e $x \in B$, segue que $x \in A \cap B$. Além disso, $x \in C$. Então, $x \in A \cap (B \cap C)$. Logo, $A \cap (B \cap C) \subset (A \cap B) \cap C$. 
+
+  A prova de que $A \cap (B \cap C) \supset (A \cap B) \cap C$, necessária para concluir a igualdade desejada, fica como exercício. Também o fica a verificação da comutatividade da reunião.
+	\item Exercício.
+	\item Exercício.
+\end{enumerate}
+\end{proof}
+
+\begin{onlineact}[\khan{https://pt.khanacademy.org/math/statistics-probability/probability-library/basic-set-ops/e/basic_set_notation}{Notação Básica de Conjunto}]
+Veja o desempenho na Missão O Mundo da Matemática - Probabilidade.
+\end{onlineact}

@@ -1,0 +1,89 @@
+\section{Inequação do 1° grau}
+
+\begin{definition}
+Uma \textdef{inequação do primeiro grau} é uma relação de uma das seguintes formas:
+
+\begin{align*}
+& ax+b <0;\\
+& ax+b >0;\\
+& ax+b \le 0;\\
+& ax+b \ge 0;
+\end{align*}
+%
+onde $a, b \in \R$ e $ a \neq 0$. Lemos os símbolos da seguinte maneira: $<$ (menor que), $>$ (maior que), $\leq$ (menor ou igual
+que) e $\geq$ (maior ou igual que).
+\end{definition}
+
+\begin{remark}
+O \textdef{conjunto solução} de uma inequação do primeiro grau é o conjunto $S$ de números reais que satisfazem a inequação, isto é, o conjunto de números que, quando substituídos na inequação, tornam a desigualdade verdadeira.
+\end{remark}
+
+\begin{proposition}
+Sejam $a, b, c, d \in \R$; $n \in \N^*$. Os seguintes valem:
+%
+\begin{enumerate}[i.]
+  \item Invariância por adição de números reais: $a < b \implies a+c < b+c$;
+  \item Invariância por multiplicação de números reais positivos:
+  $a < b ; c>0 \implies a \cdot c < b \cdot c$;
+  \item Mudança por multiplicação de números reais
+  negativos: $a < b ; c<0 \implies a \cdot c > b \cdot c$;
+  \item Se $a < b$, então $\frac 1 a > \frac 1 b$, para $a, b \neq
+  0$;
+  \item Se $a,b \geq 0$ e $c>0$, segue que $a < b \implies a^c < b^c$;
+  \item Se $a,b < 0$ e $n$ par, segue que $a < b \implies a^n > b^n$;
+  \item Se $a,b < 0$ e $n$ ímpar, segue que $a < b \implies a^n <
+  b^n$;
+  \item Se $a< b$ e $c< d$, então $a+c < b+d$;
+  \item Para $a, b, c, d \in \R_+$. Se $a< b$ e $c< d$, então $ac < bd$.
+\end{enumerate}
+%
+Os resultados são análogos para os tipos $>$, $\leq$ e $\geq$.
+\end{proposition}
+
+\begin{example}
+Qual o conjunto solução da inequação $8x - 4 \ge 0$?
+\end{example}
+
+% Exemplo 15
+\begin{solution}
+Note que:
+%
+\begin{align*}
+	8x-4 \ge 0 & \iff 8x \ge 4\\
+	& \iff x \ge \dfrac{1}{2}
+\end{align*}
+%
+Logo, o conjunto-solução da equação é $S = \set{x \in \R \tq x \ge 1/2}$. A seguir, é exibida uma resolução alternativa da inequação:
+%
+\begin{align*}
+	8x-4 \ge 0 & \iff -4 \ge -8x\\
+	& \iff \dfrac{-4}{-8} \le x \\
+	& \iff \dfrac{1}{2} \le x 
+\end{align*}
+\end{solution}	
+
+\begin{example}
+Antes de fazer os cálculos, diga qual dos números $a = 3456784 \cdot 3456786 + 3456785$ e $b = 3456785^2 - 3456788$ é maior.
+\end{example}
+
+% Exemplo 16
+\begin{solution}
+Suponha que $a > b$. Faça $x=3456784$. Teremos:
+%
+\begin{align*}
+	x(x+2)+x+1>(x+1)^2 -(x+4)& \iff x(x+1+1)+x+1>(x+1)^2-\prn{x+4}\\
+	& \iff x\prn{x+1}+x+\prn{x+1}>\prn{x+1}^2-x-4\\
+	& \iff \prn{x+1}\prn{x+1}+x>\prn{x+1}^2-x-4\\
+	& \iff \prn{x+1}^2>\prn{x+1}^2-2x-4\\
+	& \iff 0>-2x-4\\
+	& \iff 4>-2x\\
+	& \iff -2<x,
+\end{align*}
+%
+\noindent o que é uma verdade pois $x=3456784$. Logo, $a>b$.
+\end{solution}
+
+
+\begin{onlineact}[\khan{https://pt.khanacademy.org/math/cc-sixth-grade-math/cc-6th-equations-and-inequalities/cc-6th-inequalities/e/inequalities-in-one-variable-1}{Problemas com Inequações}]
+Veja o desempenho na Missão 7\tdeg{} Ano -- Introdução às Equações e Inequações.
+\end{onlineact}

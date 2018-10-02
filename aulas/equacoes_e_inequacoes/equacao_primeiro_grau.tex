@@ -1,0 +1,167 @@
+\section{Equação do 1° grau}
+
+\begin{definition}
+Uma \textdef{equação do primeiro grau} na variável $x$ é uma expressão da forma
+%
+\begin{align*}
+ax+b=0,
+\end{align*}
+%
+onde $a,b \in \R$, $a \neq 0$ e $x$ é um número real a ser encontrado.
+\end{definition}
+
+\begin{proposition}[Propriedades]
+\label{prop:props-eq}
+Sejam $a, b, c \in \R$. Os seguintes valem:
+\begin{enumerate}
+  \item $a=b \implies a+c = b+c$;
+  \item $a=b \implies ac = bc$.
+\end{enumerate}
+\end{proposition}
+
+\begin{example}
+Resolva a equação $5x-3=6$.
+\end{example}
+
+\begin{solution}
+Utilizaremos as propriedades dadas na Proposição \ref{prop:props-eq} para resolver a equação.
+%
+\begin{align*}
+5x-3=6 \iff & 5x -3+3=6+3 \tag*{$\left(\text{i., com }c := 3\right) $}\\
+	   \iff & 5x =9 \tag*{(Aritmética)}\\ 
+	   \iff & \frac{5x}{5} =\frac 9 5 \tag*{$\left(\text{ii., com com } c := \frac 1 5 \right) $}\\
+	   \iff & x =\frac 9 5 
+\end{align*}
+\end{solution}
+
+\begin{example}
+Escreva em forma de expressões cada passo da brincadeira da Introdução:
+\begin{enumerate}[label=\textbf{\arabic*}.]
+  \item Escolha um número;
+  \item Multiplique esse número por 6;
+  \item Some 12;
+  \item Divida por 3;
+  \item Subtraia o dobro do número que você escolheu;
+  \item O resultado é igual a 4.
+\end{enumerate}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}[label=\textbf{\arabic*}.]
+	\item[]
+	\item $x$
+	\item $6x$
+	\item $6x+12$
+	\item $\frac{6x+12}{3}$
+	\item $\frac{6x+12}{3} - 2x$
+	\item $\frac{6x+12}{3} - 2x = 4$
+\end{enumerate}
+\end{solution}
+
+\begin{remark}
+Deve-se ter  cuidado ao efetuar divisões em ambos os lados de uma equação para não cometer o erro de dividir os lados por zero. Do contrário, pode-se derivar absurdos matemáticos. A seguir, temos um exemplo de ``prova'' de que $1=2$:
+%
+\begin{align*}
+0=0 \implies & 1-1=2-2 \\
+	\implies & 1\cdot\cancel{(1-1)}=2\cdot\cancel{(1-1)} \\
+	\implies & 1=2 
+\end{align*}
+%
+Qual o erro?
+\end{remark}
+
+\begin{onlineact}[\khan{https://pt.khanacademy.org/math/cc-sixth-grade-math/cc-6th-equations-and-inequalities/cc-6th-super-yoga/e/model-with-one-step-equations-and-solve}{Modelo com equações de primeiro grau e
+resolução}]
+Veja o desempenho na Missão 7\tdeg{} ano -- Introdução às equações e inequações.
+\end{onlineact}
+
+% Exemplo 5
+\begin{example}
+Se $x$ representa um dígito na base 10 na equação
+%
+\begin{align*}
+x11 + 11x + 1x1 =777,
+\end{align*}
+%
+ qual o valor de $x$?
+\end{example}
+
+\begin{solution}
+Seja $x \in \set{0,1,\ldots, 9}$. Teremos:
+%
+\begin{align*}
+x11 + 11x + 1x1 =777 & \iff 100x + 11 + 10x + 100 + 110 + x = 777 \\
+	& \iff 111x+222 = 777 \\
+	& \iff 111x = 555 \\
+	& \iff x=5 
+\end{align*}
+%
+Logo, $x=5$.
+\end{solution}
+
+\begin{example}
+Determine se é possível completar o preenchimento do tabuleiro abaixo com os números naturais de 1 a 9, sem repetição, de modo que a soma de qualquer linha seja igual à de qualquer coluna ou diagonal.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+  \hline
+  1 &   & 6 \\ \hline
+    &   &   \\ \hline
+    & 9 &   \\
+  \hline
+\end{tabular}
+\end{center}
+Os tabuleiros preenchidos com essas propriedades são conhecidos como \textdef{quadrados mágicos}.
+\end{example}
+
+\begin{solution}
+Seja $c$ o valor constante da soma de cada uma das linhas, colunas ou diagonais. Note que a soma das 3 linhas será:
+%
+\begin{align*}
+3c = 1+2+3+4+5+6+7+8+9=45 & \iff c =15
+\end{align*}
+
+Usaremos a notação posicional de matrizes para os quadrados $q_{ij}$. Da configuração inicial e da definição de quadrado mágico, além do valor de $c$, segue que:
+
+\vspace{2mm}
+\begin{tabular}{l}
+	$1+q_{12}+6=15  \iff q_{12} = 8$; \\
+	{$\!\begin{aligned}
+			q_{12} + q_{22} + 9= 15 & \iff 8+q_{22} + 9= 15\\
+			& \iff q_{22} = -2
+	\end{aligned}$}
+\end{tabular}
+\vspace{2mm}
+
+\noindent Os quadrados $q_{ij}$ não podem conter números negativos. Logo, não é possível montar um quadrado mágico com a configuração inicial dada.
+\end{solution}
+
+\begin{example}
+\label{ex:fio-terra}
+Imagine que você possui um fio de cobre extremamente longo, mas tão longo que você consegue dar a volta na Terra com ele. Para simplificar, considere que a Terra é uma bola redonda e que seu raio é de exatamente 6.378.000 metros.
+
+O fio com seus milhões de metros está ajustado à Terra, ficando bem colado ao chão ao longo do Equador. Digamos, agora, que você acrescente 1 metro ao fio e o molde de modo que ele forme um círculo enorme, cujo raio é um pouco maior que o raio da Terra e tenha o mesmo centro. Você acha que essa folga será de que tamanho?
+\end{example}
+
+% https://pt.wikipedia.org/wiki/C%C3%ADrculo_m%C3%A1ximo
+\begin{solution}
+Consideremos $C$ o comprimento do círculo máximo da Terra, $r$ e $r'$ os raios desse círculo antes e depois do aumento do fio, respectivamente, e $f$ o tamanho da folga. Ora,
+%
+\begin{align*}
+C+1=2\pi r' & \iff 2\pi r+1=2\pi r' \tag*{$\prn{C = 2\pi r}$}\\
+	& \iff 2\pi r+1= 2\pi \prn{r+f} = 2\pi r+2\pi f \tag*{$\prn{r' = r+f}$}\\
+	& \iff 1 = 2\pi f\\
+	& \iff f = \dfrac{1}{2\pi}
+\end{align*}
+\begin{comment}
+\begin{tabular}{ l l l }
+$C+1=2\pi r'$ & $\iff 2\pi r+1=2\pi r'$& $\prn{C = 2\pi r}$\\
+	 & $\iff 2\pi r+1= 2\pi \prn{r+f} = 2\pi r+2\pi f$& $\prn{r' = r+f}$\\
+	 & $\iff 1 = 2\pi f$ &  \\
+	 & $\iff f = \dfrac{1}{2\pi}$  & 
+\end{tabular}
+\end{comment}
+Logo, $f = 1/(2\pi)$ metros.
+\end{solution}
+
+\noindent No Exemplo \ref{ex:fio-terra}, a folga obtida aumentando-se o fio independe do raio em consideração. Além desse problema, veja outras curiosidades sobre o número $\pi$ no vídeo \link {https://www.youtube.com/watch?v=evfc6bv6_lM}{O Pi existe} e tente calculá-lo em casa usando algum objeto redondo.

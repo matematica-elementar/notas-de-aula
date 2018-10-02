@@ -1,0 +1,160 @@
+\ProvidesPackage{mystyle}
+
+% INCLUDE ------------------------------------------------------------------------------------------------
+\usepackage{adforn}
+\usepackage{amsfonts} % \mathbb
+\usepackage{amsthm} % proof environment
+\usepackage[fleqn]{amsmath} % fleqn: align equations left
+\usepackage[portuguese]{babel}
+\usepackage{caption} % change caption separator, \captionsetup
+\usepackage{commath} % \abs
+\usepackage[shortlabels]{enumitem} % enumerate properties, enumerate-like scheme for labels
+\usepackage{environ} % nofleq
+\usepackage{float} % change float (image table etc) separator
+\usepackage[left=3cm, top=3cm, right=2cm, bottom=2cm]{geometry} % page borders
+\usepackage{graphicx} % image inserting
+\usepackage{hyperref} % hyperlinks
+\usepackage{import} % nested \input issues
+%\usepackage{indentfirst} % indent first paragraph of section
+\usepackage[utf8]{inputenc} % portuguese
+\usepackage[makeroom]{cancel} % \cancel 
+\usepackage{ragged2e} % text aligning
+\usepackage{setspace} % need this to change line spacing
+\usepackage{siunitx} % degree symbol
+\usepackage{standalone} % deal with problems when having multiple preambles
+\usepackage{textcomp} % \textdegree
+\usepackage{verbatim} % multiline comments
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% CONFIG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% space between paragraphs
+\setlength{\parskip}{0pt} 
+
+% indentation size 
+%\setlength\parindent{4em} 
+
+\onehalfspacing % line spacing
+
+% magic code to insert new line between header and first itemm
+\def\enumfix{%
+\if@inlabel
+ \noindent \par\nobreak\vskip-\topsep\hrule\@height\z@
+\fi}
+\let\olditemize\itemize
+\def\itemize{\enumfix\olditemize}
+
+% change itemize bullet character
+\renewcommand{\labelitemi}{\adfrightarrowhead}
+
+% spacing for lists
+\renewcommand{\@listI}{%
+\leftmargin=0pt
+\rightmargin=0pt
+\labelsep=5pt
+\labelwidth=20pt
+\itemindent=0pt
+%\listparindent=\parindent %indentation at the beginning of paragraph
+\topsep=0pt plus 2pt minus 4pt
+\partopsep=0pt plus 1pt minus 1pt
+\parsep=0pt plus 1pt
+\itemsep=0pt}
+
+% change caption label formatting
+\captionsetup[table]{labelfont=bf, labelsep=period}
+\captionsetup[figure]{labelfont=bf, labelsep=period}
+
+% standard label config for enumerate
+\setenumerate{label=\roman*.,leftmargin=*,align=left}
+\setlist[itemize]{leftmargin=*}
+
+%%%%%%%%% custom environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NewEnviron{nofleqn}[1]{\@fleqnfalse\begin{#1}\BODY\end{#1}}
+
+% theorem environments -----------------------------------------------------------------------------------
+
+\newtheoremstyle{brremark}% name
+  {}%         Space above, empty = `usual value'
+  {}%         Space below
+  {}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\itshape}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+% starts in new line
+\newenvironment{brproof}[1][\proofname]{\proof[#1]\mbox{}\\*}{\endproof}
+
+\theoremstyle{brremark}
+\newtheorem*{brsolution}{Solução}
+
+\theoremstyle{plain}
+\newtheorem{corollary}{Corolário}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definição}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{equivalence}{Equivalência}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{example}{Exemplo}[chapter]
+
+% exercise
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercício}[chapter]
+
+% lemma
+\theoremstyle{plain}
+\newtheorem{lemma}{Lema}[chapter]
+
+% onlineact
+\theoremstyle{definition}
+\newtheorem{onlineact}{Atividade online}[chapter]
+
+% problem
+\theoremstyle{definition}
+\newtheorem{problem}{Problema}[chapter]
+
+% proposition
+\theoremstyle{definition}
+\newtheorem{proposition}{Proposição}[chapter]
+
+% remark
+\theoremstyle{remark}
+\newtheorem*{remark}{Observação}
+
+% solution
+\theoremstyle{remark}
+\newtheorem*{solution}{Solução}
+
+% theorem
+\theoremstyle{definition}
+\newtheorem{theorem}{Teorema}[chapter]
+
+% NEW COMMAND --------------------------------------------------------------------------------------------
+
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Z}{\mathbb{Z}}
+
+% DEF ----------------------------------------------------------------------------------------------------
+
+\def\link#1#2{\href{#1}{\tt{#2}}}
+\def\khan#1#2{\href{#1}{\tt{#2}}}
+\def\modu#1{\left|#1\right|}
+\def\powerset#1{\mathcal{P}(#1)}
+\def\prn#1{\left(#1\right)}
+\def\set#1{\left\{#1\right\}}
+\def\sub#1{\underline{#1}}
+\def\tdeg{\textdegree}
+\def\textdef#1{\textit{#1}}
+\def\tq{\;;\;}
+\def\,{{,}}
