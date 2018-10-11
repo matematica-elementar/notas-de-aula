@@ -1,6 +1,3 @@
-## Folders in the project that should be ignored
-quadros/
-
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
