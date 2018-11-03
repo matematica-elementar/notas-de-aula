@@ -104,14 +104,6 @@ Mostre que, para todo número $n \in \nnats$, $n>3$, vale que:
 \end{equation*}
 \end{example}
 
-\begin{example}
-Prove  que, para todo $n \in \nnats$,
-%
-\begin{equation*}
-\underbrace{\sqrt{2+\sqrt{2+\sqrt{2+ \dots + \sqrt 2}}}}_{n  \text{ radicais}} < 2.
-\end{equation*}
-\end{example}
-
 \begin{solution}
 Utilizaremos indução finita em $n \in \nnats$, $n >3$.
 %
@@ -135,4 +127,38 @@ Utilizaremos indução finita em $n \in \nnats$, $n >3$.
 \end{itemize}
 %
 Portanto, $2^n < n!$ para todo $n \in \nnats$, $n>3$.
+\end{solution}
+
+\begin{example}
+Prove  que, para todo $n \in \nnats$,
+%
+\begin{equation*}
+\underbrace{\sqrt{2+\sqrt{2+\sqrt{2+ \dots + \sqrt 2}}}}_{n  \text{ radicais}} < 2.
+\end{equation*}
+\end{example}
+
+\begin{solution}
+Aplicaremos o Princípio da Indução Finita em $n \in \nnats$.
+%
+\begin{itemize}
+	\item \textit{Caso base} ($n=1$):
+
+	$\sqrt 2 < 2$ é válido.
+
+	\item \textit{Passo de indução}:
+
+	Suponha a validade da inequação para algum $k \in \nnats$, ou seja, 
+	%
+	\begin{equation*}
+	\underbrace{\sqrt{2+\sqrt{2+\sqrt{2+ \dots + \sqrt 2}}}}_{k  \text{ radicais}} < 2.
+	\end{equation*}
+	%
+	Da hipótese de indução, segue que:
+	%
+	\begin{align*}
+	2+\underbrace{\sqrt{2+\sqrt{2+\sqrt{2+ \dots + \sqrt 2}}}}_{k  \text{ radicais}} < 2+2 & \implies \underbrace{\sqrt{2+\sqrt{2+\sqrt{2+ \dots + \sqrt 2}}}}_{k+1  \text{ radicais}} < \sqrt 4 = 2.
+	\end{align*}
+\end{itemize}
+%
+Logo, a inequação é válida para $n := k+1$; e, assim, concluímos a validade da inequação para todo $n \in \nnats$.
 \end{solution}
