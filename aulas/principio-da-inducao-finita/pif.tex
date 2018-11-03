@@ -1,0 +1,97 @@
+\section{Princípio da Indução Finita}
+
+\begin{theorem}[Princípio da Indução Finita]
+\label{theorem:pif}
+Considere $n_0$ um inteiro não negativo. Suponhamos que, para cada inteiro $n \geq n_0$, seja dada uma proposição $p \prn n$. Suponha
+que se pode verificar as seguintes propriedades:
+
+\begin{enumerate}[(a)]
+  \item $p \prn{n_0}$ é verdadeira;
+  \item Se $p \prn n$ é verdadeira, então $p \prn {n+1}$ também
+  é verdadeira, para todo $n \geq n_0$.
+\end{enumerate}
+
+\noindent Então, $p \prn n$ é verdadeira para qualquer $n \geq n_0$.
+\end{theorem}
+
+\begin{remark}
+No Teorema \ref{theorem:pif}, a afirmação (a) é chamada de \textdef{base da indução}, e a (b), de \textdef{passo indutivo}. O fato de que $p \prn n$ é verdadeira no item (b) é chamado de \textdef{hipótese de indução}.
+\end{remark}
+
+\begin{example}
+Demonstre que, para qualquer $n \in \N^*$, é válida a igualdade:
+%
+\begin{equation*}
+2+ 4+ \dots + 2n = n \prn {n+1}.
+\end{equation*}
+\end{example}
+
+\begin{solution}
+Seja $p(n) : 2+4+\dots + 2n = n(n+1)$. Provaremos a validade de $p(n)$ para todo $n \in \nnats$ utilizando o Princípio da Indução Finita.
+%
+\begin{itemize}
+	\item \textit{Caso base} ($n=1$):
+
+	$p(1):2=1(1+1)=2$ é válido.
+
+	\item \textit{Passo de indução}:
+
+	Suponha, como hipótese de indução, que $p(k)$ é válida para algum $k \in \nnats$; ou seja, vale a equação:
+	%
+	\begin{equation*}
+	2+4+\dots+2k=k(k+1)
+	\end{equation*}
+	%
+	Provemos a validade de $p(k+1)$.
+	%
+	\begin{align*}
+	2+4+\dots + 2k+2(k+1) = & k(k+1)+2(k+1) \\
+	= & (k+1)(k+2) \text{(HI)} \\
+	= & (k+1)\left[(k+1)+1\right]
+	\end{align*}
+	%
+	Com isso, provamos o passo de indução.
+\end{itemize}
+%
+Portanto, pelo Princípio da Indução Finita, a equação $2+4+\dots + 2n=n(n+1)$ é válida para todo $n \in \nnats$.
+\end{solution}
+
+\begin{example}
+Demonstre que, para qualquer $n \in \N^*$, é válida a igualdade:
+%
+\begin{equation*}
+1+3+\dots +\prn {2n-1} = n^2.
+\end{equation*}
+\end{example}
+
+\begin{solution}
+Aplicaremos o Princípio da Indução Finita para $n \in \nnats$.
+%
+\begin{itemize}
+	\item \textit{Caso base} ($n=1$):
+
+	Como $1=1^2$, o caso base é válido.
+
+	\item \textit{Passo de indução}:
+
+	Como hipótese de indução, suponha que a igualdade é válida para algum $k\in \nnats$, ou seja:
+	%
+	\begin{equation*}
+	1+3+\dots+(2k-1) = k^2.
+	\end{equation*}
+	%
+	Provemos a validade da afirmação para $n := k$. Com efeito,
+	%
+	\begin{align*}
+	1+3+\dots + (2k-1) & = \left[2(k+1)-1\right] \text{(HI)} \\
+	& = k^2+2k+1 \\
+	& = (k+1)^2
+	\end{align*}
+\end{itemize}
+%
+Portanto, a equação a seguir é válida para todo $n \in \nnats$:
+%
+\begin{equation*}
+1+3+\dots + (2n-1) = n^2.
+\end{equation*}
+\end{solution}
