@@ -1,0 +1,56 @@
+\section{Definição de Função}
+
+\begin{definition}
+Sejam $X$ e $Y$ dois conjuntos quaisquer. Uma \textdef{função} é uma relação $f: X \to Y$ que, a cada elemento $x \in X$, associa um e somente um elemento $y \in Y$. Definem-se, além disso, os seguintes termos:
+%
+\begin{enumerate}[(i)]
+  \item \textdef{Domínio} e \textdef{contradomínio} de $f$ para os conjuntos $X$ e $Y$, respectivamente;
+  \item \textdef{Imagem} de $f$ para o conjunto $f\prn X = \set{y \in Y \tq \exists x \in X , f \prn x =
+  y} \subset Y$;
+  \item \textdef{Imagem} de $x$, dado $x \in X$, para o (único) elemento $y = f(x) \in Y$.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+Uma função pode ser vista como um terno constituído por: \textdef{domínio}, \textdef{contradomínio} e \textdef{lei de associação} (dos elementos do
+domínio com os do contradomínio). Precisa-se desses três elementos para que uma função seja bem-definida. A definição alternativa a seguir também poderia ser adotada:
+
+{\it Uma relação $f: X \to Y$ é uma \emph {função} se satisfaz às seguintes condições:
+%
+\begin{enumerate}[(I)]
+  \item Estar bem-definida em todo elemento do domínio (existência);
+  \item Não fazer corresponder mais de um elemento do contradomínio
+  a cada elemento do domínio (unicidade).
+\end{enumerate}}
+\end{remark}
+
+\begin{example}
+Considere as funções $p$ e $q$ a seguir:
+%
+\begin{gather*}
+\begin{array}{cccc}
+p : & \R & \to     & \R_+ \\
+     &  x & \mapsto & x^2;
+\end{array}\\
+\begin{array}{cccc}
+q : & \R_+ & \to     & \R \\
+     &  x & \mapsto & \sqrt x
+\end{array}.
+\end{gather*}
+%
+Qual o domínio, contradomínio e a lei de associação de $p$ e $q$?
+\end{example}
+
+\begin{solution}
+\begin{itemize}
+	\item[]
+	\vspace{3mm}
+	\item O domínio de $p$ é $\R$ e o de $q$ é $\R_+$;
+	\item O contradomínio de $p$ é $\R_+$ e o de $q$ é $\R$;
+	\item A lei de associação de $p$ é $p(x)=x^2$ e a de $q$ é $q(x)=\sqrt x$.
+\end{itemize}
+\end{solution}
+
+\begin{definition}
+Seja $\I_X : X \to X $ uma função tal que $\I_X \prn x = x$ para todo $x \in X$. Chamamos $\I_X$ de \textdef{função identidade do conjunto $X$}.
+\end{definition}
