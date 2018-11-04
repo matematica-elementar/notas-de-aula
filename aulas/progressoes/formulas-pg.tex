@@ -1,0 +1,64 @@
+\section{Fórmulas de uma Progressão Geométrica}
+
+\begin{remark}
+É claro que, numa PG, cada termo é igual ao anterior multiplicado por $1 + i$, onde $i$ é a taxa de crescimento dos termos. Chamamos $1+i$ de \textdef{razão da progressão} e a representamos por $q$. Assim, para $n \ge 2$,
+%
+\begin{equation*}
+a_n = a_{n-1} \cdot q.
+\end{equation*}
+%
+\noindent Portanto, uma progressão geométrica é uma sequência na qual é constante o quociente da divisão de cada termo pelo termo anterior (exceto quando o termo anterior é o primeiro). 
+
+Em uma PG $\prn{a_1, a_2, a_3 , \dots}$, para avançar um termo, basta multiplicar pela razão; para avançar dois termos, basta multiplicar duas vezes pela razão, e assim por diante. Assim, 
+%
+\begin{equation*}
+a_i = a_j \cdot q^{i-j}.
+\end{equation*}
+%
+Em particular,
+%
+\begin{equation*}
+a_n = a_1\cdot q^{n-1}.
+\end{equation*}
+\end{remark}
+
+\begin{example}
+Em uma PG, o quinto termo vale 5 e o oitavo termo vale 135. Quanto vale o sétimo termo dessa progressão?
+\end{example}
+
+\begin{solution}
+Seja $(a_1, a_2, \dots)$ uma PG tal que $a_5 =5$ e $a_8=135$. Tem-se que:
+%
+\begin{align*}
+a_8 = a_5 * q^{8-5} & \iff 135 = 5 \cdot q ^3 \\ & \iff q^3 = 27 \\ & \iff q = 3
+\end{align*}
+%
+Assim, o sétimo termo é:
+%
+\begin{align*}
+a_7 & = a_8 \cdot q ^{7-8} \\ &= \frac {135} 3 \\ &= 45.
+\end{align*}
+\end{solution}
+
+\begin{example}
+Qual é a razão da PG que se obtém inserindo 3 termos entre os números 30 e 480?
+\end{example}
+
+\begin{solution}
+Considere uma PG $(a_n)_{n \in \nnats}$ tal que $a_1=30$ e $a_5 = 480$. Dos valores desses termos, tem-se que:
+%
+\begin{align*}
+a_1 = a_5 \cdot q^{1-5} & \iff 30 = 480 \cdot q^{-4} \\ & \iff q^4 = \frac {480}{30} = 16 \\ & \iff q = \pm 2.
+\end{align*}
+%
+Logo, as possíveis razões para a PG são $-2$ e $2$.
+\end{solution}
+
+\begin{onlineact}[\khan{https://pt.khanacademy.org/math/algebra/sequences/introduction-to-geometric-sequences/e/geometric_sequences_2}{Use Fórmulas de Progressão Geométrica}]
+\end{onlineact}
+
+\begin{onlineact}[\khan{https://pt.khanacademy.org/math/algebra/sequences/constructing-geometric-sequences/e/explicit-and-recursive-formulas-of-geometric-sequences}{Conversão das Formas Recursiva e Explícita de
+Progressões Geométricas (no Khan aparece errado como Aritméticas)}]
+\end{onlineact}
+%
+\noindent Veja o desempenho na Missão Álgebra I.
