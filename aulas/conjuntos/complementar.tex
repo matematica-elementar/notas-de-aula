@@ -1,0 +1,45 @@
+\subsection{Complementar}
+A noção de complementar de um conjunto só faz sentido quando fixamos um \textdef{conjunto universo}, que denotaremos por $\U$. Uma vez fixado $\U$, todos os elementos considerados pertencerão a $\U$ e todos os conjuntos serão subconjuntos de $\U$. Na geometria plana, por exemplo, $\U$ é o plano.
+
+\begin{definition}
+Dado um conjunto $A$ (isto é, um subconjunto de $\U$), chama-se \textdef{complementar} de $A$ o conjunto $A^C$ formado pelos elementos de $\U$ que não pertencem a $A$. Em outras palavras:
+	$$ x \in A^C \text{ se e somente se } x \notin A $$
+\end{definition}
+
+\begin{remark}
+	Também é o caso que $ x \notin A^C \text{ se e somente se } x \in A $, como a forma contrapositiva da definição anterior.
+\end{remark}
+
+\begin{example}
+Seja $\U$ o conjunto dos triângulos. Qual o complementar do conjunto dos triângulos escalenos?
+\end{example}
+
+\begin{proposition}[Propriedades do complementar]
+\label{prop-complementar}
+Fixado um conjunto universo $\U$, sejam $A$ e $B$ conjuntos. Tem-se:
+%
+\begin{enumerate}
+	\item $\U^C=\emptyset$ e $\emptyset^C = \U$;
+	\item $\prn{A^C}^C=A$ (todo conjunto é complementar do seu complementar);
+	\item Se $A \subset B$, então $B^C \subset A^C$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro). 
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item[]
+\item A inclusão $\emptyset \subset \U^C$ é imediata pois $\emptyset$ é subconjunto de qualquer conjunto. 
+
+Provemos, agora, que $\U^C \subset \emptyset$. Suponha, por absurdo, que $\U^C \notsubset \emptyset$; ou seja, existe $x \in \U^C$ tal que $x \notin \emptyset$. Ora, se $x \in \U^C$, então $x \notin \U$, o que é um absurdo. Logo, $\U^C \subset \emptyset$.
+
+Dos fatos de que $\emptyset \subset \U$ e $\U \subset \emptyset$, conclui-se que $\U^C = \emptyset$.
+
+A demonstração de que $\emptyset^C = \U$ fica como exercício para o leitor.
+
+\item Provemos, primeiro, que $A \subset (A^C)^C$. Para tal, seja $x \in A$. Logo, $x \notin A^C$. Assim, $x \in (A^C)^C$. Então, $A \subset (A^C)^C$. A prova de que $(A^C)^C \subset A$, item restante para podermos concluir que a igualdade desejada é válida, fica como exercício para o leitor.
+
+\item Sejam $A$, $B$ conjuntos tais que $A \subset B$. Além disso, seja $x \in B^C$, o que implica em $x \notin B$. Temos duas possibilidades para a presença de $x$ no conjunto $A$, a saber, $x \in A$ e $x \notin A$. Se $x \in A$, teríamos $x \in B$ também pois $A \subset B$; um absurdo visto que já temos $x \notin B$. Logo, concluímos que $x \notin A$, ou seja, $x \in A^C$. Segue, então, que $B^C \subset A^C$.
+\end{enumerate}
+\end{proof}
+
+
