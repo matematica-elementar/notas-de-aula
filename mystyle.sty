@@ -94,44 +94,47 @@
 
 % corollary
 \theoremstyle{definition}
-\newtheorem{corollary}{Corolário}[chapter]
+\newtheorem{corollary}{Corolário} 
 
+% definition
 \theoremstyle{definition}
-\newtheorem{definition}{Definição}[chapter]
+\newtheorem{definition}{Definição} 
 
+% equivalence
 \theoremstyle{definition}
-\newtheorem{equivalence}{Equivalência}[chapter]
+\newtheorem{equivalence}{Equivalência} 
 
+% example
 \theoremstyle{definition}
-\newtheorem{example}{Exemplo}[chapter]
+\newtheorem{example}{Exemplo} 
 
 % exercise
 \theoremstyle{definition}
-\newtheorem{exercise}{Exercício}[chapter]
+\newtheorem{exercise}{Exercício} 
 
 % lemma
 \theoremstyle{plain}
-\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{lemma}{Lema} 
 
 % onlineact
 \theoremstyle{definition}
-\newtheorem{onlineact}{Atividade online}[chapter]
+\newtheorem{onlineact}{Atividade online} 
 
 % problem
 \theoremstyle{definition}
-\newtheorem{problem}{Problema}[chapter]
+\newtheorem{problem}{Problema} 
 
 % proposition
 \theoremstyle{definition}
-\newtheorem{proposition}{Proposição}[chapter]
+\newtheorem{proposition}{Proposição} 
 
 % remark
 \theoremstyle{remark}
 \newtheorem*{remark}{Observação}
 
-% remark
+% homework
 \theoremstyle{remark}
-\newtheorem*{exercise:ref}{Exercício}
+\newtheorem{homework}{Tarefa}
 
 % solution
 \theoremstyle{remark}
@@ -139,7 +142,7 @@
 
 % theorem
 \theoremstyle{definition}
-\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{theorem}{Teorema} 
 
 % NEW COMMAND --------------------------------------------------------------------------------------------
 
@@ -160,7 +163,7 @@
 \def\nnats{\N^*}
 \def\powerset#1{\mathcal{P}(#1)}
 \def\prn#1{\left(#1\right)}
-\def\set#1{\left\{#1\right\}}
+\def\set#1{\left\{ #1\right\}}
 \def\sub#1{\underline{#1}}
 \def\tdeg{\textdegree}
 \def\textdef#1{\textit{#1}}
@@ -168,6 +171,10 @@
 
 % Referencias @TODO
 %% Conjuntos
-%\def\inref
-%\def\subsetref
+\def\homeworkref#1{\hyperref[#1]{\textdef{Exercício \ref{#1}}}}
+
+\def\emptysetref#1{\hyperref[def:emptyset]{\textdef{#1}}}
+\def\inref#1{\hyperref[def:in]{\textdef{#1}}}
+\def\subsetref#1{\hyperref[def:subset]{\textdef{#1}}}
+
 
