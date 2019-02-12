@@ -9,10 +9,10 @@
 \begin{exercise}
 	Decida quais das afirmações a seguir estão corretas. Justifique suas respostas.
 	\begin{enumerate}[a.]
-		\item $\emptyset \in \emptyset$	
-		\item $\emptyset \subset \emptyset$
-		\item $\emptyset \in \set{\emptyset}$
-		\item $\emptyset \subset \set{\emptyset}$
+		\item $\emptyset \in \emptyset$;
+		\item $\emptyset \subset \emptyset$;
+		\item $\emptyset \in \set{\emptyset}$;
+		\item $\emptyset \subset \set{\emptyset}$.
 	\end{enumerate}
 \end{exercise}
 
@@ -47,3 +47,140 @@ Demonstre que os seguintes itens são equivalentes:
 	\end{tip}
 \end{exercise}
 
+\begin{exercise}
+O diagrama de Venn para os conjuntos $X$, $Y$, $Z$ decompõe o
+plano em oito regiões. Numere essas regiões e exprima cada um dos
+conjuntos abaixo como reunião de algumas dessas regiões. (Por
+exemplo: $X \cap Y = 1 \cup 2$.)
+\begin{enumerate}[a.]
+  \item $\left(X^C \cup Y \right)^C$;
+  \item $\left(X^C \cup Y \right) \cup Z^C$;
+  \item $\left(X^C \cap Y \right) \cup \left(X \cap Z^C \right)$;
+  \item $\left(X \cup Y \right)^C \cap Z$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Exprimindo cada membro como reunião de regiões numeradas, prove
+as igualdades:
+\begin{enumerate}[a.]
+  \item $\left(X \cup Y \right)\cap Z = \left(X \cap Z \right) \cup \left(Y \cap Z
+  \right)$;
+  \item $X \cup \left(Y \cap Z \right)^C = X \cup Y^C \cup Z^C$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Sejam $A$, $B$ e $C$ conjuntos. Determine uma condição necessária e
+suficiente para que se tenha 
+	$$A \cup \left( B \cap C \right) = \left(A \cup B \right) \cap C$$
+\end{exercise}
+
+\begin{exercise}
+Recorde a definição da diferença entre conjuntos:
+  $$B \setminus A = \set {x \tq x \in B \text { e } x \notin A}.$$
+  Mostre que
+    \begin{enumerate}[a.]
+      \item $B \setminus A = \emptyset$ se, e somente se, $B \subset
+      A$;
+      \item $B \setminus A = B$ se, e somente se, $A \cap B =
+      \emptyset$;
+      \item Vale a igualdade $B \setminus A = A \setminus B$ se, e
+      somente se, $A = B$;
+      \item Determine uma condição necessária e suficiente para que
+      se tenha $$A \setminus \left(B \setminus C \right) = \left(A
+      \setminus B \right) \setminus C.$$
+      %\sub{Dica}: Use o diagrama de Venn para enxergar tal condição
+      %necessária e suficiente antes de demonstrar a igualdade.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Dê exemplos de implicações, envolvendo conteúdos de ensino
+  médio, que sejam: verdadeiras com recíproca verdadeira;
+  verdadeiras com recíproca falsa; falsas, com recíproca verdadeira;
+  falsas, com recíproca falsa.
+\end{exercise}
+
+\begin{exercise}
+Considere $P$, $Q$ e $R$ condições aplicáveis aos elementos
+de um conjunto universo $\U$, e $A$, $B$ e $C$ os subconjuntos de
+$\U$ dos elementos que satisfazem $P$, $Q$ e $R$, respectivamente.
+Expresse, em termos de implicações entre $P$, $Q$ e $R$, as
+seguintes relações entre os conjuntos $A$, $B$ e $C$.
+\begin{enumerate}[a.]
+\item $A \cap B^C \subset C$;
+\item $A^C \cup B^C \subset C$;
+\item $A^C \cup B \subset C^C$;
+\item $A^C \subset B^C \cup C$;
+\item $A \subset B^C \cup C^C$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Considere as seguintes (aparentes) equivalências lógicas:
+\begin{align*}
+x=1 & \iff x^2 -2x +1 = 0 \\
+& \iff x^2 -2 \cdot 1 +1 =0 \\
+& \iff x^2 - 1 =0 \\
+& \iff x = \pm 1
+\end{align*}
+Conclusão (?): $x=1 \iff x= \pm 1$. Onde está o erro?
+\end{exercise}
+
+\begin{exercise}
+Escreva as recíprocas, contrapositivas e negações
+matemáticas das seguintes afirmações:
+\begin{enumerate}[a.]
+  \item Todos os gatos têm rabo; $\left(G \implies R \right)$\\
+  \sub{Recíproca:} Se têm rabo então é gato; $\left(R \implies G \right)$\\
+  \sub{Contrapositiva:} Se não tem rabo então não é gato; $\left(\sim R \implies \sim G \right)$\\
+  \sub{Negação:} Existe um gato que não tem rabo. $\left(G \land \sim R \right)$
+  \item Sempre que chove, eu saio de guarda-chuva ou fico em casa;
+  \item Todas as bolas de ping pong são redondas e brancas;
+  \item Sempre que é terça-feira e o dia do mês é um número primo,
+  eu vou ao cinema;
+  \item Todas as camisas amarelas ou vermelhas têm manga comprida;
+  \item Todas as coisas quadradas ou redondas são amarelas e
+  vermelhas.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Considere os conjuntos: $F$ composto por todos os filósofos;
+$M$ por todos os matemáticos; $C$ por todos os cientistas; e $P$ por
+todos os professores.
+\begin{enumerate}[a.]
+  \item Exprima cada uma das afirmativas abaixo usando a linguagem
+  de conjuntos: \\
+  (i) Todos os matemáticos são cientistas; (ii) Alguns matemáticos
+  são professores; (iii) Alguns cientistas são filósofos; (iv) Todos
+  os filósofos são cientistas ou professores; (v) Nem todo professor
+  é cientista.
+  \item Faça o mesmo com as afirmativas abaixo: \\
+  (vi) Alguns matemáticos são filósofos; (vii) Nem todo filósofo é
+  cientista; (viii) Alguns filósofos são professores; (ix) Se um
+  filósofo não é matemático, ele é professor; (x) Alguns filósofos
+  são matemáticos.
+  \item Tomando as cinco primeiras afirmativas como hipóteses,
+  verifique quais das afirmativas do segundo grupo são
+  necessariamente verdadeiras.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Considere um grupo de 4 cartões, que possuem uma letra escrita
+em um dos lados e um número do outro. Suponha que seja feita, sobre
+esses cartões, a seguinte afirmação: \emph{Todo cartão com uma vogal
+de um lado tem um número ímpar do outro}. Quais dos cartões abaixo
+você precisaria virar para verificar se essa afirmativa é verdadeira
+ou falsa?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+  \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  A & $\empty$ & 1 & $\empty$ & B & $\empty$ & 4 \\
+  \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
+\end{tabular}
+\end{center}
+\end{exercise}
