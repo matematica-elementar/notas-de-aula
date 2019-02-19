@@ -101,9 +101,17 @@ Considere $A$, $B$ e $C$ conjuntos arbitrários. Logo, são válidas as propried
 Ao manter a arbitrariedade de um conjunto, qualquer conclusão relacionada a este conjunto valerá para todos os conjuntos.
 \end{remark}
 
-\begin{definition}
-Dado um conjunto $A$, chamamos de \textdef{conjunto das partes} de $A$ o conjunto formado por todos os seus subconjuntos, e denotamo-lo $\mathcal{P}(A)$.
+\begin{definition}[Conjunto das Partes]
+\label{def:powerset}
+Dado um conjunto $A$, chamamos de \textdef{conjunto das partes} de $A$ o conjunto formado por todos os seus subconjuntos, e denotamo-lo $\powerset{A}$.
 \end{definition}
+
+\begin{remark}
+	Podemos perceber que o conjunto das partes de um determinado conjunto tem a propriedade de que todos os seus elementos também são conjuntos.
+\end{remark}
+
+Em outras palavras, podemos definir uma condição necessária e sucifiente para um elemento pertencer a $\powerset{A}$, para isso, considere X um objeto arbitrário, logo:
+$$ X \in \powerset{A} \sse X \subset A $$
 
 \begin{example}
 Dado $A = \set{1,2,3}$, determine $\powerset A$.
