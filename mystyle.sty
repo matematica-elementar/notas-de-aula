@@ -25,6 +25,7 @@
 \usepackage{standalone} % deal with problems when having multiple preambles
 \usepackage{textcomp} % \textdegree
 \usepackage{verbatim} % multiline comments
+\usepackage{chngcntr} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% CONFIG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,7 +111,8 @@
 
 % exercise
 \theoremstyle{definition}
-\newtheorem{exercise}[corollary]{Exercício} 
+\newtheorem{exercise}{Exercício}
+\counterwithin*{exercise}{section}
 
 % lemma
 \theoremstyle{plain}
