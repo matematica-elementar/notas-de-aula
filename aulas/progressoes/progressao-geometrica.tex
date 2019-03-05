@@ -1,0 +1,68 @@
+\section{Progressão Geométrica}
+
+\begin{example}
+Uma pessoa, começando com R\$ $64{,}00$, faz seis apostas consecutivas, em cada uma das quais arrisca perder ou ganhar a metade do que possui na ocasião. Se ela ganha três e perde três dessas apostas, pode-se afirmar que ela:
+%
+\begin{enumerate}[a)]
+  \item Ganha dinheiro;
+  \item Não ganha nem perde dinheiro;
+  \item Perde R\$ $27{,}00$;
+  \item Perde R\$ $37{,}00$;
+  \item Ganha ou perde dinheiro, dependendo da ordem em que ocorreram suas vitórias e derrotas.
+\end{enumerate}
+\end{example}
+
+\begin{solution}
+Se a pessoa perdesse as três primeiras apostas e, depois, ganhasse as outras três, ela ficaria, em reais, com:
+%
+\begin{align*}
+64 \cdot \frac 1 2 \cdot \frac 1 2 \cdot \frac 1 2 \cdot \frac 3 2\cdot \frac 3 2\cdot \frac 3 2 &= 64 \cdot \frac {27} {64} \\ &= 27
+\end{align*}
+%
+Note que, como a multiplicação de números reais é comutativa, a ordem das apostas não importa. Assim, a pessoa perdeu R\$ $37{,}00$.
+\end{solution}
+
+\begin{example}
+\label{example:pg-pop-pais}
+A população de um país é, hoje, igual a $P_0$ e cresce $2 \%$ ao ano. Qual será a população desse país daqui a $n$ anos?
+\end{example}
+
+\begin{solution}
+Construindo uma sequência $P_0, P_1, P_2, \dots$ tal que $P_n$ é a população do país após $n$ anos, com $n \ge 0$, teremos:
+%
+\begin{gather*}
+P_1 = P_0 + P_0 \cdot 0{,}02 = P_0 \cdot 1{,}02; \\
+P_2 = P_1 \cdot 1{,}02 = P_0 \cdot 1{,}02 ^2; \\
+\vdots \\
+P_n = P_0 \cdot 1{,}02 ^n.
+\end{gather*}
+\end{solution}
+
+\begin{example}
+\label{example:pg-torc-clube}
+A torcida de certo clube é, hoje, igual a $T_0$ e decresce $5\%$ ao ano. Qual será a torcida desse clube daqui a $n$ anos?
+\end{example}
+
+\begin{solution}
+Analogamente ao Exemplo \ref{example:pg-pop-pais}, a torcida do clube daqui a $n$ anos será:
+%
+\begin{equation*}
+T_n = T_0 + 0{,}95^n.
+\end{equation*}
+\end{solution}
+
+\begin{remark}
+Note que, nos Exemplos \ref{example:pg-pop-pais} e \ref{example:pg-torc-clube}, se uma grandeza teve taxa de crescimento igual a $i$, então cada valor da grandeza foi igual a $\prn{1+i}$ vezes o valor anterior.
+\end{remark}
+
+\begin{definition}
+Uma \textdef{progressão geométrica} (ou, simplesmente, PG) é uma sequência na qual a taxa de crescimento $i$ de cada termo para o seguinte é sempre a mesma.
+\end{definition}
+
+\begin{example}
+A sequência $\prn{1, 2, 4, 8, 16, 32, \dots }$ é um exemplo de uma PG. Aqui, a taxa de crescimento de cada termo para o seguinte é de $100 \% $, o que faz com que cada termo seja igual a $200 \% $ do termo anterior.
+\end{example}
+
+\begin{example}
+A sequência $\prn{1000, 800, 640, 512 , \dots }$ é um exemplo de uma PG. Aqui, cada termo é $80 \% $ do termo anterior. A taxa de crescimento de cada termo para o seguinte é de $ -20 \% $.
+\end{example}

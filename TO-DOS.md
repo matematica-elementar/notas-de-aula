@@ -1,0 +1,3 @@
+- Proposição 2.1.iv (propriedades exponenciação) - \cdot antes e depois das reticências
+- Estudo de sinal nos exercícios de módulo (quadros do dia 28/08)
+- Discutir ambiente no qual devem estar inseridos textos "avulsos" no material
