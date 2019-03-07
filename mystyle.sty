@@ -177,12 +177,17 @@
 \def\tq{\;;\;}
 \def\sse{\text{ se e somente se }}
 
-% Referencias @TODO
-%% Conjuntos
-\def\homeworkref#1{\hyperref[#1]{Exercício \ref{#1}}}
 
-\def\emptysetref#1{\hyperref[def:emptyset]{\textdef{#1}}}
-\def\inref#1{\hyperref[def:in]{\textdef{#1}}}
-\def\subsetref#1{\hyperref[def:subset]{\textdef{#1}}}
+% Referencias @TODO
+
+%% Conjuntos
+
+\newcommand{\homeworkref}[1]{\ref{#1}}
+\newcommand{\defref}[2]{\hyperref[#1]{#2}} %TODO: deixar os argumentos opcionais, caso não seja passado mostrar apenas a referencia.
+
+\def\inref#1{\defref{def:in}{#1}}
+\def\emptysetref#1{\defref{def:emptyset}{#1}}
+\def\subsetref#1{\defref{def:subset}{#1}}
+\def\powersetref#1{\defref{def:powerset}{#1}}
 
 
