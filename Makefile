@@ -2,6 +2,7 @@ all: main
 
 main: clean
 	pdflatex main.tex
+	biber main
 	pdflatex main.tex
 
 clean:
