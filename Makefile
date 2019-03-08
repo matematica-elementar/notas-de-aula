@@ -7,3 +7,4 @@ main: clean
 
 clean:
 	rm -rf main.aux main.log main.out main.toc main.pdf
+	rm -rf main.bbl main.bcf main.blg main.run.xml
