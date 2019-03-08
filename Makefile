@@ -1,6 +1,9 @@
-all: main
+all: help
 
-main: clean
+help:
+	@echo "Soon"
+
+build: clean
 	pdflatex main.tex
 	biber main
 	pdflatex main.tex
