@@ -10,6 +10,27 @@ Apresentar-se-ão quatro delas, mas antes vamos entender como usamos o símbolo 
 	Considere, também, $A = \set {x \tq x \text{ satisfaz } P}$ e $B= \set {x \tq x \text{ satisfaz } Q}$.
 	\end{remark}
 
+Em Lógica Proposicional, a implicação $\prn \to $ é um operador lógico. 
+Para que uma implicação seja aplicada ela precisa de duas proposições $P$ e $Q$, 
+onde cada uma pode ser verdadeira ou falsa.
+A validade da implicação $P \to Q$ é definida através da seguinte tabela, que chamamos de \textdef{tabela verdade}.
+
+<INSERIR A TABELA VERDADE DE $P \to Q$ AQUI.
+
+Em nosso texto, interpretamos o $P$ como a hipótese do meu problema e $Q$ como a tese em uma implicação.
+Essa implicação aparece textualmente de algumas maneiras, a mais comum delas é ``Se $P$, então $Q$'' 
+e, em símbolos, escrevemos $P \implies Q$.
+
+Quando queremos provar a validade desse tipo de afirmação, 
+tomamos nossa hipótese $P$ como uma propriedade verdadeira, 
+o que faz considerarmos somente as duas primeiras linhas da tabela verdade de $P \to Q$.
+Dessa maneira, a afirmação ``Se $P$, então $Q$'' é verdadeira se conseguirmos provar que a tese $Q$ também é verdadeira.
+
+Quando já está provado que ``Se $P$, então $Q$'' é verdadeira, 
+utilizamos esse resultado para concluir que $Q$ é verdadeira quando temos que $P$ é verdadeira, 
+pois, novamente olhando somente para as duas primeiras linhas de $P \to Q$, 
+a única opção que temos, quando $P \to Q$ e $P$ são verdadeiras, é que $Q$ também seja verdadeira.
+
 \begin{equivalence}[Inclusão e implicação] 
 $$A \subset B \text{ é equivalente a } P \implies Q$$
 \end{equivalence}
