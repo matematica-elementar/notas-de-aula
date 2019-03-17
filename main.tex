@@ -1,15 +1,21 @@
 \documentclass[a4paper,12pt, oneside]{book}
 \usepackage{mystyle}
+\usepackage{titlepage}
 
 \begin{document}
     \nocite{*}
-    \title{Notas de Aula da Disciplina de Matemática Elementar} 
-    \author{Antonio Igor, Josenaldo Júnior, Giordano Rodrigues} 
+    % ------------------------------------------------------------------------------
+    % Maketitle
+    % ------------------------------------------------------------------------------
+    \thispagestyle{empty}       % Remove page numbering on this page
 
+    \printtitle                 % Print the title data as defined above
+        \vfill
+    \printauthor                % Print the author data as defined above
+    \newpage
+    
     \frontmatter % turns off chapter numbering, uses roman numerals for page numbers
-    \maketitle
     \tableofcontents
-
     \mainmatter % turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers
 
     \chapter{Conjuntos}
