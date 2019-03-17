@@ -14,6 +14,7 @@
 \usepackage[shortlabels]{enumitem} % enumerate properties, enumerate-like scheme for labels
 \usepackage{environ} % nofleq
 \usepackage{float} % change float (image table etc) separator
+\usepackage{framed}
 \usepackage[left=2.5cm, top=3cm, right=2.5cm, bottom=2cm]{geometry} % page borders
 \usepackage{graphicx} % image inserting
 \usepackage{hyperref} % hyperlinks
@@ -162,6 +163,12 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\U}{\mathcal{U}}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\curiosity}[2]{\begin{framed}
+   \begin{center}
+   \textbf{#1}
+   \end{center}
+   #2
+\end{framed}}
 
 % DEF ----------------------------------------------------------------------------------------------------
 
