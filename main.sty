@@ -7,11 +7,14 @@
 \usepackage{amssymb} % \subsetneq
 \usepackage[fleqn]{amsmath} % fleqn: align equations left
 \usepackage[portuguese]{babel}
+\usepackage{biblatex}
 \usepackage{caption} % change caption separator, \captionsetup
+\usepackage{chngcntr} 
 \usepackage{commath} % \abs
 \usepackage[shortlabels]{enumitem} % enumerate properties, enumerate-like scheme for labels
 \usepackage{environ} % nofleq
 \usepackage{float} % change float (image table etc) separator
+\usepackage{framed}
 \usepackage[left=2.5cm, top=3cm, right=2.5cm, bottom=2cm]{geometry} % page borders
 \usepackage{graphicx} % image inserting
 \usepackage{hyperref} % hyperlinks
@@ -25,8 +28,8 @@
 \usepackage{standalone} % deal with problems when having multiple preambles
 \usepackage{textcomp} % \textdegree
 \usepackage{verbatim} % multiline comments
-\usepackage{chngcntr} 
 
+\addbibresource{aulas/conjuntos/conjuntos.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% CONFIG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,7 +123,8 @@
 
 % onlineact
 \theoremstyle{definition}
-\newtheorem{onlineact}[corollary]{Atividade online} 
+\newtheorem*{onlineact}{Atividade online}
+%\counterwithin*{onlineact}{section}
 
 % problem
 \theoremstyle{definition}
@@ -160,6 +164,12 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\U}{\mathcal{U}}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\curiosity}[2]{\begin{framed}
+   \begin{center}
+   \textbf{#1}
+   \end{center}
+   #2
+\end{framed}}
 
 % DEF ----------------------------------------------------------------------------------------------------
 
@@ -175,14 +185,19 @@
 \def\tdeg{\textdegree}
 \def\textdef#1{\textit{#1}}
 \def\tq{\;;\;}
-\def\sse{\text{ se e somente se }}
+\def\sse{\text{ se, e somente se, }}
+
 
 % Referencias @TODO
+
 %% Conjuntos
-\def\homeworkref#1{\hyperref[#1]{Exercício \ref{#1}}}
 
-\def\emptysetref#1{\hyperref[def:emptyset]{\textdef{#1}}}
-\def\inref#1{\hyperref[def:in]{\textdef{#1}}}
-\def\subsetref#1{\hyperref[def:subset]{\textdef{#1}}}
+\newcommand{\homeworkref}[1]{\ref{#1}}
+\newcommand{\defref}[2]{\hyperref[#1]{#2}} %TODO: deixar os argumentos opcionais, caso não seja passado mostrar apenas a referencia.
 
+\def\inref#1{\defref{def:in}{#1}}
+\def\emptysetref#1{\defref{def:emptyset}{#1}}
+\def\subsetref#1{\defref{def:subset}{#1}}
+\def\powersetref#1{\defref{def:powerset}{#1}}
+\def\complementref#1{\defref{def:complementar}{#1}}
 

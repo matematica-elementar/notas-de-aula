@@ -1,14 +1,21 @@
 \documentclass[a4paper,12pt, oneside]{book}
-\usepackage{mystyle}
+\usepackage{main}
+\usepackage{titlepage}
 
 \begin{document}
-    \title{Notas de Aula da Disciplina de Matemática Elementar}
-    \author{Antônio Igor, Josenaldo Júnior, Giordano Rodrigues} 
+    \nocite{*}
+    % ------------------------------------------------------------------------------
+    % Maketitle
+    % ------------------------------------------------------------------------------
+    \thispagestyle{empty}       % Remove page numbering on this page
 
+    \printtitle                 % Print the title data as defined above
+        \vfill
+    \printauthor                % Print the author data as defined above
+    \newpage
+    
     \frontmatter % turns off chapter numbering, uses roman numerals for page numbers
-    \maketitle
     \tableofcontents
-
     \mainmatter % turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers
 
     \chapter{Conjuntos}
@@ -16,14 +23,12 @@
     \import{aulas/conjuntos/}{introducao.tex}
     \import{aulas/conjuntos/}{pertinencia.tex}
     \import{aulas/conjuntos/}{inclusao.tex}
-    \import{aulas/conjuntos/}{igualdade.tex}
     \import{aulas/conjuntos/}{operacoes.tex}
     \import{aulas/conjuntos/}{logica.tex}
     \import{aulas/conjuntos/}{exercicios.tex}
     \import{aulas/conjuntos/}{bibliografia.tex} %@TODO: discutir isso aqui
 
     % deixar comentado enquanto tonhão não tiver chegado no assunto
-    \begin{comment}
 
     \chapter{Conjuntos Numéricos e Potenciação}    
     \import{aulas/conjuntos-numericos/}{apresentacao.tex}
@@ -33,6 +38,7 @@
     \import{aulas/conjuntos-numericos/}{exercicios.tex}
     \import{aulas/conjuntos-numericos/}{bibliografia.tex} %TO-DO: discutir isso aqui
 
+    \begin{comment}
     \chapter{Equações e Inequações}
     \import{aulas/equacoes-e-inequacoes/}{introducao.tex}
     \import{aulas/equacoes-e-inequacoes/}{equacao-primeiro-grau.tex}

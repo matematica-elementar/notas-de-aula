@@ -7,15 +7,10 @@ Se for o caso que todo elemento de $A$ é, também, elemento de $B$, diz-se que 
 Para indicar esse fato, usa-se a notação $A \subset B$.
 
 \label{def:notsubset}
-Note que quando $A$ \textit{não} está contido em $B$,  utiliza-se a notação  $A \notsubset B$.
+Quando $A$ \textit{não} está contido em $B$,  utiliza-se a notação  $A \notsubset B$.
 Na prática, isso significa que existe pelo menos um elemento que está em $A$ mas não está em $B$.
 Em outras palavras, existe um elemento $x$ tal que $x \in A$ mas $x \notin B$.
 \end{definition}
-
-% nivel coração
-% como provar
-% como usar
-
 
 \begin{remark}
 Também podemos escrever $B \supset A$ quando for o caso que $A \subset B$. Para essa situação, dizemos que $B$ \textdef{contém} $A$.
@@ -35,28 +30,34 @@ elementos do conjunto $\Pi$ são pontos, não retas.
 \begin{example}
 Considere os conjuntos $N = \set{1, 2, 3, 4, 5, 6}$, $I = \set{1, 3, 5}$ e $P = \set{0, 2, 4, 6}$.
 Analisando o cenário, podemos concluir que:
-	\begin{enumerate}
-		\item $I \subset N$. Observe que todos os elementos de $I$ também são elementos de $N$.
-		\item $P \notsubset N$. Observe que nem todos os elementos de $P$ são elementos de $N$, pois $0 \in P$ mas $0 \notin N$.
-	\end{enumerate}
+\begin{enumerate}
+\item
+$I \subset N$. Observe que todos os elementos de $I$ também são elementos de $N$.
+\item
+$P \notsubset N$. Observe que nem todos os elementos de $P$ são elementos de $N$, pois $0 \in P$ mas $0 \notin N$.
+\end{enumerate}
 \end{example}
 
 \begin{proposition}[Inclusão universal do $\emptyset$]
-	\label{prop:emptyset1}
-Seja um conjunto $A$ arbitrário. Pode-se concluir que $\emptyset \subset A$.
+\label{prop:emptyset1}
+Seja $A$ um conjunto arbitrário. Pode-se concluir que $\emptyset \subset A$.
 Em outras palavras, o \emptysetref{conjunto vazio} é subconjunto de todos os conjuntos.
 \end{proposition}
 
 \begin{proof}
-Para chegar num absurdo, considere um conjunto $A$ tal que $\emptyset \notsubset A$.
+Para chegarmos num absurdo, considere um conjunto $A$ tal que $\emptyset \notsubset A$.
 Logo, podemos concluir que existe um elemento $x$ tal que $x \in \emptyset$ mas $x \notin A$, pela \subsetref{definição de inclusão}.
 Mas, já sabemos que $x \notin \emptyset$ pela \emptysetref{definição do conjunto vazio}.
 O que nos leva a um absurdo, pois não pode acontecer que $x \in \emptyset$ e $x \notin \emptyset$ ao mesmo tempo.
 Portanto, podemos concluir que $\emptyset \subset A$.
 \end{proof}
 
+\begin{remark}
+Ao manter a arbitrariedade de um conjunto, qualquer conclusão relacionada a este conjunto valerá para todos os conjuntos.
+\end{remark}
+
 \begin{definition}[Inclusão Própria]
-Dizemos que $A$ é um \textdef{subconjunto próprio} de $B$ quando $A \subset B$ mas $A \neq B$. Quando isso ocorre utiliza-se a notação $A \subsetneq B$.
+Dizemos que $A \ne \emptyset$ é um \textdef{subconjunto próprio} de $B$ quando $A \subset B$ mas $A \neq B$.
 \end{definition}
 
 \begin{proposition}[Propriedades da inclusão]
@@ -82,42 +83,40 @@ Considere $A$, $B$ e $C$ conjuntos arbitrários. Logo, são válidas as propried
 	Seja $x \in A$ um elemento arbitrário.
 	Ora, como já temos que $x \in A$ podemos concluir que $A \subset A$.
 
-	%\ref{inclusao:antissimetria}
-	%Sejam $A$ e $B$ conjuntos tais que $A \subset B$ e $B \subset A$.
-	%Suponha, por contradição, que $A \ne B$, ou seja, existe $x \in A$ tal que $x \notin B$ (1) ou existe $x \in B$ tal que $x \notin A$ (2).
-	%Ora, (1) é o mesmo que $A \notsubset B$, contradizendo $A \subset B$.
-	%Analogamente, (2) contradiz $B \subset A$.
-	%Portanto, $A = B$.
+	\ref{inclusao:antissimetria}
+	Sejam $A$ e $B$ conjuntos tais que $A \subset B$ e $B \subset A$.
+	Suponha, por contradição, que $A \ne B$, ou seja, existe $x \in A$ tal que $x \notin B$ (1) ou existe $x \in B$ tal que $x \notin A$ (2).
+	Ora, (1) é o mesmo que $A \notsubset B$, contradizendo $A \subset B$.
+	Analogamente, (2) contradiz $B \subset A$.
+	Portanto, $A = B$.
 
 	\ref{inclusao:transitividade}
 	Sejam $A$, $B$ e $C$ conjuntos tais que $A \subset B$ e $B \subset C$.
 	Agora basta demonstrar que $A \subset C$.
-	Para isso, considere $x \in A$ um elemento arbitrário.
+	Para isso, considere $x \in A$ um elemento arbitrário e mostremos que $x \in C$.
 	Como temos que $A \subset B$, podemos concluir que $x \in B$.
 	E, como $x \in B$ e $B \subset C$, segue que $x \in C$.
 	Portanto, $A \subset C$.
 \end{proof}
-
-\begin{remark}
-Ao manter a arbitrariedade de um conjunto, qualquer conclusão relacionada a este conjunto valerá para todos os conjuntos.
-\end{remark}
 
 \begin{definition}[Conjunto das Partes]
 \label{def:powerset}
 Dado um conjunto $A$, chamamos de \textdef{conjunto das partes} de $A$ o conjunto formado por todos os seus subconjuntos, e denotamo-lo $\powerset{A}$.
 \end{definition}
 
-\begin{remark}
-	Podemos perceber que o conjunto das partes de um determinado conjunto tem a propriedade de que todos os seus elementos também são conjuntos.
-\end{remark}
-
 Em outras palavras, podemos definir uma condição necessária e sucifiente para um elemento pertencer a $\powerset{A}$, para isso, considere X um objeto arbitrário, logo:
 $$ X \in \powerset{A} \sse X \subset A $$
 
 \begin{example}
+\label{exem-powerset-basico}
 Dado $A = \set{1,2,3}$, determine $\powerset A$.
 \end{example}
 
 \begin{solution}
+
 $\powerset A=\{\emptyset,\{1\}, \{2\}, \{3\}, \{1,2\}, \{2,3\}, \{1,3\},A\}$.
 \end{solution}
+
+\begin{remark}
+Como o Exemplo~\ref{exem-powerset-basico} ilustra, o conjunto das partes de um determinado conjunto tem a particularidade de que todos os seus elementos também são conjuntos.
+\end{remark}

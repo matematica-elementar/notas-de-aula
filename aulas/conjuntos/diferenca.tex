@@ -2,11 +2,22 @@
 
 \begin{definition}[Diferença de Conjuntos]
 \label{def:setminus}
-A \textdef{diferença} entre os conjuntos $A$ e $B$, denotada por $B\setminus A$, é definida por:
+A \textdef{diferença} do conjunto $A$ por $B$, é o conjunto
 %
-	$$ x \in  B \setminus A \text{ se e somente se }  x \in B \text{ mas } x \notin A $$
+	$$ A\setminus B = \set{x \tq  x \in A \text{ e } x \notin B}.$$
 \end{definition}
 \begin{remark}
-Em geral, não é verdade que $A \setminus B = B \setminus A$. Além disso, note que $A^C = \U\setminus A$.
+Em geral, não é verdade que $A \setminus B = B \setminus A$, pense em um par de conjuntos 
+em que essa igualdade não é válida antes de ver o exemplo a seguir. Além disso, note que $A^C = \U\setminus A$.
 \end{remark}
 
+\begin{example}
+	Sejam $A = \set{1, 2, 3}$ e $ B = \set{2,5}$. Determine $A \setminus B$ e $B \setminus A$.
+	\end{example}
+	
+	\begin{solution}
+	\begin{align*}
+		&A \setminus B = \set{1,3};\\
+		&B \setminus A = \set{5}.
+	\end{align*}
+	\end{solution}
