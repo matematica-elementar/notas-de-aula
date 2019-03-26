@@ -4,10 +4,10 @@ Em Matemática, a Teoria de Conjuntos está intimamente relacionada à Lógica.
 Como evidência disso, existem diversas equivalências entre relações e operadores de conjuntos e conectivos lógicos.
 Apresentar-se-ão quatro delas, mas antes vamos entender como usamos o símbolo $ \implies$ no nosso curso.
 
-	\begin{remark}
-	Em toda esta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$.
-	Considere, também, $A = \set {x \tq x \text{ satisfaz } P}$ e $B= \set {x \tq x \text{ satisfaz } Q}$.
-	\end{remark}
+\begin{remark}
+Em toda esta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$.
+Considere, também, $A = \set {x \tq x \text{ satisfaz } P}$ e $B= \set {x \tq x \text{ satisfaz } Q}$.
+\end{remark}
 
 \begin{comment}
 Em Lógica Proposicional, a implicação $\prn \to $ é um operador lógico. 
@@ -33,11 +33,11 @@ a única opção que temos, quando $P \to Q$ e $P$ são verdadeiras, é que $Q$ 
 \end{comment}
 
 \begin{equivalence}[Inclusão e implicação] 
-$$A \subset B \text{ é equivalente a } P \implies Q$$
+$$ A \subset B \text{ é equivalente a } P \implies Q \text{.} $$
 \end{equivalence}
 
 \begin{equivalence}[Igualdade e bi-implicação] 
-	$$A=B \text{ é equivalente a } P \iff Q$$
+$$ A = B \text{ é equivalente a } P \iff Q \text{.} $$
 \end{equivalence}
 
 \begin{example}
@@ -52,8 +52,7 @@ x^2+1=0 & \implies \left(x^2 +1 \right) \left( x^2-1 \right) = 0
 \end{aligned}
 \end{equation*}
 %
-Isso quer dizer que o conjunto solução de $x^2 +1 = 0$ é $\set{-1,
-1}$?
+Isso quer dizer que o conjunto solução de $x^2 +1 = 0$ é $\set{-1, 1}$?
 \end{example}
 
 \begin{solution}
@@ -65,9 +64,7 @@ $A^C$ é equivalente a $\neg P$.
 \end{equivalence}
 Podemos combinar os itens \ref{prop:complementar:complementar-do-complementar} e \ref{prop:complementar:contrapositiva} da Proposição \ref{prop:complementar} e obter que:
 %
-\begin{align*}
-P \implies Q \text{ se, e somente se, } \neg Q \implies \neg P.	
-\end{align*}
+$$ P \implies Q \sse \neg Q \implies \neg P \text{.} $$
 %
 Chamamos $Q \implies P$ de \textdef{recíproca} de $P \implies Q$, e $P \land \neg Q$ de \textdef{negação}\newline de $P \implies Q$. É dado um exemplo no Exercício \ref{exe:escrever-reciprocas}.
 
