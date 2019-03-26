@@ -10,6 +10,7 @@ build: clean
 	pdflatex main.tex
 	biber main
 	pdflatex main.tex
+	pdflatex main.tex
 
 clean:
 	rm -rf main.aux main.log main.out main.toc main.pdf
