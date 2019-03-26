@@ -154,52 +154,83 @@
 \theoremstyle{definition}
 \newtheorem{theorem}[corollary]{Teorema}
 
-% NEW COMMAND --------------------------------------------------------------------------------------------
-
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\I}{\mathcal I}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\U}{\mathcal{U}}
-\newcommand{\Z}{\mathbb{Z}}
-
 \newcommand{\curiosity}[2]{
   \begin{mdframed}[
-    frametitle={#1},
-    frametitlealignment=\centering
+	frametitle={#1},
+	frametitlealignment=\centering
   ]
   #2
 \end{mdframed}}
 
-% DEF ----------------------------------------------------------------------------------------------------
+%
+%   Comandos de utilidade para as notas de aula
+%
+\newcommand{\link}[2]{\href{#1}{\tt{#2}}}
+\newcommand{\khan}[2]{\href{#1}{\tt{#2}}}
+\newcommand{\textdef}[1]{\textit{#1}}
 
-% @TODO complementar operation
-\def\link#1#2{\href{#1}{\tt{#2}}}
-\def\khan#1#2{\href{#1}{\tt{#2}}}
-\def\modu#1{\left|#1\right|}
-\def\nnats{\N^*}
-\def\powerset#1{\mathcal{P}(#1)}
-\def\prn#1{\left(#1\right)}
-\def\set#1{\left\{ #1\right\}}
-\def\sub#1{\underline{#1}}
-\def\tdeg{\textdegree}
-\def\textdef#1{\textit{#1}}
-\def\tq{\;;\;}
-\def\sse{\text{ se, e somente se, }}
+%
+%   Comandos para ajudar na escrita
+%
+\newcommand{\prn}[1]{\left(#1\right)}
+\newcommand{\sub}[1]{\underline{#1}}
+\newcommand{\sse}{\text{ se, e somente se, }}
+\newcommand{\tdeg}{\textdegree}
 
+%%
+%%   Comandos para Teoria de Conjuntos
+%%
+%
+% 	Comandos já existentes por padrão:
+%		\set			Define conjuntos usando chaves
+%		\in				Relação de pertinência
+%		\notin			Não pertence
+%		\subset			Relação de inclusão
+%		\setminus		Operação de diferença de conjuntos
+%
+\newcommand{\notsubset}{\not\subset}
 
-% Referencias @TODO
+\newcommand{\suchthat}{\;;\;}
+\newcommand{\st}{\suchthat}
+\newcommand{\talque}{\suchthat}
+\newcommand{\tq}{\talque}
 
-%% Conjuntos
+%
+%	Operações
+%
+\newcommand{\union}{\cup}%							União
+\newcommand{\intersection}{\cap}%					Interseção
+\newcommand{\inter}{\intersection}%					Interseção (alias)
+\newcommand{\setcomplement}[1]{{#1}^C}%				Complementar
+\newcommand{\compl}{\setcomplement}%				Complementar (alias)
+\newcommand{\minus}{\setminus}%						Diferença (alias)
+\newcommand{\powerset}[1]{\mathcal{P}\prn{#1}}%		Conjunto das partes
 
+%
+%   Conjuntos conhecidos
+%
+\newcommand{\U}{\mathcal{U}}%						Universo
+\newcommand{\I}{\mathcal{I}}%
+\newcommand{\N}{\mathbb{N}}%						Naturais
+\newcommand{\nnats}{\N^*}%							Naturais positivos
+\newcommand{\Z}{\mathbb{Z}}%						Inteiros
+\newcommand{\Q}{\mathbb{Q}}%						Racionais
+\newcommand{\R}{\mathbb{R}}%						Reais
+\newcommand{\C}{\mathbb{C}}%						Complexos
+
+%
+%   Referências
+%
+\newcommand{\inref}[1]{\defref{def:in}{#1}}
+\newcommand{\emptysetref}[1]{\defref{def:emptyset}{#1}}
+\newcommand{\subsetref}[1]{\defref{def:subset}{#1}}
+\newcommand{\powersetref}[1]{\defref{def:powerset}{#1}}
+\newcommand{\complementref}[1]{\defref{def:complementar}{#1}}
 \newcommand{\homeworkref}[1]{\ref{#1}}
 \newcommand{\defref}[2]{\hyperref[#1]{#2}} %TODO: deixar os argumentos opcionais, caso não seja passado mostrar apenas a referencia.
 
-\def\inref#1{\defref{def:in}{#1}}
-\def\emptysetref#1{\defref{def:emptyset}{#1}}
-\def\subsetref#1{\defref{def:subset}{#1}}
-\def\powersetref#1{\defref{def:powerset}{#1}}
-\def\complementref#1{\defref{def:complementar}{#1}}
-
+%
+%   Funções reais
+%
+\newcommand{\modulo}[1]{\left|#1\right|}
+\newcommand{\modu}{\modulo}
