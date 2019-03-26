@@ -8,20 +8,20 @@
 \usepackage[fleqn]{amsmath} % fleqn: align equations left
 \usepackage[portuguese]{babel}
 \usepackage{biblatex}
+\usepackage[makeroom]{cancel} % \cancel 
 \usepackage{caption} % change caption separator, \captionsetup
 \usepackage{chngcntr} 
 \usepackage{commath} % \abs
 \usepackage[shortlabels]{enumitem} % enumerate properties, enumerate-like scheme for labels
 \usepackage{environ} % nofleq
 \usepackage{float} % change float (image table etc) separator
-\usepackage{framed}
 \usepackage[left=2.5cm, top=3cm, right=2.5cm, bottom=2cm]{geometry} % page borders
 \usepackage{graphicx} % image inserting
 \usepackage{hyperref} % hyperlinks
 \usepackage{import} % nested \input issues
 %\usepackage{indentfirst} % indent first paragraph of section
 \usepackage[utf8]{inputenc} % portuguese
-\usepackage[makeroom]{cancel} % \cancel 
+\usepackage{mdframed}
 \usepackage{ragged2e} % text aligning
 \usepackage{setspace} % need this to change line spacing
 \usepackage{siunitx} % degree symbol
@@ -29,7 +29,7 @@
 \usepackage{textcomp} % \textdegree
 \usepackage{verbatim} % multiline comments
 
-\addbibresource{aulas/conjuntos/conjuntos.bib}
+\addbibresource{src/conjuntos/conjuntos.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% CONFIG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,12 +164,14 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\U}{\mathcal{U}}
 \newcommand{\Z}{\mathbb{Z}}
-\newcommand{\curiosity}[2]{\begin{framed}
-   \begin{center}
-   \textbf{#1}
-   \end{center}
-   #2
-\end{framed}}
+
+\newcommand{\curiosity}[2]{
+  \begin{mdframed}[
+    frametitle={#1},
+    frametitlealignment=\centering
+  ]
+  #2
+\end{mdframed}}
 
 % DEF ----------------------------------------------------------------------------------------------------
 

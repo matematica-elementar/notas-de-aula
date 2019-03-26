@@ -38,17 +38,23 @@ Qual o complementar do conjunto dos triângulos escalenos?
 \end{solution}
 
 \begin{proposition}[Propriedades do complementar]
-\label{prop-complementar}
+\label{prop:complementar}
 Fixado um conjunto universo $\U$, valem para todos conjuntos $A$ e $B$:
-\begin{enumerate}
-	\item $\U^C=\emptyset$ e $\emptyset^C = \U$;
-	\item $\prn{A^C}^C=A$ (todo conjunto é complementar do seu complementar);
-	\item Se $A \subset B$, então $B^C \subset A^C$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro). 
+\begin{enumerate}[i)]
+	\item
+		\label{prop:complementar:universo}
+		$\U^C=\emptyset$ e $\emptyset^C = \U$;
+	\item
+		\label{prop:complementar:complementar-do-complementar}
+		$\prn{A^C}^C=A$ (todo conjunto é complementar do seu complementar);
+	\item
+		\label{prop:complementar:contrapositiva}
+		Se $A \subset B$, então $B^C \subset A^C$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro). 
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-\begin{enumerate}
+\begin{enumerate}[i)]
 \item[]
 \item
 A inclusão $\emptyset \subset \U^C$ é imediata pois $\emptyset$ é subconjunto de qualquer conjunto. 
