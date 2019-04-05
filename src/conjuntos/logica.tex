@@ -1,36 +1,34 @@
 \section{Conjuntos e Lógica}
 
+Bernaldo
+
+
 Em Matemática, a Teoria de Conjuntos está intimamente relacionada à Lógica.
 Como evidência disso, existem diversas equivalências entre relações e operadores de conjuntos e conectivos lógicos.
 Apresentar-se-ão quatro delas, mas antes vamos entender como usamos o símbolo $ \implies$ no nosso curso.
 
-\begin{remark}
-Em toda esta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$.
-Considere, também, $A = \set {x \tq x \text{ satisfaz } P}$ e $B= \set {x \tq x \text{ satisfaz } Q}$.
-\end{remark}
+Em Lógica Proposicional, a implicação $\prn \to $ é um conectivo lógico. 
+Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \to Q$.
+O valor-verdade de $P \to Q$ é completamente determinado quando se conhecem os valores-verdade de $P$ e $Q$.
+A relação exata pode ser consultada na Tabela [\textbackslash ref], denominada tabela-verdade.
 
-\begin{comment}
-Em Lógica Proposicional, a implicação $\prn \to $ é um operador lógico. 
-Para que uma implicação seja aplicada ela precisa de duas proposições $P$ e $Q$, 
-onde cada uma pode ser verdadeira ou falsa.
-A validade da implicação $P \to Q$ é definida através da seguinte tabela, que chamamos de \textdef{tabela verdade}.
+A implicação aparece textualmente de algumas maneiras; a mais comum delas sendo ``Se $P$, então $Q$''.
+No caso de a afirmação anterior ser, por exemplo, um problema, interpreta-se o $P$ como a sua hipótese, e $Q$, como a sua tese.
+Costuma-se escrever, também, nessa situação, $P \implies Q$ e reservar o $P \to Q$ para contextos puramente lógicos.
 
-<INSERIR A TABELA VERDADE DE $P \to Q$ AQUI.
-
-Em nosso texto, interpretamos o $P$ como a hipótese do meu problema e $Q$ como a tese em uma implicação.
-Essa implicação aparece textualmente de algumas maneiras, a mais comum delas é ``Se $P$, então $Q$'' 
-e, em símbolos, escrevemos $P \implies Q$.
-
-Quando queremos provar a validade desse tipo de afirmação, 
-tomamos nossa hipótese $P$ como uma propriedade verdadeira, 
-o que faz considerarmos somente as duas primeiras linhas da tabela verdade de $P \to Q$.
-Dessa maneira, a afirmação ``Se $P$, então $Q$'' é verdadeira se conseguirmos provar que a tese $Q$ também é verdadeira.
+Para provar que uma implicação é verdadeira, o primeiro passo é considerar a hipótese $P$ como uma propriedade verdadeira.
+Consequentemente, nossa atenção se restringe somente às duas primeiras linhas da tabela-verdade de $P \to Q$.
+Assim, pela tabela, constatamos que, para alcançarmos nosso objetivo de provar que a afirmação ``Se $P$, então $Q$'' é verdadeira,
+precisamos mostrar que a tese $Q$ também é verdadeira.
 
 Quando já está provado que ``Se $P$, então $Q$'' é verdadeira, 
-utilizamos esse resultado para concluir que $Q$ é verdadeira quando temos que $P$ é verdadeira, 
-pois, novamente olhando somente para as duas primeiras linhas de $P \to Q$, 
-a única opção que temos, quando $P \to Q$ e $P$ são verdadeiras, é que $Q$ também seja verdadeira.
-\end{comment}
+utilizamos esse resultado para concluir que $Q$ é verdadeira quando temos, também, que $P$ é verdadeira.
+Isso pode, mais uma vez, ser verificado pela tabela-verdade de $P \to Q$:
+na única linha em que $P \to Q$ e $P$ são verdadeiras, $Q$ também é.
+
+Explicado o uso do $\implies$ neste texto, podemos voltar a atenção à equivalência entre operadores e relações de conjuntos e conectivos lógicos.
+No restante desta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$.
+Considere, também, $A = \set {x \tq x \text{ satisfaz } P}$ e $B= \set {x \tq x \text{ satisfaz } Q}$.
 
 \begin{equivalence}[Inclusão e implicação] 
 $$ A \subset B \text{ é equivalente a } P \implies Q \text{.} $$
