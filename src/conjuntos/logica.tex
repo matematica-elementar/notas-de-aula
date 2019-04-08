@@ -9,7 +9,20 @@ Apresentar-se-ão quatro delas, mas antes vamos entender como usamos os símbolo
 Em Lógica Proposicional, a implicação $\prn \to $ é um conectivo lógico. 
 Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \to Q$.
 O valor-verdade de $P \to Q$ é completamente determinado quando se conhecem os valores-verdade de $P$ e $Q$.
-A relação exata pode ser consultada na Tabela [\textbackslash ref], denominada tabela-verdade.
+A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
+
+\begin{table}[h]
+\caption{Tabela-verdade da implicação:}
+\label{tbl:implicacao}
+\centering
+\begin{tabular}{ccc}
+$P$		& $Q$		& $P \to Q$	\\ \hline
+V		& V			& V			\\
+V		& F			& F			\\
+F		& V			& V			\\
+F		& F			& V			\\	
+\end{tabular}
+\end{table}
 
 A implicação aparece textualmente de algumas maneiras; a mais comum delas sendo ``Se $P$, então $Q$''.
 No caso de a afirmação anterior ser, por exemplo, um problema, interpreta-se o $P$ como a sua hipótese, e $Q$, como a sua tese.
