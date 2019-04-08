@@ -67,7 +67,12 @@
 \itemsep=0pt}
 
 % change caption label formatting
-\captionsetup[table]{labelfont=bf, labelsep=period}
+\captionsetup[table]{
+  labelfont=bf, %
+  labelsep=period, %
+  justification=raggedright, %
+  singlelinecheck=false%    Necessário para alinhar à esquerda mesmo quando o texto é pequeno o suficiente para não preencher uma linha
+}
 \captionsetup[figure]{labelfont=bf, labelsep=period}
 
 % standard label config for enumerate
