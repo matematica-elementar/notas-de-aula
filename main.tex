@@ -18,39 +18,15 @@
     \frontmatter % turns off chapter numbering, uses roman numerals for page numbers
     \tableofcontents
     \mainmatter % turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers
+    
+    {
+        \newcommand{\templatesdir}{src/esqueletos-dos-capitulos/}
 
-    \chapter{Conjuntos}
-    \import{src/conjuntos/}{apresentacao.tex}
-    \import{src/conjuntos/}{introducao.tex}
-    \import{src/conjuntos/}{pertinencia.tex}
-    \import{src/conjuntos/}{inclusao.tex}
-    \import{src/conjuntos/}{operacoes.tex}
-    \import{src/conjuntos/}{logica.tex}
-    \import{src/conjuntos/}{exercicios.tex}
-    \import{src/conjuntos/}{bibliografia.tex} %@TODO: discutir isso aqui
-
-    % deixar comentado enquanto tonhão não tiver chegado no assunto
-
-    \chapter{Conjuntos Numéricos e Potenciação}
-    \label{cap:conjuntos-numericos}    
-    \import{src/conjuntos-numericos/}{apresentacao.tex}
-    \import{src/conjuntos-numericos/}{conjuntos-numericos.tex}
-    \import{src/conjuntos-numericos/}{operacoes.tex}
-    \import{src/conjuntos-numericos/}{potenciacao.tex}
-    \import{src/conjuntos-numericos/}{exercicios.tex}
-    \import{src/conjuntos-numericos/}{bibliografia.tex} %TO-DO: discutir isso aqui
-
-    \chapter{Equações e Inequações}
-    \import{src/equacoes-e-inequacoes/}{introducao.tex}
-    \import{src/equacoes-e-inequacoes/}{equacao-primeiro-grau.tex}
-    \import{src/equacoes-e-inequacoes/}{equacao-segundo-grau.tex}
-    \import{src/equacoes-e-inequacoes/}{inequacao-primeiro-grau.tex}
-    \import{src/equacoes-e-inequacoes/}{inequacao-segundo-grau.tex}
-    \import{src/equacoes-e-inequacoes/}{modulos.tex}
-    \import{src/equacoes-e-inequacoes/}{desigualdades-classicas.tex}
-    \import{src/equacoes-e-inequacoes/}{exercicios.tex}
-    \import{src/equacoes-e-inequacoes/}{bibliografia.tex} %TO-DO: discutir isso aqui
-
+        \subimport{\templatesdir}{conjuntos.tex}
+        \subimport{\templatesdir}{conjuntos-numericos.tex}
+        \subimport{\templatesdir}{equacoes-e-inequacoes.tex}
+    }
+    
     \begin{comment}
     \chapter{Princípio da Indução Finita}
     \import{src/principio-da-inducao-finita/}{introducao.tex}
