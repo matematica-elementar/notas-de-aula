@@ -5,10 +5,12 @@
 
 % Chapter file names
 \newcommand{\nameconjuntos}{conjuntos}
+\newcommand{\nameconjuntosnumericos}{conjuntos-numericos}
 \newcommand{\nameequacoeseinequacoes}{equacoes-e-inequacoes}
 
 % Include the .bib files 
 \addbibresource{\bibpath{\nameconjuntos}}
+\addbibresource{\bibpath{\nameconjuntosnumericos}}
 \addbibresource{\bibpath{\nameequacoeseinequacoes}}
 
 % Alias for a \map command to be used on \DeclareSourceMap
@@ -28,6 +30,7 @@
   \maps[datatype=bibtex]
   {
     \sourcemapoverwrite{\nameconjuntos}
+    \sourcemapoverwrite{\nameconjuntosnumericos}
     \sourcemapoverwrite{\nameequacoeseinequacoes}
   }
 }
