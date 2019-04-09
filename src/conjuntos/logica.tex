@@ -6,7 +6,7 @@ Em Matemática, a Teoria de Conjuntos está intimamente relacionada à Lógica.
 Como evidência disso, existem diversas equivalências entre relações e operadores de conjuntos e conectivos lógicos.
 Apresentar-se-ão quatro delas, mas antes vamos entender como usamos os símbolos $ \implies$ e $\iff$ no nosso curso.
 
-Em Lógica Proposicional, a implicação $\prn \to $ é um conectivo lógico. 
+Na Lógica Proposicional, a implicação $\prn \to $ é um conectivo lógico. 
 Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \to Q$.
 O valor-verdade de $P \to Q$ é completamente determinado quando se conhecem os valores-verdade de $P$ e $Q$.
 A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
@@ -38,9 +38,50 @@ utilizamos esse resultado para concluir que $Q$ é verdadeira quando temos, tamb
 Isso pode, mais uma vez, ser verificado pela tabela-verdade de $P \to Q$:
 na única linha em que $P \to Q$ e $P$ são verdadeiras, $Q$ também é.
 
-Já $P \iff Q$ significa que $P \implies Q$ e $Q \implies P$, ou seja, para provar que $P \iff Q$ é preciso provar duas implicações. No texto, o $ P \iff Q$ aparece geralmente como ``$P$ se, e somente se, $Q$'' ou ``Para $P$ é necessário e suficiente que $Q$''. Nesse caso, podemos dizer que $P$ e $Q$ são propriedades equivalentes.
+Outro conectivo lógico é o $\liff$, chamado de bicondicional ou bi-implicação.
+Da mesma forma que a implicação -- e os demais conectivos lógicos --, o valor-verdade da expressão $P \liff Q$, dadas duas proposições $P$ e $Q$, é totalmente determinado pelos valores-verdade dessas proposições.
+A relação se encontra na Tabela \ref{tbl:bi-implicacao}.
 
-Explicado o uso do $\implies$  e do $\iff$ neste texto, podemos voltar a atenção à equivalência entre operadores e relações de conjuntos e conectivos lógicos.
+\begin{table}[h]
+\caption{Tabela-verdade da bi-implicação.}
+\label{tbl:bi-implicacao}
+\centering
+\begin{tabular}{ccc}
+$P$		& $Q$		& $P \liff Q$	\\ \hline
+V		& V			& V			\\
+V		& F			& F			\\
+F		& V			& F			\\
+F		& F			& V			\\	
+\end{tabular}
+\end{table}
+%
+\noindent Pela tabela, pode-se notar que a expressão $P \liff Q$ é verdadeira quando $P$ e $Q$ têm o mesmo valor-verdade, e apenas nessa situação.
+
+De forma similar ao que ocorre na implicação, reserva-se o símbolo $\liff$ para contextos lógicos, utilizando o $\iff$ apenas em cenários menos formais.
+Textualmente, uma afirmação do tipo $P \iff Q$ costuma se manifestar como ``$P$ se, e somente se, $Q$''. 
+Isso começa a evidenciar um importante fato sobre a bi-implicação: ela pode ser definida como a conjunção de duas implicações.
+A frase ``$P$ se $Q$'' é equivalente a ``se $Q$, então $P$'', o que, conforme já visto, pode ser representado como $Q \implies P$.
+Ademais, ``$P$ somente se $Q$'' diz que $P$ só pode ser verdade se $Q$ também for, ou seja, $P \implies Q$. 
+As frases, quando juntas, expressão a noção de bi-condicionalidade.
+
+Outra versão textual comum do $\iff$ é a expressão ``Para $P$, é necessário e suficiente que $Q$''.
+Assim como no caso do ``se, e somente se'', essa expressão carrega duas informações consigo.
+A frase ``Para $P$, é necessário que $Q$'' significa que a validade de $P$ só é possível na presença da validade de $Q$, isso é, $P \implies Q$.
+Por outro lado, ``Para $P$, é suficiente que $Q$'' indica que basta $Q$ ser verdade para $P$ também ser, ou seja, $Q \implies P$.
+
+Uma terceira forma de se apresentar a informação $P \iff Q$ é dizer que ``$P$ é equivalente a $Q$''.
+Pode-se justificar essa construção pela tabela-verdade de $P \liff Q$. 
+Conforme mencionado, $P \liff Q$ é verdade precisamente quando $P$ e $Q$ tem o mesmo valor-verdade.
+Em caso positivo, não existe uma diferença prática entre $P$ e $Q$.
+Assim, usa-se o termo ``equivalência'', que também indica que, quando se tem uma dessas proposições, se tem a outra, já que elas possuem o mesmo valor-verdade.
+
+Em todas as formas textuais vistas, o $\iff$ pôde ser desmembrado em dois $\implies$.
+Isso reflete diretamente na maneira como se prova afirmações do tipo $P \iff Q$.
+O método consiste em demonstrar, de forma independente, que $P \implies Q$ e que $Q \implies P$.
+Aqui, vale a discussão acerca de como provar afirmações com $\implies$.
+A diferença é que sempre se fazem necessárias duas provas desse tipo.
+
+Explicados os usos do $\implies$  e do $\iff$ neste texto, podemos voltar a atenção à equivalência entre operadores e relações de conjuntos e conectivos lógicos.
 No restante desta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$.
 Considere, também, $A = \set {x \tq x \text{ satisfaz } P}$ e $B= \set {x \tq x \text{ satisfaz } Q}$.
 
