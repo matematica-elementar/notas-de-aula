@@ -1,0 +1,33 @@
+\usepackage{biblatex}
+
+% Path for a .bib based on the chapter file name 
+\newcommand{\bibpath}[1]{src/#1/#1.bib}
+
+% Chapter file names
+\newcommand{\nameconjuntos}{conjuntos}
+\newcommand{\nameequacoeseinequacoes}{equacoes-e-inequacoes}
+
+% Include the .bib files 
+\addbibresource{\bibpath{\nameconjuntos}}
+%\addbibresource{\bibpath{\nameequacoeseinequacoes}}
+
+% Alias for a \map command to be used on \DeclareSourceMap
+\newcommand{\sourcemapoverwrite}[1]
+{
+    \map[overwrite]
+    {
+      \perdatasource{\bibpath{#1}}
+      \step[fieldset=keywords, fieldvalue={,#1}, append]
+    }
+}
+
+% Add a keyword to each .bib file. It will be used for printing each .bib file separately.
+% One \sourcemapoverwrite must be added whenever a .bib file for a chapter is included.
+\DeclareSourcemap
+{
+  \maps[datatype=bibtex]
+  {
+    \sourcemapoverwrite{\nameconjuntos}
+    %\sourcemapoverwrite{\nameequacoeseinequacoes}
+  }
+}
