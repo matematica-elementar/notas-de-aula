@@ -201,3 +201,60 @@ Para quaisquer $a_1, a_2, \dots , a_n \in \R_+$, vale:
     \sqrt[n]{a_1\dots a_n} \le \frac {a_1 + \dots + a_n} n.
 \end{equation*}
 \end{theorem}
+
+\begin{proof}
+	Provemos, inicialmente, que a desigualdade é válida quando $n$ é uma potência de 2.
+	Para tal, seja $n = 2^m$, com $m \in \N$.
+	Usaremos o Princípio da Indução Finita em $m$.
+
+	\begin{itemize}
+		\item \emph{Caso base} ($m=0$). Para $m=0$, temos $n=1$. 
+		Seja $a_1 \in \R_+$. 
+		Note que $\sqrt[1]{a_1}=a_1\le \frac{a_1}{1}$.
+		Assim, a desigualdade é válida para $m=0$.
+
+		\item \emph{Passo de Indução}. Como hipótese de indução (HI), suponha, para algum $m=k\in \N$ --- ou seja, $n=2^k$ ---, que vale:
+		$$
+		\sqrt[2^k]{a_1 \cdot \dots \cdot a_{2^k}}\le \frac{a_1 + \dots + a_{2^k}}{2^k}
+		$$
+
+		Agora, provemos que a desigualdade é válida para $m=k+1$ --- isso é, $n = 2^{k+1}$---. De fato,
+		%
+		\begin{align*}
+		\sqrt[2^{k+1}]{a_1 \cdot \ldots \cdot a_{2^{k+1}}} &= \sqrt[2]{\sqrt[2^k]{a_1 \cdot \ldots \cdot a_{2^{k+1}}}}&  \\
+		& = \sqrt[2]{ \sqrt[2^k]{a_1 \cdot \ldots \cdot a_{2^k}} \cdot \sqrt[2^k]{a_{2^k+1} \cdot \ldots \cdot a_{2^{k+1}}}}& \\
+		& \le \frac{\sqrt[2^k]{a_1 \cdot \ldots \cdot a_{2^k}} + \sqrt[2^k]{a_{2^k+1} \cdot \ldots \cdot a_{2^{k+1}}}  }{2} & \text{(Teorema \ref{theo:desigualdade-medias-dois-termos})}\\
+		& \le \frac{ \frac{a_1 + \ldots + a_{2^k}}{2^k} + \frac{a_{2^k+1}+\ldots+a_{2^{k+1}}}{2^k}    }{2} & \text{(HI)}\\
+		& = \frac{\frac{a_1 + \ldots + a_{2^{k+1}}}{2^k}}{2} & \\
+		& = \frac{a_1 + \ldots + a_{2^{k+1}}}{2^{k+1}}  &
+		\end{align*}
+		
+	\end{itemize}
+
+	Dessa forma, a desigualdade vale quando $n$ é uma potência de 2.
+
+	Provemos, agora, o caso geral.
+	Para tanto, seja $n \in \N$ arbitrário.
+	Tomemos o menor $m \in \N$ tal que $n \le 2^m$.
+	Além disso, definamos $L = \sqrt[n]{a_1 \cdot \ldots \cdot a_n}$.
+	Pelo que acabamos de provar, é válido que:
+
+	$$
+	\frac{a_1 + \ldots + a_n + \overbrace{L+\ldots + L}^{2^m - n \text{ vezes}}}{2^m} \ge \sqrt[2^m]{a_1 \cdot \ldots +\cdot a_n \cdot L^{2^m-n}}
+	$$
+
+	No entanto, note que:
+	%
+	\begin{align*}
+		\sqrt[2^m]{a_1 \cdot \ldots +\cdot a_n \cdot L^{2^m-n}} & = \sqrt[2^m]{L^n \cdot L^{2^m-n}} \\ & = \sqrt[2^m]{L^{2^m}} \\ & = L
+	\end{align*}
+	
+	Assim,
+	%
+	\begin{align*}
+		\frac{a_1 + \ldots + a_n + (2^m - n)L}{2^m} \ge L & \implies a_1 + \ldots + a_n \ge 2^m L - (2^m - n)L = n \cdot L\\
+		& \implies \frac{a_1 + \ldots + a_n}{n} \ge \sqrt[n]{a_1 \cdot \ldots \cdot a_n}
+	\end{align*}
+
+	Portanto, a desigualdade é válida para todo $n \in N$.
+\end{proof}
