@@ -33,9 +33,11 @@ S_n - S_n \cdot q = a_1 - a_{n+1} = a_1 - a_1 \cdot q^n & \iff S_n\cdot\prn{1-q}
 \end{proof}
 
 \begin{example}
-Diz a lenda que o inventor do xadrez pediu como recompensa 1 grão de trigo pela primeira casa, 2 grãos pela segunda, 4 pela terceira e assim por diante, sempre dobrando a quantidade a cada nova casa. Sabendo que o tabuleiro de xadrez tem 64 casas, qual o número de grãos pedido pelo inventor do jogo?
+Diz a lenda que o inventor do xadrez pediu como recompensa 1 grão de trigo pela primeira casa, 2 grãos pela segunda, 4 pela terceira e assim por diante, sempre dobrando a quantidade a cada nova casa. 
+Sabendo que o tabuleiro de xadrez tem 64 casas, qual o número de grãos pedido pelo inventor do jogo?
 \end{example}
 
 \begin{solution}
-Pelo seu enunciado, o problema pode ser modelado por uma PG $(a_1, a_2, \dots, a_{64})$ tal que $a_i$, $1 \le i \le n$, é o número de grãos que o inventor pediu pela $i$-ésima casa do tabuleiro. A partir da equação para a soma dos $n$ primeiros termos de uma PG, conclui-se que o inventor pediu, no total, $1 \cdot \frac {1 - 2^{64}} {1-2} = 18446744073709551615$ grãos.
+Pelo seu enunciado, o problema pode ser modelado por uma PG $(a_1, a_2, \dots, a_{64})$ tal que $a_i$, $1 \le i \le n$, é o número de grãos que o inventor pediu pela $i$-ésima casa do tabuleiro.
+A partir da equação para a soma dos $n$ primeiros termos de uma PG, conclui-se que o inventor pediu, no total, $1 \cdot \frac {1 - 2^{64}} {1-2} = 2^{64}-1 = 18446744073709551615$ grãos.
 \end{solution}
