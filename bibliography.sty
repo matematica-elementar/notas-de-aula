@@ -7,11 +7,15 @@
 \newcommand{\nameconjuntos}{conjuntos}
 \newcommand{\nameconjuntosnumericos}{conjuntos-numericos}
 \newcommand{\nameequacoeseinequacoes}{equacoes-e-inequacoes}
+\newcommand{\nameinducao}{principio-da-inducao-finita}
+\newcommand{\nameprogressoes}{progressoes}
 
 % Include the .bib files 
 \addbibresource{\bibpath{\nameconjuntos}}
 \addbibresource{\bibpath{\nameconjuntosnumericos}}
 \addbibresource{\bibpath{\nameequacoeseinequacoes}}
+\addbibresource{\bibpath{\nameinducao}}
+\addbibresource{\bibpath{\nameprogressoes}}
 
 % Alias for a \map command to be used on \DeclareSourceMap
 \newcommand{\sourcemapoverwrite}[1]
@@ -32,5 +36,7 @@
     \sourcemapoverwrite{\nameconjuntos}
     \sourcemapoverwrite{\nameconjuntosnumericos}
     \sourcemapoverwrite{\nameequacoeseinequacoes}
+    \sourcemapoverwrite{\nameinducao}
+    \sourcemapoverwrite{\nameprogressoes}
   }
 }
