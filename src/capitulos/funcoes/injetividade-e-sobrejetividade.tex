@@ -1,0 +1,126 @@
+\section{Injetividade e Sobrejetividade}
+
+\begin{definition}
+\label{def:inj-sobr-bij}
+    Considere uma função $f: X \to Y$. Definem-se:
+    %
+    \begin{enumerate}[(i)]
+    \item $f$ é \textdef{sobrejetiva} se, para todo $y \in Y$, existe $x
+    \in X$ tal que $f(x) = y$;
+    \item $f$ é \textdef{injetiva} se, para todos $x_1, x_2 \in X$, $x_1 \ne x_2$ implica que $f(x_1) \ne f(x_2)$;
+    \item $f$ é \textdef{bijetiva} se é sobrejetiva e injetiva.
+    \end{enumerate}
+\end{definition}
+
+Nas Proposições \ref{prop:def-alternativa-sobr}, \ref{prop:def-alternativa-inj-1}, \ref{prop:def-alternativa-inj-2} e \ref{prop:def-alternativa-bij}, são mostradas caracterizações alternativas dos conceitos introduzidos na Definição \ref{def:inj-sobr-bij}.
+Em todas elas, considere $f$ uma função com domínio $X$ e contradomínio $Y$.
+%
+\begin{proposition}
+\label{prop:def-alternativa-sobr}
+    $f$ é sobrejetiva se, e somente se, $f(X) = Y$.
+\end{proposition}
+
+\begin{proposition}
+\label{prop:def-alternativa-inj-1}
+    $f$ é injetiva se, e somente se, para todos $x_1, x_2 \in X$, $f(x_1) = f(x_2)$ implica $x_1 = x_2$.
+\end{proposition}
+
+\begin{proposition}
+\label{prop:def-alternativa-inj-2}
+    $f$ é injetiva se, e somente se, para todo $y \in f(X)$, existe um único $x \in X$ tal que $f(x) = y$.
+\end{proposition}
+
+\begin{proposition}
+\label{prop:def-alternativa-bij}
+    $f$ é bijetiva se, e somente se, para todo $y \in Y$, existe um único $x \in X$ tal que $f(x) = y$.
+\end{proposition}
+
+\begin{example}
+    Quais das propriedades de injetividade, sobrejetividade e bijetividade as funções $p$ e $q$ possuem?
+\end{example}
+
+\begin{solution}
+    Verifiquemos, primeiro, se as funções são injetivas. $p$ não é, pois $p(-1)=1=p(1)$.
+    Já $q$, por outro lado, é injetiva.
+    Para provar isso, sejam $x_1, x_2 \in \R_+$ tais que $q(x_1)=q(x_2)$.
+    Ora, 
+    %
+    \begin{align*}
+        q(x_1) = q(x_2) & \implies \sqrt{x_1} = \sqrt{x_2} \\ & \implies \prn{\sqrt{x_1}}^2 = \prn{\sqrt{x_2}}^2 \\ & \implies x_1 = x_2,
+    \end{align*}
+    %
+    o que nos permite concluir que $q$ é injetiva.
+
+    Agora, vamos à sobrejetividade.
+    $q$ não é sobrejetiva, pois não existe $x \in R_+$ tal que $\sqrt x = -1$, e $-1$ é um elemento do contradomínio dessa função.
+    Já $p$, por sua vez, é sobrejetiva. 
+    De fato; para todo $y \in \R_+$, $p\prn{\sqrt y} = \prn{\sqrt y}^2 = y$, e $\sqrt y$ está no domínio de $p$.
+
+    A bijetividade não é válida para nenhuma das funções, já que $p$ não é injetiva e $p$ não é sobrejetiva.
+\end{solution}
+
+\begin{theorem}
+    Uma função $f: X \to Y$ é invertível se, e somente se, é bijetiva.
+\end{theorem}
+
+\begin{proof}
+    Seja  $f: X \to Y$.
+    \begin{itemize}
+        \item (\emph{Somente se}) Suponha que $f$ é invertível; isso é, existe $g : Y \to X$ tal que $f \fcomp g = \identity{Y}$ e $g \fcomp f = \identity{X}$.
+        Provemos que $f$ é bijetiva. 
+        \begin{itemize}
+            \item (\emph{Sobrejetividade}) Seja $b \in Y$.
+            Tome $g(b)\in X$.
+            Note que:
+            %
+            \begin{align*}
+                f\prn{g(b)} &= \prn{f \fcomp g}(b) \\ &= \identity{Y}(b) \\ &= b.
+            \end{align*}
+            %
+            Assim, $f$ é sobrejetiva.
+            \item (\emph{Injetividade}) Sejam $a_1, a_2 \in X$ tais que $f(a_1)=f(a_2)$.
+            Logo, $g(f(a_1))=g(f(a_2))$.
+            Note que:
+            %
+            \begin{align*}
+                g(f(a_1))=g(f(a_2)) & \implies \prn{g \fcomp f}(a_1) = \prn{g \fcomp f}(a_2) \\
+                & \implies \identity{X}(a_1) = \identity{X}(a_2) \\
+                & \implies a_1 = a_2
+            \end{align*}
+            %
+            Logo, $f$ é injetiva.
+        \end{itemize}
+        %
+        Concluímos, então, que $f$ é bijetiva.
+        \item (\emph{Se}) Suponha que $f$ é bijetiva.
+        Ademais, defina $g: Y \to X$ com lei de formação $g(b)=a$, em que $a \in X$ é tal que $f(a)=b$.
+        Ora, para cada $b \in Y$ existe tal $a$, pela injetividade de $f$.
+        Além disso, como $f$ é injetiva, $a$ é único. 
+        Assim, pela Observação \ref{rem:def-alternativa-funcao}), $g$ é uma função.
+
+        A igualdade $f \fcomp g = \identity Y$ é válida, pois, para todo $b \in Y$,
+        %
+        \begin{align*}
+            \prn{f \fcomp g}(b) & = f\prn{g(b)} \\ &= f(a) \\ &= b
+        \end{align*}
+        %
+        Verifiquemos, agora, que $g \fcomp f = \identity X$.
+        Para tal, seja $a \in X$.
+        Suponha, para chegar a um absurdo, que $\prn{g \fcomp f}(a) \ne a$.
+        Assim,
+        %
+        \begin{equation*}
+            \begin{array}{rlc}
+                \prn{g \fcomp f}(a) \ne a & \implies f\prn{\prn{g \fcomp f}(a)} \ne f(a) & (\text{Injetividade de $f$}) \\
+                & \implies \prn{f \fcomp g \fcomp f}(a) \ne f(a) & \\
+                & \implies \prn{f \fcomp g}\prn{f(a)} \ne f(a) & \\
+                & \implies \identity{Y}\prn{f(a)} \ne f(a) & \\
+                & \implies f(a) \ne f(a) &
+            \end{array}
+        \end{equation*}
+        %
+        Chegamos a um absurdo.
+        Consequentemente, $\prn{f \fcomp g}(a) = a$, o que implica que $g \fcomp f = \identity X$ e nos permite concluir que $f$ é invertível.
+        
+    \end{itemize}
+\end{proof}

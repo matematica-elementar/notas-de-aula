@@ -35,9 +35,6 @@
 % space between paragraphs
 \setlength{\parskip}{0pt} 
 
-% indentation size 
-%\setlength\parindent{4em} 
-
 \onehalfspacing % line spacing
 
 % magic code to insert new line between header and first itemm
@@ -49,20 +46,21 @@
 \def\itemize{\enumfix\olditemize}
 
 % change itemize bullet character
-\renewcommand{\labelitemi}{-}
+\renewcommand{\labelitemi}{--}
+\renewcommand{\labelitemii}{-}
 
 % spacing for lists
-\renewcommand{\@listI}{%
-\leftmargin=0pt
-\rightmargin=0pt
-\labelsep=5pt
-\labelwidth=20pt
-\itemindent=0pt
-%\listparindent=\parindent %indentation at the beginning of paragraph
-\topsep=0pt plus 2pt minus 4pt
-\partopsep=0pt plus 1pt minus 1pt
-\parsep=0pt plus 1pt
-\itemsep=0pt}
+% \renewcommand{\@listI}{%
+% \leftmargin=0pt
+% \rightmargin=0pt
+% \labelsep=5pt
+% \labelwidth=20pt
+% \itemindent=0pt
+% %\listparindent=\parindent %indentation at the beginning of paragraph
+% \topsep=0pt plus 2pt minus 4pt
+% \partopsep=0pt plus 1pt minus 1pt
+% \parsep=0pt plus 1pt
+% \itemsep=0pt}
 
 % change caption label formatting
 \captionsetup[table]{
@@ -202,6 +200,7 @@
 %    Funções gerais
 %
 \newcommand{\identity}[1]{\mathcal{I}_{#1}}
+\newcommand{\fcomp}{\circ}
 
 
 %
