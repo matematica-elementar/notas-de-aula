@@ -12,19 +12,21 @@ g \circ f : & X & \to     & Y \subset U & \to & V \\
 \end{definition}
 
 \begin{example}
-Seja $f: X \to Y$ uma função. Mostre que $f \circ \I_X = f$ e $\I_Y \circ f = f$.
+Seja $f: X \to Y$ uma função. Mostre que $f \circ \identity X = f$ e $\identity Y \circ f = f$.
 \end{example}
 
 \begin{solution}
-Note que o domínio de $f \circ \I_X$ é $X$ já que $X$ é o domínio de $\I_X$. Logo, $f$ e $f \circ \I_X$ têm o mesmo domínio. Um resultado análogo vale para o contradomínio dessas funções:  $Y$ também é contradomínio de $f \circ \I_X$ pois é o contradomínio de $f$. Ademais, note que, para qualquer $x \in X$, 
+Note que o domínio de $f \circ \identity X$ é $X$ já que $X$ é o domínio de $\identity X$. Logo, $f$ e $f \circ \identity X$ têm o mesmo domínio.
+Um resultado análogo vale para o contradomínio dessas funções:  $Y$ também é contradomínio de $f \circ \identity X$ pois é o contradomínio de $f$.
+Ademais, note que, para qualquer $x \in X$, 
 %
 \begin{align*}
-(f \circ \I_X)\prn x &= f\prn{\I_X \prn x} \text{(definição de composição)} \\ &= f(x) \text{(definição de identidade)}.
+(f \circ \identity X)\prn x &= f\prn{\identity X \prn x} \text{(definição de composição)} \\ &= f(x) \text{(definição de identidade)}.
 \end{align*}
 % 
-Das igualdades de domínio, contradomínio e lei de associação de $f$ e $f \circ \I_X$, conclui-se que essas funções são iguais.
+Das igualdades de domínio, contradomínio e lei de associação de $f$ e $f \circ \identity X$, conclui-se que essas funções são iguais.
 
-A demonstração da igualdade $\I_Y \circ f = f$ fica como exercício para o leitor.
+A demonstração da igualdade $\identity Y \circ f = f$ fica como exercício para o leitor.
 \end{solution}
 
 \begin{example}
@@ -41,7 +43,7 @@ p \circ q : & R_+ & \to     & \R \subset \R & \to     & \R_+ \\
 \end{array}
 \end{equation*}
 %
-Do diagrama, conclui-se que $p \circ q = \I_{\R_+}$.
+Do diagrama, conclui-se que $p \circ q = \identity{\R_+}$.
 \end{solution}
 
 \begin{onlineact}[\khan{https://pt.khanacademy.org/math/algebra2/manipulating-functions/function-composition/e/compose-functions}{Encontre Funções Compostas}]
