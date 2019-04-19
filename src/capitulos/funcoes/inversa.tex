@@ -1,0 +1,34 @@
+\section{Função inversa}
+
+\begin{definition}
+Uma função $f: X \to Y$ é \textdef{invertível} se existe uma função $g: Y \to X$ tal que:
+%
+\begin{enumerate}[(i)]
+  \item $f \circ g = \identity Y$;
+  \item $g \circ f = \identity X$.
+\end{enumerate}
+%
+Nesse caso, a função $g$ é dita \textdef{função inversa} de $f$ e denotada por $g = f^{-1}$.
+\end{definition}
+
+\begin{example}
+\label{ex:q-inversa-de-p}
+    A função $q$ é inversa de $p$?
+\end{example}
+
+\begin{solution}
+Do Exemplo \ref{ex:comp-pq}, já temos que $p \circ q = \identity{\R_+}$.
+Então, devemos verificar se $q \circ p = \identity{\R}$.
+Para tal, seja $x \in \R$. 
+Note que:
+%
+\begin{align*}
+    \prn{q \circ p}(x) &= q(p(x)) \\ &= q(x^2) \\ &= \sqrt{x^2} \\ &= \modu{x}.
+\end{align*}
+%
+Assim, temos que $q \circ p \ne \identity{\R}$, pois, por exemplo, $\identity{\R}(-3) = -3 \ne 3 = \modu{-3} = \prn{q \circ p}(-3)$.
+Portanto, $q$ não é a função inversa de $p$.
+\end{solution}
+
+O Exemplo \ref{ex:q-inversa-de-p} ilustra a importância de se verificar, quando se quer provar que uma função é inversa da outra, todas as condições da definição.
+Demonstrar a validade de apenas uma delas não garante que uma função é inversa de outra, mesmo que, inicialmente, pensemos o contrário.
