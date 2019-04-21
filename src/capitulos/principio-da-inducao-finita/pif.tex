@@ -74,36 +74,26 @@ Portanto $p(n)$ vale para todo $n \in \nnats$.
 \end{solution}
 
 \begin{example}
-Mostre que, para todo número $n \in \nnats$, $n>3$, vale que:
-%
-\begin{equation*}
-2^n < n!
-\end{equation*}
+Mostre que, para todo número $n \in \nnats$ tal que $n>3$ vale:
+$$2^n < n!$$
 \end{example}
 
 \begin{solution}
-Utilizaremos indução finita em $n \in \nnats$, $n >3$.
-%
-\begin{itemize}
-	\item \textit{Caso base} ($n=4$):
-	%
-	\begin{equation*}
-	2^4 =16 < 24=4!
-	\end{equation*}  
-	%
-	\item \textit{Passo de indução}:
+Considere $n \in \nnats$ tal que $n >3$. Provemos que $2^n < n!$ aplicando Indução em $n$.
 
-	Suponha, como hipótese de indução, que $2^k < k!$ para algum $k \in \nnats$, $k>3$. Além dessa hipótese, temos que $2 < k+1$ pois $k>3$. Logo,
-	%
-	\begin{align*}
-	0<2<k+1 \text{ e } 0<2^k<k! & \implies 2\cdot 2^k < k!(k+1) \\
-	& \iff 2^{k+1} < (k+1)!,
-	\end{align*}
-	%
-	provando a validade da inequação para $n=k+1$.
-\end{itemize}
-%
-Portanto, $2^n < n!$ para todo $n \in \nnats$, $n>3$.
+\case{Caso base $[n=4]$} Temos $2^4 = 16$ e $4! = 24$. Como $16 < 24$, o caso base é satisfeito.
+
+\case{Passo Indutivo}
+Suponha, como Hipótese de Indução, que vale $2^k < k!$ para algum $k \in \nnats$ tal que $k > 3$.
+
+Provemos que vale $2^{k+1} < (k+1)!$.
+Observe que $2 < k + 1$, visto que $2 < 3 < k < k + 1$. Também temos que $2$ e $2^k$ são positivos. Sendo assim, podemos concluir que:
+\begin{align*}
+2^k < k! \text{ e } 2 < k+1 & \implies 2^k \cdot 2 < k!(k+1) \\
+& \implies 2^{k+1} < (k+1)!.
+\end{align*}
+Assim provando que vale o passo indutivo.
+Portanto, $2^n < n!$ para qualquer $n \in \nnats$ tal que $n>3$.
 \end{solution}
 
 \begin{example}
