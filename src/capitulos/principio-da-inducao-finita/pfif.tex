@@ -21,8 +21,31 @@ Todo número natural $N$ maior que 1 pode ser escrito como um produto
 N = p_1 \cdot p_2 \cdot p_3 \dots p_m,
 \end{equation}
 %
-onde $m \ge 1$ é um número natural e os $p_i$, $1 \le i \le m$, são números primos. Além disso, a fatoração exibida na Equação \ref{theorem:tfa} é única se exigirmos que $p_1 \le p_2 \le \dots \le p_m$.
+onde $m \ge 1$ é um número natural e os $p_i$, $1 \le i \le m$, são números primos.
+Além disso, a fatoração exibida na Equação \ref{theorem:tfa} é única se exigirmos que $p_1 \le p_2 \le \dots \le p_m$.
 \end{theorem}
+
+\begin{proof}
+  Seja $N$ um número natural maior que 1. 
+  Provemos, inicialmente, que existe uma fatoração de $N$ em primos.
+  Para isso, usaremos o Princípio Forte da Indução Finita.
+
+  \begin{itemize}
+    \item \emph{Caso base ($N = 2$)}. O $N$ já é sua própria fatoração em primos.
+    \item \emph{Passo de Indução}. Suponhamos, como hipótese indutiva, que todo $k \in \N$ tal que $2 \le k \le N-1$ pode ser escrito como um produto de primos.
+    Para provar que $N$ também tem essa propriedade, consideremos os casos a seguir:
+
+    \begin{itemize}
+      \item \emph{$N$ é primo}. Essa situação é similar à base: $N$ já é um produto de primos;
+      \item \emph{$N$ é composto}. Nesse caso, $N$ pode ser escrito como um produto $ab$, em que $a$ e $b$ são números naturais maiores que 1 e menores que $N$.
+      Consequentemente, pela hipótese indutiva, $a = p_1 \cdot p_2 \cdot \ldots \cdot p_{n_a}$ e $b = q_1 \cdot q_2 \cdot \ldots \cdot q_{n_b}$ para alguns $n_a, n_b \ge 1$, e $p$'s e $q$'s primos.
+      Logo, $N = p_1 \cdot p_2 \cdot \ldots \cdot p_{n_a} \cdot q_1 \cdot q_2 \cdot \ldots \cdot q_{n_b}$, e, portanto, pode ser escrito como um produto de primos.
+     \end{itemize}
+  \end{itemize}
+  
+  A demonstração da unicidade da fatoração vai além do escopo deste texto. 
+
+\end{proof}
 
 \begin{example}
 Critique a argumentação a seguir.
