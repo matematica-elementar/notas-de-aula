@@ -1,4 +1,10 @@
 \section{Introdução}
 
 Imagine uma fila com infinitos dominós, um atrás do outro. Suponha que eles estejam de tal modo distribuídos que, uma vez que um dominó
-caia, o seu sucessor na fila também cai. O que acontece quando derrubamos o primeiro dominó?
+caia, o seu sucessor na fila também cai. O que acontece quando derrubamos o primeiro dominó? Não podemos dizer que todas as peças cairão, pois seria preciso um tempo infinito para que isso ocorresse. Porém, se desejas que alguma peça específica caia, basta ter tempo disponível que isso ocorrerá em algum momento.
+
+O princípio da indução finita pode ser interpretado como essa fila com infinitos dominós. Se quisermos provar que um determinado resultado vale para qualquer número natural a partir de um valor especificado $n_0 \in \N$, basta verificar que: 
+\begin{itemize}
+    \item O resultado proposto é válido para $n_0$, representando o primeiro dominó sendo derrubado;
+    \item Se o resultado for válido para algum $n \in \N$, então o resultado também é válido para $n+1$, representando que qualquer peça de dominó ao cair, derrubará a peça seguinte.
+\end{itemize}
