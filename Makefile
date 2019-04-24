@@ -1,3 +1,10 @@
+DOCUMENT		= $(SRC_DIR)main
+SRC_DIR			= ./src/
+COMPILER		= pdflatex
+BIBER			= biber
+BUILD_FILES		= *.{pdf,log,aux,bcf,out,run,xml,toc}
+BIB_FILES		= *.{bbl,blg}
+
 all: help
 
 help:
@@ -7,11 +14,11 @@ help:
 	@echo -e "help\t\t- show this message."
 
 build: clean
-	pdflatex main.tex
-	biber main
-	pdflatex main.tex
-	pdflatex main.tex
+	$(COMPILER)	$(DOCUMENT).tex
+	$(BIBER)	$(DOCUMENT)
+	$(COMPILER)	$(DOCUMENT).tex
+	$(COMPILER)	$(DOCUMENT).tex
 
 clean:
-	rm -rf main.aux main.log main.out main.toc main.pdf
-	rm -rf main.bbl main.bcf main.blg main.run.xml
+	rm -rf $(SRC_DIR)$(BUILD_FILES)
+	rm -rf $(SRC_DIR)$(BIB_FILES)
