@@ -48,6 +48,27 @@ Com isso, concluímos que vale $p(k+1)$. Sendo assim, o passo indutivo é satisf
 Portanto, pelo Princípio da Indução Finita, a equação $p(n) : 2+4+\dots + 2n=n(n+1)$ é válida para todo $n \in \nnats$.
 \end{solution}
 
+\begin{solution} (Versão simplificada só para análise)
+	A fim de provar que a soma dos $n$ primeiros números pares é igual a $n(n+1)$, ou seja, $2+4+\dots + 2n = n(n+1)$ para todo $n \in \nnats$, aplicaremos indução em $n$.
+	
+	\case{Caso base $[n=1]$}
+	Observe que $2 = 1(1+1)$, ou seja, a soma do primeiro número par (somente o 2) é igual a $1(1+1)$. Logo, o caso base é válido.
+	
+	\case{Passo indutivo}
+	Suponha, como Hipótese de Indução (HI), que para algum $n \in \nnats$, vale a equação:
+	$$2+4+\dots+2n=n(n+1).$$
+	Provemos então que:
+	$$2+4+\dots + 2n + 2(n+1) = (n+1)[(n+1)+1].$$
+	De fato, segue da (HI) que:
+	\begin{align*}
+	2+4+\dots+2n +2(n+1)	&= n(n+1) + 2(n+1) \\
+	&= (n+1)(n+2) \\
+	&= (n+1)[(n+1)+1].
+	\end{align*}
+	Com isso, concluímos que o passo indutivo é satisfeito.
+	Portanto, pelo Princípio da Indução Finita, a equação $2+4+\dots + 2n=n(n+1)$ é válida para todo $n \in \nnats$.
+	\end{solution}
+
 \begin{example}
 Demonstre que, para qualquer $n \in \N^*$, é válida a igualdade:
 $$1+3+\dots +\prn {2n-1} = n^2.$$
