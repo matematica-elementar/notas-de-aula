@@ -243,3 +243,6 @@ TSWLatexianTemp*
 
 # vs code configuration
 .vscode
+
+# build directory
+build/
