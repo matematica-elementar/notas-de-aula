@@ -20,13 +20,11 @@
     \mainmatter % turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers
     
     {
-        \newcommand{\templatesdir}{src/esqueletos-dos-capitulos/}
-
-        \subimport{\templatesdir}{conjuntos.tex}
-        \subimport{\templatesdir}{conjuntos-numericos.tex}
-        \subimport{\templatesdir}{equacoes-e-inequacoes.tex}
-        \subimport{\templatesdir}{principio-da-inducao-finita.tex}
-        \subimport{\templatesdir}{funcoes.tex}
-        \subimport{\templatesdir}{progressoes.tex}
+        \subimport{src/chapters/conjuntos/}{main.tex}
+        \subimport{src/chapters/conjuntos-numericos/}{main.tex}
+        \subimport{src/chapters/equacoes-e-inequacoes/}{main.tex}
+        \subimport{src/chapters/principio-da-inducao-finita/}{main.tex}
+        \subimport{src/chapters/funcoes/}{main.tex}
+        \subimport{src/chapters/progressoes/}{main.tex}
     }
 \end{document}
