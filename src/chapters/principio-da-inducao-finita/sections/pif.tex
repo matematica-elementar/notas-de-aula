@@ -69,30 +69,29 @@ Portanto, pelo Princípio da Indução Finita, a equação $p(n) : 2+4+\dots + 2
 	Portanto, pelo Princípio da Indução Finita, a equação $2+4+\dots + 2n=n(n+1)$ é válida para todo $n \in \nnats$.
 	\end{solution}
 
+
 \begin{example}
 Demonstre que, para qualquer $n \in \N^*$, é válida a igualdade:
 $$1+3+\dots +\prn {2n-1} = n^2.$$
 \end{example}
 
 \begin{solution}
-Considere $n \in \nnats$ e a proposição $p(n) : 1+3+\dots +\prn {2n-1} = n^2$. Demonstremos que $p(n)$ vale aplicando Indução em $n$.
+Demonstremos que a igualdade vale aplicando Indução em $n$.
 
 \case{Caso base $[n=1]$}
 Como $1=1^2$, o caso base é válido.
 
 \case{Passo indutivo}
-Como Hipótese de Indução, assuma que $p(k)$ vale para algum $k\in \nnats$, ou seja:
-$$1+3+\dots+(2k-1) = k^2.$$
-Provemos a validade da equação $p(k+1)$:
-$$1+3+\dots+(2k-1)+(2(k+1)-1) = (k+1)^2.$$
-Note que $2(k+1)-1 = 2k + 2 - 1 = 2k +1$.
-Sendo assim, a partir da (HI), ao somar $2k + 1$ em ambos os lados da equação obtemos:
+Assuma, como Hipótese de Indução (HI), que a igualdade vale para algum $n\in \nnats$, ou seja:
+$$1+3+\dots+(2n-1) = n^2.$$
+Provemos a validade da equação:
+$$1+3+\dots+(2n-1)+[2(n+1)-1] = (n+1)^2.$$
+Calculando o lado esquerdo da igualdade, obtemos:
 \begin{align*}
-1+3+\dots+(2k-1) + (2k + 1) &= k^2  + (2k + 1) \\
-& = k^2 + 2k + 1 \\
-& = (k + 1)^2
+\underbrace{1+3+\dots+(2n-1)}_{\text{HI}} + [2(n+1)-1] & = \underbrace{n^2}_{\text{HI}} + 2n + 1 \\
+& = (n + 1)^2
 \end{align*}
-Com isso, provamos que vale $p(k+1)$, e por consequência, o passo indutivo.
+Com isso, provamos que o passo indutivo é válido.
 Portanto $p(n)$ vale para todo $n \in \nnats$.
 \end{solution}
 
