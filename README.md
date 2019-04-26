@@ -13,6 +13,6 @@ Com isso, o arquivo de extensão .pdf será compilado com o nome `main.pdf`.
 
 
 ## Autores
-- Antonio Igor de Oliveira [@tonhaunm](https://github.com/tonhaunm)
-- Josenaldo Araujo da Silva [@jjosenaldo](https://github.com/jjosenaldo)
+- Prof. Antonio Igor Silva de Oliveira [@tonhaunm](https://github.com/tonhaunm)
+- Josenaldo Araújo da Silva [@jjosenaldo](https://github.com/jjosenaldo)
 - Giordano Rodrigues [@giordanorn](https://github.com/giordanorn)
