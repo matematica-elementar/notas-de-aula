@@ -147,19 +147,21 @@ Seja $n \in \N$ tal que $n\ge 3$. Mostre  que podemos cobrir os $n^2$ pontos no 
 \end{example}
 
 \begin{example}
-Um rei muito rico possui $3^n$ moedas de ouro. No entanto, uma dessas moedas é falsa, e seu peso é menor que o peso das demais. Com uma balança de dois pratos e sem nenhum peso, mostre que é possível encontrar a moeda falsa com apenas $n$ pesagens.
+Um rei muito rico possui $3^n$ moedas de ouro, onde $n \in \nnats$. No entanto, uma dessas moedas é falsa, e seu peso é menor que o peso das demais. Com uma balança de dois pratos e sem nenhum peso, mostre que é possível encontrar a moeda falsa com apenas $n$ pesagens.
 \end{example}
 
 \begin{solution}
 Dado que o rei tem $3^n$ moedas, usaremos indução finita em $n \in \nnats$. 
 
-Para $n=1$, ou seja, três moedas, coloca-se uma moeda em cada prato. Se as moedas tiverem pesos iguais, então a moeda falsa é a que não foi colocada na balança. Do contrário, a moeda falsa é a mais leve.
+\begin{itemize}
+	\item \textit{Caso base} ($n=1$): Para $n=1$, ou seja, três moedas, coloca-se uma moeda em cada prato. Se as moedas tiverem pesos iguais, então a moeda falsa é a que não foi colocada na balança. Do contrário, a moeda falsa é a mais leve.
 
-Como hipótese de indução, suponhamos que, para algum $k \in \nnats$, seja possível identificar a moeda falsa dentre $3^k$ moedas realizando-se $k$ pesagens. Suponha que temos $3^{k+1}$ moedas. 
+	\item \textit{Passo de indução} Como hipótese de indução, suponhamos que, para algum $n \in \nnats$, seja possível identificar a moeda falsa dentre $3^n$ moedas realizando-se $n$ pesagens. Suponha que temos $3^{n+1}$ moedas. 
 
-Separando as moedas em três grupos com $3^k$ moedas cada, coloca-se um grupo em cada prato da balança. Assim, analogamente ao caso $n = 1$, identificamos o grupo com a moeda falsa. Tal grupo tem $3^k$ moedas e, pela hipótese de indução, pode-se identificar a moeda falsa com mais $k$  pesagens, totalizando $k+1$ pesagens.
+	Separando as moedas em três grupos com $3^n$ moedas cada, coloca-se um grupo em cada prato da balança. Assim, analogamente ao caso $n = 1$, identificamos o grupo com a moeda falsa. Tal grupo tem $3^n$ moedas e, pela hipótese de indução, pode-se identificar a moeda falsa com mais $n$  pesagens, totalizando $n+1$ pesagens. Concluímos assim a veracidade do passo de indução.
 
-Assim, para cada $n \in \nnats$, é possível identificar a moeda falsa dentre $3^n$ moedas com apenas $n$ pesagens.
+		Portanto, para cada $n \in \nnats$, é possível identificar a moeda falsa dentre $3^n$ moedas com apenas $n$ pesagens.
+\end{itemize}
 \end{solution}
 
 \begin{theorem}
