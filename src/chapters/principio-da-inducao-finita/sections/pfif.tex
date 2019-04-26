@@ -76,4 +76,9 @@ B = \set {b_1, b_2, \dots, b_n} \text{ e } C= \set{ b_2, \dots, b_{n+1}}.
 \end{equation*}
 %
 De fato, ambos os conjuntos têm $n$ elementos. Assim, as bolas $b_1, b_2, \dots , b_n$ têm a mesma cor. Do mesmo modo, as bolas do conjunto $C$ também têm a mesma cor. Em particular, as bolas $b_n$ e $b_{n+1}$ têm a mesma cor (ambas estão em $C$). Assim, todas as $n+1$ bolas têm a mesma cor.}
+\begin{solution}
+O problema dessa demonstração está no passo indutivo que não é válido para todo $n \in \nnats$, em particular, não temos o caso em que $n=1$ implique no caso em que $n=2$.
+
+De fato, supondo que o caso $n=1$ seja verdade, o que até já foi provado no caso base, vamos aplicar a ideia apresentada no passo indutivo e verificar que não se pode provar o caso em que $n=2$. Teremos $A = \set {b_1, b_2}$ e consequentemente $B = \set {b_1}$ e $C = \set {b_2}$. Note que podemos usar o caso em que $n=1$ para provar que todas as bolas de $B$ e de $C$ possuem a mesma cor, mas como não há nenhuma bola em comum nesses dois conjuntos, nada garante que $b_1$ e $b_2$ sejam da mesma cor. Invalidando assim a demonstração do passo indutivo. Fazendo uma analogia com os dominós, o que ocorreu foi a queda do primeiro dominó, mas essa queda não derrubou o segundo dominó, deixando-o de pé assim como as peças seguintes.
+\end{solution}
 \end{example}
