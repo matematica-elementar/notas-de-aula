@@ -1,0 +1,170 @@
+\section{Progressão Aritmética}
+
+\begin{definition}
+Uma \textdef{progressão aritmética} --- ou, simplesmente, PA --- é uma sequência na qual a diferença entre um termo, quando este não é o primeiro, e seu anterior  é constante. Essa diferença constante é chamada de \textdef{razão} da progressão e representada pela
+letra $r$.
+\end{definition}
+
+\begin{remark}
+De maneira recursiva, o $n$-ésimo, $n>1$, termo de uma PA é escrito
+como:
+%
+\begin{equation*}
+a_n = a_{n-1} + r.
+\end{equation*}
+\end{remark}
+
+\begin{example}
+Uma fábrica de automóveis produziu 400 veículos em janeiro e aumenta mensalmente sua produção em 30 veículos. Quantos veículos foram produzidos em junho?
+\end{example}
+
+\begin{solution}
+A produção de cada mês será, em número de veículos:
+%
+\begin{itemize}
+	\item Janeiro -- 400;
+	\item Fevereiro -- 430;
+	\item Março -- 460;
+	\item Abril -- 490;
+	\item Maio -- 520;
+	\item Junho -- 550.
+\end{itemize}
+%
+Poderíamos ter obtido a produção de junho calculando $400 + 5 \cdot 30$.
+\end{solution}
+
+\begin{remark}
+Em uma PA $\prn{ a_1 , a_2 , a_3 , \dots }$, para avançar um termo basta somar a razão; para avançar dois termos, basta somar duas
+vezes a razão, e assim por diante. Dessa forma, teremos $a_{13} = a_5 +8r$, $a_4 = a_{17} - 13r$, e, mais geralmente, 
+%
+\begin{equation*}
+a_i = a_j + \prn{i-j}r.
+\end{equation*}
+%
+Em particular:
+%
+\begin{equation*}
+a_n = a_1 + \prn{n-1}r.
+\end{equation*}
+\end{remark}
+
+\begin{example}
+Em uma PA, o quinto termo vale 30, e o vigésimo termo vale 50. Quanto vale o oitavo termo dessa progressão?
+\end{example}
+
+\begin{solution}
+Seja $(a_1, a_2, \dots)$ uma PA tal que $a_5 = 30$ e $a_{20}=50$. Note que:
+%
+\begin{align*}
+a_5 = a_{20}+(5-20)\cdot r & \iff 30 = 50-15r\\
+& \iff r = \frac 4 3
+\end{align*}
+%
+Assim,
+%
+\begin{align*}
+a_8 & = a_5+(8-5) \cdot \frac 4 3 \\
+& = 30 + 3 \cdot \frac 4 3 \\
+& =  34
+\end{align*}
+\end{solution}
+
+\begin{example}
+Qual a razão da PA que se obtém inserindo 10 termos entre os números 3 e 25?
+\end{example}
+
+\begin{solution}
+Seja $(a_1, a_2, \dots)$ uma PA tal que $a_1 = 3$ e $a_{12} = 25$. Note que há 10 termos entre 3 e 25. Assim,
+%
+\begin{align*}
+a_{12} = a_1 + (12-1)\cdot r & \iff 25 = 3 + 11r\\
+& \iff r = 2
+\end{align*}
+%
+A razão da PA é igual a 2.
+\end{solution}
+
+\begin{example}
+O cometa Halley visita a Terra a cada 76 anos. Sua última passagem por aqui foi em 1986. Quantas vezes ele visitou a Terra desde o nascimento de Cristo? Em que ano foi sua primeira passagem na Era Cristã?
+\end{example}
+
+\begin{solution}
+Seja $(a_1, a_2, \dots)$ uma PA de razão $-76$ e $a_1 = 1986$. Quer-se saber qual o maior $n \in \N$ tal que $a_n \ge 0$. Calculemos:
+%
+\begin{align*}
+a_1+(n-1)\cdot r\ge 0 & \iff 1986+(n-1)\cdot(-76)\ge 0 \\
+& \iff 76n \le 2062 \\
+& \iff n \le 27{,}13
+\end{align*}
+%
+Logo, o cometa passou 27 vezes na Era Cristã. Além disso, sua primeira passagem nessa era foi no ano $a_{27}=1986+(27-1)\cdot(-76)=10$.
+\end{solution}
+
+\begin{onlineact}
+\khan{https://pt.khanacademy.org/math/algebra/sequences/introduction-to-arithmetic-squences/e/arithmetic_sequences_2}{Use Fórmulas de Progressão Aritmética}
+\end{onlineact}
+
+\begin{onlineact}
+\khan{https://pt.khanacademy.org/math/algebra/sequences/constructing-arithmetic-sequences/e/explicit-and-recursive-formulas-of-arithmetic-sequences}{Conversão das Formas Recursiva e Explícita de
+Progressões Aritméticas}
+\end{onlineact}
+%
+\noindent Veja o desempenho na Missão Álgebra I.
+
+\begin{example} 
+O preço de um carro novo é de R\$ $30.000{,}00$ e diminui R\$ $1.000{,}00$ a cada ano de uso. Qual será o preço com quatro anos de uso?
+\end{example}
+
+\begin{solution}
+Seja $(a_0, a_1, \dots)$ uma PA tal que $a_0 = 30.000$ e $r = -1.000$. Calculemos:
+%
+\begin{align*}
+a_4 &= a_0+(4-0)\cdot r\\ &=30.000-4.000 \\ &= 26.000
+\end{align*}
+%
+O preço do carro após quatro anos de uso será de R\$ $26.000{,}00$.
+\end{solution}
+
+\begin{example}
+Determine quatro números em uma PA crescente tais que sua soma é 8 e a soma de seus quadrados é 36.
+\end{example}
+
+\begin{solution}
+Considere os quatro termos abaixo em uma PA de razão $2r$:
+%
+\begin{equation*}
+x-3r, x-r, x+r, x+3r.
+\end{equation*}
+%
+Por hipótese do problema, tem-se que:
+%
+\begin{equation*}
+x-3r+x-r+x+r+x+3r = 4x = 8 
+\end{equation*}
+%
+Logo, $x=2$. Também por hipótese do problema, 
+%
+\begin{align*}
+\prn{2-3r}^2 + \prn{2-r}^2 + \prn{2+r}^2 + \prn{2+3r}^2 = 36 & \iff 4 \cdot 2^2 + 2r^2 + 2\cdot 9r^2 =  36 \\ & \iff 20r^2 = 20 \\ & \iff r = \pm 1
+\end{align*}
+%
+Note que, tanto para $r=1$ quanto para $r=-1$, os quatro números desejados são $-1$, $1$, $3$ e $5$.
+\end{solution}
+
+\begin{definition}
+\label{definition:pa-po-estc}
+Uma PA de razão $r \ne 0$ é chamada de \textdef{progressão aritmética de primeira ordem}. Se $r=0$, chamamos de \textdef{progressão aritmética estacionária}.
+\end{definition}
+
+\begin{remark}
+Os termos introduzidos na Definição \ref{definition:pa-po-estc} são motivados pelo fato de que, em uma PA, o termo geral é dado por um polinômio em $n$, a saber:
+%
+\begin{equation*}
+a_n = a_1 + \prn{n-1} r = r \cdot n + \prn{a_1 - r}.
+\end{equation*}
+%
+\noindent Assim, se $r\ne 0$, esse polinômio é de grau 1. Note que, se $r=0$, a PA é constante.
+
+A recíproca desse resultado também é válida, ou seja, se uma sequência tiver seu termo de ordem $n$ $\prn{a_n}$ definido por um
+polinômio em $n$ de grau menor ou igual a 1, então essa sequência será uma PA.
+\end{remark}

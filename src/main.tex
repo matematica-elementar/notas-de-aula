@@ -1,0 +1,29 @@
+\documentclass[a4paper,12pt, oneside]{book}
+\usepackage{config/main}
+\usepackage{config/bibliography}
+\usepackage{config/titlepage}
+
+\begin{document}
+    \nocite{*}
+    % ------------------------------------------------------------------------------
+    % Maketitle
+    % ------------------------------------------------------------------------------
+    \thispagestyle{empty}       % Remove page numbering on this page
+
+    \printtitle                 % Print the title data as defined above
+        \vfill
+    \printauthor                % Print the author data as defined above
+    \newpage
+    
+    \frontmatter % turns off chapter numbering, uses roman numerals for page numbers
+    \tableofcontents
+    \mainmatter % turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers
+    
+    {
+        \subimport{src/chapters/conjuntos/}{main.tex}
+        \subimport{src/chapters/conjuntos-numericos/}{main.tex}
+        \subimport{src/chapters/equacoes-e-inequacoes/}{main.tex}
+        \subimport{src/chapters/principio-da-inducao-finita/}{main.tex}
+        \subimport{src/chapters/funcoes/}{main.tex}
+    }
+\end{document}

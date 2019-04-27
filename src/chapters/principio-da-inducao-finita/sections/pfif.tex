@@ -1,0 +1,84 @@
+\section{Princípio Forte da Indução Finita}
+
+\begin{theorem}[Princípio Forte da Indução Finita]
+Considere $n_0$ um inteiro não negativo. Suponhamos que, para cada inteiro $n \ge n_0$, seja dada uma proposição $p \prn n$. Suponha que se pode verificar as seguintes propriedades:
+%
+\begin{enumerate}[(a)]
+  \item $p \prn{n_0}$ é verdadeira;
+  \item Se para cada inteiro não negativo $k$, com $n_0 \le k \le n$, temos que
+   $p \prn k$ é verdadeira, então $p \prn {n+1}$ também
+  é verdadeira.
+\end{enumerate}
+%
+Então, $p \prn n$ é verdadeira para qualquer $n \ge n_0$.
+\end{theorem}
+
+\begin{theorem}[Teorema Fundamental da Aritmética]
+Todo número natural $N$ maior que 1 pode ser escrito como um produto
+%
+\begin{equation}
+\label{theorem:tfa}
+N = p_1 \cdot p_2 \cdot p_3 \dots p_m,
+\end{equation}
+%
+onde $m \ge 1$ é um número natural e os $p_i$, $1 \le i \le m$, são números primos.
+Além disso, a fatoração exibida na Equação \ref{theorem:tfa} é única se exigirmos que $p_1 \le p_2 \le \dots \le p_m$.
+\end{theorem}
+
+\begin{proof}
+  Seja $N$ um número natural maior que 1. 
+  Provemos, inicialmente, que existe uma fatoração de $N$ em primos.
+  Para isso, usaremos o Princípio Forte da Indução Finita.
+
+  \begin{itemize}
+    \item \emph{Caso base} [$N = 2$]: O $N$ já é sua própria fatoração em primos, pois $2$ é um número primo.
+    \item \emph{Passo indutivo}: Suponhamos, como hipótese indutiva, que todo $k \in \N$ tal que $2 \le k \le N-1$ pode ser escrito como um produto de primos.
+    Para provar que $N$ também tem essa propriedade, consideremos os casos a seguir:
+
+    \begin{itemize}
+      \item \emph{$N$ é primo}. Essa situação é similar à base: $N$ já é um produto de primos;
+      \item \emph{$N$ é composto}. Nesse caso, $N$ pode ser escrito como um produto $ab$, em que $a$ e $b$ são números naturais maiores que 1 e menores que $N$.
+      Consequentemente, pela hipótese indutiva, $a = p_1 \cdot p_2 \cdot \ldots \cdot p_{n_a}$ e $b = q_1 \cdot q_2 \cdot \ldots \cdot q_{n_b}$ para alguns $n_a, n_b \ge 1$, e $p$'s e $q$'s primos.
+      Logo, $N = p_1 \cdot p_2 \cdot \ldots \cdot p_{n_a} \cdot q_1 \cdot q_2 \cdot \ldots \cdot q_{n_b}$, e, portanto, pode ser escrito como um produto de primos.
+     \end{itemize}
+  \end{itemize}
+  
+  A demonstração da unicidade da fatoração vai além do escopo deste texto. 
+
+\end{proof}
+
+\begin{example}
+Critique a argumentação a seguir.
+
+\textit{Quer-se provar que todo número natural é pequeno. Evidentemente, 1 é um número pequeno. Além disso, se $n$ for pequeno, $n+1$ também o será, pois não se torna grande um número pequeno simplesmente somando-lhe uma unidade. Logo, por indução, todo número natural é pequeno}.
+
+\begin{solution}
+O problema da argumentação é que a propriedade ``pequeno'' não é algo bem definido para números naturais. Para utilizarmos o Princípio da indução finita para se provar algum resultado, é preciso que o resultado seja algo bem definido. 
+\end{solution}
+\end{example}
+
+\begin{example}
+Considere a seguinte afirmação, evidentemente falsa:
+
+\textit{Em um conjunto qualquer de $n$ bolas, todas as bolas possuem a mesma cor}.
+
+Analise a seguinte demonstração por indução para a afirmação anterior e aponte o problema da demonstração.
+
+{\it Para $n=1$, nossa proposição é verdadeira pois em qualquer conjunto com uma bola, todas as bolas têm a mesma cor, já que só existe uma bola. 
+
+Assumamos, por hipótese de indução, que a afirmação é verdadeira para $n$ e provemos que a afirmação é verdadeira para
+$n+1$.
+
+Ora, seja $A = \set {b_1, \dots, b_n, b_{n+1}}$ o conjunto  com $n+1$ bolas referido. Considere os subconjuntos $B$ e $C$ de $A$ com $n$ elementos, construídos como:
+%
+\begin{equation*}
+B = \set {b_1, b_2, \dots, b_n} \text{ e } C= \set{ b_2, \dots, b_{n+1}}.
+\end{equation*}
+%
+De fato, ambos os conjuntos têm $n$ elementos. Assim, as bolas $b_1, b_2, \dots , b_n$ têm a mesma cor. Do mesmo modo, as bolas do conjunto $C$ também têm a mesma cor. Em particular, as bolas $b_n$ e $b_{n+1}$ têm a mesma cor (ambas estão em $C$). Assim, todas as $n+1$ bolas têm a mesma cor.}
+\begin{solution}
+O problema dessa demonstração está no passo indutivo que não é válido para todo $n \in \nnats$, em particular, não temos o caso em que $n=1$ implique no caso em que $n=2$.
+
+De fato, supondo que o caso $n=1$ seja verdade, o que até já foi provado no caso base, vamos aplicar a ideia apresentada no passo indutivo e verificar que não se pode provar o caso em que $n=2$. Teremos $A = \set {b_1, b_2}$ e consequentemente $B = \set {b_1}$ e $C = \set {b_2}$. Note que podemos usar o caso em que $n=1$ para provar que todas as bolas de $B$ e de $C$ possuem a mesma cor, mas como não há nenhuma bola em comum nesses dois conjuntos, nada garante que $b_1$ e $b_2$ sejam da mesma cor. Invalidando assim a demonstração do passo indutivo. Fazendo uma analogia com os dominós, o que ocorreu foi a queda do primeiro dominó, mas essa queda não derrubou o segundo dominó, deixando-o de pé assim como as peças seguintes.
+\end{solution}
+\end{example}

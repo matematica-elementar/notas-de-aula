@@ -1,0 +1,258 @@
+\ProvidesPackage{mystyle}
+
+% INCLUDE ------------------------------------------------------------------------------------------------
+\usepackage{adforn}
+\usepackage{amsfonts} % \mathbb
+\usepackage{amsthm} % proof environment
+\usepackage{amssymb} % \subsetneq
+\usepackage{amsmath} 
+\usepackage[portuguese]{babel}
+\usepackage[makeroom]{cancel} % \cancel 
+\usepackage{caption} % change caption separator, \captionsetup
+\usepackage{chngcntr} 
+\usepackage{commath} % \abs
+\usepackage[shortlabels]{enumitem} % enumerate properties, enumerate-like scheme for labels
+\usepackage{environ} % nofleq
+\usepackage{float} % change float (image table etc) separator
+\usepackage[left=2.5cm, top=3cm, right=2.5cm, bottom=2cm]{geometry} % page borders
+\usepackage{graphicx} % image inserting
+\usepackage{hyperref} % hyperlinks
+\usepackage{import} % nested \input issues
+%\usepackage{indentfirst} % indent first paragraph of section
+\usepackage[utf8]{inputenc} % portuguese
+\usepackage{mdframed}
+\usepackage{ragged2e} % text aligning
+\usepackage{setspace} % need this to change line spacing
+\usepackage{siunitx} % degree symbol
+\usepackage{standalone} % deal with problems when having multiple preambles
+\usepackage{textcomp} % \textdegree
+\usepackage{tikz} % drawing pictures
+\usepackage{verbatim} % multiline comments
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% CONFIG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% space between paragraphs
+\setlength{\parskip}{0pt} 
+
+\onehalfspacing % line spacing
+
+% magic code to insert new line between header and first itemm
+\def\enumfix{%
+\if@inlabel
+ \noindent \par\nobreak\vskip-\topsep\hrule\@height\z@
+\fi}
+\let\olditemize\itemize
+\def\itemize{\enumfix\olditemize}
+
+% change itemize bullet character
+\renewcommand{\labelitemi}{--}
+\renewcommand{\labelitemii}{-}
+
+% spacing for lists
+% \renewcommand{\@listI}{%
+% \leftmargin=0pt
+% \rightmargin=0pt
+% \labelsep=5pt
+% \labelwidth=20pt
+% \itemindent=0pt
+% %\listparindent=\parindent %indentation at the beginning of paragraph
+% \topsep=0pt plus 2pt minus 4pt
+% \partopsep=0pt plus 1pt minus 1pt
+% \parsep=0pt plus 1pt
+% \itemsep=0pt}
+
+% change caption label formatting
+\captionsetup[table]{
+  labelfont=bf, %
+  labelsep=period, %
+  justification=raggedright, %
+  singlelinecheck=false%    Necessário para alinhar à esquerda mesmo quando o texto é pequeno o suficiente para não preencher uma linha
+}
+\captionsetup[figure]{labelfont=bf, labelsep=period}
+
+% standard label config for enumerate
+\setenumerate{label=\roman*.,leftmargin=*,align=left}
+\setlist[itemize]{leftmargin=*}
+
+%%%%%%%%% custom environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NewEnviron{nofleqn}[1]{\@fleqnfalse\begin{#1}\BODY\end{#1}}
+
+% theorem environments -----------------------------------------------------------------------------------
+
+\newtheoremstyle{brremark}% name
+  {}%         Space above, empty = `usual value'
+  {}%         Space below
+  {}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\itshape}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+% starts in new line
+\newenvironment{brproof}[1][\proofname]{\proof[#1]\mbox{}\\*}{\endproof}
+
+\theoremstyle{brremark}
+\newtheorem*{brsolution}{Solução}
+
+% corollary
+\theoremstyle{definition}
+\newtheorem{corollary}{Corolário}[chapter]
+
+% definition
+\theoremstyle{definition}
+\newtheorem{definition}[corollary]{Definição}
+
+% equivalence
+\theoremstyle{definition}
+\newtheorem{equivalence}[corollary]{Equivalência}
+
+% example
+\theoremstyle{definition}
+\newtheorem{example}[corollary]{Exemplo} 
+
+% exercise
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercício}
+\counterwithin*{exercise}{section}
+
+% lemma
+\theoremstyle{plain}
+\newtheorem{lemma}[corollary]{Lema} 
+
+% onlineact
+\theoremstyle{definition}
+\newtheorem*{onlineact}{Atividade online}
+%\counterwithin*{onlineact}{section}
+
+% problem
+\theoremstyle{definition}
+\newtheorem{problem}[corollary]{Problema}
+
+% proposition
+\theoremstyle{definition}
+\newtheorem{proposition}[corollary]{Proposição} 
+
+% remark
+\theoremstyle{remark}
+\newtheorem*{remark}{Observação}
+
+% homework
+\theoremstyle{remark}
+\newtheorem{homework}[corollary]{Tarefa}
+
+% tip
+\theoremstyle{remark}
+\newtheorem*{tip}{Dica}
+
+% solution
+\theoremstyle{remark}
+\newtheorem*{solution}{Solução}
+
+% theorem
+\theoremstyle{definition}
+\newtheorem{theorem}[corollary]{Teorema}
+
+\newcommand{\curiosity}[2]{
+  \begin{mdframed}[
+	frametitle={#1},
+	frametitlealignment=\centering
+  ]
+  #2
+\end{mdframed}}
+
+%
+%   Comandos de utilidade para as notas de aula
+%
+\newcommand{\link}[2]{\href{#1}{\tt{#2}}}
+\newcommand{\khan}[2]{\href{#1}{\tt{#2}}}
+\newcommand{\textdef}[1]{\textit{#1}}
+
+%
+%   Comandos para ajudar na escrita
+%
+\newcommand{\prn}[1]{\left(#1\right)}
+\newcommand{\paren}{\prn}
+\newcommand{\sub}[1]{\underline{#1}}
+\newcommand{\sse}{\text{ se, e somente se, }}
+\newcommand{\tdeg}{\textdegree}
+\newcommand{\hint}{\noindent\emph{Dica: }}
+\newcommand{\dica}{\hint}
+\newcommand{\highlight}[1]{\noindent-- \emph{#1}:}
+\newcommand{\case}{\highlight}
+
+%%
+%%   Comandos para Teoria de Conjuntos
+%%
+%
+% 	Comandos já existentes por padrão:
+%		\set			Define conjuntos usando chaves
+%		\in				Relação de pertinência
+%		\notin			Não pertence
+%		\subset			Relação de inclusão
+%		\setminus		Operação de diferença de conjuntos
+%
+\newcommand{\notsubset}{\not\subset}
+
+\newcommand{\suchthat}{\;;\;}
+\newcommand{\st}{\suchthat}
+\newcommand{\talque}{\suchthat}
+\newcommand{\tq}{\talque}
+
+%
+%    Funções gerais
+%
+\newcommand{\identity}[1]{\mathcal{I}_{#1}}
+\newcommand{\fcomp}{\circ}
+
+
+%
+%	Operações
+%
+\newcommand{\union}{\cup}%							União
+\newcommand{\intersection}{\cap}%					Interseção
+\newcommand{\inter}{\intersection}%					Interseção (alias)
+\newcommand{\setcomplement}[1]{{#1}^C}%				Complementar
+\newcommand{\compl}{\setcomplement}%				Complementar (alias)
+\newcommand{\minus}{\setminus}%						Diferença (alias)
+\newcommand{\powerset}[1]{\mathcal{P}\prn{#1}}%		Conjunto das partes
+
+%
+%   Conjuntos conhecidos
+%
+\newcommand{\U}{\mathcal{U}}%						Universo
+\newcommand{\N}{\mathbb{N}}%						Naturais
+\newcommand{\nnats}{\N^*}%							Naturais positivos
+\newcommand{\Z}{\mathbb{Z}}%						Inteiros
+\newcommand{\Q}{\mathbb{Q}}%						Racionais
+\newcommand{\R}{\mathbb{R}}%						Reais
+\newcommand{\C}{\mathbb{C}}%						Complexos
+
+%
+%   Referências
+%
+\newcommand{\inref}[1]{\defref{def:in}{#1}}
+\newcommand{\emptysetref}[1]{\defref{def:emptyset}{#1}}
+\newcommand{\subsetref}[1]{\defref{def:subset}{#1}}
+\newcommand{\powersetref}[1]{\defref{def:powerset}{#1}}
+\newcommand{\complementref}[1]{\defref{def:complementar}{#1}}
+\newcommand{\homeworkref}[1]{\ref{#1}}
+\newcommand{\defref}[2]{\hyperref[#1]{#2}} %TODO: deixar os argumentos opcionais, caso não seja passado mostrar apenas a referencia.
+
+%
+%   Funções reais
+%
+\newcommand{\modulo}[1]{\left|#1\right|}
+\newcommand{\modu}{\modulo}
+%
+%   Lógica
+%
+\newcommand{\liff}{\leftrightarrow}
+
+%
+%    Diretórios
+%
+\newcommand{\imgdirfromsection}{../../../../res/img}
