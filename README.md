@@ -2,7 +2,7 @@
 Este repositório mantém as notas de aula da disciplina Matemática Elementar do Bacharelado em Tecnologia da Informação da Universidade Federal do Rio Grande do Norte.
 
 ## Instruções
-É necessário que os [TexLive](https://tug.org/texlive/) e [GNU Make](https://www.gnu.org/software/make/) estejam instalados em sua máquina.
+É necessário que o pacote [TexLive](https://tug.org/texlive/) e o utilitário [GNU Make](https://www.gnu.org/software/make/) estejam instalados em sua máquina.
 
 Após clonar/baixar o repositório, entre no diretório e rode o comando:
 
