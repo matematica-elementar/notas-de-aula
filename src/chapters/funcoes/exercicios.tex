@@ -1,0 +1,120 @@
+\section{Exercícios}
+
+\begin{exercise}
+Em cada um dos itens abaixo, defina uma função com a lei de
+formação dada (indicando domínio e contradomínio). Verifique se é
+injetiva, sobrejetiva ou bijetiva, a função
+\begin{enumerate}[(a)]
+  \item Que a cada dois números naturais associa seu mdc;
+%  \item Que a cada vetor do plano associa seu módulo;
+%  \item Que a cada matriz $2 \times 2$ associa sua matriz
+%  transposta;
+%  \item Que a cada matriz $2 \times 2$ associa seu determinante;
+  \item Que a cada polinômio (não nulo) com coeficientes reais
+  associa seu grau;
+  \item Que a cada figura plana fechada e limitada associa a sua
+  área;
+  \item Que a cada subconjunto de $\R$ associa seu complementar;
+  \item Que a cada subconjunto finito de $\N$ associa seu número de
+  elementos;
+  \item Que a cada subconjunto não vazio de $\N$ associa seu menor
+  elemento;
+  \item Que a cada função $f: \R \to \R$ associa seu valor no ponto
+  $x_0 = 0$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Considere a  função $f:  \N^*  \to      \Z $ tal que $$f(n) =
+\begin{cases} \frac {-n} 2, \text{ se $n$ é par} \\ \frac {n-1} 2, \text{ se $n$ é
+ímpar} \end{cases}.$$ Mostre que $f$ é bijetiva. O que você pode
+concluir com esse resultado?
+\end{exercise}
+
+\begin{exercise}
+Mostre que a função inversa de $f: X \to Y$, caso exista, é
+única; isso é, se existem $g_1 : Y \to X$ e $g_2 : Y \to X$
+satisfazendo a Definição \ref{def:funcao-inversa}, então $g_1 = g_2$.\\
+\emph{Dica: } Lembre-se que duas funções são iguais se, e só se,
+possuem mesmos domínios, contradomínios e seus valores são iguais em
+todos os elementos do domínio. Assim, procure mostrar que $g_1 (y) =
+g_2 (y)$, para todo $y \in Y$.
+\end{exercise}
+
+\begin{exercise}
+    Seja $f: X \to Y$ uma função e seja $A$ um subconjunto de $X$.
+Define-se $$f(A) = \set{f(x) \tq x\in A} \subset Y.$$ Se $A$ e $B$
+são subconjuntos de $X$:
+\begin{enumerate}[(a)]
+  \item Mostre que $f(A \cup B) = f(A) \cup f(B)$;
+  \item Mostre que $f(A \cap B) \subset f(A) \cap f(B)$;
+  \item É possível afirmar que $f(A \cap B) = f(A) \cap f(B)$ para
+  todos $A, B \subset X$? Justifique.
+  \item Determine que condições deve satisfazer $f$ para que a
+  afirmação feita no item (c) seja verdadeira.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{exercise}
+    Seja $f: X \to Y$ uma função. Dado $y \in Y$, definimos a
+\sub{contraimagem} ou \sub{imagem inversa} de $y$ como sendo o
+seguinte subconjunto de $X$: $$ f^{-1}(y) = \set{x \in X \tq
+f(x)=y}.$$
+\begin{enumerate}[(a)]
+  \item Se $f$ é injetiva e $y$ é um elemento qualquer de $Y$, o que
+  se pode afirmar sobre a imagem inversa $f^{-1}(y)$?
+  \item Se $f$ é sobrejetiva e $y$ é um elemento qualquer de $Y$, o que
+  se pode afirmar sobre a imagem inversa $f^{-1}(y)$?
+  \item Se $f$ é bijetiva e $y$ é um elemento qualquer de $Y$, o que
+  se pode afirmar sobre a imagem inversa $f^{-1}(y)$?
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Seja $f: X \to Y$ uma função. Dado $A \subset Y$, definimos a
+\sub{contraimagem} ou \sub{imagem inversa} de $A$ como sendo o
+seguinte subconjunto de $X$: $$ f^{-1}(A) = \set{x \in X \tq f(x)\in
+A}.$$ Mostre que
+\begin{enumerate}[(a)]
+  \item $f^{-1} (A \cup B) = f^{-1} (A) \cup f^{-1} (B)$;
+  \item $f^{-1} (A \cap B) = f^{-1} (A) \cap f^{-1} (B)$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Seja $f: X \to Y$ uma função. Mostre que, se existem $g_1 : Y
+\to X$ e $g_2 : Y \to X$ tais que $f \fcomp g_1 = \I Y$ e $g_2 \fcomp
+f = \I X$, então $g_1 = g_2$ (portanto, neste caso, $f$ será
+invertível).
+\end{exercise}
+
+\begin{exercise}
+    Seja $f: X \to Y$ uma função. Mostre que
+\begin{enumerate}[(a)]
+  \item $f(f^{-1}(B)) \subset B$, para todo $B \subset Y$;
+  \item $f(f^{-1}(B)) = B$, para todo $B \subset Y$ se, e
+  somente se, $f$ é sobrejetiva.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Seja $f: X \to Y$ uma função. Mostre que
+\begin{enumerate}[(a)]
+  \item $f(f^{-1}(A)) \supset A$, para todo $A \subset X$;
+  \item $f(f^{-1}(A)) = A$, para todo $A \subset X$ se, e
+  somente se, $f$ é injetiva.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Mostre que existe uma injeção $f: X \to Y$ se, e somente se,
+existe uma sobrejeção $g: Y \to X$.
+\end{exercise}
+
+%EXERCÍCIOS PARA FUNÇÕES EXPONENCIAIS E LOGARÍTMICAS
+%\Ex{Se $\paren{a_n}$ é uma PG de termos positivos, prove que
+%$\paren{ b_n}$ definida por $b_n = \log a_n$ é uma PA.}
+
+%\Ex{Se $\paren{a_n}$ é uma PA, prove que $\paren{ b_n}$ definida por
+%$b_n = e^{a_n}$ é uma PG.}
