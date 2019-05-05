@@ -168,6 +168,8 @@
 %
 %   Comandos de utilidade para as notas de aula
 %
+\newcommand{\importchapter}[1]{\subimport{src/chapters/#1/}{main.tex}}
+\newcommand{\importsection}[1]{\subimport{sections/}{#1.tex}}
 \newcommand{\link}[2]{\href{#1}{\tt{#2}}}
 \newcommand{\khan}[2]{\href{#1}{\tt{#2}}}
 \newcommand{\textdef}[1]{\textit{#1}}
