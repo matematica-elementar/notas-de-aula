@@ -4,26 +4,31 @@
 \usepackage{config/titlepage}
 
 \begin{document}
-    \nocite{*}
-    % ------------------------------------------------------------------------------
-    % Maketitle
-    % ------------------------------------------------------------------------------
-    \thispagestyle{empty}       % Remove page numbering on this page
 
-    \printtitle                 % Print the title data as defined above
-        \vfill
-    \printauthor                % Print the author data as defined above
-    \newpage
+    \nocite{*}
+
+    % Uses roman numerals for page numbering
+    \frontmatter
     
-    \frontmatter % turns off chapter numbering, uses roman numerals for page numbers
+    % Setup titlepage
+    % Does not consider as a numbered page
+    \thispagestyle{empty}
+    \printtitle
+    \vfill
+    \printauthor
+    
+    % Print the content page
     \tableofcontents
-    \mainmatter % turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers
     
-    {
-        \importchapter{conjuntos}
-        \importchapter{conjuntos-numericos}
-        \importchapter{equacoes-e-inequacoes}
-        \importchapter{principio-da-inducao-finita}
-        \importchapter{funcoes}
-    }
+        
+    % Turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers
+    \mainmatter
+
+    % Import all chapters in order
+    \importchapter{conjuntos}
+    \importchapter{conjuntos-numericos}
+    \importchapter{equacoes-e-inequacoes}
+    \importchapter{principio-da-inducao-finita}
+    \importchapter{funcoes}
+
 \end{document}
