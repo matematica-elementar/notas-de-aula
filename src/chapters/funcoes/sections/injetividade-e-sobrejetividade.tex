@@ -94,36 +94,46 @@ Em todas elas, considere $f$ uma função com domínio $X$ e contradomínio $Y$.
         \end{itemize}
         %
         Concluímos, então, que $f$ é bijetiva.
+
         \item (\emph{Se}) Suponha que $f$ é bijetiva.
         Ademais, defina $g: Y \to X$ com lei de formação $g(b)=a$, em que $a \in X$ é tal que $f(a)=b$.
-        Ora, para cada $b \in Y$ existe tal $a$, pela injetividade de $f$.
+        Ora, para cada $b \in Y$, existe tal $a$, pela sobrejetividade de $f$.
         Além disso, como $f$ é injetiva, $a$ é único. 
         Assim, pela Observação \ref{def:funcao-alternativa}), $g$ é uma função.
 
-        A igualdade $f \fcomp g = \identity Y$ é válida, pois, para todo $b \in Y$,
+        A igualdade $f \fcomp g = \identity Y$ é válida, pois, para todo $y \in Y$,
         %
-        \begin{align*}
-            \prn{f \fcomp g}(b) & = f\prn{g(b)} \\ &= f(a) \\ &= b
-        \end{align*}
+        \begin{alignat*}{3}
+            \prn{f \fcomp g}(y) & = f\prn{g(y)} && \quad\text{(Definição de $\fcomp$)} \\ 
+             &= y && \quad\text{(Definição de $g$, com $a=g(y)$ e $b=y$)}
+        \end{alignat*}
         %
         Verifiquemos, agora, que $g \fcomp f = \identity X$.
-        Para tal, seja $a \in X$.
-        Suponha, para chegar a um absurdo, que $\prn{g \fcomp f}(a) \ne a$.
-        Assim,
+        Para tal, seja $x \in X$.
+        % Suponha, para chegar a um absurdo, que $\prn{g \fcomp f}(a) \ne a$.
+        % Assim,
+        % %
+        % \begin{equation*}
+        %     \begin{array}{rlc}
+        %         \prn{g \fcomp f}(a) \ne a & \implies f\prn{\prn{g \fcomp f}(a)} \ne f(a) & (\text{Injetividade de $f$}) \\
+        %         & \implies \prn{f \fcomp g \fcomp f}(a) \ne f(a) & \\
+        %         & \implies \prn{f \fcomp g}\prn{f(a)} \ne f(a) & \\
+        %         & \implies \identity{Y}\prn{f(a)} \ne f(a) & \\
+        %         & \implies f(a) \ne f(a) &
+        %     \end{array}
+        % \end{equation*}
+        % %
+        % Chegamos a um absurdo.
+        % Consequentemente, $\prn{f \fcomp g}(a) = a$, o que implica que $g \fcomp f = \identity X$ e nos permite concluir que $f$ é invertível.
+        Temos que:
         %
-        \begin{equation*}
-            \begin{array}{rlc}
-                \prn{g \fcomp f}(a) \ne a & \implies f\prn{\prn{g \fcomp f}(a)} \ne f(a) & (\text{Injetividade de $f$}) \\
-                & \implies \prn{f \fcomp g \fcomp f}(a) \ne f(a) & \\
-                & \implies \prn{f \fcomp g}\prn{f(a)} \ne f(a) & \\
-                & \implies \identity{Y}\prn{f(a)} \ne f(a) & \\
-                & \implies f(a) \ne f(a) &
-            \end{array}
-        \end{equation*}
+        \begin{alignat*}{3}
+            \prn{g \fcomp f}(x) & = g\prn{f(x)} && \quad\text{(Definição de $\fcomp$)} \\ 
+             &= x && \quad\text{(Definição de $g$, com $a=x$ e $b=f(x)$)}
+        \end{alignat*}
         %
-        Chegamos a um absurdo.
-        Consequentemente, $\prn{f \fcomp g}(a) = a$, o que implica que $g \fcomp f = \identity X$ e nos permite concluir que $f$ é invertível.
-        
+        Assim, $g \fcomp f = \identity X$.
+        Disso, e do fato que $f \fcomp g = \identity Y$, concluímos que $f$ é invertível.
     \end{itemize}
 \end{proof}
 
