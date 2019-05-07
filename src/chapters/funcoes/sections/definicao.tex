@@ -2,48 +2,32 @@
 
 \begin{definition}
 Sejam $X$ e $Y$ dois conjuntos quaisquer.
-Uma \textdef{função} é uma relação $f: X \to Y$ (lê-se $f$ de $X$ em $Y$) que, a cada elemento $x \in X$, associa um, e somente um, elemento $y \in Y$.
+Uma \textdef{função} é uma relação $f: X \to Y$ que, a cada elemento $x \in X$, associa um e somente um elemento $y \in Y$.
 Definem-se, além disso, os seguintes termos:
 %
 \begin{enumerate}[(i)]
-\item \textdef{Domínio} e \textdef{contradomínio} de $f$ para os conjuntos $X$ e $Y$, respectivamente;
-\item \textdef{Imagem} de $x$, dado qualquer $x \in X$, para o único elemento $y \in Y$ que satisfaz $y = f(x)$;
-\item \textdef{Imagem} de $f$ para o conjunto $f\prn X = \set{y \in Y \tq y = f \prn x \text{ para algum } x \in X }$, ou seja, o conjunto das imagens dos elementos de $X$.
-
-Confira o exemplo a seguir:
-\begin{center}
-    \input{res/tikz/funcao-exemplo-imagem.tex}
-\end{center}
-Observe que o conjunto imagem de $f$, por ser constituído de elementos de $Y$, sempre está contido no contradomínio, isto é, $f(X) \subset Y$.
+  \item \textdef{Domínio} e \textdef{contradomínio} de $f$ para os conjuntos $X$ e $Y$, respectivamente;
+  \item \textdef{Imagem} de $f$ para o conjunto $f\prn X = \set{y \in Y \tq \exists x \in X , f \prn x =
+  y} \subset Y$;
+  \item \textdef{Imagem} de $x$, dado $x \in X$, para o (único) elemento $y = f(x) \in Y$.
 \end{enumerate}
 \end{definition}
 
-%\begin{remark}
-%\label{rem:def-alternativa-funcao}
-De certa forma, uma função pode ser vista como um terno constituído por: \textdef{domínio}, \textdef{contradomínio} e \textdef{lei de associação} (dos elementos do domínio com os do contradomínio). 
+\begin{remark}
+\label{rem:def-alternativa-funcao}
+Uma função pode ser vista como um terno constituído por: \textdef{domínio}, \textdef{contradomínio} e \textdef{lei de associação} (dos elementos do
+domínio com os do contradomínio). 
 Precisa-se desses três elementos para que uma função seja bem-definida. 
-
 A definição alternativa a seguir também poderia ser adotada:
-{\it \label{def:funcao-alternativa} Uma relação $f: X \to Y$ é uma \emph {função} se satisfaz as seguintes condições:
+
+{\it Uma relação $f: X \to Y$ é uma \emph {função} se satisfaz as seguintes condições:
 %
 \begin{enumerate}[(I)]
-  \item Estar bem-definida em todo elemento do domínio, isto é, os elementos do domínio devem corresponder à pelo menos um elemento do contradomínio;
-  \item Os elementos do domínio não devem corresponder a mais de um elemento do contradomínio, ou seja, devem corresponder no máximo um elemento.
+  \item Estar bem-definida em todo elemento do domínio (existência);
+  \item Não fazer corresponder mais de um elemento do contradomínio
+  a cada elemento do domínio (unicidade).
 \end{enumerate}}
-%\end{remark}
-
-
-\begin{example}
-Sejam $X = \set{x_1, x_2}$, $Y = \set{y_1, y_2}$ e a relação $f : X \to Y$ definida pelo gráfico a seguir:
-\begin{center}
-     \input{res/tikz/funcao-nao-exemplo.tex}
-\end{center}
-Qual(is) o(s) problema(s) com essa ``função''?
-\end{example}
-\begin{solution}
-Temos dois problemas, o primeiro é que, pelo gráfico, temos que $f(x_1) = y_1$ e $f(x_1) = y_2$, e com isso existem dois valores possíveis para $f(x_1)$. O segundo é que $x_2$ não foi mapeado em nenhum elemento de $Y$, sendo assim não há um valor para $f(x_2)$.
-\end{solution}
-
+\end{remark}
 
 \begin{example}
 \label{example:func-sq-sqrt}
@@ -64,11 +48,15 @@ Qual o domínio, contradomínio e a lei de associação de $p$ e $q$?
 \end{example}
 
 \begin{solution}
-O domínio de $p$ é $\R$ e o de $q$ é $\R_+$; 
-O contradomínio de $p$ é $\R_+$ e o de $q$ é $\R$; 
-A lei de associação de $p$ é $p(x)=x^2$ e a de $q$ é $q(x)=\sqrt x$.
+\begin{itemize}
+	\item[]
+	\vspace{3mm}
+	\item O domínio de $p$ é $\R$ e o de $q$ é $\R_+$;
+	\item O contradomínio de $p$ é $\R_+$ e o de $q$ é $\R$;
+	\item A lei de associação de $p$ é $p(x)=x^2$ e a de $q$ é $q(x)=\sqrt x$.
+\end{itemize}
 \end{solution}
 
-\begin{definition}[Função Identidade de um Conjunto]
+\begin{definition}
 Seja $\identity X : X \to X $ uma função tal que $\identity X \prn x = x$ para todo $x \in X$. Chamamos $\identity X$ de \textdef{função identidade do conjunto $X$}.
 \end{definition}
