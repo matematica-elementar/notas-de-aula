@@ -11,6 +11,7 @@
 \usepackage{caption} % change caption separator, \captionsetup
 \usepackage{chngcntr} 
 \usepackage{commath} % \abs
+\usepackage{csquotes}
 \usepackage[shortlabels]{enumitem} % enumerate properties, enumerate-like scheme for labels
 \usepackage{environ} % nofleq
 \usepackage{float} % change float (image table etc) separator
@@ -119,6 +120,11 @@
 \newtheorem{exercise}{Exercício}
 \counterwithin*{exercise}{section}
 
+% problem
+\theoremstyle{definition}
+\newtheorem{challenge}{Desafio}
+\counterwithin*{challenge}{section}
+
 % lemma
 \theoremstyle{plain}
 \newtheorem{lemma}[corollary]{Lema} 
@@ -167,6 +173,8 @@
 %
 %   Comandos de utilidade para as notas de aula
 %
+\newcommand{\importchapter}[1]{\subimport{src/chapters/#1/}{main.tex}}
+\newcommand{\importsection}[1]{\subimport{sections/}{#1.tex}}
 \newcommand{\link}[2]{\href{#1}{\tt{#2}}}
 \newcommand{\khan}[2]{\href{#1}{\tt{#2}}}
 \newcommand{\textdef}[1]{\textit{#1}}
@@ -205,6 +213,7 @@
 %
 %    Funções gerais
 %
+\newcommand{\I}[1]{\identity{#1}}
 \newcommand{\identity}[1]{\mathcal{I}_{#1}}
 \newcommand{\fcomp}{\circ}
 
