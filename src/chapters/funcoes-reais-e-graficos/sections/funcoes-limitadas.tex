@@ -4,33 +4,36 @@
     Seja $f: D \subset \R \to \R$ uma função.
 \begin{enumerate}[(i)]
   \item $f$ é \textdef{limitada superiormente} se existe $M \in \R$ tal
-  que $f(x) \leq M$, para todo $x \in D$;
+  que $f(x) \leq M$ para todo $x \in D$;
   \item $f$ é \textdef{limitada inferiormente} se existe $M \in \R$ tal
-  que $f(x) \geq M$, para todo $x \in D$;
+  que $f(x) \geq M$ para todo $x \in D$;
   \item $x_0 \in D$ é um \textdef{ponto de máximo absoluto} de $f$ se
-  $f(x_0) \geq f(x)$, para todo $x \in D$;
+  $f(x_0) \geq f(x)$ para todo $x \in D$;
   \item $x_0 \in D$ é um \textdef{ponto de mínimo absoluto} de $f$ se
-  $f(x_0) \leq f(x)$, para todo $x \in D$;
+  $f(x_0) \leq f(x)$ para todo $x \in D$;
   \item $x_0 \in D$ é um \textdef{ponto de máximo local} de $f$ se
-  existe $r>0$ tal que $f(x_0) \geq f(x)$, para todo $x \in D \cap \paren{x_0 - r , x_0+r}$;
+  existe $r>0$ tal que $f(x_0) \geq f(x)$ para todo $x \in D \cap \paren{x_0 - r , x_0+r}$;
   \item $x_0 \in D$ é um \textdef{ponto de mínimo local} de $f$ se
-  existe $r>0$ tal que $f(x_0) \leq f(x)$, para todo $x \in D \cap \paren{x_0 - r ,
+  existe $r>0$ tal que $f(x_0) \leq f(x)$ para todo $x \in D \cap \paren{x_0 - r ,
   x_0+r}$.
 \end{enumerate}
 \end{definition}
 
 \begin{example}
     A função $h : \left( -1 ; 6 \right] \to \R$, cujo gráfico é esboçado
-abaixo, é definida por $h(x) = \begin{cases}
+na Imagem~\ref{img:funcao-h-descontinua}, é definida por:
+%
+$$h(x) = \begin{cases}
                                 3x-x^2 & \ \text{ se } \ x\leq 2 \\
                                 \modu{x-4} +1 & \ \text{ se } \ 2 < x \leq 5 \\
                                 2 & \ \text{ se } \ x > 5 \\
-                                \end{cases}.$
-
-\begin{figure}[H]
+                                \end{cases}.$$
+%
+\begin{figure}
 \centering
 \includegraphics[scale=0.5]{\imgdirfromsection/funcao-h-descontinua}
-\caption{}
+\caption{Gráfico da função $h$.}
+\label{img:funcao-h-descontinua}
 \end{figure}
 
 Determine os intervalos de monotonicidade e os extremos de $h$.
