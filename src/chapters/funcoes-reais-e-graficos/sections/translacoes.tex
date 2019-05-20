@@ -1,39 +1,43 @@
 \subsubsection{Translação}
 
+Se uma função real $g$ é tal que $g(x) = f(x+b) +a$, em que $f$ é outra função real e $b$ e $a$ são números reais,
+então o gráfico de $g$ pode ser obtido, do gráfico de $f$, através
+de uma translação horizontal de $\modu b$ unidades e uma
+translação vertical de $\modu a$ unidades.
+Os sinais de $a$ e $b$ influenciam nas translações vertical e horizontal, respectivamente, da seguinte forma:
+
+\begin{itemize}
+  \item $a > 0$: o translado vertical é no sentido positivo do eixo $y$ (para cima);
+  \item $a < 0$: o translado vertical é no sentido negativo do eixo $y$ (para baixo);
+  \item $b > 0$: o translado horizontal é no sentido negativo do eixo $x$ (para a esquerda);
+  \item $b < 0$: o translado horizontal é no sentido positivo do eixo $x$ (para a direita).
+\end{itemize}
+
 \begin{example}
-    Compare os gráficos das funções reais $f, g , h: \R \to \R$ tais que:
-    \begin{itemize}
-    \item $f(x) = \sen x$;
-    \item $g(x) = f(x) + 1 = \sen x +1$;
-    \item $h(x)= f(x+\frac {\pi} 2)= \sen (x+ \frac {\pi} 2)$.
-    \end{itemize}
-    
-    \begin{center}
-      \input{res/tikz/translacao-exemplo-g.tex}
-    \end{center}
-
-    \begin{center}
-      \input{res/tikz/translacao-exemplo-h.tex}
-    \end{center}
-
+Sejam $f,g,h:\R \to \R$ tais que $f(x) = \sen x$, $g(x) = f(x) + 1 = \sen x +1$ e $h(x)= f\prn{x+\frac {\pi} 2}= \sen \prn{x+ \frac {\pi} 2}$.
+Compare os gráficos de $h$ e $g$ ao gráfico de $f$ com relação a translações.
 \end{example}
 
+\begin{solution}
+Na Imagem~\ref{img:grafico-translacao-exemplo-g}, é mostrado o gráfico de $g$.
+%
+  \begin{figure}
+    \centering
+    \input{res/tikz/translacao-exemplo-g.tex}
+    \caption{Gráfico da função $g$.}
+    \label{img:grafico-translacao-exemplo-g}
+  \end{figure}
+%
+\noindent Uma vez que $g(x) = f(x)+1$ e $1>0$, o gráfico de $g$ é obtível transladando o gráfico de $f$ 1 unidade para cima.
 
-Dessa forma, se a função real $g$ é tal que $g(x) = f(x+b) +a$,
-então o gráfico de $g$ pode ser obtido, do gráfico de $f$, através
-de uma translação horizontal determinada pelo parâmetro $b$, e uma
-translação vertical determinada pelo parâmetro $a$. 
-\begin{itemize}
-  \item O translado vertical será:
-        \begin{itemize}
-          \item No sentido positivo do eixo $y$ (para cima), se
-          $a>0$;
-          \item No sentido negativo do eixo $y$ (para baixo), se
-          $a<0$.
-        \end{itemize} 
-  \item O translado horizontal será:
-        \begin{itemize}
-          \item No sentido positivo do eixo $x$ (para a direita), se $b<0$;
-          \item No sentido negativo do eixo $x$ (para a esquerda), se $b>0$.
-        \end{itemize}
-\end{itemize}
+Na Imagem~\ref{img:grafico-translacao-exemplo-h}, é mostrado o gráfico de $g$.
+%
+  \begin{figure}
+    \centering
+    \input{res/tikz/translacao-exemplo-h.tex}
+    \caption{Gráfico da função $h$.}
+    \label{img:grafico-translacao-exemplo-h}
+  \end{figure}
+%
+\noindent Uma vez que $h(x) = f\prn{x+\frac {\pi} 2}$ e $\frac {\pi} 2>0$, o gráfico de $h$ é obtível transladando o gráfico de $f$ $\frac {\pi} 2$ unidades para a esquerda.
+\end{solution}    
