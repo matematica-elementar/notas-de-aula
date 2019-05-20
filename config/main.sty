@@ -174,9 +174,9 @@
 \end{mdframed}}
 
 %
-%    Declarações de operadores matemáticos
+%   Diretórios
 %
-\DeclareMathOperator{\sen}{sen}
+\newcommand{\resources}{res}
 
 %
 %   Comandos de utilidade para as notas de aula
@@ -186,6 +186,7 @@
 \newcommand{\link}[2]{\href{#1}{\tt{#2}}}
 \newcommand{\khan}[2]{\href{#1}{\tt{#2}}}
 \newcommand{\textdef}[1]{\textit{#1}}
+\newcommand{\importtikz}[1]{\input{\resources/tikz/#1.tex}}
 
 %
 %   Comandos para ajudar na escrita
@@ -199,6 +200,11 @@
 \newcommand{\dica}{\hint}
 \newcommand{\highlight}[1]{\noindent-- \emph{#1}:}
 \newcommand{\case}{\highlight}
+
+%
+%    Declarações de operadores matemáticos
+%
+\DeclareMathOperator{\sen}{sen}
 
 %%
 %%   Comandos para Teoria de Conjuntos
