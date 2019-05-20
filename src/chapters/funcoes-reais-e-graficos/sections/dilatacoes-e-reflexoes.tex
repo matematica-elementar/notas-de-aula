@@ -1,0 +1,97 @@
+\subsubsection{Dilatação e Reflexão}
+
+A dilatação e a reflexão de um gráfico de uma função real são dadas pelos mesmos parâmetros.
+Contudo, enquanto a primeira transformação depende da magnitude (módulo) dos parâmetros, a segunda se dá pelos seus sinais.
+
+Se uma função real $g$ é tal que $g(x) = c \cdot f(d\cdot x)$, em que $f$ é outra função real e $c,d\in \R$, então o gráfico de $g$ pode ser obtido, do gráfico de $f$, através de uma dilatação horizontal de $\modu d$ vezes e uma dilatação vertical de $\modu c$ vezes. 
+Mais especificamente, os valores de $c$ e $d$ influenciam nas dilatações vertical e horizontal, respectivamente, do gráfico de $f$ da seguinte forma:
+%
+\begin{itemize}
+          \item $\modu c>1$: esticamento vertical;
+          \item $0<\modu c<1$: encolhimento vertical;
+          \item $\modu d>1$: esticamento horizontal;
+          \item $0<\modu d<1$: encolhimento horizontal.
+\end{itemize}
+%
+Ademais, os valores de $c$ e $d$ influenciam nas reflexões do gráfico de $f$ em relação aos eixos $x$ e $y$, respectivamente, da seguinte forma:
+%
+\begin{itemize}
+  \item $c > 0$: não há reflexões;
+  \item $c < 0$: reflexão em relação ao eixo $x$;
+  \item $d > 0$: não há reflexões;
+  \item $d < 0$: reflexão em relação ao eixo $y$.
+\end{itemize}
+
+As transformações de translação e reflexão podem ocorrer ao mesmo tempo.
+Assim, se $c<-1$, por exemplo, o gráfico de $g$ é obtível a partir do de $f$ por meio de um esticamento vertical composto com uma reflexão em relação ao eixo $x$.
+
+\begin{example}
+  Sejam $f, g , h: \R \to \R$ funções reais tais que $f(x) = \sen x$, $g(x) = \frac 1 2 \cdot f(x)  = \frac 1 2 \cdot \sen x $ e $h(x)= f(2 \cdot x)= \sen (2x)$.
+  Compare os gráficos de $h$ e $g$ ao gráfico de $f$ com relação a dilatações.
+\end{example}
+
+\begin{solution}
+Na Imagem~\ref{img:dilatacao-exemplo1-g}, é mostrado o gráfico de $g$.
+  \begin{figure}
+    \centering
+    \input{res/tikz/dilatacao-exemplo1-g.tex}
+    \caption{Gráfico da função $g$.}
+    \label{img:dilatacao-exemplo1-g}
+  \end{figure}
+  %
+\noindent Uma vez que $g(x) = \frac 1 2 \cdot f(x)$ e $0 < \frac 1 2 < 1$, o gráfico de $g$ é obtível encolhendo verticalmente o gráfico de $f$ pela metade.
+
+Na Imagem~\ref{img:dilatacao-exemplo1-h}, é mostrado o gráfico de $h$.
+%
+  \begin{figure}
+    \centering
+    \input{res/tikz/dilatacao-exemplo1-h.tex}
+    \caption{Gráfico da função $h$.}
+    \label{img:dilatacao-exemplo1-h}
+  \end{figure}
+  %
+\noindent Uma vez que $h(x) = f(2 \cdot x)$ e $2>0$, o gráfico de $h$ é obtível encolhendo horizontalmente o gráfico de $f$.
+\end{solution}
+
+\begin{example}
+Sejam $f, g , h: \R \to \R$ funções reais tais que $f(x) = \sen x$, $g(x) = -1 \cdot f(x)  = -1 \cdot \sen x $ e $h(x)= f(-1 \cdot x)= \sen (-1 \cdot x)$.
+Compare os gráficos de $h$ e $g$ ao gráfico de $f$ com relação a dilatações e reflexões.
+\end{example}
+
+\begin{solution}
+Na Imagem~\ref{img:dilatacao-exemplo2-g}, é mostrado o gráfico de $g$.
+%
+  \begin{figure}
+    \centering
+    \input{res/tikz/dilatacao-exemplo2-g.tex}
+    \caption{Gráfico da função $g$.}
+    \label{img:dilatacao-exemplo2-g}
+  \end{figure}
+%
+\noindent Uma vez que $g(x) = -1 \cdot f(x)$ e $-1 < 0$, o gráfico de $g$ é obtível por meio de uma reflexão do gráfico de $f$ em relação ao eixo $x$.
+
+Na Imagem~\ref{img:dilatacao-exemplo2-h}, é mostrado o gráfico de $h$.
+%
+  \begin{figure}
+    \centering
+    \input{res/tikz/dilatacao-exemplo2-h.tex}
+    \caption{Gráfico da função $h$.}
+    \label{img:dilatacao-exemplo2-h}
+  \end{figure}
+  %
+\noindent Uma vez que $h(x)= f(-1 \cdot x)$ e $-1 < 0$, o gráfico de $h$ é obtível por meio de uma reflexão do gráfico de $f$ em relação ao eixo $y$.
+Note que o gráfico de $h$ é igual ao de $g$. 
+O porquê disso será explicado quando estudarmos as funções trigonométricas.
+\end{solution}
+
+  
+
+\begin{onlineact}
+    \khan{https://pt.khanacademy.org/math/algebra2/manipulating-functions/shifting-functions/e/shift-functions}
+    {Deslocamento de Funções}.
+\end{onlineact}
+
+\begin{onlineact}
+    \khan{https://pt.khanacademy.org/math/algebra2/manipulating-functions/stretching-functions/e/shifting_and_reflecting_functions}
+    {Como Transformar Funções}.
+\end{onlineact}
