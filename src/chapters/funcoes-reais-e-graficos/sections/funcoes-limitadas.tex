@@ -41,12 +41,20 @@ Identifique, pelo gráfico, os intervalos de monotonicidade e os extremos locais
 
 \begin{solution}
     A partir do gráfico, pode-se perceber que a função $h$ é crescente nos intervalos $(-1;1{,}5]$ e $[4;5]$,
-    decrescente em $[1,5; 2]$ e $(2;4]$ e constante em $[5;+\infty]$. 
-    Note que o número 4 está presente tanto em um intervalo de crescimento quanto em um de decrescimento,
-    e o 5 está num dos intervalos de decrescimento e no de constância da função.
-    
+    decrescente em $[1,5; 2]$ e $(2;4]$ e constante em $[5;6]$.     
     Também por observação do gráfico da função, conclui-se que o ponto $(1{,}5; 2{,}25)$ é um mínimo local, e o ponto $(4,1)$ é um máximo local.
-    A função não possui máximos ou mínimos locais.
+    A função não possui extremos absolutos.
+    Algumas observações, baseadas na análise do gráfico, são importantes acerca da solução apresentada acima.
+    \begin{itemize}
+        \item $-1$ não está presente no intervalo de crescimento $(-1;1{,}5]$ por não ser elemento do domínio da função;
+        \item $1{,}5$ deve estar no intervalo de crescimento $(-1;1{,}5]$. Note que, quaisquer $x_1, x_2 \in (-1;1{,}5]$ é satisfeito que $x_1 < x_2$ implica $f(x_1) < f(x_2)$, ou seja, a condição para que a função seja crescente nesse intervalo. Em particular, como $1{,}5$ é o maior dos valores de $(-1;1{,}5]$, note que é válido que $x_1 < 1{,}5$ implica $f(x_1) < f(1{,}5)$;
+        \item Analogamente ao ponto anterior, é necessário que $1{,}5$ e $2$ estejam no intervalo de decrescimento $[1,5; 2]$. Assim como todos os demais extremos dos intervalos fechados.
+        \item $2$ não deve fazer parte do intervalo de decrescimento $(2; 4]$, pois há uma bola aberta nesse intervalo de decrescimento. Se $2$ pertencesse a tal intervalo, teríamos devido à definição de função decrescente,que $2<2{,}1$ implicaria em $2 = f(2) < f(2{,}1 = 2{,}9$. Essa implicação claramente é falsa;
+        \item O fato há um mínimo local quando $x = 4$, pode ser observado porque $4$ é maior valor de um intervalo de decrescimento e o menor de um intervalo de crescimento. Em outras palavras, em $x=4$, a função que estava decrescendo em $(2;4]$ passa a crescer em $[4;5]$, atingindo o menor valor localmente nessa mudança de comportamento da monotonicidade. É comum que mudanças da monotonicidade da função determinem extremos locais.
+        \item Analogamente ao ponto anterior, justifica-se que em $x=1{,}5$ tenhamos um máximo local.
+        %\item extremos no intervalo de constância
+        %\item demonstrar usando os intervalos de monotonicidade que 4 é mínimo local
+    \end{itemize}
 \end{solution}
 
 \begin{onlineact}
