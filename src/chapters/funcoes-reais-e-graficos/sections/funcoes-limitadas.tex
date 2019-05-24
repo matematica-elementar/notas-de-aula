@@ -42,18 +42,18 @@ Identifique, pelo gráfico, os intervalos de monotonicidade e os extremos locais
 \begin{solution}
     A partir do gráfico, pode-se perceber que a função $h$ é crescente nos intervalos $(-1;1{,}5]$ e $[4;5]$,
     decrescente em $[1,5; 2]$ e $(2;4]$ e constante em $[5;6]$.     
-    Também por observação do gráfico da função, conclui-se que o ponto $(1{,}5; 2{,}25)$ é um mínimo local, e o ponto $(4,1)$ é um máximo local.
+    Também por observação do gráfico da função, conclui-se que o ponto $(1{,}5; 2{,}25)$ é um mínimo local, e o ponto $(4,1)$ é um máximo local. Além disso, todos os pontos tais que $x \in [5;6]$ são máximos locais e todos os pontos tais que $x \in (5; 6]$ são mínimos locais.
     A função não possui extremos absolutos.
     Algumas observações, baseadas na análise do gráfico, são importantes acerca da solução apresentada acima.
     \begin{itemize}
         \item $-1$ não está presente no intervalo de crescimento $(-1;1{,}5]$ por não ser elemento do domínio da função;
-        \item $1{,}5$ deve estar no intervalo de crescimento $(-1;1{,}5]$. Note que, quaisquer $x_1, x_2 \in (-1;1{,}5]$ é satisfeito que $x_1 < x_2$ implica $f(x_1) < f(x_2)$, ou seja, a condição para que a função seja crescente nesse intervalo. Em particular, como $1{,}5$ é o maior dos valores de $(-1;1{,}5]$, note que é válido que $x_1 < 1{,}5$ implica $f(x_1) < f(1{,}5)$;
+        \item $1{,}5$ deve estar no intervalo de crescimento $(-1;1{,}5]$. Note que, quaisquer $x_1, x_2 \in (-1;1{,}5]$ é satisfeito que $x_1 < x_2$ implica $h(x_1) < h(x_2)$, ou seja, a condição para que a função seja crescente nesse intervalo. Em particular, como $1{,}5$ é o maior dos valores de $(-1;1{,}5]$, note que é válido que $x_1 < 1{,}5$ implica $h(x_1) < h(1{,}5)$;
         \item Analogamente ao ponto anterior, é necessário que $1{,}5$ e $2$ estejam no intervalo de decrescimento $[1,5; 2]$. Assim como todos os demais extremos dos intervalos fechados.
-        \item $2$ não deve fazer parte do intervalo de decrescimento $(2; 4]$, pois há uma bola aberta nesse intervalo de decrescimento. Se $2$ pertencesse a tal intervalo, teríamos devido à definição de função decrescente,que $2<2{,}1$ implicaria em $2 = f(2) < f(2{,}1 = 2{,}9$. Essa implicação claramente é falsa;
+        \item $2$ não deve fazer parte do intervalo de decrescimento $(2; 4]$, pois há uma bola aberta nesse intervalo de decrescimento. Se $2$ pertencesse a tal intervalo, teríamos devido à definição de função decrescente,que $2<2{,}1$ implicaria em $2 = h(2) < h(2{,}1) = 2{,}9$. Essa implicação claramente é falsa;
         \item O fato há um mínimo local quando $x = 4$, pode ser observado porque $4$ é maior valor de um intervalo de decrescimento e o menor de um intervalo de crescimento. Em outras palavras, em $x=4$, a função que estava decrescendo em $(2;4]$ passa a crescer em $[4;5]$, atingindo o menor valor localmente nessa mudança de comportamento da monotonicidade. É comum que mudanças da monotonicidade da função determinem extremos locais.
         \item Analogamente ao ponto anterior, justifica-se que em $x=1{,}5$ tenhamos um máximo local.
-        %\item extremos no intervalo de constância
-        %\item demonstrar usando os intervalos de monotonicidade que 4 é mínimo local
+        \item Em todo intervalo $[5; 6]$ em que a função é constante, os pontos são máximos locais e mínimos locais, com  a exceção que não há mínimo local em $x=5$. Isso ocorre porque, para qualquer $x_0\in (4;5]$, existe um intervalo $(x_0 - r; x_0+r)$ em torno de $x_0$ tal que $f(x)= f(x_0)$ para todo $x \in (x_0 - r; x_0+r)$. Ou seja, vale tanto $f(x) \leq f(x_0)$ quanto $f(x)\geq f(x_0)$. Observe no gráfico que em $x_0= 5$ não ocorre mínimo absoluto porque, para qualquer intervalo $(5 - r; 5+r)$, existe $x < 5$ tal que $f(x) < f(5)$.
+        \item Tendo como hipótese que a função é decrescente em $(2; 4]$ e crescente em $[4; 5]$, provemos que ocorre um mínimo local em $x=4$. Para tanto, precisamos mostrar que existe $r>0$ tal que, para todo $x \in (4-r; 4+r)$, então $h(4) \leq h(x)$. De fato, tome $r=1$ e seja $x \in (3; 5)$. Separaremos a verificação em três casos possíveis para $x$. Caso $x \in (3; 4)$, note que $x, 4 \in (2; 4]$, um intervalo de decrescimento da função. Assim, como $x<4$, então $h(4)< h(x)$. Agora, caso $x \in (4; 5)$, note que $x, 4 \in [4; 5]$, um intervalo de crescimento da função. Assim, como $4<x$, então $h(4)< h(x)$. Finalmente, caso $x=4$, é óbvio que $h(4)=h(x)$. Portanto, em $x=4$ há um mínimo local para a função $h$.
     \end{itemize}
 \end{solution}
 
