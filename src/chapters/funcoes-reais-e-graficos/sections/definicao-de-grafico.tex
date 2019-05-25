@@ -1,0 +1,37 @@
+\subsection{Definição}
+
+\begin{definition}
+    O \textdef{gráfico} de uma função real $f : D \subset \R \to \R$ é o seguinte subconjunto do plano
+cartesiano $\R^2$: $$G(f) = \set{(x,y) \in \R^2 \tq x \in D , y =
+f(x)}.$$
+\end{definition}
+
+\begin{remark}
+    O gráfico de uma função pode ser visto como o lugar geométrico
+dos pontos cujas coordenadas satisfazem sua lei de associação.
+\end{remark}
+
+\begin{example}
+    Esboce o gráfico da função real
+    $$\begin{array}{cccl}
+    f : & \R^\ast & \to     & \R \\
+        &  x & \mapsto & \begin{cases}
+                            +1,  &  \ \text{ se } x >0 \\
+                            -1, &  \ \text{ se } x <0
+                            \end{cases}
+    \end{array}.$$
+\end{example}
+
+\begin{solution}
+    Na Imagem~\ref{img:grafico-funcao-zeroum}, é mostrado o gráfico de $f$.
+
+    \begin{figure}[ht]
+    \centering
+        \importtikz{grafico-funcao-zeroum}
+    \caption{Gráfico da função $f$.}
+    \label{img:grafico-funcao-zeroum}
+    \end{figure}
+
+    Note que o valor de $f(x)$ não é definido para $x=0$.
+    Para deixar claro que o gráfico não possui nenhum ponto com coordenada $x$ com valor $0$, foram colocadas, na imagem, circunferências --- comumente chamadas de bolas abertas ---- nos pontos $(0,1)$ e $(0,-1)$, indicando que eles não pertencem ao gráfico de $f$.
+\end{solution}

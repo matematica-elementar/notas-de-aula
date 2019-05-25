@@ -1,0 +1,46 @@
+\subsubsection{Translação}
+
+A translação de um gráfico consiste em adicionar, à coordenada $y$ ou $x$ de todos os seus pontos, um mesmo fator constante.
+O resultado é um gráfico com a mesma forma, mas em uma altura e/ou posição horizontal diferentes no plano cartesiano.
+
+Considere funções reais $f$ e $g$ tais que $g(x) = f(x+h) + v$, em que $v$ e $h$ são números reais,
+então o gráfico de $g$ pode ser obtido, do gráfico de $f$, através
+de uma translação horizontal de $\modu h$ unidades e uma
+translação vertical de $\modu v$ unidades.
+Os valores de $v$ e $h$ influenciam nas translações vertical e horizontal, respectivamente, do gráfico de $f$ da seguinte forma:
+
+\begin{itemize}
+  \item $v > 0$: o translado vertical é no sentido positivo do eixo $y$ (para cima);
+  \item $v < 0$: o translado vertical é no sentido negativo do eixo $y$ (para baixo);
+  \item $h > 0$: o translado horizontal é no sentido negativo do eixo $x$ (para a esquerda);
+  \item $h < 0$: o translado horizontal é no sentido positivo do eixo $x$ (para a direita).
+\end{itemize}
+
+\begin{example}
+Sejam $f,g,h:\R \to \R$ tais que $f(x) = \sen x$, $g(x) = f(x) + 1 = \sen x +1$ e $h(x)= f\prn{x+\frac {\pi} 2}= \sen \prn{x+ \frac {\pi} 2}$.
+Compare os gráficos de $h$ e $g$ ao gráfico de $f$ com relação a translações.
+\end{example}
+
+\begin{solution}
+Na Imagem~\ref{img:grafico-translacao-exemplo-g}, são mostrados os gráficos de $f$ e $g$.
+%
+  \begin{figure}
+    \centering
+    \importtikz{translacao-exemplo-g}
+    \caption{Gráficos das funções $f$ e $g$.}
+    \label{img:grafico-translacao-exemplo-g}
+  \end{figure}
+%
+\noindent Uma vez que $g(x) = f(x)+1$ e $1>0$, o gráfico de $g$ é obtível transladando o gráfico de $f$ 1 unidade para cima.
+
+Na Imagem~\ref{img:grafico-translacao-exemplo-h}, são mostrados os gráficos de $f$ e $h$.
+%
+  \begin{figure}
+    \centering
+    \importtikz{translacao-exemplo-h}
+    \caption{Gráficos das funções $f$ e $h$.}
+    \label{img:grafico-translacao-exemplo-h}
+  \end{figure}
+%
+\noindent Uma vez que $h(x) = f\prn{x+\frac {\pi} 2}$ e $\frac {\pi} 2>0$, o gráfico de $h$ é obtível transladando o gráfico de $f$ $\frac {\pi} 2$ unidades para a esquerda.
+\end{solution}    

@@ -1,5 +1,3 @@
-\ProvidesPackage{mystyle}
-
 % INCLUDE ------------------------------------------------------------------------------------------------
 \usepackage{adforn}
 \usepackage{amsfonts} % \mathbb
@@ -8,7 +6,7 @@
 \usepackage{amsmath} 
 \usepackage[portuguese]{babel}
 \usepackage[makeroom]{cancel} % \cancel 
-\usepackage{caption} % change caption separator, \captionsetup
+\usepackage[figurename=Imagem]{caption} % change caption separator, \captionsetup
 \usepackage{chngcntr} 
 \usepackage{commath} % \abs
 \usepackage{csquotes}
@@ -34,6 +32,9 @@
 %%%%%%%%% CONFIG %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Numerar até \subsubsection{}'s
+\setcounter{secnumdepth}{3}
+
 % space between paragraphs
 \setlength{\parskip}{0pt} 
 
@@ -48,8 +49,8 @@
 \def\itemize{\enumfix\olditemize}
 
 % change itemize bullet character
-\renewcommand{\labelitemi}{--}
-\renewcommand{\labelitemii}{-}
+% \renewcommand{\labelitemi}{--}
+% \renewcommand{\labelitemii}{-}
 
 % spacing for lists
 % \renewcommand{\@listI}{%
@@ -171,6 +172,11 @@
 \end{mdframed}}
 
 %
+%   Diretórios
+%
+\newcommand{\resources}{res}
+
+%
 %   Comandos de utilidade para as notas de aula
 %
 \newcommand{\importchapter}[1]{\subimport{src/chapters/#1/}{main.tex}}
@@ -178,6 +184,7 @@
 \newcommand{\link}[2]{\href{#1}{\tt{#2}}}
 \newcommand{\khan}[2]{\href{#1}{\tt{#2}}}
 \newcommand{\textdef}[1]{\textit{#1}}
+\newcommand{\importtikz}[1]{\input{\resources/tikz/#1.tex}}
 
 %
 %   Comandos para ajudar na escrita
@@ -191,6 +198,11 @@
 \newcommand{\dica}{\hint}
 \newcommand{\highlight}[1]{\noindent-- \emph{#1}:}
 \newcommand{\case}{\highlight}
+
+%
+%    Declarações de operadores matemáticos
+%
+\DeclareMathOperator{\sen}{sen}
 
 %%
 %%   Comandos para Teoria de Conjuntos
@@ -256,6 +268,8 @@
 %
 \newcommand{\modulo}[1]{\left|#1\right|}
 \newcommand{\modu}{\modulo}
+\renewcommand{\sin}{\sen}
+
 %
 %   Lógica
 %
