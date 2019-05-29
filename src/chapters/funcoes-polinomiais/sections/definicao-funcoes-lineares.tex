@@ -1,1 +1,51 @@
 \subsubsection{Definição}
+
+\begin{definition}
+    Chamamos de \textdef{função linear} uma função real com lei de formação
+$f(x) = ax$ para algum $a \in \R$. Quando $a = 0$, dizemos que $f$ é \textdef{identicamente nula}.
+\end{definition}
+
+\begin{remark}
+Note que, sabendo que uma função é linear, o valor de $a$ é igual a
+$f(1)$.
+\end{remark}
+
+No caso das grandezas inversamente proporcionais, a função
+matemática que modela tal problema é uma função $f: \R^* \to
+\R^*$ tal que $f(x) = \frac a x$. 
+Nesse caso, também temos a
+particularidade de que $f(1) = a \in \R^*$.
+
+\begin{theorem}[Teorema Fundamental da Proporcionalidade]
+\label{def:teorema-fundamental-proporcionalidade}
+Seja $f: \R \to \R$ uma função crescente tal que $f(1)>0$. 
+As seguintes afirmações são equivalentes:
+%
+\begin{enumerate}[(i)]
+  \item $f$ é linear;
+  \item $f(x+y) = f(x) + f(y)$ para quaisquer $x, y \in \R$;
+  \item $f(nx) = nf(x)$ para todo $n \in \Z$ e todo $x \in \R$.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+    Um resultado análogo ao do Teorema \ref{def:teorema-fundamental-proporcionalidade} é válido
+    no caso de $f$ ser crescente e tal que $f(1) < 0$.
+\end{remark}
+
+A importância do Teorema \ref{def:teorema-fundamental-proporcionalidade} 
+está no fato de que, se quisermos saber se $f: \R \to \R$ é uma função linear não identicamente nula,
+basta verificar duas coisas:
+%
+\begin{enumerate}[1.]
+  \item $f$ é crescente ou decrescente;
+  \item $f(nx) = n f(x)$ para todo $x \in \R$ e todo $n \in \Z$. No
+  caso de o domínio e o contradomínio de $f$ serem o conjunto $\R^+$, basta verificar a condição
+  para $n \in \N$.
+\end{enumerate}
+
+\begin{example}
+O lado de um quadrado é proporcional à sua área? Em outras palavras,
+essas duas grandezas podem ser relacionadas por meio de uma função
+linear?
+\end{example}

@@ -1,1 +1,53 @@
 \subsection{Definição}
+
+\begin{definition}
+Diz-se que $p: \R \to \R$ é uma \textdef{função polinomial} quando
+existem números reais $a_0, a_1, \dots , a_n$ tais que, para todo $x
+\in \R$, tem-se
+
+\begin{equation}\label{funcpol}
+p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0.
+\end{equation}
+
+Os elementos de $p^{-1}(0)$ são chamados de \textdef{raízes de $p$}.
+\end{definition}
+
+\begin{example}
+Além das funções lineares, afins e quadráticas, a soma e o produto
+de funções polinomiais são funções polinomiais. Considere a função
+polinomial $p$ tal que $$p(x) = \paren{x - \alpha} \paren{x^{n-1} +
+\alpha x^{n-2} + \dots + \alpha^{n-2}x+ \alpha^{n-1}}=x^n -
+\alpha^n.$$ Nesse caso, dizemos que $p(x)$ é \textdef{divisível} por $x-
+\alpha$.
+\end{example}
+
+\begin{proposition}
+\label{prop:fatoracao-polinomios}
+Se $\alpha \in \R$ é raiz da função polinomial $p(x)$ de grau $n$,
+então existe uma função polinomial $q(x)$, de grau $n-1$, tal que
+$$p(x) = \paren{x- \alpha}q(x).$$
+Além disso, $p(x)$ não pode ter mais do que $n$ raízes.
+\end{proposition}
+
+\begin{definition}
+Uma função polinomial $p$ chama-se \emph{identicamente nula} quando
+se tem $p(x) = 0$ para todo $x \in \R$.
+\end{definition}
+
+\begin{remark}
+Note que uma função polinomial tem uma infinidade de raízes, 
+já que todo número real é raiz de do polinômio correspondente. 
+Isso não contradiz a Propisição \ref{prop:fatoracao-polinomios}, 
+já que o grau de uma função polinomial não está definido para a função identicamente nula.
+\end{remark}
+
+\begin{proposition}[Fórmula de Interpolação de Lagrange]
+Dados $n+1$ números reais distintos $x_0, x_1 , \dots , x_n$ e
+fixados arbitrariamente $y_0, y_1, \dots, y_n$ reais, existe
+um, e somente um, polinômio $p$ de grau menor ou igual a $n$ tal que
+$$p(x_0) = y_0, \ \ p(x_1) = y_1,  \dots , \ \ p(x_n) = y_n.$$
+
+$p(x)$ pode ser obtido pela fórmula:
+$$p(x) = \sum_{i=0}^{n} \bracket{y_i \cdot \prod_{k \neq i} \paren{\frac {x-
+x_k}{x_i-x_k}}}.$$
+\end{proposition}
