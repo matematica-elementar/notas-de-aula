@@ -14,6 +14,7 @@ Os elementos de $p^{-1}(0)$ são chamados de \textdef{raízes de $p$}.
 \end{definition}
 
 \begin{example}
+\label{exa:div-polinomio-linear}
 Além das funções lineares, afins e quadráticas, a soma e o produto
 de funções polinomiais são funções polinomiais. Considere a função
 polinomial $p$ tal que $$p(x) = \paren{x - \alpha} \paren{x^{n-1} +
@@ -29,6 +30,30 @@ então existe uma função polinomial $q(x)$, de grau $n-1$, tal que
 $$p(x) = \paren{x- \alpha}q(x).$$
 Além disso, $p(x)$ não pode ter mais do que $n$ raízes.
 \end{proposition}
+
+\begin{proof}
+    Seja $p(x)$ uma função polinomial de grau $n$, ou seja, $p(x)=a_n x^n  + \dots + a_1x + a_0$.
+    Teremos, para $\alpha \in \R$:
+    %
+    \[
+        p(x)-p(\alpha) = a_n(x^n-a^n) + \dots + a_1(x-\alpha) + \cancel{a_0}-\cancel{a_0}
+    \]   
+    %
+    Colocando o termo $(x-\alpha)$ em evidência de cada parcela dos $(x^i - \alpha^i)$, teremos:
+    %
+    \begin{equation}
+    \label{eq:px-minus-palpha}
+        p(x)-p(\alpha) = (x-\alpha)q(x),
+    \end{equation}
+    %
+    \noindent em que $q(x)$ é um polinômio de grau $n-1$ proveniente da fatoração de $(x^n-\alpha^n)$,
+    pelo Exemplo \ref{exa:div-polinomio-linear}. 
+    Agora, se $\alpha$ é uma raiz de $p(x)$, então $p(\alpha)=0$, e $\ref{eq:px-minus-palpha}$ tem a forma
+    $p(x)=(x-\alpha)q(x)$. 
+    Ademais, note que esse processo só pode ser repetido no máximo $n$ vezes, pois o grau de $q(x)$ é
+    $n-1$.
+
+\end{proof}
 
 \begin{definition}
 Uma função polinomial $p$ chama-se \emph{identicamente nula} quando

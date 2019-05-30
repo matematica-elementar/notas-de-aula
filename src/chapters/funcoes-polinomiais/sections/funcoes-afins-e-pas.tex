@@ -9,6 +9,27 @@ se $f$ for monótona e transformar qualquer PA $\paren{x_1, x_2,
 \N^*$, então $f$ é uma função afim.    
 \end{proposition}
 
+\begin{proof}
+    Seja $f: \R \to \R$ uma função afim e $(x_i)_{i\in\N^*}$ uma PA de razão $r$. 
+    Provemos que a sequência $(y_i)_{i\in\N^*}$, onde $y_i = f(x_i)$, para cada $i \in \N^*$, 
+    é uma PA.
+    Para tanto, seja $n \in \N^*$. 
+    Note que:
+    %
+    \[
+        y_{n+1}-y_n = f(x_{n+1})-f(x_n).
+    \]
+
+    Como $f$ é afim, existem $a,b\in\R$ tais que $f(x)=ax+b$.
+    Logo:
+    %
+    \begin{align*}
+        y_{n+1}-y_n &= a(x_{n+1})+\cancel b - (ax_n+\cancel b) \\ &= a(x_{n+1}-x_n) \\ &= ar.
+    \end{align*}
+    
+    Assim, $(y_i)_{i\in\N^*}$ é uma PA.
+\end{proof}
+
 \begin{onlineact}
     \khan{https://pt.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-linear-functions-modeling/e/constructing-and-interpreting-linear-functions}
     {Problemas de Modelos de Funções Lineares}.

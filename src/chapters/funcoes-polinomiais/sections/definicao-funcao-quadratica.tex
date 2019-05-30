@@ -15,9 +15,52 @@ ponto $\paren{-\frac {b} {2a}, -\frac {\Delta} {4a}}$ é o máximo
 absoluto da função.
 \end{proposition}
 
+\begin{proof}
+    Note que:
+    %
+    \begin{align*}
+        f(x) &= ax^2+bx+c\\
+        &= a\paren{x^2 + \frac b a x + \frac c a} \\
+        &= a\prn{x^2+2x\frac b {2a} + \prn{\frac b {2a}}^2  - \prn{\frac b {2a}}^2 + \frac c a} \\
+        &= a\prn{\prn{x+\frac{b}{2a}}^2 - \frac{b^2}{4a^2}+\frac c a}\\
+        &= a\prn{\prn{x+\frac{b}{2a}}^2 + \frac{-b^2+4ac}{4a^2}} \\
+        &= a\prn{\prn{x+\frac{b}{2a}}^2 - \frac{\Delta}{4a^2}} \\
+    \end{align*}
+    %
+    \noindent A última expressão é chamada de \textdef{forma canônica} da função quadrática.
+
+    Note que, se $a>0$, o termo $-\frac{\Delta}{4a^2}$ não depende de $x$. 
+    Assim, $f(x)$ atingirá o seu mínimo quando $\paren{x+\frac b {2a}}^2=0$, isso é, quando
+    $x = -\frac b {2a}$. 
+    Além disso, segue que $f(x)$ é ilimitada superiormente pois $\paren{x+\frac{b}{2a}}^2$ também o é.
+
+    Teremos o mínimo da função como sendo:
+    %
+    \begin{align*}
+        f\prn{\frac{-b}{2a}} &= a\prn{0^2-\frac{\Delta}{4a^2}} \\ &= -\frac{\Delta}{4a}.
+    \end{align*}
+
+    O caso em que $a<0$ é análogo.
+\end{proof}
+
 \begin{proposition}
 Seja $f$ uma função quadrática da forma $f(x) = ax^2 + bx +c$. Se
 $f(x_1) = f(x_2)$ para $x_1 \neq x_2$, então $x_1$ e $x_2$ são
 equidistantes de $-\frac{b} {2a}$, ou seja, $\frac{x_1 +x_2} 2 =
 -\frac{b}{2a}$.
 \end{proposition}
+
+\begin{proof}
+    Sejam $x_1 \ne x_2$ tais que $f(x_1) = f(x_2)$. Assim:
+    %
+    \begin{align*}
+        a\prn{ \prn{x_1+\frac{b}{2a}}^2 - \frac{\Delta}{4a^2}  } = a\prn{ \prn{x_2+\frac{b}{2a}}^2 - \frac{\Delta}{4a^2}  }
+        &\iff \prn{x_1+\frac b {2a}}^2 = \prn{x_2+\frac b {2a}}^2 \\ 
+        &\iff \modu{x_1 + \frac b {2a}} = \modu{x_2 + \frac b {2a}} \\ 
+        &\stackrel{x_1 \ne x_2}{\iff} x_1 + \frac b {2a} = -\prn{x_2 + \frac b {2a}}  \\
+        &\iff x_1 + x_2 = - 2 \cdot \frac b {2a} \\
+        &\iff \frac{x_1+x_2} 2 = -\frac b {2a}
+    \end{align*}
+
+    Portanto, $x_1$ e $x_2$ são equidistantes de $-\frac b {2a}$.
+\end{proof}
