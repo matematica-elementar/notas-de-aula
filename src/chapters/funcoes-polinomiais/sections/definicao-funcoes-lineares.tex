@@ -51,3 +51,26 @@ O lado de um quadrado é proporcional à sua área? Em outras palavras,
 essas duas grandezas podem ser relacionadas por meio de uma função
 linear?
 \end{example}
+
+\begin{solution}
+  O lado de um quadrado não é proporcional à sua área.
+  Para chegar a um absurdo, 
+  considere que o lado e a área de um quadrado são diretamente proporcionais, ou seja, eles podem
+  ser relacionados pela função linear
+  %
+  \begin{equation*}
+  \begin{array}{cccc}
+    A : & \R_+ & \to     & \R_+ \\
+        &  l & \mapsto & A(l),
+  \end{array}
+  \end{equation*}
+  %
+  que mapeia um número $l$ à área $A(l)$ de um quadrado cujo lado mede $l$.
+  Como $A$ é linear, então
+
+  $$A(3) = A(1+2)=A(1)+A(2),$$
+
+  \noindent pelo Teorema \ref{def:teorema-fundamental-proporcionalidade}. 
+  No entanto, $A(3) = 9$, e $A(1)+A(2) = 1+4 = 5$, levando-nos a concluir que $9=5$, o que, evidentemente,
+  é falso. Portanto, o lado e a área de um quadrado não são diretamente proporcionais.
+\end{solution}
