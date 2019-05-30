@@ -30,6 +30,71 @@ As seguintes afirmações são equivalentes:
 \end{enumerate}
 \end{theorem}
 
+\begin{proof}
+  Seja $f:\R \to \R$ uma função crescente.
+  Para provar que os três itens são equivalentes, basta provar as implicações (i)$\implies$(ii),  
+  (ii)$\implies$(iii) e (i)$\implies$(iii).
+
+  \begin{itemize}
+    \item (iii)$\implies$(i): A demonstração deste fato está fora do escopo deste texto.
+    \item (i)$\implies$(ii): Suponha que $f(x)=ax$ para algum $a \in \R$. Sejam $x,y\in\R$.
+    Teremos:
+    %
+    \begin{alignat*}{3}
+        f(x+y) &= a(x+y) && \quad\text{(Definição de $f$)}\\
+        &= ax+ay && \quad\text{(i)}\\
+        &= f(x)+f(y) && \quad\text{(Definição de $f$)}
+    \end{alignat*}
+
+    \item (ii)$\implies$(iii): Suponha que $f(x+y)=f(x)+f(y)$ para todos $x,y\in\R$.
+    Provemos, inicialmente, que $f(-x) = -f(x)$ sempre que $x\in\R$. 
+    Para isso, tomemos $x\in\R$.
+    Note que:
+    %
+    \begin{alignat*}{3}
+      f(x) &= f(-x+2x)\\
+      &= f(-x)+f(x+x) && \quad\text{(ii)}\\
+      &= f(-x)+f(x)+f(x) && \quad\text{(ii)}\\
+    \end{alignat*}
+    %
+    A igualdade $f(x) = f(-x)+f(x)+f(x)$ implica que $f(-x) = -f(x)$.
+
+    Seja, agora, $n\in\Z$. Separaremos a prova de $f(nx)=nf(x)$ em casos.
+    %
+    \begin{itemize}
+      \item Caso $n>0$: Temos que:
+      %
+      \begin{alignat*}{3}
+        f(nx) &= f(\underbrace{x+x+\dots+x}_{\text{$n$ vezes}}) \\
+        &= \underbrace{f(x)+f(x)+\dots+f(x)}_{\text{$n$ vezes}} && \quad\text{(ii)}\\
+        &= nf(x)
+      \end{alignat*}
+
+      \item Caso $n<0$: Temos que:
+      %
+      \begin{alignat*}{3}
+        f(nx)&=f\prn{-(-nx)} \\
+        &= -f\prn{-nx} && \quad\text{($f(-x) = -f(x)$ para todo $x \in \R$)}\\
+        &= -f\prn{(-n)x} \\
+        &= -\prn{ (-n)f(x)} && \quad\text{(Caso anterior, pois $-n>0$)}\\
+        &= nf(x)
+      \end{alignat*}
+      
+      \item Caso $n=0$: Temos que:
+      %
+      \begin{alignat*}{3}
+        f(0x) &= f(x-x) \\
+        &= f(x)+f(-x) && \quad\text{(ii)}\\
+        &= f(x)-f(x) && \quad\text{($f(-x) = -f(x)$ para todo $x \in \R$)}\\
+        &= 0\\
+        &= 0f(x)
+      \end{alignat*}
+    \end{itemize}
+
+    Da verificação dos três casos, concluímos que, para quaisquer $n\in\Z$ e $x\in\R$, vale que $f(nx)=nf(x)$.
+  \end{itemize}
+\end{proof}
+
 \begin{remark}
     Um resultado análogo ao do Teorema \ref{def:teorema-fundamental-proporcionalidade} é válido
     no caso de $f$ ser crescente e tal que $f(1) < 0$.
