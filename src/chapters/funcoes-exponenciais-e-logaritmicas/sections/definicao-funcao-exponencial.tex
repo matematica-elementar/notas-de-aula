@@ -1,1 +1,42 @@
 \subsection{Definição}
+
+\begin{definition}
+    Seja $a$ um número real positivo diferente de 1. Chamamos de
+\textdef{função exponencial} uma função $f: \R \to \R_+^*$ com lei de
+formação $f(x) = a^x$. O número $a$ é chamado de \textdef{base} da função exponencial.
+\end{definition}
+
+\begin{definition}
+Dizemos que uma função $f: \R \to \R$ é de \textdef{tipo exponencial}
+quando $f(x) =b\cdot a^x$, onde $a,b \in\R$, $b$ é não nulo e $a$ é
+positivo e diferente de 1.
+\end{definition}
+
+\begin{proposition}[Propriedades Fundamentais da Função Exponencial]
+\label{prop:propriedades-funcao-exponencial}
+Seja $f: \R \to \R_+^*$ uma função exponencial de base $a$.
+Então, para quaisquer $x, y \in \R$ valem:
+%
+\begin{enumerate}[(i)]
+  \item  $a^{x+y} = a^x\cdot a^y$, ou seja, $f(x+y) = f(x)\cdot f(y)$;
+  \item $a^1 = a$, ou seja, $f(1) = a$;
+  \item $x<y \implies \begin{cases} a^x < a^y, \ \ \ \text{ quando } \ \ \ a>1 \\
+                                    a^y < a^x, \ \ \ \text{ quando } \ \ \ 0<a<1
+                       \end{cases}.$
+\end{enumerate}
+\end{proposition}
+
+Como consequências das propriedades listadas na Proposição \ref{prop:propriedades-funcao-exponencial},
+pode-se listar os seguintes resultados acerca de uma função exponencial $f: \R \to \R_+^*$:
+%
+\begin{itemize}
+    \item $f^{-1}(0) = \emptyset$, ou seja, $f$ não pode assumir o valor
+    zero;
+    \item $f(x)>0$, para todo $x \in \R$;
+    \item Ao escolhermos o conjunto $\R_+^*$ como contradomínio de $f$, obtemos
+    a sobrejetividade da função;
+    \item $f$ é ilimitada superiormente;
+    \item O gráfico de $f$ é uma linha contínua;
+    \item $f$ é bijetiva e crescente se $a>1$, ou decrescente se
+    $0<a<1$.
+\end{itemize}
