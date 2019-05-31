@@ -33,19 +33,26 @@ $$ y = \log_a x \iff a^y = x.$$
 \end{proposition}
 
 \begin{proof}
-    Sob as hipóteses da proposição, teremos:
+    Sejam $x, y, b \in \R_+^*$, com $b \neq 1$, e $k \in \R$.
     %
     \begin{enumerate}[(a)]
         \item 
-        \begin{alignat*}{3}
-            z = \log_a x + \log_a y & \iff a^z && = a^{\log_a x + \log_a y}\\
-            & && = a^{\log_a x} \cdot a^{\log_a y} \\
-            & && = xy \\
-            & \iff z = \log_a(x y) && 
-        \end{alignat*}
+        Seja $z \in \R$. Ora,
         %
-        Logo, $\log_a(xy)=\log_a x + \log_a y$.
-        \item 
+        \[
+            z = \log_a x + \log_a y \iff a^z = a^{\log_a x + \log_a y} 
+        \]
+        %
+        Note que $a^{\log_a x + \log_a y}  = a^{\log_a x} \cdot a^{\log_a y} = xy$.
+        Logo, 
+        %
+        \begin{align*}
+            z = \log_a x + \log_a y & \iff a^z = a^{\log_a x + \log_a y}\\
+            & \iff a^z = xy \\
+            & \iff z = \log_a(xy)
+        \end{align*}
+        %
+        Portanto, $\log_a(xy)=\log_a x + \log_a y$.
     \end{enumerate}
 \end{proof}
 
