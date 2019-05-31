@@ -32,6 +32,23 @@ $$ y = \log_a x \iff a^y = x.$$
 \end{enumerate}
 \end{proposition}
 
+\begin{proof}
+    Sob as hipóteses da proposição, teremos:
+    %
+    \begin{enumerate}[(a)]
+        \item 
+        \begin{alignat*}{3}
+            z = \log_a x + \log_a y & \iff a^z && = a^{\log_a x + \log_a y}\\
+            & && = a^{\log_a x} \cdot a^{\log_a y} \\
+            & && = xy \\
+            & \iff z = \log_a(x y) && 
+        \end{alignat*}
+        %
+        Logo, $\log_a(xy)=\log_a x + \log_a y$.
+        \item 
+    \end{enumerate}
+\end{proof}
+
 \begin{onlineact}
     \khan{https://pt.khanacademy.org/math/algebra2/exponential-and-logarithmic-functions/introduction-to-logarithms/e/logarithms_1.5}
     {Cálculo de Logaritmos (Avançado)}
