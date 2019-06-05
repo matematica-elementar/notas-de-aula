@@ -28,7 +28,46 @@ se $f$ for monótona e transformar qualquer PA $\paren{x_1, x_2,
     \end{align*}
     
     Assim, $(y_i)_{i\in\N^*}$ é uma PA.
-\end{proof}
+
+    Suponha, reciprocamente, que $f$ é monótona e transforma qualquer
+    PA $\paren{x_1, x_2, \dots , x_i, \dots}$ numa PA com termo geral $y_i = f(x_i)$, com $i \in
+    \N^*$. 
+
+    Para provar que $f$ é afim, é suficiente verificar a linearidade da função $g(x)$ tal que
+    $f(x) = g(x) + f(0)$, uma vez que $g(x)$ seria da forma $ax$ e $f(0)$ é constante. 
+    Pelo Teorema \ref{def:teorema-fundamental-proporcionalidade}, basta provar que 
+    $g(nx) = ng(x)$ para todo $n \in \Z$ e todo $x \in \R$.
+
+    Note que $g(x) = f(x) - f(0)$. Além disso, se a sequência $\prn{f(x_1), f(x_2), \dots, f(x_i), \dots}$
+    é uma PA de razão $r$, a sequência $\prn{f(x_1) - f(0), f(x_2) - f(0), \dots, f(x_i) - f(0), \dots}$ também é 
+    uma PA de razão $r$. Dessa forma, podemos concluir que $g$ também transforma uma PA em outra.
+
+    Considere a PA $\prn{0, x, 2x, 3x, \dots}$. Temos que $\prn{g(0), g(x), g(2x), g(3x), \dots}$
+    também é uma PA, com razão $g(x)-g(0)$. No entanto, $g(0) = f(0)-f(0) = 0$, o que implica que a PA tem
+    razão $g(x)$. Pela fórmula do termo geral de uma PA, concluímos que $g(nx) = g(0) + n\cdot g(x) = n\cdot g(x)$
+    para todo $n \in \N$.
+
+    Falta mostrar que $g(nx) = n \cdot g(x)$ para cada $n \in \Z$ tal que $n < 0$.
+    Para nos ajudar nessa tarefa, vamos demonstrar que $g(x) = -g(-x)$, em que $x \in \R$. 
+    Primeiro, note que, para qualquer $x \in \R$, os números $-x$, $0$ e $x$
+    constituem uma PA, e, portanto, $g(-x)$, $g(0)$ e $g(x)$ também estão em PA. Daí, temos que $g(x) - g(0) = 
+    g(0)-g(-x)$. No entanto, $g(0) = f(0) - f(0) = 0$, o que implica que $g(x) = -g(-x)$.
+
+    Seja, agora, $n \in \Z$ tal que $n < 0$; ou seja, $-n \in \N$. Calculemos:
+    %
+    \begin{alignat*}{3}
+        g(nx) &= g\prn{(-n)(-x)} &&  \\
+        &= (-n)g(-x) && \quad\text{($g(mx) = mg(x)$ para $m\in\N$)} \\
+        &= (-n)\prn{-g(x)} && \quad\text{($g(k) = -g(-k)$ para $k \in \R$)} \\
+        &= ng(x)
+    \end{alignat*}
+
+    Demonstramos, então, que $g(nx) = ng(x)$ para todo $n \in \Z$. Pelo \ref{def:teorema-fundamental-proporcionalidade},
+    $g$ é linear; isso é, $g(x) = ax$ para algum $a \in \R$. Logo, $f(x) = ax + f(0)$. Como $a$ e $f(0)$ são constantes,
+    temos que $f$ é afim.
+
+    
+ \end{proof}
 
 \begin{onlineact}
     \khan{https://pt.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-linear-functions-modeling/e/constructing-and-interpreting-linear-functions}
