@@ -1,0 +1,141 @@
+\subsubsection{Definição}
+
+\begin{definition}
+    Chamamos de \textdef{função linear} uma função real com lei de formação
+$f(x) = ax$ para algum $a \in \R$. Quando $a = 0$, dizemos que $f$ é \textdef{identicamente nula}.
+\end{definition}
+
+\begin{remark}
+Note que, sabendo que uma função é linear, o valor de $a$ é igual a
+$f(1)$.
+\end{remark}
+
+No caso das grandezas inversamente proporcionais, a função
+matemática que modela tal problema é uma função $f: \R^* \to
+\R^*$ tal que $f(x) = \frac a x$. 
+Nesse caso, também temos a
+particularidade de que $f(1) = a \in \R^*$.
+
+A seguir, veremos um teorema de grande relevância para funções lineares.
+
+\begin{theorem}[Teorema Fundamental da Proporcionalidade]
+\label{def:teorema-fundamental-proporcionalidade}
+Seja $f: \R \to \R$ uma função crescente tal que $f(1)>0$. 
+As seguintes afirmações são equivalentes:
+%
+\begin{enumerate}[(i)]
+  \item $f$ é linear;
+  \item $f(x+y) = f(x) + f(y)$ para quaisquer $x, y \in \R$;
+  \item $f(nx) = nf(x)$ para todo $n \in \Z$ e todo $x \in \R$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  Seja $f:\R \to \R$ uma função crescente.
+  Para provar que os três itens são equivalentes, basta provar as implicações (i)$\implies$(ii),  
+  (ii)$\implies$(iii) e (i)$\implies$(iii).
+
+  \begin{itemize}
+    \item (iii)$\implies$(i): A demonstração deste fato está fora do escopo deste texto.
+    \item (i)$\implies$(ii): Suponha que $f(x)=ax$ para algum $a \in \R$. Sejam $x,y\in\R$.
+    Teremos:
+    %
+    \begin{alignat*}{3}
+        f(x+y) &= a(x+y) && \quad\text{(Definição de $f$)}\\
+        &= ax+ay && \quad\text{(i)}\\
+        &= f(x)+f(y) && \quad\text{(Definição de $f$)}
+    \end{alignat*}
+
+    \item (ii)$\implies$(iii): Suponha que $f(x+y)=f(x)+f(y)$ para todos $x,y\in\R$.
+    Provemos, inicialmente, que $f(-x) = -f(x)$ sempre que $x\in\R$. 
+    Para isso, tomemos $x\in\R$.
+    Note que:
+    %
+    \begin{alignat*}{3}
+      f(x) &= f(-x+2x)\\
+      &= f(-x)+f(x+x) && \quad\text{(ii)}\\
+      &= f(-x)+f(x)+f(x) && \quad\text{(ii)}\\
+    \end{alignat*}
+    %
+    A igualdade $f(x) = f(-x)+f(x)+f(x)$ implica que $f(-x) = -f(x)$.
+
+    Seja, agora, $n\in\Z$. Separaremos a prova de $f(nx)=nf(x)$ em casos.
+    %
+    \begin{itemize}
+      \item Caso $n>0$: Temos que:
+      %
+      \begin{alignat*}{3}
+        f(nx) &= f(\underbrace{x+x+\dots+x}_{\text{$n$ vezes}}) \\
+        &= \underbrace{f(x)+f(x)+\dots+f(x)}_{\text{$n$ vezes}} && \quad\text{(ii)}\\
+        &= nf(x)
+      \end{alignat*}
+
+      \item Caso $n<0$: Temos que:
+      %
+      \begin{alignat*}{3}
+        f(nx)&=f\prn{-(-nx)} \\
+        &= -f\prn{-nx} && \quad\text{($f(-x) = -f(x)$ para todo $x \in \R$)}\\
+        &= -f\prn{(-n)x} \\
+        &= -\prn{ (-n)f(x)} && \quad\text{(Caso anterior, pois $-n>0$)}\\
+        &= nf(x)
+      \end{alignat*}
+      
+      \item Caso $n=0$: Temos que:
+      %
+      \begin{alignat*}{3}
+        f(0x) &= f(x-x) \\
+        &= f(x)+f(-x) && \quad\text{(ii)}\\
+        &= f(x)-f(x) && \quad\text{($f(-x) = -f(x)$ para todo $x \in \R$)}\\
+        &= 0\\
+        &= 0f(x)
+      \end{alignat*}
+    \end{itemize}
+
+    Da verificação dos três casos, concluímos que, para quaisquer $n\in\Z$ e $x\in\R$, vale que $f(nx)=nf(x)$.
+  \end{itemize}
+\end{proof}
+
+\begin{remark}
+    Um resultado análogo ao do Teorema \ref{def:teorema-fundamental-proporcionalidade} é válido
+    no caso de $f$ ser crescente e tal que $f(1) < 0$.
+\end{remark}
+
+A importância do Teorema \ref{def:teorema-fundamental-proporcionalidade} 
+está no fato de que, se quisermos saber se $f: \R \to \R$ é uma função linear não identicamente nula,
+basta verificar duas coisas:
+%
+\begin{enumerate}[1.]
+  \item $f$ é crescente ou decrescente;
+  \item $f(nx) = n f(x)$ para todo $x \in \R$ e todo $n \in \Z$. No
+  caso de o domínio e o contradomínio de $f$ serem o conjunto $\R^+$, basta verificar a condição
+  para $n \in \N$.
+\end{enumerate}
+
+\begin{example}
+O lado de um quadrado é proporcional à sua área? Em outras palavras,
+essas duas grandezas podem ser relacionadas por meio de uma função
+linear?
+\end{example}
+
+\begin{solution}
+  O lado de um quadrado não é proporcional à sua área.
+  Para chegar a um absurdo, 
+  considere que o lado e a área de um quadrado são diretamente proporcionais, ou seja, eles podem
+  ser relacionados pela função linear
+  %
+  \begin{equation*}
+  \begin{array}{cccc}
+    A : & \R_+ & \to     & \R_+ \\
+        &  l & \mapsto & A(l),
+  \end{array}
+  \end{equation*}
+  %
+  que mapeia um número $l$ à área $A(l)$ de um quadrado cujo lado mede $l$.
+  Como $A$ é linear, então
+
+  $$A(3) = A(1+2)=A(1)+A(2),$$
+
+  \noindent pelo Teorema \ref{def:teorema-fundamental-proporcionalidade}. 
+  No entanto, $A(3) = 9$, e $A(1)+A(2) = 1+4 = 5$, levando-nos a concluir que $9=5$, o que, evidentemente,
+  é falso. Portanto, o lado e a área de um quadrado não são diretamente proporcionais.
+\end{solution}
