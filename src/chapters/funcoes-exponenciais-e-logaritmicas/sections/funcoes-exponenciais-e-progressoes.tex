@@ -9,3 +9,53 @@ PA $\paren{x_1, x_2, \dots , x_i, \dots}$ numa PG com termo geral
 $y_i = f(x_i)$, $i \in \N^*$ então $f$ é uma função real tal
 que $f(x) = b \cdot a^x$ com $b = f(0)$ e $a = \frac {f(1)} {f(0)}$.
 \end{proposition}
+
+\begin{proof}
+    Seja $f: \R \to \R$. Inicialmente, suponha que $f(x) = b a^x$, com $a,b\in\R$ tais que $a>0$ e $a\ne 1$.
+    Além disso, suponha que $\seq{x_i}{i \in \nnats}$ é uma PA de razão $r$.
+    
+    Considere a sequência $\seq{b_i}{i \in \nnats}$ tal que $b_i = f(x_i)$ para cada $i \in \nnats$.
+    Seja $n \in \nnats$. Temos que:
+    %
+    \[
+        \frac{b_{n+1}}{b_n} = \frac{f(x_{n+1})}{f(x_n)} = \frac{\cancel b \cdot a^{x_{n+1}}}{\cancel b \cdot a^{x_n}} = 
+        a^{x_{n+1}-x_n} = a^r
+    \]
+    %
+    Logo, $\seq{b_i}{i \in \nnats}$ é uma PG.
+
+    Reciprocamente, suponha que $f$ é monótona e injetiva e transforma qualquer PA $\seq{x_i}{i \in \nnats}$
+    em uma PG $\seq{y_i}{i \in \nnats}$ tal que $y_i = f(x_i)$ para todo $i \in \nnats$.
+    Ademais, tome $b = f(0)$.
+
+    Seja $\func g {\reais}{\reais}$ tal que $g(x) = \frac{f(x)}b$. 
+    Temos que $g$, assim como $f$, transforma PAs em PGs (exercício para o leitor).
+    Agora, considere $a = g(1)$. 
+    Note que $g(1) = \frac{f(1)}b$, o que implica que $a = \frac{f(1)}b$ e, consequentemente,
+    $f(1) = b\cdot a$. 
+    
+    Note que, para qualquer $x \in \reais$, $-x$, $0$ e $x$ estão em PA. 
+    Assim, $g(-x)$, $g(0)$ e $g(x)$ estão em PG. 
+    Como $g(0) = \frac{f(0)}{b} = \frac{f(0)}{f(0)} = 1$, essa PG tem razão
+    $\frac{g(x)}{g(0)} = g(x)$.
+    Logo, $g(x) = \frac{1}{g(-x)}$, o que implica que:
+    %
+    \[
+        g(-x) = \frac{1}{g(x)} = \prn{g(x)}^{-1}
+    \]
+    %
+    Ademais, a PG $\prn{g(0)=1, g(x), g(2x), \dots, g(nx), \dots}$ tem razão $g(x)$.
+    Logo, $g(nx) = \prn{g(x)}^n$ para todos $n \in \nats$ e $x \in \reais$.
+    Como temos, também, que $g(-x) = \prn{g(x)}^{-1}$, podemos concluir que
+    $g(nx) = \prn{g(x)}^n$ para todos $n \in \ints$ e $x \in \reais$.
+    Segue, do Teorema~\ref{theo:caracterizacao-funcao-exponencial}, que $g(x) = a^x$, 
+    em que $a = g(1)$. Assim,
+    %
+    \[
+        f(x) = b\cdot g(x) = b \cdot a^x,
+    \]
+    %
+    com $f(0) = b$ e $f(1) = b\cdot a$, ou seja, $a = \frac{f(1)}{f(0)}$.
+
+
+\end{proof}
