@@ -4,7 +4,20 @@
     Considere as funções logarítmicas tais que $f(x) = \log_2 x$ e $g(x)
 = \log_{\frac 1 2} x$. Os gráficos de $f$ e $g$ são apresentados
 abaixo.
+
+Qual a relação entre os gráficos dessas funções?
 \end{example}
+
+\begin{solution}
+    Seja $f(x) = \log_2 x$. Teremos:
+    %
+    \[
+        g(x) = \log_{\frac 1 2}{x} = \frac{\log_2 x}{\log_2 {\frac 1 2}} = \frac{\log_2 x}{\log_2 \prn{2^{-1}}}
+        = \frac{\log_2 x}{-1\cdot\log_2 2} = -\log_2 x = -f(x)
+    \]
+    %
+    Assim, o gráfico de $g(x)$ é, simplesmente, uma reflexão do gráfico de $f(x)$.
+\end{solution}
 
 \begin{remark}
     Já vimos que o crescimento exponencial supera o de qualquer
