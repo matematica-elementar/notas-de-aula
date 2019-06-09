@@ -75,6 +75,16 @@ $$ y = \log_a x \iff a^y = x.$$
         \item Note que $x = a^{\log_a x} = \prn{b^{\log_b a}}^{\log_a x} = b^{\log_b a \cdot \log_a x}$.
         Com isso, temos que $\log_b x = \log_b a \cdot \log_a x$. Portanto, $\log_a x = \frac{\log_b x}{\log_b a}$.
 
+        \item A função $f$ tem inversa --- a saber, a exponencial $g(x) =  a^x$ ---, e, portanto, pelo Teorema \ref{theo:inv-sse-bij}, é bijetiva.
+        Consequentemente, sua imagem é o conjunto $\reais$, o que implica que é ilimitada tanto superiormente quanto inferiormente.
+
+        \item A explicação do porquê de o gráfico de $f$ ser traçado por uma linha contínua está fora do escopo do texto.
+
+        \item Temos, como uma das consequências da Proposição~\ref{prop:propriedades-funcao-exponencial}, que a inversa de $f$ é crescente
+        quando $a > 1$ ou decrescente quando $0 < a <1$, além de ser bijetiva.
+        Logo, sua inversa, que é a própria função $f$ pela Definição~\ref{def:funcao-inversa}, também é crescente quando $a > 1$ ou decrescente
+        quando $0 < a < 1$ (Exercício \ref{exer:inversa-funcao-crescente}).
+
 
     \end{enumerate}
 \end{proof}
