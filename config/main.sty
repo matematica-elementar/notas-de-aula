@@ -226,6 +226,8 @@
 \newcommand{\st}{\suchthat}
 \newcommand{\talque}{\suchthat}
 \newcommand{\tq}{\talque}
+\newcommand{\sequencia}[2]{\prn{#1}_{#2}}
+\newcommand{\seq}{\sequencia}
 
 %
 %    Funções gerais
@@ -233,6 +235,8 @@
 \newcommand{\I}[1]{\identity{#1}}
 \newcommand{\identity}[1]{\mathcal{I}_{#1}}
 \newcommand{\fcomp}{\circ}
+\newcommand{\funcao}[3]{#1 : #2 \to #3}
+\newcommand{\func}{\funcao}
 
 
 %
@@ -251,10 +255,18 @@
 %
 \newcommand{\U}{\mathcal{U}}%						Universo
 \newcommand{\N}{\mathbb{N}}%						Naturais
-\newcommand{\nnats}{\N^*}%							Naturais positivos
+\newcommand{\naturais}{\N}%             Naturais
+\newcommand{\nats}{\naturais}%          Naturais
+\newcommand{\nnats}{\pnats}%            Naturais positivos
+\newcommand{\pnats}{\nats^*}%						Naturais positivos
 \newcommand{\Z}{\mathbb{Z}}%						Inteiros
+\newcommand{\inteiros}{\Z}%             Inteiros
+\newcommand{\ints}{\inteiros}%          Inteiros
+\newcommand{\nints}{\ints_{-}^*}%       Inteiros negativos
 \newcommand{\Q}{\mathbb{Q}}%						Racionais
 \newcommand{\R}{\mathbb{R}}%						Reais
+\newcommand{\reais}{\R}%						    Reais
+\newcommand{\preais}{\reais^*_+}%       Reais positivos
 \newcommand{\C}{\mathbb{C}}%						Complexos
 
 %
