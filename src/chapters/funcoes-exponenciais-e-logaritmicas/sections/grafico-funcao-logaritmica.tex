@@ -13,16 +13,16 @@
 Qual a relação entre os gráficos dessas funções?
 
 \begin{solution}
-    Seja $f(x) = \log_2 x$. Teremos:
-    \[
-        g(x) = \log_{\frac 1 2}{x}
-        = \frac{\log_2 x}{\log_2 {\frac 1 2}}
-        = \frac{\log_2 x}{\log_2 \prn{2^{-1}}}
-        = \frac{\log_2 x}{-1\cdot\log_2 2}
-        = -\log_2 x
-        = -f(x)
-    \]
-    Assim, o gráfico de $g(x)$ é, simplesmente, uma reflexão do gráfico de $f(x)$.
+    De modo geral, o gráfico de $h(x) = \log_b x$ terá forma semelhante ao de $f$ quando $b>1$, e semelhante
+    ao de  $g$ quando $0<b<1$. Agora, verificaremos que o gráfico de $g$ é um reflexo vertical do gráfico de $f$,
+    ou seja, $g(x) =  -f(x)$, para todo $x \in \preais$. Seja $x \in \preais$.
+    Note que:
+    %
+    $$g(x) = \log_{\frac 1 2} x = \frac{\log_2 x}{\log_{\frac 1 2} 2}= \frac{\log_2 x}{\log_2 2^{-1}}=\frac{\log_2 x}{-1}=-f(x) $$
+    %
+    Assim, o gráfico de $g(x)$ é, simplesmente, uma reflexão do gráfico de $f(x)$. Mais geralmente,
+    se $f$ e $g$ são funções logarítmicas de base $a$ e $b$, respectivamente, então $a\cdot b = 1$ se,
+    e somente se, o gráfico de $g$ é reflexo vertical do gráfico de $f$ (exercício para o leitor).
 \end{solution}
 
 \begin{remark}
