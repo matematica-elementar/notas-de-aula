@@ -1,0 +1,106 @@
+\subsection{Definição}
+
+\begin{definition}
+A inversa da função exponencial de base $a$ é a \textdef{função
+logarítmica}
+$$\log_a : \R_+^* \to \R,$$
+que associa a cada número real positivo $x$ o número real $\log_a
+x$, chamado \textdef{logaritmo} de $x$ na base $a$. No caso de $a=10$,
+escrevemos, por simplicidade, $\log_{10}x = \log x$.
+\end{definition}
+
+\begin{remark}
+    Pela definição de função inversa, tem-se
+$$ a^{\log_a x}=x \ \ \ \text{ e } \ \ \ \log_a \paren{a^x} = x.$$
+Assim, $\log_a x $ é o expoente ao qual se deve elevar a base $a$
+para obter o número $x$. Em outras palavras,
+$$ y = \log_a x \iff a^y = x.$$
+\end{remark}
+
+\begin{proposition}
+    Seja $f: \R_+^* \to \R$ uma função logarítmica tal que $f(x) =
+\log_a x$. Os seguintes valem para quaisquer  $x, y, b \in
+\R_+^*$, $b \neq 1$ e qualquer $k \in \R$:
+\begin{enumerate}[(a)]
+  \item $\log_a \paren{xy} = \log_a x + \log_a y$;
+  \item $\log_a x^k = k\cdot \log_a x$;
+  \item $\log_a 1 = 0$;
+  \item $\log_a x = \frac{\log_b x}{\log_b a}$;
+  \item $f$ é bijetiva com contradomínio $\R$, logo é ilimitada superiormente e inferiormente;
+  \item O gráfico de $f$ é traçado por uma linha contínua;
+  \item $f$ é crescente se $a>1$ e decrescente se $0<a<1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    Sejam $x, y, b \in \R_+^*$, com $b \neq 1$, e $k \in \R$.
+    %
+    \begin{enumerate}[(a)]
+        \item 
+        Seja $z \in \R$. Ora,
+        %
+        \[
+            z = \log_a x + \log_a y \iff a^z = a^{\log_a x + \log_a y} 
+        \]
+        %
+        Note que $a^{\log_a x + \log_a y}  = a^{\log_a x} \cdot a^{\log_a y} = xy$.
+        Logo, 
+        %
+        \begin{align*}
+            z = \log_a x + \log_a y & \iff a^z = a^{\log_a x + \log_a y}\\
+            & \iff a^z = xy \\
+            & \iff z = \log_a(xy)
+        \end{align*}
+        %
+        Portanto, $\log_a(xy)=\log_a x + \log_a y$.
+
+        \item Seja $z \in \R$.
+        Ora, 
+        %
+        \[
+            z = k \log_a x \iff a^z = a^{k\log_a x}
+        \]
+        %
+        Note que $a^{k\log_a x} = \prn{a^{\log_a x}}^k = x^k$.
+        Logo:
+        %
+        \begin{align*}
+            z = k \log_a x & \iff a^z = x^k \\ &\iff z = \log_a {x^k}
+        \end{align*}
+        %
+        Portanto, $\log_a{x^k}=k\log_a x$
+
+        \item Temos que $a^0 = 1$, e, portanto, $\log_a 1 = 0$.
+
+        \item Note que $x = a^{\log_a x} = \prn{b^{\log_b a}}^{\log_a x} = b^{\log_b a \cdot \log_a x}$.
+        Com isso, temos que $\log_b x = \log_b a \cdot \log_a x$. Portanto, $\log_a x = \frac{\log_b x}{\log_b a}$.
+
+        \item A função $f$ tem inversa --- a saber, a exponencial $g(x) =  a^x$ ---, e, portanto, pelo Teorema \ref{theo:inv-sse-bij}, é bijetiva.
+        Consequentemente, sua imagem é o conjunto $\reais$, o que implica que é ilimitada tanto superiormente quanto inferiormente.
+
+        \item A explicação do porquê de o gráfico de $f$ ser traçado por uma linha contínua está fora do escopo do texto.
+
+        \item Temos, como uma das consequências da Proposição~\ref{prop:propriedades-funcao-exponencial}, que a inversa de $f$ é crescente
+        quando $a > 1$ ou decrescente quando $0 < a <1$, além de ser bijetiva.
+        Logo, sua inversa, que é a própria função $f$ pela Definição~\ref{def:funcao-inversa}, também é crescente quando $a > 1$ ou decrescente
+        quando $0 < a < 1$ (Exercício \ref{exer:inversa-funcao-crescente}).
+
+
+    \end{enumerate}
+\end{proof}
+
+\begin{onlineact}
+    \khan{https://pt.khanacademy.org/math/algebra2/exponential-and-logarithmic-functions/introduction-to-logarithms/e/logarithms_1.5}
+    {Cálculo de Logaritmos (Avançado)}
+\end{onlineact}
+
+\begin{onlineact}
+    \khan{https://pt.khanacademy.org/math/algebra2/exponential-and-logarithmic-functions/properties-of-logarithms/e/logarithms_2}
+    {Use as Propriedades dos Logaritmos}
+\end{onlineact}
+
+\begin{onlineact}
+    \khan{https://pt.khanacademy.org/math/algebra2/exponential-and-logarithmic-functions/change-of-base-formula-for-logarithms/e/rewrite-logarithmic-expressions-using-the-change-of-base-rule}
+    {Use a Regra da Mudança de Base dos Logaritmos}
+\end{onlineact}
+

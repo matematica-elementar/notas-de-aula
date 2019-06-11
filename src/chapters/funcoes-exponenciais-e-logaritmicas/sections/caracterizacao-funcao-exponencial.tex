@@ -1,0 +1,44 @@
+\subsection{Caracterização}
+
+\begin{theorem}[Caracterização da Função Exponencial]
+\label{theo:caracterizacao-funcao-exponencial}
+Seja $f: \R \to \R_+^*$ uma função monótona injetiva. As
+seguintes afirmações são equivalentes:
+\begin{enumerate}[(i)]
+  \item $f(nx) = f(x)^n$ para todo $n \in \Z$ e todo $x \in \R$;
+  \item $f(x) = a^x$ para todo $x\in \R$, onde $a = f(1)$;
+  \item $f(x+y) = f(x)\cdot f(y)$ para quaisquer $x, y \in \R$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  \item (i)$\implies$(ii): Esta prova está fora do escopo do texto.
+  \item (ii)$\implies$(iii): Suponha que $f(x) = a^x$ para todo $x \in \reais$.
+  
+  Sejam $x,y \in \reais$. Note que:
+  %
+  \[
+      f(x+y)=a^{x+y}=a^x \cdot a^y = f(x)\cdot f(y)
+  \]
+  \item (iii)$\implies$(i): Suponha que $f(x+y) = f(x)\cdot f(y)$ para todo $x,y\in\reais$. 
+  Temos que $f(x)=f(x+0) = f(x)\cdot f(0)$. 
+  Logo, $f(0)=1=\prn{f(x)}^0$.
+  Além disso, para qualquer $x\in\reais$,
+  \[
+      1=f(0)=f(x-x)=f(x)\cdot f(-x).
+  \]
+  Logo, $f(-x) = \frac{1}{f(x)} = \prn{f(x)}^{-1}$.
+
+  Sejam $n \in \nnats$ e $x \in \reais$. Note que:
+  %
+  \[
+      f(nx)=f(\underbrace{x+x+\dots + x}_{\text{$n$ termos}}) = 
+      \underbrace{f(x)\cdot f(x) \cdot \dots \cdot f(x)}_{\text{$n$ termos}} = f(x)^n
+  \]
+
+  Agora, sejam $n \in \nints$ e $x \in \reais$. Assim, $-n \in \pnats$, e
+  %
+  \[
+      f(nx) = f\bracket{-\prn{-nx}} = \bracket{f(-nx)}^{-1} = \bracket{f(x)^{-n}}^{-1} = f(x)^n.
+  \]
+\end{proof}
