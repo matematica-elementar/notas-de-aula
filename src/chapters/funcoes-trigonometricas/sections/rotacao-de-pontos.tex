@@ -1,5 +1,7 @@
 \subsubsection{Rotação de Pontos no Plano Cartesiano}
 
+Nesta seção, será vista a rotação de pontos, uma aplicação direta das fórmulas de adição de arcos vistas até então.
+
 \begin{definition}
 Considere o ponto $A = (x, y) \in \reais^2$ e chame de $\alpha$ o ângulo
 formado pelo segmento $OA$ com o eixo positivo de $x$. A função
@@ -14,8 +16,13 @@ torno da origem. O esquema é ilustrado na Imagem~\ref{img:funcao-rotacao}.
 \caption{Função de rotação $T_{\theta}$.}
 \label{img:funcao-rotacao}
 \end{figure}
-    
 \end{definition}
+
+\begin{remark}
+    Note que $x\cos \theta - y\sen\theta = \cos\alpha\cos\theta - \sen\alpha\sen\theta = \cos(\alpha+\theta)$ e que 
+    $x \sen \theta + y\cdot \cos \theta = \cos\theta \cdot \sen\theta + \sen\alpha \cdot \cos\theta = \sen(\alpha+\theta)$, 
+    ou seja, a rotação de pontos é, de fato, uma aplicação direta das identidades da Proposição~\ref{prop:seno-e-cosseno-da-soma}.
+\end{remark}
 
 \begin{onlineact}
     \khan{https://pt.khanacademy.org/math/trigonometry/trig-equations-and-identities/intro-to-trig-angle-addition-identities/e/trig_addition_identities}
