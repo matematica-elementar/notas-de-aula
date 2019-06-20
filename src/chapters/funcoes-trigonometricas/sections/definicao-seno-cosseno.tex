@@ -66,6 +66,19 @@ para todo $t\in \reais$. Se for o caso de $f(-t) = - f(t)$ para todo $t
      A função seno é ímpar, e a função cosseno é par.
  \end{proposition}
 
+\begin{proof}
+    Seja $t \in \reais$. Sem perda de generalidade, suponha que $0 < t < \frac \pi 2$.
+    Tome, no quarto quadrante do ciclo trigonométrico, o ponto $E(-t) = (x_0; y_0)$, e considere 
+    $\theta$ o ângulo que o segmento da origem a esse ponto faz com o eixo $x$, conforme a Imagem . %TODO: update ref
+    %
+    %TODO: insert image
+    %
+    Teremos que $(x_0, y_0) =\prn{\cos\prn{-t}, \sen\prn{-t}}$ e que o ângulo formado no triângulo vermelho é igual a $\theta$.
+    Quando dois triângulos possuem hipotenusas congruentes e um dos ângulos agudos congruentes, tem-se que os triângulos são congruentes.
+    Logo, $\cos t = \cos\prn{-t}$ e $\sen t = \modu{\sen\prn{- t}}$. Como $\sen\prn{-t}$ é negativo, segue que 
+    $\sen\prn{-t} = -\sen t$. Os casos em que o ângulo $\theta$ está no segundo, terceiro ou quarto quadrantes ficam como exercício 
+    para o leitor.
+\end{proof}
 
 \begin{onlineact}
     \khan{https://pt.khanacademy.org/math/trigonometry/unit-circle-trig-func/trig-values-special-angles/e/trigonometric-functions-of-special-angles}
