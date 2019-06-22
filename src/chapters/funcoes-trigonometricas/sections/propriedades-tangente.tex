@@ -3,7 +3,7 @@
 \begin{proposition}
     Valem as seguintes propriedades acerca da função tangente:
 
-\begin{itemize}
+\begin{enumerate}[(a)]
   \item Embora não seja definida para todo número real, a função
   tangente pode ser considerada uma função periódica de período
   $\pi$ em todo o seu domínio, pois $\tan \paren{x+\pi} = \tan x$;
@@ -13,12 +13,20 @@
   \item Ao definirmos $tan: \paren{- \frac {\pi} 2, \frac {\pi} 2} \to \reais$,
 obtemos uma bijeção. Assim, o intervalo aberto $\paren{- \frac {\pi}
 2, \frac {\pi} 2}$ tem a mesma cardinalidade que $\reais$.
-\end{itemize}
+\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-  \item Seja $x \in \bigcup_{k \in \Z} \paren{k \pi - \frac{\pi} 2, k \pi + \frac {\pi} 2}$. Segue que $$\tan \paren{x+\pi} = \frac{\sen \paren{x+\pi}}{\cos \paren{x+\pi}}= \frac{-\sen x}{-\cos x}= \frac{\sen x}{\cos x}= \tan x.$$
-  \item Considere uma reta não vertical com equação $y=mx+n$, ou seja, $m \neq 0$. Considere também que esta reta forma um ângulo $\alpha$ com o eixo $x$. Agora, sejam $\paren {x_1, y_1}$ e $\paren{x_2, y_2}$ pontos quaisquer da reta com $x_1 \neq x_2$. Para fixar as ideias, faremos o caso onde $m>0$, conforme ilustrado na imagem abaixo.
+  \begin{enumerate}[(a)]
+    \item[]
+    \item Seja $x \in \bigcup_{k \in \Z} \paren{k \pi - \frac{\pi} 2, k \pi + \frac {\pi} 2}$. 
+  Segue que: $$\tan \paren{x+\pi} = \frac{\sen \paren{x+\pi}}{\cos \paren{x+\pi}}= \frac{-\sen x}{-\cos x}= \frac{\sen x}{\cos x}= \tan x.$$
+  Logo, pela Definição~\ref{def:funcao-periodica}, a função tangente é periódica.
+  \item Considere uma reta não vertical com equação $y=mx+n$, em que $m > 0$. Considere, também, que essa reta forma um ângulo $\alpha$ com o eixo $x$. Agora, sejam $\paren {x_1, y_1}$ e $\paren{x_2, y_2}$ pontos quaisquer da reta tais que $x_1 \neq x_2$. 
+  O esquema é ilustrado na Imagem blah. % PENDENTE: ajeitar a referência da imagem.
+  %
+  % PENDENTE: inserir imagem
+  % 
   %Inserir a figura aqui e ajustar as referências dela com o fim do texto acima (sim, eu comento em PT_BR mesmo =D)
   No triângulo retângulo formado na imagem, temos:
   \begin{align*}
@@ -27,22 +35,13 @@ obtemos uma bijeção. Assim, o intervalo aberto $\paren{- \frac {\pi}
     &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
     &= \frac{y_2 - y_1}{x_2 - x_1}
   \end{align*}
-  Sabemos que $\frac{y_2 - y_1}{x_2 - x_1} = m$. %tem referência a esse cálculo em alguma parte do texto ou dos exercícios?
-  É por conta dessa igualdade que o valor $m$ numa função afim é costumeiramente chamado de coeficiente angular. Porém, reforçamos que o termo mais apropriado para designar o $m$ numa função afim é taxa de variação ou taxa de crescimento. Use o termo coeficiente angular quando estiver tratando explicitamente de uma característica de retas, que significa o valor da tangente de $\alpha$, o ângulo formado pela reta e o eixo $x$.
-  %fim da minha demonstração do ponto 2
-  %O terceiro ponto está fora do escopo do texto (pelo menos por hora)
+  %
+  O caso em que $m < 0$ é análogo.
+
+  Sabemos que $\frac{y_2 - y_1}{x_2 - x_1} = m$ (Exercício \ref{exer:determinicidade-funcao-afim}).
+  É por conta dessa igualdade que o valor $m$ numa função afim é, costumeiramente, chamado de coeficiente angular. Porém, reforçamos que o termo mais apropriado para designar o $m$ numa função afim é taxa de variação ou taxa de crescimento. Use o termo coeficiente angular quando estiver se referindo explicitamente a uma reta. Nesse contexto, ele corresponde ao valor da tangente de $\alpha$, o ângulo formado pela reta e o eixo $x$.
+  \item A demonstração deste item está fora do escopo do texto.
+  \end{enumerate}
+
   
-  Considere a Imagem . %TODO: update ref %TODO: better text about the image (include the m factor)
-  %
-  % TODO: insert image here
-  %
-  No triângulo retângulo mostrado na imagem, temos:
-  %
-  \begin{align*}
-    \tan \alpha &= \frac {\sen\alpha}{\cos\alpha} \\ 
-    &= \frac{ \frac{\text{cateto oposto}}{\text{hipotenusa}}   }{\frac{\text{cateto adjacente}}{\text{hipotenusa}}} \\
-    &= \frac{\text{cateto oposto}}{\text{cateto adjacente}}\\
-    &= \frac{y_2 - y_1}{x_2 - x_1} \\ &= m
-  \end{align*}
-  \item %TODO: decide what will happen with this (trello)
 \end{proof}
