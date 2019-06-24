@@ -22,12 +22,18 @@ obtemos uma bijeção. Assim, o intervalo aberto $\paren{- \frac {\pi}
     \item Seja $x \in \bigcup_{k \in \Z} \paren{k \pi - \frac{\pi} 2, k \pi + \frac {\pi} 2}$. 
   Segue que: $$\tan \paren{x+\pi} = \frac{\sen \paren{x+\pi}}{\cos \paren{x+\pi}}= \frac{-\sen x}{-\cos x}= \frac{\sen x}{\cos x}= \tan x.$$
   Logo, pela Definição~\ref{def:funcao-periodica}, a função tangente é periódica.
-  \item Considere uma reta não vertical com equação $y=mx+n$, em que $m > 0$. Considere, também, que essa reta forma um ângulo $\alpha$ com o eixo $x$. Agora, sejam $\paren {x_1, y_1}$ e $\paren{x_2, y_2}$ pontos quaisquer da reta tais que $x_1 \neq x_2$. 
-  O esquema é ilustrado na Imagem blah. % PENDENTE: ajeitar a referência da imagem.
+  \item Considere uma reta não vertical com equação $y=mx+n$, em que $m > 0$. 
+  Considere, também, que essa reta forma um ângulo $\alpha$ com o eixo $x$. 
+  Agora, sejam $\paren {x_1, y_1}$ e $\paren{x_2, y_2}$ pontos quaisquer da reta tais que $x_1 \neq x_2$. 
+  O esquema é ilustrado na Imagem~\ref{img:prova-props-tangente}. 
   %
-  % PENDENTE: inserir imagem
-  % 
-  %Inserir a figura aqui e ajustar as referências dela com o fim do texto acima (sim, eu comento em PT_BR mesmo =D)
+  \begin{figure}[H]
+      \centering
+      \includegraphics[scale=0.65]{\imgdirfromsection/props-tangente.jpg}
+      \caption{Reta $y = mx + n$ e os pontos $\prn{x_1, y_1}$ e $\prn{x_2, y_2}$.}
+      \label{img:prova-props-tangente}
+  \end{figure}
+    %
   No triângulo retângulo formado na imagem, temos:
   \begin{align*}
     \tan \alpha &= \frac {\sen\alpha}{\cos\alpha} \\ 
