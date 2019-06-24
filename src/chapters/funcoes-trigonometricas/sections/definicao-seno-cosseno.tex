@@ -1,0 +1,102 @@
+\subsubsection{Definição}
+
+A fim de definirmos as funções trigonométricas como funções
+reais, considere a seguinte função, chamada de função de Euler: $E:
+\reais \to \reais^2$ tal que $E(t)$ é o ponto $(x, y)$ do círculo
+trigonométrico obtido após ``enrolarmos'', com uma corda de comprimento
+$t$, o círculo trigonométrico iniciando no ponto $(1, 0)$ e tomando
+como sentido positivo o sentido anti-horário. 
+A construção é mostrada na Imagem~\ref{fig:ciclo-trigonometrico}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{\imgdirfromsection/circtrig.jpg}
+\caption{Interpretação geométrica da função $E$.}
+\label{fig:ciclo-trigonometrico}
+\end{figure}
+
+\begin{definition}
+\label{def:funcao-seno-cosseno}
+    As funções $\cos : \R \to \R$ e $\sen : \R \to \R$, chamadas
+\textdef{função cosseno} e \textdef{função seno}. respectivamente, são
+definidas pondo-se, para cada $t \in \R$,
+$$E(t) = \paren{\cos t , \sen t}.$$
+
+Em outras palavras, $x= \cos t$ e $y = \sen t$ são, respectivamente,
+a abcissa e a ordenada do ponto $E(t)$ da circunferência unitária.
+\end{definition}
+
+Segue imediatamente da Definição~\ref{def:funcao-seno-cosseno} que a
+relação fundamental $$ \sen^2 t + \cos^2 t = 1$$ vale para todo $t
+\in \reais$.
+Além disso, valem as seguintes igualdades para todo $t \in \reais$:
+\begin{center}
+\begin{tabular}{ c c }
+    %\hline
+    % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    $\cos \paren{t+ \pi} = -\cos t$, & $\sen \paren{t+ \pi} = -\sen t$, \\
+    $\cos \paren{t+ \frac {\pi} 2} = -\sen t$, & $\sen \paren{t+ \frac {\pi} 2} = \cos t$, \\
+    $\cos \paren{ \frac {\pi} 2 -t} = \sen t$, & $\sen \paren{ \frac {\pi} 2 -t} = \cos t$, \\
+    $\cos \paren{ \pi -t} = -\cos t$, & $\sen \paren{ \pi -t} = \sen t$. \\
+    %\hline
+  \end{tabular}
+\end{center}
+
+\begin{definition}
+\label{def:funcao-periodica}
+    Uma função $f: \R \to \R$ chama-se \textdef{periódica} quando existe $T
+\in \R^\ast$ tal que $f(t + T) = f(t)$ para todo $t \in \reais$. Ao
+menor número $T>0$ que faz a propriedade anterior ser satisfeita,
+damos o nome de \textdef{período} da função $f$.
+\end{definition}
+
+\begin{remark}
+    Como uma volta completa no círculo trigonométrico tem $2 \pi$ de
+comprimento, é fácil ver que a função seno e cosseno são periódicas
+de período $2\pi$.
+\end{remark}
+
+\begin{definition}
+\label{def:funcao-par-impar}
+    Uma função $f: \reais \to \reais$ é \textdef{par} quando se tem $f(-t) = f(t)$
+para todo $t\in \reais$. Se for o caso de $f(-t) = - f(t)$ para todo $t
+\in \reais$, dizemos que $f$ é \textdef{ímpar}.
+\end{definition}
+
+ \begin{proposition}
+     A função seno é ímpar, e a função cosseno é par.
+ \end{proposition}
+
+\begin{proof}
+    Seja $t \in \reais$. Sem perda de generalidade, suponha que $0 < t < \frac \pi 2$.
+    Tome, no quarto quadrante do ciclo trigonométrico, o ponto $E(-t) = (x_0; y_0)$, e considere 
+    $\theta$ o ângulo que o segmento da origem a esse ponto faz com o eixo $x$, conforme a Imagem~\ref{img:reflexao-eixo-y-angulo-primeiro-quadrante}.
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{\imgdirfromsection/reflexao-eixo-y-angulo-primeiro-quadrante.jpg}
+        \caption{Ângulo $\theta$.}
+        \label{img:reflexao-eixo-y-angulo-primeiro-quadrante}
+    \end{figure}
+    %
+    Teremos que $(x_0, y_0) =\prn{\cos\prn{-t}, \sen\prn{-t}}$ e que o ângulo formado no triângulo vermelho é igual a $\theta$.
+    Quando dois triângulos possuem hipotenusas congruentes e um dos ângulos agudos congruentes, tem-se que os triângulos são congruentes.
+    Logo, $\cos t = \cos\prn{-t}$ e $\sen t = \modu{\sen\prn{- t}}$. Como $\sen\prn{-t}$ é negativo, segue que 
+    $\sen\prn{-t} = -\sen t$. Os casos em que o ângulo $\theta$ está no segundo, terceiro ou quarto quadrantes ficam como exercício 
+    para o leitor.
+\end{proof}
+
+\begin{onlineact}
+    \khan{https://pt.khanacademy.org/math/trigonometry/unit-circle-trig-func/trig-values-special-angles/e/trigonometric-functions-of-special-angles}
+    {Valores Trigonométricos de Ângulos Especiais}.
+\end{onlineact}
+
+\begin{onlineact}
+    \khan{https://pt.khanacademy.org/math/trigonometry/unit-circle-trig-func/pythagorean-identity/e/circles-and-pythagorean-identities}
+    {Use a Identidade Trigonométrica Fundamental}.
+\end{onlineact}
+
+\begin{onlineact}
+    \khan{https://pt.khanacademy.org/math/trigonometry/trig-equations-and-identities/basic-sinusoidal-equations/e/solve-basic-sinusoidal-equations}
+    {Resolva Equações Senoidais (Básico)}.
+\end{onlineact}
