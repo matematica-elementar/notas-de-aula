@@ -76,26 +76,15 @@ Para quaisquer conjuntos $A$, $B$ e $C$, são válidas as propriedades a seguir:
 \end{proposition}
 
 \begin{proof}
-	Apenas dos itens \ref{inclusao:reflexividade} e \ref{inclusao:transitividade}.
-
 	\ref{inclusao:reflexividade}
 	Seja $x \in A$ um elemento arbitrário.
 	Ora, como já temos que $x \in A$ podemos concluir que $A \subset A$.
 
 	\ref{inclusao:antissimetria}
-	Sejam $A$ e $B$ conjuntos tais que $A \subset B$ e $B \subset A$.
-	Suponha, por contradição, que $A \ne B$, ou seja, existe $x \in A$ tal que $x \notin B$ (1) ou existe $x \in B$ tal que $x \notin A$ (2).
-	Ora, (1) é o mesmo que $A \notsubset B$, contradizendo $A \subset B$.
-	Analogamente, (2) contradiz $B \subset A$.
-	Portanto, $A = B$.
+	Sejam $A$ e $B$ conjuntos tais que $A \subset B$ e $B \subset A$. Suponha, por contradição, que $A \ne B$, ou seja, existe $x \in A$ tal que $x \notin B$ (1) ou existe $x \in B$ tal que $x \notin A$ (2). Ora, (1) é o mesmo que $A \notsubset B$, contradizendo $A \subset B$. Analogamente, (2) contradiz $B \subset A$. Portanto, $A = B$.
 
 	\ref{inclusao:transitividade}
-	Sejam $A$, $B$ e $C$ conjuntos tais que $A \subset B$ e $B \subset C$.
-	Agora basta demonstrar que $A \subset C$.
-	Para isso, considere $x \in A$ um elemento arbitrário e mostremos que $x \in C$.
-	Como temos que $A \subset B$, podemos concluir que $x \in B$.
-	E, como $x \in B$ e $B \subset C$, segue que $x \in C$.
-	Portanto, $A \subset C$.
+	Sejam $A$, $B$ e $C$ conjuntos tais que $A \subset B$ e $B \subset C$. Agora basta demonstrar que $A \subset C$. Para isso, considere $x \in A$ um elemento arbitrário e mostremos que $x \in C$. Como temos que $A \subset B$, podemos concluir que $x \in B$. E, como $x \in B$ e $B \subset C$, segue que $x \in C$. Portanto, $A \subset C$.
 \end{proof}
 
 \begin{definition}[Conjunto das Partes]
