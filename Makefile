@@ -14,7 +14,7 @@ BIBER_FLAGS		= --input-directory $(BUILD_PATH) --output-directory $(BUILD_PATH)
 BUILD_FILES		= $(BUILD_PATH)/$(DOCUMENT_NAME).{log,aux,bcf,out,run.xml,toc}
 BIB_FILES		= $(BUILD_PATH)/$(DOCUMENT_NAME).{bbl,blg}
 
-default: help
+default: build
 
 help:
 	@echo "These are all the options available:"
