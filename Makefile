@@ -12,4 +12,4 @@ clean:
 	latexmk -c
 
 cleanall:
-	lataexmk -C
+	latexmk -C
