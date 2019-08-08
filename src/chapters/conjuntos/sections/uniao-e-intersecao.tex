@@ -97,10 +97,16 @@ Abaixo, seguem as demonstrações de cada propriedade.
     \item Abaixo, seguem as demonstrações das leis de De Morgan.
         \begin{enumerate}[a)]
             \item
-                Inicialmente, demonstremos que $(A \cup B)^C \subset A^C \cap B^C$. Da proposição \ref{prop:uniao-inclusao} da propriedade \ref{prop:uniao-e-intersecao-inclusao}, temos que $A \subset A \cup B$. Segue do item \ref{prop:complementar:contrapositiva} da proposicao \ref{prop:complementar} que $(A \cup B)^C \subset A^C$ (i). De forma análoga, também temos que $(A \cup B)^C \subset B^C$ (ii). Seja agora $x \in (A \cup B)^C$. Por (i), temos $x \in A^C$. Por (ii), temos $x \in B^C$. Logo, $x \in A^C \cap B^C$. Portanto, $(A \cup B)^C \subset A^C \cap B^C$. \\
+                Inicialmente, demonstremos que $(A \cup B)^C \subset A^C \cap B^C$. Do item \ref{prop:uniao-inclusao} da propriedade \ref{prop:uniao-e-intersecao-inclusao}, temos que $A \subset A \cup B$. Segue do item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar} que $(A \cup B)^C \subset A^C$ (i). De forma análoga, também temos que $(A \cup B)^C \subset B^C$ (ii). Seja agora $x \in (A \cup B)^C$. Por (i), temos $x \in A^C$. Por (ii), temos $x \in B^C$. Logo, $x \in A^C \cap B^C$. Portanto, $(A \cup B)^C \subset A^C \cap B^C$. \\
                 Finalmente, demonstremos que $A^C \cap B^C \subset (A \cup B)^C$. Seja $x \in A^C \cap B^C$, ou seja, $x \in A^C$ e $x \in B^C$. Dessa forma, $x \not\in A$ e $x \not\in B$. Suponha, por contradição, que $x \in A \cup B$. Dessa maneira, teríamos $x \in A$, o que contradiz $x \not\in A$, ou $x \in B$, o que contradiz $x \not\in B$. Logo, $x \not\in A \cup B$, ou seja, $x \in (A \cup B)^C$. Assim, $A^C \cap B^C \subset (A \cup B)^C$. Portanto, $(A \cup B)^C = A^C \cap B^C$.
             \item
-                Exercício.
+                Primeiramente, demonstremos que $A^C \cup B^C \subset (A \cap B)^C$. Observe que, pelo item \ref{prop:intersecao-inclusao} da propriedade \ref{prop:uniao-e-intersecao-inclusao}, temos $A \cap B \subset A$, e, pelo item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar}, temos $A^C \subset (A \cap B)^C$ (i). De forma análoga, temos $B^C \subset (A \cap B)^C$ (ii). Então, seja $x \in A^C \cup B^C$, isto é, $x \in A^C$ ou $x \in B^C$. Caso que $x \in A^C$, podemos afirmar que $x \in (A \cap B)^C$ por (i). E, caso $x \in B^C $, por (ii), também podemos afirmar que $x \in (A \cap B)^C$. Portanto, temos que $A^C \cup B^C \subset (A \cap B)^C$. \\
+                Finalmente, demonstremos que $(A \cap B)^C \subset A^C \cup B^C$. Suponha, para chegar num absurdo, que $(A \cap B)^C \not\subset A^C \cup B^C$. Então, existe $x \in (A \cap B)^C$ tal que $x \not\in A^C \cup B^C$. Logo, $x \not\in A \cap B$. Temos 4 possibilidades para $x$: \\
+                Caso $x \in A$ e $x \in B$: Então, $x \in A \cap B$, o que contradiz $x \not\in A \cap B$. \\
+                Caso $x \not\in A$ e $x \in B$: Então, $x \in A^C$. Daí, $x \in A^C \cup B^C$, o que contradiz $x \not\in A^C \cup B^C$.\\
+                Caso $x \in A$ e $x \not\in B$: Então, $x \in B^C$. Daí, $x \in A^C \cup B^C$, o que contradiz $x \not\in A^C \cup B^C$.\\
+                Caso $x \not\in A$ e $x \not\in B$: De $x \not\in $, temos $x \in A^C$. Daí, $x \in A^C \cup B^C$, o que contradiz $x \not\in A^C \cup B^C$.\\
+                Sendo assim, como os 4 casos levam a um absurdo, podemos concluir que $(A \cap B)^C \subset A^C \cup B^C$.
         \end{enumerate}
 \end{enumerate}
 \end{proof}
