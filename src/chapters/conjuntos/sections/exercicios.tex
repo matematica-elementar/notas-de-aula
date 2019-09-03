@@ -17,27 +17,6 @@
 	\end{enumerate}
 \end{exercise}
 
-\begin{comment}
-\begin{exercise}
-Demonstre as seguintes propriedades sobre os conjuntos arbitrários $A$, $B$ e $C$.
-
-\begin{tip}
-Ao demonstrar uma propriedade você tem o direito de usá-la para demonstrar as outras)
-\end{tip}
-
-\begin{enumerate}[a.]
-\item $A \subset A$
-\item $A \subset A \cup B$
-\item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
-\item $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
-\item $(A \cup B)^C = A^C \cap B^C$
-\item $(A \cap B)^C = A^C \cup B^C$
-\item $(A^C)^C = A$	
-\item $A \cap (A \cup B) = A$
-\item $A \cup (A \cap B) = A$
-\end{enumerate}
-\end{exercise}
-\end{comment}
 \begin{exercise}
 %\label{exe:} @TODO linkar com as propriedades
 Complete as demonstrações em \nameref{prop:uniao-e-intersecao} que não foram feitas em sala de aula.
@@ -51,10 +30,10 @@ Demonstre que os seguintes itens são equivalentes:
 		\item $A \subset B$;
 		\item $A \cap B = A$;
 	\end{enumerate}
-	\begin{tip}
+	\begin{hint}
 		Para tanto, é preciso provar \textbf{a. $\iff$ b.} e \textbf{b. $\iff$ c.}.
 		Outra maneira é provar \textbf{a. $\implies$ b.}, \textbf{b. $\implies$ c.} e por fim, \textbf{c. $\implies$ a.}.
-	\end{tip}
+	\end{hint}
 \end{exercise}
 
 \begin{exercise}
@@ -91,6 +70,8 @@ Recorde a definição da diferença entre conjuntos:
   $$B \setminus A = \set {x \tq x \in B \text { e } x \notin A}.$$
   Mostre que
     \begin{enumerate}[a.]
+      \item $B \setminus A = B \cap A^C$;
+      \item $\prn{B \setminus A}^C = B^C\cup A$;
       \item $B \setminus A = \emptyset$ se, e somente se, $B \subset
       A$;
       \item $B \setminus A = B$ se, e somente se, $A \cap B =
@@ -194,4 +175,21 @@ ou falsa?
   \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
 \end{tabular}
 \end{center}
+\end{exercise}
+
+\begin{exercise}
+  Numa mesa há cinco cartas:
+  %
+  \begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9}
+    Q & $\empty$ & T & $\empty$ & 3 & $\empty$ & 4 & $\empty$ & 6 \\
+    \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9}
+  \end{tabular}
+  \end{center}
+  %
+  Cada carta tem um número natural de um lado e uma letra de outro lado. 
+  Nico afirma: ``Qualquer carta que tenha uma vogal tem um número par do outro lado''.
+  Jorel provou que Nico mente virando somente uma das cartas. Qual das cinco cartas
+  Jorel teve que virar para provar que Nico mentiu?
 \end{exercise}

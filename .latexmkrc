@@ -1,0 +1,1 @@
+@default_files = ('src/main.tex');

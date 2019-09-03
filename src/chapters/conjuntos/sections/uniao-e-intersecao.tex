@@ -2,12 +2,14 @@
 
 \begin{definition}[União e Interseção]
 Dados os conjuntos $A$ e $B$, definem-se:
-
 \begin{enumerate}
-	\item A \textdef{união} $A \cup B$ como sendo o conjunto formado pelos elementos que pertencem a pelo menos um dos conjuntos $A$ e $B$. Ou seja,
-		$$ A \cup B = \set{x \tq x \in A \text{ ou } x \in B} . $$
-	\item A \textdef{interseção} $A \cap B$ como sendo o conjunto formado pelos elementos que pertencem a ambos $A$ e $B$. Ou seja,
-		$$ A \cap B = \set{x \tq x \in A \text{ e } x \in B} . $$
+    \item
+        A \textdef{união} $A \cup B$ como sendo o conjunto formado pelos elementos que pertencem a pelo menos um dos conjuntos $A$ e $B$. Ou seja,
+    $$ A \cup B = \set{x \tq x \in A \text{ ou } x \in B} . $$
+    
+    \item
+        A \textdef{interseção} $A \cap B$ como sendo o conjunto formado pelos elementos que pertencem a ambos $A$ e $B$. Ou seja,
+        $$ A \cap B = \set{x \tq x \in A \text{ e } x \in B}. $$
 \end{enumerate}
 \end{definition}
 
@@ -17,8 +19,8 @@ Sejam $A = \set{1, 2, 3}$ e $ B = \set{2,5}$. Determine $A \cup B$ e $A \cap B$.
 
 \begin{solution}
 \begin{align*}
-	&A \cup B = \set{1,2,3,5};\\
-	&A \cap B = \set{2}.\\
+    A \cup B &= \set{1,2,3,5};\\
+    A \cap B &= \set{2}.
 \end{align*}
 \end{solution}
 
@@ -26,74 +28,89 @@ Sejam $A = \set{1, 2, 3}$ e $ B = \set{2,5}$. Determine $A \cup B$ e $A \cap B$.
 \label{prop:uniao-e-intersecao}
 Para quaisquer conjuntos $A$, $B$ e $C$, tem-se:
 \begin{enumerate}[i)]
-\item \textdef{Comutatividade}: 
-	\begin{enumerate}[a)]
-		\item $A \cup B = B \cup A$;
-		\item $A \cap B = B \cap A$.
-	\end{enumerate}
-\item \textdef{Associatividade}:
-	\begin{enumerate}[a)]
-		\item $\left(A \cup B \right) \cup C = A \cup \left( B \cup C \right)$;
-		\item $\left(A \cap B \right) \cap C = A \cap \left( B \cap C \right)$.
-	\end{enumerate}
-\item % @TODO nomear esta propriedade - by TONHAUNM: não vejo necessidade
-	\begin{enumerate}[a)]
-		\item $A \subset \prn{A \cup B}$;
-		\item $\prn{A \cap B} \subset A$.
-	\end{enumerate}
-\item \textdef{Distributividade}, de uma em relação à outra:
-	\begin{enumerate}[a)]
-		\item $A \cap \left( B \cup C \right) = \left(A \cap B \right) \cup \left( A \cap C \right)$;
-		\item $A \cup \left( B \cap C \right) = \left(A \cup B \right) \cap \left( A \cup C  \right)$.
-	\end{enumerate}
-\item
-	\textdef{Leis de DeMorgan}:
-	\begin{enumerate}[a)]
-		\item $\left( A \cup B \right)^C = A^C \cap B^C$;
-		\item $\left(A \cap B \right)^C = A^C \cup B^C$.
-	\end{enumerate}
+    \item
+        \textdef{Comutatividade}:
+        \begin{enumerate}[a)]
+            \item $A \cup B = B \cup A$;
+            \item $A \cap B = B \cap A$.
+        \end{enumerate}
+
+    \item
+        \textdef{Associatividade}:
+        \begin{enumerate}[a)]
+            \item $\left(A \cup B \right) \cup C = A \cup \left( B \cup C \right)$;
+            \item $\left(A \cap B \right) \cap C = A \cap \left( B \cap C \right)$.
+        \end{enumerate}
+
+    \item
+        \begin{enumerate}[a)]
+            \label{prop:uniao-e-intersecao-inclusao}
+            \item
+                \label{prop:uniao-inclusao}
+                $A \subset \prn{A \cup B}$;
+            \item
+                \label{prop:intersecao-inclusao}
+                $\prn{A \cap B} \subset A$.
+        \end{enumerate}
+
+    \item
+        \textdef{Distributividade}, de uma em relação à outra:
+        \begin{enumerate}[a)]
+            \item $A \cap \left( B \cup C \right) = \left(A \cap B \right) \cup \left( A \cap C \right)$;
+            \item $A \cup \left( B \cap C \right) = \left(A \cup B \right) \cap \left( A \cup C  \right)$.
+        \end{enumerate}
+
+    \item
+        \label{prop:demorgan}
+        \textdef{Leis de DeMorgan}:
+        \begin{enumerate}[a)]
+            \item $\left( A \cup B \right)^C = A^C \cap B^C$;
+            \item $\left(A \cap B \right)^C = A^C \cup B^C$.
+        \end{enumerate}
 \end{enumerate}
 \end{proposition}
 
-% Proposição 21
 \begin{proof}
+Abaixo, seguem as demonstrações de cada propriedade.
 \begin{enumerate}[i)]
-\item[]
-\item Exercício.
-\item
-	\begin{enumerate}[a)]
-		\item 
-		Exercício.
+    \item Exercício.
 
-		\item
-		Provemos que $A \cap (B \cap C) \subset (A \cap B) \cap C$. 
-		Seja $x \in A \cap (B \cap C)$, isso é, $x \in A$ e $x \in B \cap C$.
-		De $x \in B \cap C$, temos $x \in B$ e $x \in C$.
-		Como $x \in A$ e $x \in B$, segue que $x \in A \cap B$.
-		Além disso, $x \in C$.
-		Então, $x \in A \cap (B \cap C)$.
-		Logo, $A \cap (B \cap C) \subset (A \cap B) \cap C$. 
+    \item
+        \begin{enumerate}[a)]
+            \item Exercício.
+            \item
+                Provemos que $A \cap (B \cap C) \subset (A \cap B) \cap C$. Seja $x \in A \cap (B \cap C)$, isso é, $x \in A$ e $x \in B \cap C$. De $x \in B \cap C$, temos $x \in B$ e $x \in C$. Como $x \in A$ e $x \in B$, segue que $x \in A \cap B$. Além disso, $x \in C$. Então, $x \in A \cap (B \cap C)$. Logo, $A \cap (B \cap C) \subset (A \cap B) \cap C$. \\
+                A prova de que $A \cap (B \cap C) \supset (A \cap B) \cap C$, necessária para concluir a igualdade desejada, fica como exercício para o leitor.
+        \end{enumerate}
 
-		A prova de que $A \cap (B \cap C) \supset (A \cap B) \cap C$, necessária para concluir a igualdade desejada, fica como exercício para o leitor.
+    \item 	
+        \begin{enumerate}[a)]
+            \item
+                Seja $x \in A$. Pela definição de união, segue que $x \in A \cup B$. Portanto, $A \subset \prn{A \cup B}$;
+            \item
+                Seja $x \in \prn{A \cap B}$. Pela definição de interseção, segue que $x\in A$ e $x \in B$. Em particular, já temos que $x \in A$. Portanto, $\prn{A \cap B} \subset A$.
+        \end{enumerate}
+        Em decorrência dessa propriedade, vamos tratar como imediatos que: se $x \in A$, então $x \in \prn{A \cup B}$; e se $x \in \prn{A \cap B}$, então $x\in A$ (ou, caso convenha, $x\in B$).
 
-	\end{enumerate}
+    \item Exercício.
 
-\item 	
-	\begin{enumerate}[a)]
-		\item Seja $x \in A$. Pela definição de união, segue que $x \in A \cup B$. Portanto, $A \subset \prn{A \cup B}$;
-		\item Seja $x \in \prn{A \cap B}$. Pela definição de interseção, segue que $x\in A$ e $x \in B$. 
-		Em particular, já temos que $x \in A$. Portanto, $\prn{A \cap B} \subset A$.
-	\end{enumerate}
-	Em decorrência dessa propriedade, vamos tratar como imediatos que: 
-	se $x \in A$, então $x \in \prn{A \cup B}$; 
-	e se $x \in \prn{A \cap B}$, então $x\in A$ (ou, caso convenha, $x\in B$).
-\item Exercício.
-\item Exercício.
+    \item Abaixo, seguem as demonstrações das leis de De Morgan.
+        \begin{enumerate}[a)]
+            \item
+                Inicialmente, demonstremos que $(A \cup B)^C \subset A^C \cap B^C$. Do item \ref{prop:uniao-inclusao} da propriedade \ref{prop:uniao-e-intersecao-inclusao}, temos que $A \subset A \cup B$. Segue do item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar} que $(A \cup B)^C \subset A^C$ (i). De forma análoga, também temos que $(A \cup B)^C \subset B^C$ (ii). Seja agora $x \in (A \cup B)^C$. Por (i), temos $x \in A^C$. Por (ii), temos $x \in B^C$. Logo, $x \in A^C \cap B^C$. Portanto, $(A \cup B)^C \subset A^C \cap B^C$. \\
+                Finalmente, demonstremos que $A^C \cap B^C \subset (A \cup B)^C$. Seja $x \in A^C \cap B^C$, ou seja, $x \in A^C$ e $x \in B^C$. Dessa forma, $x \not\in A$ e $x \not\in B$. Suponha, por contradição, que $x \in A \cup B$. Dessa maneira, teríamos $x \in A$, o que contradiz $x \not\in A$, ou $x \in B$, o que contradiz $x \not\in B$. Logo, $x \not\in A \cup B$, ou seja, $x \in (A \cup B)^C$. Assim, $A^C \cap B^C \subset (A \cup B)^C$. Portanto, $(A \cup B)^C = A^C \cap B^C$.
+            \item
+                Primeiramente, demonstremos que $A^C \cup B^C \subset (A \cap B)^C$. Observe que, pelo item \ref{prop:intersecao-inclusao} da propriedade \ref{prop:uniao-e-intersecao-inclusao}, temos $A \cap B \subset A$, e, pelo item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar}, temos $A^C \subset (A \cap B)^C$ (i). De forma análoga, temos $B^C \subset (A \cap B)^C$ (ii). Então, seja $x \in A^C \cup B^C$, isto é, $x \in A^C$ ou $x \in B^C$. Caso que $x \in A^C$, podemos afirmar que $x \in (A \cap B)^C$ por (i). E, caso $x \in B^C $, por (ii), também podemos afirmar que $x \in (A \cap B)^C$. Portanto, temos que $A^C \cup B^C \subset (A \cap B)^C$. \\
+                Finalmente, demonstremos que $(A \cap B)^C \subset A^C \cup B^C$. Suponha, para chegar num absurdo, que $(A \cap B)^C \not\subset A^C \cup B^C$. Então, existe $x \in (A \cap B)^C$ tal que $x \not\in A^C \cup B^C$. Logo, $x \not\in A \cap B$. Temos 4 possibilidades para $x$: \\
+                Caso $x \in A$ e $x \in B$: Então, $x \in A \cap B$, o que contradiz $x \not\in A \cap B$. \\
+                Caso $x \not\in A$ e $x \in B$: Então, $x \in A^C$. Daí, $x \in A^C \cup B^C$, o que contradiz $x \not\in A^C \cup B^C$.\\
+                Caso $x \in A$ e $x \not\in B$: Então, $x \in B^C$. Daí, $x \in A^C \cup B^C$, o que contradiz $x \not\in A^C \cup B^C$.\\
+                Caso $x \not\in A$ e $x \not\in B$: De $x \not\in $, temos $x \in A^C$. Daí, $x \in A^C \cup B^C$, o que contradiz $x \not\in A^C \cup B^C$.\\
+                Sendo assim, como os 4 casos levam a um absurdo, podemos concluir que $(A \cap B)^C \subset A^C \cup B^C$.
+        \end{enumerate}
 \end{enumerate}
 \end{proof}
 
 \begin{onlineact}
 \khan{https://pt.khanacademy.org/math/statistics-probability/probability-library/basic-set-ops/e/basic_set_notation}{Notação Básica de Conjunto}.
 \end{onlineact}
-
-
