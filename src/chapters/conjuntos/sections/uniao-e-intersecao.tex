@@ -26,8 +26,14 @@ Sejam $A = \set{1, 2, 3}$ e $ B = \set{2,5}$. Determine $A \cup B$ e $A \cap B$.
 
 \begin{proposition}[Propriedades da união e interseção]
 \label{prop:uniao-e-intersecao}
-Para quaisquer conjuntos $A$, $B$ e $C$, tem-se:
+Para quaisquer conjuntos $A$, $B$ e $C$, e fixado um universo $\U$, tem-se:
 \begin{enumerate}[i)]
+    \item
+        União/interseção com o universo:
+        \begin{enumerate}[a)]
+            \item $A\cup \U = \U$;
+            \item $A \cap \U = A$.
+        \end{enumerate}
     \item
         \textdef{Comutatividade}:
         \begin{enumerate}[a)]
@@ -73,6 +79,13 @@ Para quaisquer conjuntos $A$, $B$ e $C$, tem-se:
 \begin{proof}
 Abaixo, seguem as demonstrações de cada propriedade.
 \begin{enumerate}[i)]
+    \item 
+        \begin{enumerate}[a)]
+            \item Exercício.
+            \item Seja $x\in A$. Temos que $x \in \U$, logo, $x \in A\cap \U$.
+            Segue, assim, que $A \subset A\cap \U$. A inclusão $A\cap \U\subset A$, 
+            por sua vez, é imediata. Portanto, $A\cap \U = A$.
+        \end{enumerate}
     \item Exercício.
 
     \item
