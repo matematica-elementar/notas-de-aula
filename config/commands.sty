@@ -1,7 +1,7 @@
 \newcommand{\curiosity}[2]{
   \begin{mdframed}[
-	frametitle={#1},
-	frametitlealignment=\centering
+    frametitle={#1},
+    frametitlealignment=\centering
   ]
   #2
 \end{mdframed}}
@@ -10,6 +10,7 @@
 %   Diretórios
 %
 \newcommand{\resources}{res}
+\newcommand{\imgdirfromsection}{../../../../res/img}
 
 %
 %   Comandos de utilidade para as notas de aula
@@ -22,94 +23,160 @@
 \newcommand{\importtikz}[1]{\input{\resources/tikz/#1.tex}}
 
 %
-%   Comandos para ajudar na escrita
+%   Comandos para ajudar na escrita de texto
 %
 \newcommand{\prn}[1]{\left(#1\right)}
 \newcommand{\paren}{\prn}
 \newcommand{\bracket}[1]{\left[#1\right]}
-\newcommand{\sub}[1]{\underline{#1}}
-\newcommand{\sse}{\text{ se, e somente se, }}
-\newcommand{\tdeg}{\textdegree} 
 \newcommand{\highlight}[1]{\noindent-- \emph{#1}:}
+\newcommand{\sub}[1]{\underline{#1}}
+\newcommand{\tdeg}{\textdegree} 
 \newcommand{\case}{\highlight}
+\newcommand{\nao}{\not}
+
+% Texto
+\newcommand{\abreaspas}{``}
+\newcommand{\fechaaspas}{''}
+\newcommand{\entreaspas}[1]{\abreaspas#1\fechaaspas}
+\newcommand{\sse}{\text{ se, e somente se, }}
+\newcommand{\e}{\text{ e }}
+\newcommand{\ou}{\text{ ou }}
+\newcommand{\etc}{\dots}
+\newcommand{\linha}{^{\prime}}
+
+% Relações e Operações
+\newcommand{\diferente}{\neq}
+\newcommand{\maiorque}{\gt}
+\newcommand{\menorque}{\lt}
+\newcommand{\maiorigual}{\ge}
+\newcommand{\menorigual}{\le}
+\newcommand{\vezes}{\cdot}
 
 %
-%    Declarações de operadores matemáticos
+%   Comandos para Teoria de Conjuntos
 %
-\DeclareMathOperator{\sen}{sen}
-\DeclareMathOperator{\dist}{d}
+\newcommand{\conjunto}{\set}
+\newcommand{\unitario}{\conjunto}
+\newcommand{\talque}{\;;\;}
+\newcommand{\pertence}{\in}
+\newcommand{\fora}{\nao}
+\newcommand{\contido}{\subset}
+\newcommand{\contem}{\supset}
 
-%%
-%%   Comandos para Teoria de Conjuntos
-%%
-%
-% 	Comandos já existentes por padrão:
-%		\set			Define conjuntos usando chaves
-%		\in				Relação de pertinência
-%		\notin			Não pertence
-%		\subset			Relação de inclusão
-%		\setminus		Operação de diferença de conjuntos
-%
+\newcommand{\sequencia}[2]{\prn{#1}_{#2}}
 \newcommand{\notsubset}{\not\subset}
 
-\newcommand{\suchthat}{\;;\;}
-\newcommand{\st}{\suchthat}
-\newcommand{\talque}{\suchthat}
+% Abreviações
 \newcommand{\tq}{\talque}
-\newcommand{\sequencia}[2]{\prn{#1}_{#2}}
+\newcommand{\taisque}{\talque}
+\renewcommand{\do}{\pertence}
+\newcommand{\no}{\pertence}
+\newcommand{\nos}{\pertence}
+\newcommand{\naopertence}{\nao\pertence}
 \newcommand{\seq}{\sequencia}
+
+%
+%    Operações entre conjuntos
+%
+\newcommand{\uniao}{\cup}
+\newcommand{\intersecao}{\cap}
+\newcommand{\menos}{\setminus}
+\newcommand{\complementar}{^C}
+\newcommand{\complemento}[1]{{#1}^C}
+\newcommand{\partes}[1]{\mathcal{P}\prn{#1}}
+
+% Abreviações
+\newcommand{\inter}{\intersecao}
+\newcommand{\compl}{\complemento}
+
+% Abreviações deprecadas (ainda estão aqui por compatibilidade)
+\newcommand{\union}{\uniao}
+\newcommand{\minus}{\menos}
+\newcommand{\powerset}{\partes}
+
+%
+%   Símbolos para conjuntos mais utilizados
+%
+\newcommand{\vazio}{\emptyset}
+\newcommand{\universo}{\mathcal U}
+\newcommand{\naturais}{\mathbb N}
+\newcommand{\inteiros}{\mathbb Z}
+\newcommand{\racionais}{\mathbb Q}
+\newcommand{\reais}{\mathbb R}
+\newcommand{\complexos}{\mathbb C}
+
+% Auxiliares
+\newcommand{\naonulos}{^*}
+\newcommand{\naonegativos}{_+}
+\newcommand{\naopositivos}{_-}
+\newcommand{\positivos}{\naonulos\naonegativos}
+\newcommand{\negativos}{\naopositivos\naonulos}
+
+% Abreviações
+\newcommand{\U}{\universo}
+\newcommand{\N}{\naturais}
+\newcommand{\Np}{\naturais\naonulos}
+\newcommand{\Z}{\inteiros}
+\newcommand{\Zp}{\inteiros\positivos}
+\newcommand{\Zn}{\inteiros\naopositivos}
+\newcommand{\Zz}{\inteiros\naonulos}
+\newcommand{\Zzn}{\inteiros\negativos}
+\newcommand{\Q}{\racionais}
+\newcommand{\R}{\reais}
+\newcommand{\Rp}{\reais\positivos}
+\renewcommand{\Rn}{\reais\negativos}
+\newcommand{\Rz}{\reais\naonulos}
+\newcommand{\C}{\complexos}
+
+% Abreviações deprecadas (ainda estão aqui por compatibilidade)
+\newcommand{\nats}{\naturais}
+\newcommand{\nnats}{\naturais\naonulos}
+\newcommand{\pnats}{\nnats}
+\newcommand{\ints}{\inteiros}
+\newcommand{\nints}{\ints\naopositivos\naonulos}
+\newcommand{\nnints}{\ints}
+\newcommand{\reals}{\reais}
+\newcommand{\preais}{\reais^*_+}
 
 %
 %    Funções gerais
 %
-\newcommand{\I}[1]{\identity{#1}}
-\newcommand{\identity}[1]{\mathcal{I}_{#1}}
-\newcommand{\fcomp}{\circ}
+\newcommand{\de}{:}
+\newcommand{\para}{\to}
+\newcommand{\identidade}[1]{\mathcal{I}_{#1}}
+\newcommand{\composta}{\circ}
+
+% Abreviações
+\newcommand{\pra}{\para}
+\newcommand{\I}{\identidade}
+\newcommand{\bola}{\composta}
+
+% Comandos deprecados
 \newcommand{\funcao}[3]{#1 : #2 \to #3}
+
+% Abreviações deprecadas
+\newcommand{\identity}{\identidade}
+\newcommand{\fcomp}{\circ}
 \newcommand{\func}{\funcao}
 
-
 %
-%	Operações
+%  Funções reais
 %
-\newcommand{\union}{\cup}%							União
-\newcommand{\intersection}{\cap}%					Interseção
-\newcommand{\inter}{\intersection}%					Interseção (alias)
-\newcommand{\setcomplement}[1]{{#1}^C}%				Complementar
-\newcommand{\compl}{\setcomplement}%				Complementar (alias)
-\newcommand{\minus}{\setminus}%						Diferença (alias)
-\newcommand{\powerset}[1]{\mathcal{P}\prn{#1}}%		Conjunto das partes
-
-%
-%   Conjuntos conhecidos
-%
-\newcommand{\U}{\mathcal{U}}%			Universo
-\newcommand{\N}{\mathbb{N}}%			Naturais
-\newcommand{\naturais}{\N}%             Naturais
-\newcommand{\nats}{\naturais}%          Naturais
-\newcommand{\nnats}{\pnats}%            Naturais positivos
-\newcommand{\pnats}{\nats^*}%			Naturais positivos
-\newcommand{\Z}{\mathbb{Z}}%			Inteiros
-\newcommand{\inteiros}{\Z}%             Inteiros
-\newcommand{\ints}{\inteiros}%          Inteiros
-\newcommand{\nints}{\ints_{-}^*}%       Inteiros negativos
-\newcommand{\Q}{\mathbb{Q}}%			Racionais
-\newcommand{\R}{\mathbb{R}}%			Reais
-\newcommand{\reais}{\R}%				Reais
-\newcommand{\reals}{\reais}%			Reais
-\newcommand{\preais}{\reais^*_+}%       Reais positivos
-\newcommand{\C}{\mathbb{C}}%			Complexos
-
-%
-%   Funções reais
-%
+\newcommand{\raiz}{\sqrt}
 \newcommand{\modulo}[1]{\left|#1\right|}
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\dist}{d}
+
+% Abreviações
 \newcommand{\modu}{\modulo}
+
+% Abreviações deprecadas
 \renewcommand{\sin}{\sen}
 
 %
 %   Lógica
 %
+\newcommand{\implica}{\implies}
 \newcommand{\liff}{\leftrightarrow}
 
 %
@@ -119,7 +186,7 @@
 \newcommand{\degree}{^{\circ}}
 
 %
-%   Referências
+%   Referências % TODO: Refazer tudo isso
 %
 \newcommand{\inref}[1]{\defref{def:in}{#1}}
 \newcommand{\emptysetref}[1]{\defref{def:emptyset}{#1}}
@@ -127,10 +194,4 @@
 \newcommand{\powersetref}[1]{\defref{def:powerset}{#1}}
 \newcommand{\complementref}[1]{\defref{def:complementar}{#1}}
 \newcommand{\homeworkref}[1]{\ref{#1}}
-\newcommand{\defref}[2]{\hyperref[#1]{#2}} %TODO: deixar os argumentos opcionais, caso não seja passado mostrar apenas a referencia.
-
-
-%
-%    Diretórios
-%
-\newcommand{\imgdirfromsection}{../../../../res/img}
+\newcommand{\defref}[2]{\hyperref[#1]{#2}}
