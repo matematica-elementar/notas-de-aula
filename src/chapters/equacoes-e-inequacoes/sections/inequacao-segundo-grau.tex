@@ -46,17 +46,23 @@
 \end{example}
 
 \begin{proof}
-    Queremos provar que $x+1/x\ge 2$, para todo $x > 0$. Note que:
+    Queremos demonstrar que $x + \dfrac 1 x \maiorigual 2$, para todo $x > 0$. De fato, seja $x \nos \reais$. Observe que:
+    \[
+        x + \dfrac 1 x \maiorigual 2 \sse x + \dfrac 1 x - 2 \maiorigual 0.
+    \]
+    Sendo assim, basta demonstrar que $x + \dfrac 1 x - 2 \maiorigual 0$. Calculando o termo do lado esquerdo obtemos:
     \begin{align*}
-        x+\dfrac{1}{x}\ge 2 &\iff \dfrac{x^2+1-2x}{x}       \\
-                            &\iff \dfrac{\prn{x-1}^2}{x}
+        x + \dfrac 1 x - 2 &= \dfrac {x \vezes x} x + \dfrac 1 x -  \dfrac {2x} x \\
+                           &= \dfrac {x^2 - 2x + 1} x \\
+                           &= \dfrac {(x - 1)^2} x.
     \end{align*}
 
+    Com isso, podemos realizar o estudo de sinal da função $\dfrac {(x - 1)^2} x$ da seguinte forma:
     \begin{figure}[H]
         \centering
-        \includegraphics{\imgdirfromsection/[ok]photo_2018-08-24_22-55-35(2).jpg}
+        \importtikz{inequacao-2grau-exemplo2}
         \caption{}
     \end{figure}
 
-    Logo, para que $x+1/x\ge 2$, é necessário e suficiente que $x > 0$, ou seja, $x$ é positivo.
+    Portanto, para que $x + \dfrac 1 x \maiorigual 2$, é necessário e suficiente que $x > 0$ como queríamos demonstrar.
 \end{proof}
