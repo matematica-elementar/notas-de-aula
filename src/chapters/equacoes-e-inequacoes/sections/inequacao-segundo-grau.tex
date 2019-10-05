@@ -3,13 +3,13 @@
 \begin{definition}
     Uma \textdef{inequação do segundo grau} é uma relação de uma das formas
     a seguir:
-    \begin{gather*}
-        ax^2 +bx + c <0;\\
-        ax^2 +bx + c>0;\\
-        ax^2 +bx + c \le 0;\\
-        ax^2 +bx + c \ge 0;
-    \end{gather*}
-    onde $a, b, c \in \R$, com $ a \ne 0$.
+    \begin{align*}
+        ax^2 + bx + c &< 0;   \\
+        ax^2 + bx + c &> 0;   \\
+        ax^2 + bx + c &\le 0; \\
+        ax^2 + bx + c &\ge 0;
+    \end{align*}
+    onde $a, b, c \nos \reais$, com $a \diferente 0$.
 \end{definition}
 
 \begin{example}
@@ -32,15 +32,17 @@
         \caption{}
     \end{figure}
 
-    Assim, $S = \set{x \in \R \tq{x<1 \text{ ou } x>2}}$. Ademais, a solução $\bar{S}$ para a inequação $x^2-3x+2\le0$ será:
+    Assim, $S = \conjunto{ x \nos \reais \taisque x < 1 \ou x > 2 }$. Ademais, a solução $S\linha$ para a inequação $x^2 - 3x + 2 \menorigual 0$ pode ser obtida da seguinte forma:
     \begin{align*}
-        \bar{S} &= \set{x \in \R \tq x \ge 1 \text{ e } x \le 2} \\
-                &= \set{x \in \R \tq 1 \le x \le 2} 
+        S\linha &= S\complementar \\ 
+                &= \conjunto{ x \nos \reais \taisque x < 1 \ou x > 2 }\complementar \\ 
+                &= \conjunto{ x \nos \reais \taisque x \maiorigual 1 \e x \menorigual 2 } \\ 
+                &= \conjunto{ x \nos \reais \taisque 1 \menorigual x \menorigual 2 }.
     \end{align*}
 \end{solution}
 
 \begin{example}
-    Prove que a soma de um número positivo com seu inverso é sempre maior ou igual a 2.
+    Prove que a soma de um número positivo com seu inverso multiplicativo é sempre maior ou igual a 2.
 \end{example}
 
 \begin{proof}
