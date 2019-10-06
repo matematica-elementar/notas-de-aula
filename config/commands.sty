@@ -34,6 +34,11 @@
 \newcommand{\case}{\highlight}
 \newcommand{\nao}{\not}
 
+% Redeclaração do comando \em para poder usá-lo com outro propósito,
+% Com isso, foi necessário redeclarar o comando \emph pois sua definição dependia do \em.
+\let\emp\em % Definição do \em copiada para \emp
+\DeclareTextFontCommand{\emph}{\emp} % Redeclaração do \emph usando o novo \emp
+
 % Texto
 \newcommand{\abreaspas}{``}
 \newcommand{\fechaaspas}{''}
@@ -68,6 +73,7 @@
 % Abreviações
 \newcommand{\tq}{\talque}
 \newcommand{\taisque}{\talque}
+\renewcommand{\em}{\pertence}
 \renewcommand{\do}{\pertence}
 \newcommand{\no}{\pertence}
 \newcommand{\nos}{\pertence}
