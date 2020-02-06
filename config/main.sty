@@ -7,10 +7,24 @@
 % Imprime, na tabela de conteúdos, títulos de seções até \subsubsection's
 \setcounter{tocdepth}{3}
 
-% space between paragraphs
-\setlength{\parskip}{0pt} 
+% Define o espaçamento entre as linhas do texto
+\onehalfspacing
 
-\onehalfspacing % line spacing
+% Estilo das tabelas e imagens
+\captionsetup{ % Estilo da legenda de todas as figuras e tabelas
+    labelfont=bf,            % Nome em Negrito
+    labelsep=period,         % Nome terminado com um ponto final.
+    justification=centering, % Texto centralizado
+    margin=40pt              % Espaçamento horizontal mínimo na direita e esquerda
+}
+\captionsetup[figure]{ % Estilo da legenda das figuras
+    name=Imagem              % Nome alterado de Figura para Imagem 
+}
+
+% Estilo das listas de enumeração
+\setlist[enumerate,1]{label = \textit{\roman*}., ref = \textit{\roman*}}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*})}
+\setlist[enumerate,3]{label = \arabic*), ref = \theenumii.\arabic*}
 
 % magic code to insert new line between header and first itemm
 \def\enumfix{%
@@ -19,42 +33,3 @@
 \fi}
 \let\olditemize\itemize
 \def\itemize{\enumfix\olditemize}
-
-% change itemize bullet character
-% \renewcommand{\labelitemi}{--}
-% \renewcommand{\labelitemii}{-}
-
-% spacing for lists
-% \renewcommand{\@listI}{%
-% \leftmargin=0pt
-% \rightmargin=0pt
-% \labelsep=5pt
-% \labelwidth=20pt
-% \itemindent=0pt
-% %\listparindent=\parindent %indentation at the beginning of paragraph
-% \topsep=0pt plus 2pt minus 4pt
-% \partopsep=0pt plus 1pt minus 1pt
-% \parsep=0pt plus 1pt
-% \itemsep=0pt}
-
-% change caption label formatting
-\captionsetup[table]{
-  labelfont=bf, %
-  labelsep=period, %
-  justification=raggedright, %
-  singlelinecheck=false%    Necessário para alinhar à esquerda mesmo quando o texto é pequeno o suficiente para não preencher uma linha
-}
-\captionsetup[figure]{labelfont=bf, labelsep=period}
-
-% standard label config for enumerate
-\setenumerate{label=\roman*.,leftmargin=*,align=left}
-%\setlist[itemize]{leftmargin=*}
-
-%%%%%%%%% custom environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\NewEnviron{nofleqn}[1]{\@fleqnfalse\begin{#1}\BODY\end{#1}}
-
-% theorem environments -----------------------------------------------------------------------------------
-
-
-

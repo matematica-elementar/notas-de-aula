@@ -1,10 +1,6 @@
-\newcommand{\curiosity}[2]{
-  \begin{mdframed}[
-    frametitle={#1},
-    frametitlealignment=\centering
-  ]
-  #2
-\end{mdframed}}
+%
+%   Comandos (macros) utilizados para auxiliar na escrita do material de uma maneira geral.
+%
 
 %
 %   Diretórios
@@ -23,7 +19,7 @@
 \newcommand{\importtikz}[1]{\input{\resources/tikz/#1.tex}}
 
 %
-%   Comandos para ajudar na escrita de texto
+%   Comandos para ajudar na digitação de texto
 %
 \newcommand{\prn}[1]{\left(#1\right)}
 \newcommand{\paren}{\prn}
@@ -34,10 +30,20 @@
 \newcommand{\case}{\highlight}
 \newcommand{\nao}{\not}
 
+% Elemento textual que insere um texto dentro de uma caixa centralizada com título.
+% Parâmetro 1: Título da caixa.
+% Parâmetro 2: Conteúdo da caixa.
+\newcommand{\caixote}[2]{
+    \begin{mdframed}[frametitle={#1},frametitlealignment=\centering]
+        #2
+    \end{mdframed}
+}
+\newcommand{\curiosity}{\caixote} % Mantido por razões de compatibildade.
+
 % Redeclaração do comando \em para poder usá-lo com outro propósito,
 % Com isso, foi necessário redeclarar o comando \emph pois sua definição dependia do \em.
 \let\emp\em % Definição do \em copiada para \emp
-\DeclareTextFontCommand{\emph}{\emp} % Redeclaração do \emph usando o novo \emp
+\DeclareTextFontCommand{\emph}{\emp} % Redeclaração do comando \emph usando o novo \emp
 
 % Texto
 \newcommand{\abreaspas}{``}
@@ -45,6 +51,7 @@
 \newcommand{\entreaspas}[1]{\abreaspas#1\fechaaspas}
 \newcommand{\e}{\text{ e }}
 \newcommand{\ou}{\text{ ou }}
+\newcommand{\reticencias}{\dots}
 \newcommand{\etc}{\dots}
 \newcommand{\linha}{^{\prime}}
 
@@ -61,23 +68,24 @@
 %
 \newcommand{\conjunto}{\set}
 \newcommand{\unitario}{\conjunto}
+
 \newcommand{\talque}{\;;\;}
-\newcommand{\pertence}{\in}
-\newcommand{\fora}{\nao}
-\newcommand{\contido}{\subset}
-\newcommand{\contem}{\supset}
-
-\newcommand{\sequencia}[2]{\prn{#1}_{#2}}
-\newcommand{\notsubset}{\not\subset}
-
-% Abreviações
 \newcommand{\tq}{\talque}
 \newcommand{\taisque}{\talque}
+
+\newcommand{\pertence}{\in}
 \renewcommand{\em}{\pertence}
 \renewcommand{\do}{\pertence}
 \newcommand{\no}{\pertence}
 \newcommand{\nos}{\pertence}
 \newcommand{\naopertence}{\nao\pertence}
+\newcommand{\fora}{\nao}
+\newcommand{\contido}{\subset}
+\newcommand{\incluso}{\contido}
+\newcommand{\naocontido}{\nao\contido}
+\newcommand{\contem}{\supset}
+\newcommand{\naocontem}{\nao\contem}
+\newcommand{\sequencia}[2]{\prn{#1}_{#2}}
 \newcommand{\seq}{\sequencia}
 
 %
@@ -85,14 +93,13 @@
 %
 \newcommand{\uniao}{\cup}
 \newcommand{\intersecao}{\cap}
-\newcommand{\menos}{\setminus}
-\newcommand{\complementar}{^C}
-\newcommand{\complemento}[1]{{#1}^C}
-\newcommand{\partes}[1]{\mathcal{P}\prn{#1}}
-
-% Abreviações
 \newcommand{\inter}{\intersecao}
+\newcommand{\diferenca}{\setminus}
+\newcommand{\menos}{\diferenca}
+\newcommand{\complementar}{^{C}}
+\newcommand{\complemento}[1]{{#1}^C}
 \newcommand{\compl}{\complemento}
+\newcommand{\partes}[1]{\mathcal P\prn{#1}}
 
 % Abreviações deprecadas (ainda estão aqui por compatibilidade)
 \newcommand{\union}{\uniao}
@@ -148,18 +155,14 @@
 %
 \newcommand{\de}{:}
 \newcommand{\para}{\to}
-\newcommand{\identidade}[1]{\mathcal{I}_{#1}}
-\newcommand{\composta}{\circ}
-
-% Abreviações
 \newcommand{\pra}{\para}
+\newcommand{\identidade}[1]{\mathcal{I}_{#1}}
 \newcommand{\I}{\identidade}
+\newcommand{\composta}{\circ}
 \newcommand{\bola}{\composta}
 
 % Comandos deprecados
 \newcommand{\funcao}[3]{#1 : #2 \to #3}
-
-% Abreviações deprecadas
 \newcommand{\identity}{\identidade}
 \newcommand{\fcomp}{\circ}
 \newcommand{\func}{\funcao}
@@ -183,7 +186,13 @@
 %
 \newcommand{\implica}{\implies}
 \newcommand{\sse}{\iff}
-\newcommand{\liff}{\leftrightarrow}
+\newcommand{\biimplica}{\sse}
+
+\newcommand{\implicalogico}{\to}
+\newcommand{\sselogico}{\leftrightarrow}
+\newcommand{\oulogico}{\lor}
+\newcommand{\elogico}{\land}
+\newcommand{\naologico}{\neg}
 
 %
 %   Outros
@@ -196,7 +205,6 @@
 %
 \newcommand{\inref}[1]{\defref{def:in}{#1}}
 \newcommand{\emptysetref}[1]{\defref{def:emptyset}{#1}}
-\newcommand{\subsetref}[1]{\defref{def:subset}{#1}}
 \newcommand{\powersetref}[1]{\defref{def:powerset}{#1}}
 \newcommand{\complementref}[1]{\defref{def:complementar}{#1}}
 \newcommand{\homeworkref}[1]{\ref{#1}}

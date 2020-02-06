@@ -1,23 +1,24 @@
 \subsection{Diferença}
 
 \begin{definition}[Diferença de Conjuntos]
-\label{def:setminus}
-A \textdef{diferença} do conjunto $A$ por $B$, é o conjunto
-%
-	$$ A\setminus B = \set{x \tq  x \in A \text{ e } x \notin B}.$$
+	\label{def:setminus}
+	A \emph{diferença} do conjunto $A$ por $B$, é o conjunto
+	\[
+		A \diferenca B = \conjunto{ x \talque  x \pertence A \e x \naopertence B}.
+	\]
 \end{definition}
+
 \begin{remark}
-Em geral, não é verdade que $A \setminus B = B \setminus A$, pense em um par de conjuntos 
-em que essa igualdade não é válida antes de ver o exemplo a seguir. Além disso, note que $\compl A = \U\setminus A$.
+	Em geral, não é verdade que $A \menos B = B \menos A$, pense em um par de conjuntos em que essa igualdade não é válida antes de ver o exemplo a seguir. Além disso, note que $\compl A = \U \menos A$.
 \end{remark}
 
 \begin{example}
-	Sejam $A = \set{1, 2, 3}$ e $ B = \set{2,5}$. Determine $A \setminus B$ e $B \setminus A$.
-	\end{example}
+	Sejam $A = \conjunto{1, 2, 3}$ e $ B = \conjunto{2,5}$. Determine $A \setminus B$ e $B \setminus A$.
+\end{example}
 	
-	\begin{solution}
+\begin{solution}
 	\begin{align*}
-		&A \setminus B = \set{1,3};\\
-		&B \setminus A = \set{5}.
+		&A \setminus B = \conjunto{1,3};\\
+		&B \setminus A = \unitario{5}.
 	\end{align*}
-	\end{solution}
+\end{solution}

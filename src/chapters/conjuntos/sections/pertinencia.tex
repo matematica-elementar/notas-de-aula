@@ -3,65 +3,51 @@
 Na Seção \ref{sec:intro}, entendemos o que é um conjunto e como podemos defini-lo.
 Agora, teremos o poder de relacionar objetos a conjuntos perguntando se um dado objeto está em um conjunto.
 Como já falamos sobre, só temos uma resposta possível dentre sim e não.
-Dados um objeto $a$ e um conjunto $A$, utilizamos a notação $a \in A$ para dizer que $a$ pertence ao conjunto $A$, e $a \notin A$ significa que $a$ não pertence a $A$.
+Dados um objeto $a$ e um conjunto $A$, utilizamos a notação $a \pertence A$ para dizer que $a$ pertence ao conjunto $A$, e $a \naopertence A$ significa que $a$ não pertence a $A$.
 
 \begin{example}
-Considere $PP$ e $V$ conforme definido nos Exemplos~\ref{ex-vogais} e~\ref{ex-primos-pares}, respectivamente. Temos que $\texttt{e} \in \mathcal{V}$ e $3 \notin PP$.
+    Considere $P$ e $V$ conforme definido nos Exemplos~\ref{ex-vogais} e~\ref{ex-primos-pares}, respectivamente. Sendo assim, temos que $\texttt e \pertence V$ e $3 \naopertence P$.
 \end{example}
 
 \begin{example}
-Considere $L$ como sendo o conjunto de todas as letras do alfabeto latino.
-Sabendo que as vogais do conjunto $V$ fazem parte desse alfabeto, podemos concluir que $\texttt{a}, \texttt{e}, \texttt{i}, \texttt{o}, \texttt{u} \in L$.
-Também sabemos que a letra $\texttt{j}$ faz parte do alfabeto, isso é, $\texttt{j} \in L$.
-Contudo, como $\texttt{j}$ não é uma vogal, podemos concluir que $\texttt{j} \notin V$.
+    Considere $L$ como sendo o conjunto de todas as letras do alfabeto latino. Sabendo que as vogais do conjunto $V$ fazem parte desse alfabeto, podemos concluir que $\texttt a, \texttt e, \texttt i , \texttt o , \texttt u  \pertence L$. Também sabemos que a letra $\texttt j$ faz parte do alfabeto, isso é, $\texttt j \pertence L$. Contudo, como $\texttt j$ não é uma vogal, podemos concluir que $\texttt j \naopertence V$.
 \end{example}
 
-Ainda na Seção \ref{sec:intro} \nameref{sec:intro}, viu-se que dois conjuntos iguais $A$ e $B$ possuem, necessariamente, os mesmos elementos, o que implica que são diferentes quando um possui algum elemento que o outro não possui.
-Com a notação de pertinência, isso é o mesmo que dizer que existe $x \in A$ tal que $x \notin B$ ou que existe $x \in B$ tal que $x \notin A$.
+Ainda na Seção~\ref{sec:intro} \nameref{sec:intro}, vimos que dois conjuntos iguais $A$ e $B$ possuem, necessariamente, os mesmos elementos, o que implica que são diferentes quando um possui algum elemento que o outro não possui. Com a notação de pertinência, isso é o mesmo que dizer que existe $x \em A$ tal que $x \naopertence B$ ou que existe $x \em B$ tal que $x \naopertence A$.
 
 \begin{example}
-Os conjuntos $\N$ (números naturais) e $\Z$ (números inteiros), abordados com mais detalhe no Capítulo \ref{cap:conjuntos-numericos}, são diferentes.
-Note que $-1 \in \Z$ mas $-1 \notin \N$, por exemplo, o que prova que esses conjuntos são diferentes.
+    Os conjuntos $\N$ (números naturais) e $\Z$ (números inteiros), abordados com mais detalhe no Capítulo \ref{cap:conjuntos-numericos}, são diferentes. Note que $-1 \pertence \Z$ mas $-1 \naopertence \N$, por exemplo, o que prova que esses conjuntos são diferentes.
 \end{example}
 
-As noções de conjuntos e elementos não são mutuamente exclusivas como, por exemplo, a paridade nos números naturais. 
-Nos Exemplos \ref{exe:conjuntos-de-conjuntos-explicito} e \ref{exe:conjuntos-de-conjuntos-implicito}, serão vistos conjuntos cujos elementos também são conjuntos!
+As noções de conjuntos e elementos não são mutuamente exclusivas como, por exemplo, a paridade nos números naturais. Nos exemplos a seguir, veremos conjuntos cujos elementos também são conjuntos.
 
 \begin{example}
-\label{exe:conjuntos-de-conjuntos-explicito}
-Considere o conjunto $A = \set{\set{1,2},\set{2}, 1}$.
-    Observe que existem elementos em $A$ que são conjuntos.
-    Note que:
+    \label{exe:conjuntos-de-conjuntos-explicito}
+    Considere o conjunto $A = \set{\set{1,2},\set{2}, 1}$. Observe que existem elementos em $A$ que são conjuntos. Note que:
     \begin{enumerate}
-        \item $\set{1,2} \in A$
-        \item $\set{2} \in A$
-        \item $1 \in A$
-        \item $2 \notin A$
+        \item $\conjunto{1, 2} \pertence A$
+        \item $\unitario{2} \pertence A$
+        \item $1 \pertence A$
+        \item $2 \naopertence A$
     \end{enumerate}
 \end{example}
 
 \begin{example}
-\label{exe:conjuntos-de-conjuntos-implicito}
-Os habitantes de um país pode ser visto como um conjunto de pessoas.
-Por sua vez, cada pessoa pode ser vista como um conjunto de células.
-Mais tarde, na definição~\ref{def:powerset}, veremos um famoso conjunto formado por conjuntos.
+    \label{exe:conjuntos-de-conjuntos-implicito}
+    Os habitantes de um país pode ser visto como um conjunto de pessoas. Por sua vez, cada pessoa pode ser vista como um conjunto de células. Mais tarde, na Definição~\ref{def:powerset}, veremos um famoso conjunto formado por conjuntos.
 \end{example}
 
+Para dizer se um dado objeto deve receber o título de \entreaspas{elemento}, é preciso olhar para o objeto com o qual ele está se relacionando. No caso do Exemplo~\ref{exe:conjuntos-de-conjuntos-explicito}, o conjunto $\conjunto{1, 2}$ é elemento do conjunto $A$, mas quando o interesse se volta à sua relação com o número $2$, não faz sentido se referir a $\conjunto{1, 2}$ usando simplesmente o nome \entreaspas{elemento}.
 
-Para dizer se um dado objeto deve receber o título de ``elemento'', é preciso olhar para o objeto com o qual ele está se relacionando. 
-No caso do Exemplo \ref{exe:conjuntos-de-conjuntos-explicito}, o conjunto $\set{1,2}$ é elemento do conjunto $A$, mas quando o interesse se volta à sua relação com o número $2$, não faz sentido se referir a $\set{1,2}$ usando simplesmente o nome ``elemento''.
-
-A Definição \ref{def:emptyset} irá introduzir outro importante tipo de conjunto.
+A Definição~\ref{def:emptyset} irá introduzir outro importante tipo de conjunto.
 
 \begin{definition}[O Conjunto Vazio]
-\label{def:emptyset}
-O conjunto que não possui elementos é chamado de \textdef{conjunto vazio} e é representado por $\emptyset$.
-Em outras palavras, para qualquer que seja o objeto $x$, temos $x \notin \emptyset$.
+    \label{def:emptyset} % trocar label para def:vazio
+    O conjunto que não possui elementos é chamado de \emph{conjunto vazio} e é representado por $\vazio$. Então, para qualquer que seja o objeto $x$, temos que $x \naopertence \vazio$.
 \end{definition}
 
 Agora, com a Definição~\ref{def:emptyset}, o Exercício~\homeworkref{exe:vazio-notacao} já pode ser feito.
 
 \begin{example}
-Quais outros conjuntos você conhece? Que tal pensar sobre o conjunto $A = \set{x \tq x \notin A}$?
+    Quais outros conjuntos você conhece? Que tal pensar sobre o conjunto $A = \conjunto{ x \talque x \naopertence A}$?
 \end{example}
-

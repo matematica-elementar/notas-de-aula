@@ -26,9 +26,9 @@ Complete as demonstrações em \nameref{prop:uniao-e-intersecao} que não foram 
 %\label{exe:}
 Demonstre que os seguintes itens são equivalentes:
 	\begin{enumerate}[a.]
-		\item $A \cup B = B$;
+		\item $A \uniao B = B$;
 		\item $A \subset B$;
-		\item $A \cap B = A$;
+		\item $A \inter B = A$;
 	\end{enumerate}
 	\begin{hint}
 		Para tanto, é preciso provar \textbf{a. $\iff$ b.} e \textbf{b. $\iff$ c.}.
@@ -40,12 +40,12 @@ Demonstre que os seguintes itens são equivalentes:
 O diagrama de Venn para os conjuntos $X$, $Y$, $Z$ decompõe o
 plano em oito regiões. Numere essas regiões e exprima cada um dos
 conjuntos abaixo como reunião de algumas dessas regiões. (Por
-exemplo: $X \cap Y = 1 \cup 2$.)
+exemplo: $X \inter Y = 1 \uniao 2$.)
 \begin{enumerate}[a.]
-  \item $\left(X^C \cup Y \right)^C$;
-  \item $\left(X^C \cup Y \right) \cup Z^C$;
-  \item $\left(X^C \cap Y \right) \cup \left(X \cap Z^C \right)$;
-  \item $\left(X \cup Y \right)^C \cap Z$.
+  \item $\left(X^C \uniao Y \right)^C$;
+  \item $\left(X^C \uniao Y \right) \uniao Z^C$;
+  \item $\left(X^C \inter Y \right) \uniao \left(X \inter Z^C \right)$;
+  \item $\left(X \uniao Y \right)^C \inter Z$.
 \end{enumerate}
 \end{exercise}
 
@@ -53,22 +53,22 @@ exemplo: $X \cap Y = 1 \cup 2$.)
 Exprimindo cada membro como reunião de regiões numeradas, prove
 as igualdades:
 \begin{enumerate}[a.]
-  \item $\left(X \cup Y \right)\cap Z = \left(X \cap Z \right) \cup \left(Y \cap Z
+  \item $\left(X \uniao Y \right)\inter Z = \left(X \inter Z \right) \uniao \left(Y \inter Z
   \right)$;
-  \item $X \cup \left(Y \cap Z \right)^C = X \cup Y^C \cup Z^C$.
+  \item $X \uniao \left(Y \inter Z \right)^C = X \uniao Y^C \uniao Z^C$.
 \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
 Sejam $A$, $B$ e $C$ conjuntos. Determine uma condição necessária e
 suficiente para que se tenha 
-	$$A \cup \left( B \cap C \right) = \left(A \cup B \right) \cap C$$
+	$$A \uniao \left( B \inter C \right) = \left(A \uniao B \right) \inter C$$
 \end{exercise}
 
 \begin{exercise}
 Considere $A$, $A^\prime$, $B$ e $B^\prime$ conjuntos tais que $A  \subset A^\prime$ e 
-$B \subset B^\prime$. Prove que, se $A^\prime \cap B^\prime=\emptyset$, então
-$A\cap B = \emptyset$.  
+$B \subset B^\prime$. Prove que, se $A^\prime \inter B^\prime=\emptyset$, então
+$A\inter B = \emptyset$.  
 \end{exercise}
 
 \begin{exercise}
@@ -76,12 +76,12 @@ Recorde a definição da diferença entre conjuntos:
   $$B \setminus A = \set {x \tq x \in B \text { e } x \notin A}.$$
   Mostre que
     \begin{enumerate}[a.]
-      \item $B \setminus A = B \cap A^C$;
-      \item $(B \setminus A)\cup A = B \cup A$;
-      \item $\prn{B \setminus A}^C = B^C\cup A$;
+      \item $B \setminus A = B \inter A^C$;
+      \item $(B \setminus A)\uniao A = B \uniao A$;
+      \item $\prn{B \setminus A}^C = B^C\uniao A$;
       \item $B \setminus A = \emptyset$ se, e somente se, $B \subset
       A$;
-      \item $B \setminus A = B$ se, e somente se, $A \cap B =
+      \item $B \setminus A = B$ se, e somente se, $A \inter B =
       \emptyset$;
       \item Vale a igualdade $B \setminus A = A \setminus B$ se, e
       somente se, $A = B$;
@@ -107,11 +107,11 @@ $\U$ dos elementos que satisfazem $P$, $Q$ e $R$, respectivamente.
 Expresse, em termos de implicações entre $P$, $Q$ e $R$, as
 seguintes relações entre os conjuntos $A$, $B$ e $C$.
 \begin{enumerate}[a.]
-\item $A \cap B^C \subset C$;
-\item $A^C \cup B^C \subset C$;
-\item $A^C \cup B \subset C^C$;
-\item $A^C \subset B^C \cup C$;
-\item $A \subset B^C \cup C^C$.
+\item $A \inter B^C \subset C$;
+\item $A^C \uniao B^C \subset C$;
+\item $A^C \uniao B \subset C^C$;
+\item $A^C \subset B^C \uniao C$;
+\item $A \subset B^C \uniao C^C$.
 \end{enumerate}
 \end{exercise}
 

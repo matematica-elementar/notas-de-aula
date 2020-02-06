@@ -1,86 +1,59 @@
 \subsection{Complementar}
-A noção de complementar de um conjunto só faz sentido quando fixamos um \textdef{conjunto universo}, que denotaremos por $\U$.
-Uma vez fixado $\U$, todos os elementos considerados pertencerão a $\U$ e todos os conjuntos serão subconjuntos de $\U$.
-Dessa forma, teremos bem esclarecidos quais objetos podem estar presentes nos conjuntos.
+A noção de complementar de um conjunto só faz sentido quando fixamos um \emph{conjunto universo}, que denotaremos por $\U$. Uma vez fixado $\universo$, todos os elementos considerados pertencerão a $\U$ e todos os conjuntos serão subconjuntos de $\U$. Dessa forma, teremos bem esclarecidos quais objetos podem estar presentes nos conjuntos.
 
 \begin{example}
-Na geometria plana, $\U$ é o plano onde os elementos são pontos, e todos os conjuntos são constituídos por pontos desse plano.
-As retas servem como exemplos desses conjuntos; portanto, são subconjuntos de $\U$ (não elementos!).
+	Na geometria plana, $\universo$ é o plano onde os elementos são pontos, e todos os conjuntos são constituídos por pontos desse plano. As retas servem como exemplos desses conjuntos; portanto, são subconjuntos de $\U$ (não elementos!).
 \end{example}
 
 \begin{definition}[Complementar]
-\label{def:complementar}
-Dado um conjunto $A$ (isto é, um subconjunto de $\U$), chama-se \textdef{complementar} de $A$ o conjunto $\compl{A}$ formado pelos elementos de $\U$ que não pertencem a $A$.
-Em outras palavras:
-$$
-\compl{A} = \set{x \tq x \notin A}
-$$
+	\label{def:complementar}
+	Dado um conjunto $A$ (isto é, um subconjunto de $\U$), chama-se \emph{complementar} de $A$ o conjunto $\compl A$ formado pelos elementos de $\U$ que não pertencem a $A$.
+	Em outras palavras:
+	\[
+		A\complementar = \conjunto{ x \taisque x \naopertence A}.
+	\]
 \end{definition}
 
 \begin{proposition}
-\label{prop:def-complementar}
-Tem-se, para todo conjunto $A$, que:
-\begin{center}
-    $x \not \in \compl{A}$ se, e somente se, $x \in A$.
-\end{center}
+	\label{prop:def-complementar}
+	Tem-se, para todo conjunto $A$, que:
+	\begin{center}
+		$x \naopertence \compl A$ se, e somente se, $x \pertence A$.
+	\end{center}
 \end{proposition}
 
 \begin{proof}
-Exercício.
+	Exercício.
 \end{proof}
 
 \begin{example}
-Seja $\U$ o conjunto dos triângulos.
-Qual o complementar do conjunto dos triângulos escalenos?
+	Seja $\U$ o conjunto dos triângulos. Qual o complementar do conjunto dos triângulos escalenos?
 \end{example}
 
 \begin{solution}
-	Quando classificamos um triângulo pelo comprimento de seus lados, ele é, necessariamente, equilátero, isósceles ou escaleno.
-	Portanto, o complementar do conjunto dos triângulos escalenos é o conjunto dos triângulos que são equiláteros ou isósceles.
+	Quando classificamos um triângulo pelo comprimento de seus lados, ele é, necessariamente, equilátero, isósceles ou escaleno. Portanto, o complementar do conjunto dos triângulos escalenos é o conjunto dos triângulos que são equiláteros ou isósceles.
 \end{solution}
 
 \begin{proposition}[Propriedades do complementar]
-\label{prop:complementar}
-Fixado um conjunto universo $\U$, valem para todos conjuntos $A$ e $B$:
-\begin{enumerate}[i)]
-	\item
-		\label{prop:complementar:universo}
-		$\compl{\U}=\emptyset$ e $\compl{\emptyset} = \U$;
-	\item
-		\label{prop:complementar:complementar-do-complementar}
-		$\compl{\prn{\compl{A}}} = A$ (todo conjunto é complementar do seu complementar);
-	\item
-		\label{prop:complementar:contrapositiva}
-		Se $A \subset B$, então $\compl{B} \subset \compl{A}$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro). 
-\end{enumerate}
+	\label{prop:complementar}
+	Fixado um conjunto universo $\U$, valem para todos conjuntos $A$ e $B$:
+	\begin{enumerate}
+		\item
+			\label{prop:complementar:universo}
+			$\compl\U = \vazio$ e $\compl\vazio = \U$;
+		\item
+			\label{prop:complementar:complementar-do-complementar}
+			$\prn{A\complementar}\complementar = A$ (todo conjunto é complementar do seu complementar);
+		\item
+			\label{prop:complementar:contrapositiva}
+			Se $A \contido B$, então $\compl{B} \contido \compl{A}$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro). 
+	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-\begin{enumerate}[i)]
-\item[]
-\item
-A inclusão $\emptyset \subset \compl{\U}$ é imediata pois $\emptyset$ é subconjunto de qualquer conjunto. 
-Provemos, agora, que $\compl{\U} \subset \emptyset$.
-Suponha, por absurdo, que $\compl{\U} \notsubset \emptyset$; ou seja, existe $x \in \compl{\U}$ tal que $x \notin \emptyset$.
-Ora, se $x \in \compl{\U}$, então $x \notin \U$, o que é um absurdo.
-Logo, $\compl{\U} \subset \emptyset$.
-Dos fatos de que $\emptyset \subset \compl{\U}$ e $\compl{\U} \subset \emptyset$, conclui-se que $\compl{\U} = \emptyset$.
-A demonstração de que $\compl{\emptyset} = \U$ fica como exercício para o leitor.
+	Primeiramente, demonstremos que vale o item~\ref{prop:complementar:universo}. A inclusão $\vazio \contido \compl{\U}$ é imediata pois $\vazio$ é subconjunto de qualquer conjunto.  Provemos, agora, que $\compl{\U} \contido \vazio$. Suponha, por absurdo, que $\compl{\U} \naocontido \vazio$; ou seja, existe $x \em \compl{\U}$ tal que $x \naopertence \vazio$. Ora, se $x \pertence \compl{\U}$, então $x \naopertence \U$, o que é um absurdo. Logo, $\compl{\U} \contido \vazio$. Dos fatos de que $\vazio \contido \compl{\U}$ e $\compl{\U} \contido \vazio$, conclui-se que $\compl{\U} = \vazio$. A demonstração de que $\compl{\vazio} = \U$ fica como exercício para o leitor.
 
-\item
-Provemos, primeiro, que $A \subset \compl{\prn{\compl{A}}}$.
-Para tal, seja $x \in A$.
-Logo, $x \notin \compl{A}$, pela Proposição \ref{prop:def-complementar}.
-Assim, $x \in \compl{\prn{\compl{A}}}$, usando, agora, a própria \complementref{definição de complementar}.
-Então, $A \subset \compl{\prn{\compl{A}}}$.
-A prova de que $\compl{\prn{\compl{A}}} \subset A$, item restante para podermos concluir que a igualdade desejada é válida, fica como exercício para o leitor.
+	Em segundo lugar, demonstremos que vale o item~\ref{prop:complementar:complementar-do-complementar}. Para isso, provemos que $A \contido \compl{\prn{\compl{A}}}$ primeiro. Para tal, seja $x \em A$. Logo, $x \naopertence \compl{A}$, pela Proposição~\ref{prop:def-complementar}. Assim, $x \pertence \compl{\prn{\compl{A}}}$, usando, agora, a própria definição de complementar. Então, $A \contido \compl{\prn{\compl{A}}}$. A prova de que $\compl{\prn{\compl{A}}} \contido A$, item restante para podermos concluir que a igualdade desejada é válida, fica como exercício para o leitor.
 
-\item
-Sejam $A$, $B$ conjuntos tais que $A \subset B$.
-Além disso, seja $x \in \compl{B}$, o que implica em $x \notin B$.
-Temos duas possibilidades para a presença de $x$ no conjunto $A$, a saber, $x \in A$ e $x \notin A$.
-Se $x \in A$, teríamos $x \in B$ também pois $A \subset B$; um absurdo visto que já temos $x \notin B$.
-Logo, concluímos que $x \notin A$, ou seja, $x \in \compl{A}$.
-Segue, então, que $\compl{B} \subset \compl{A}$.
-\end{enumerate}
+	Por fim, demonstremos que vale o item~\ref{prop:complementar:contrapositiva}. Para isso, sejam $A$, $B$ conjuntos tais que $A \contido B$. Além disso, seja $x \em \compl{B}$, o que implica em $x \naopertence B$. Temos duas possibilidades para a presença de $x$ no conjunto $A$, a saber, $x \pertence A$ e $x \naopertence A$. Se $x \pertence A$, teríamos $x \em B$ também pois $A \contido B$; um absurdo visto que já temos $x \naopertence B$. Logo, concluímos que $x \naopertence A$, ou seja, $x \pertence \compl{A}$. Segue, então, que $\compl{B} \contido \compl{A}$.
 \end{proof}
