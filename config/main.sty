@@ -1,35 +1,71 @@
-% Lê a bibliografia presente no arquivo .bib para que seja possível produzir as referências.
-\addbibresource{./res/bib/bibliography.bib}
+%
+%   Arquivo principal de configuração do preâmbulo
+%   Neste arquivo estão presentes configurações gerais e estéticas do documento
+%
 
-% Numerar títulos de seções até \subsubsection's
-\setcounter{secnumdepth}{3}
+%
+%   Configurações gerais
+%
 
-% Imprime, na tabela de conteúdos, títulos de seções até \subsubsection's
-\setcounter{tocdepth}{3}
-
-% Define o espaçamento entre as linhas do texto
+% Definição do tamanho do espaçamento entre as linhas do texto
 \onehalfspacing
 
-% Estilo das tabelas e imagens
-\captionsetup{ % Estilo da legenda de todas as figuras e tabelas
+
+%
+%   Bibliografia
+%
+
+% Carrega a bibliografia presente no arquivo .bib
+\addbibresource{./res/bib/bibliography.bib}
+
+
+%
+%   Contadores de Capítulo, Seção e Subseção
+%
+
+% Define que a numeração dos títulos das seções de profundidade até subsubseções
+\setcounter{secnumdepth}{3}
+
+% Imprime na tabela de conteúdos os títulos de profundidade até subsubseções
+\setcounter{tocdepth}{3}
+
+
+%
+%   Estilo das tabelas e imagens
+%
+
+% Estilo da legenda de todas as figuras e tabelas
+\captionsetup{
     labelfont=bf,            % Nome em Negrito
     labelsep=period,         % Nome terminado com um ponto final.
     justification=centering, % Texto centralizado
     margin=40pt              % Espaçamento horizontal mínimo na direita e esquerda
 }
-\captionsetup[figure]{ % Estilo da legenda das figuras
+
+% Estilo da legenda das figuras
+\captionsetup[figure]{
     name=Imagem              % Nome alterado de Figura para Imagem 
 }
 
-% Estilo das listas de enumeração
-\setlist[enumerate,1]{label = \textit{\roman*}., ref = \textit{\roman*}}
-\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*})}
-\setlist[enumerate,3]{label = \arabic*), ref = \theenumii.\arabic*}
 
-% magic code to insert new line between header and first itemm
-\def\enumfix{%
-\if@inlabel
- \noindent \par\nobreak\vskip-\topsep\hrule\@height\z@
-\fi}
-\let\olditemize\itemize
-\def\itemize{\enumfix\olditemize}
+%
+%   Listas
+%
+
+% Definição do estilo da lista de enumeração padrão (enumerate)
+% Mais detalhes na documentação do pacote enumitem
+\setlist[enumerate,1]
+{
+    label = \emph{\roman*}.,
+    ref   = \emph{\roman*}
+}
+\setlist[enumerate,2]
+{
+    label = \emph{\alph*}),
+    ref   = \theenumi.\emph{\alph*})
+}
+\setlist[enumerate,3]
+{
+    label = \arabic*),
+    ref   = \theenumii.\arabic*
+}
