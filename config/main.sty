@@ -23,28 +23,30 @@
 %   Contadores de Capítulo, Seção e Subseção
 %
 
-% Define que a numeração dos títulos das seções de profundidade até subsubseções
+% Define que os títulos sejam enumerados até a profundidade das subsubseções
 \setcounter{secnumdepth}{3}
 
-% Imprime na tabela de conteúdos os títulos de profundidade até subsubseções
-\setcounter{tocdepth}{3}
+% Exibe na tabela de conteúdos os títulos de profundidade até as seções
+\setcounter{tocdepth}{1}
 
 
 %
-%   Estilo das tabelas e imagens
+%   Tabelas e Figuras
 %
 
 % Estilo da legenda de todas as figuras e tabelas
-\captionsetup{
-    labelfont=bf,            % Nome em Negrito
-    labelsep=period,         % Nome terminado com um ponto final.
-    justification=centering, % Texto centralizado
-    margin=40pt              % Espaçamento horizontal mínimo na direita e esquerda
+\captionsetup
+{
+    labelfont     = bf,          % Nome em Negrito
+    labelsep      = period,      % Nome terminado com um ponto final.
+    justification = centering,   % Texto centralizado
+    margin        = 40pt         % Espaçamento horizontal mínimo na direita e esquerda
 }
 
 % Estilo da legenda das figuras
-\captionsetup[figure]{
-    name=Imagem              % Nome alterado de Figura para Imagem 
+\captionsetup[figure]
+{
+    name = Imagem              % Nome alterado de Figura para Imagem 
 }
 
 
