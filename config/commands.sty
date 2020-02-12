@@ -60,7 +60,8 @@
 
 \newcommand{\abreaspas}{``}
 \newcommand{\fechaaspas}{''}
-\newcommand{\entreaspas}[1]{\abreaspas#1\fechaaspas}
+\newcommand{\entreaspas}{\enquote}
+\newcommand{\aspas}{\entreaspas}
 \newcommand{\reticencias}{\dots}
 \newcommand{\etc}{\dots}
 \newcommand{\linha}{^{\prime}}
@@ -79,13 +80,15 @@
 \newcommand{\maisoumenos}{\pm}
 \newcommand{\e}{\text{ e }}
 \newcommand{\ou}{\text{ ou }}
+\newcommand{\corta}{\cancel}
+\newcommand{\cancela}{\cancel}
 
 
 %
 %   Comandos para Teoria de Conjuntos
 %
 
-\newcommand{\conjunto}{\set}
+\newcommand{\conjunto}[1]{\left\{#1\right\}}
 \newcommand{\unitario}{\conjunto}
 \newcommand{\talque}{\;;\;}
 \newcommand{\tq}{\talque}
@@ -105,6 +108,8 @@
 \newcommand{\sequencia}[2]{\prn{#1}_{#2}}
 \newcommand{\seq}{\sequencia}
 
+% Deprecado
+\newcommand{\set}{\conjunto}
 
 %
 %    Operações entre conjuntos
@@ -202,6 +207,7 @@
 
 % Abreviações deprecadas
 \renewcommand{\sin}{\sen}
+\newcommand{\abs}{\modulo}
 
 
 %

@@ -1,26 +1,60 @@
-\usepackage{adforn}
-\usepackage{amsfonts, amsthm, amssymb} % Environment proof; comandos \mathbb, \newtheorem, \subsetneq
-\usepackage[portuguese]{babel} % Evitar
-\usepackage[backend=biber]{biblatex} % Inserção de referências
-\usepackage[makeroom]{cancel} % \cancel 
-\usepackage{caption} % Necessário estar após o pacote babel
-\usepackage{chngcntr} 
-\usepackage{commath} % \abs
-\usepackage[shortlabels]{enumitem} % enumerate properties, enumerate-like scheme for labels
-\usepackage{environ} % nofleq
-\usepackage{float} % change float (image table etc) separator
+%
+%   Todos os pacotes importados para o documento
+%
+
+% Codificação dos caracteres em formato universal.
 \usepackage[T1]{fontenc}
-\usepackage[left=2.5cm, top=3cm, right=2.5cm, bottom=2cm]{geometry} % page borders
-\usepackage{graphicx} % image inserting
-\usepackage{hyperref} % hyperlinks
-\usepackage{import} % nested \input issues
-\usepackage[utf8]{inputenc} % portuguese
+\usepackage[utf8]{inputenc}
+
+% Traduz o texto gerados pelo LaTeX para português. ex.: Capítulo, Seção, Conteúdo.
+\usepackage[brazil]{babel}
+
+% Inserção de referências de todo o documento.
+\usepackage[backend=biber]{biblatex}
+
+% Pacotes essenciais para fazer a magia acontecer no modo matemático.
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% Configuração do posicionamento de alguns elementos.
+\usepackage{float}
+
+% Espaçamento dos cantos das páginas.
+\usepackage[left=2.5cm, top=3cm, right=2.5cm, bottom=2cm]{geometry}
+
+% Configuração de listas.
+\usepackage[shortlabels]{enumitem}
+
+% Personalização das legendas de tabelas e figuras. Necessário que esteja após o pacote babel.
+\usepackage{caption}
+
+% Inserção de imagens.
+\usepackage{graphicx}
+
+% Funcionamento dos hiperlinks.
+\usepackage{hyperref}
+
+% Auxiliar na configuração dos contadores. Necessário para o comando \counterwithin.
+\usepackage{chngcntr} 
+
+% Auxiliar na modularização dos arquivos.
+\usepackage{import}
+
+% Gráficos em formato Tikz
+\usepackage{tikz}
+
+% Diversas funções para o uso das aspas.
 \usepackage{csquotes}
+
+% Usado ndefinição de espaço entre as linhas do texto. Comando \onehalfspacing.
+\usepackage{setspace}
+
+% Usado para o caixote no ambiente mdframed.
 \usepackage{mdframed}
-\usepackage{ragged2e} % text aligning
-\usepackage{setspace} % need this to change line spacing
-\usepackage{siunitx} % degree symbol
-\usepackage{standalone} % deal with problems when having multiple preambles
-\usepackage{textcomp} % \textdegree
-\usepackage{tikz} % drawing pictures
-\usepackage{verbatim} % multiline comments
+
+% Permite usar alguns simbolos do teclados como caracteres no texto.
+\usepackage{textcomp}
+
+% Necessário para o comando \cancel (\corta) usado no modo matemático.
+\usepackage[makeroom]{cancel}
