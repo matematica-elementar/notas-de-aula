@@ -1,185 +1,148 @@
 \section{Conjuntos e Lógica}
 
+Em Matemática, a Teoria de Conjuntos está intimamente relacionada à Lógica. Como evidência disso, existem diversas equivalências entre relações e operadores de conjuntos e conectivos lógicos. Apresentar-se-ão quatro delas, mas antes vamos entender como usamos os símbolos $\implica$ e $\sse$ no nosso curso.
 
-
-Em Matemática, a Teoria de Conjuntos está intimamente relacionada à Lógica.
-Como evidência disso, existem diversas equivalências entre relações e operadores de conjuntos e conectivos lógicos.
-Apresentar-se-ão quatro delas, mas antes vamos entender como usamos os símbolos $ \implies$ e $\iff$ no nosso curso.
-
-Na Lógica Proposicional, a implicação $\prn \to $ é um conectivo lógico. 
-Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \to Q$.
-O valor-verdade de $P \to Q$ é completamente determinado quando se conhecem os valores-verdade de $P$ e $Q$.
-A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
+Na Lógica Clássica Proposicional, a implicação $(\implicalogico)$ é um conectivo lógico. Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \implicalogico Q$.O valor-verdade de $P \implicalogico Q$ é completamente determinado quando se conhecem os valores-verdade de $P$ e $Q$.A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
 
 \begin{table}[h]
-\caption{Tabela-verdade da implicação:}
-\label{tbl:implicacao}
-\centering
-\begin{tabular}{cc|c}
-$P$		& $Q$		& $P \to Q$	\\ \hline
-V		& V			& V			\\
-V		& F			& F			\\
-F		& V			& V			\\
-F		& F			& V			\\	
-\end{tabular}
+	\centering
+	\begin{tabular}{cc|c}
+		$P$		& $Q$		& $P \implica Q$ \\ \hline
+		V		& V			& V			     \\
+		V		& F			& F			     \\
+		F		& V			& V			     \\
+		F		& F			& V			     \\	
+	\end{tabular}
+	\caption{Tabela-verdade da implicação.}
+	\label{tbl:implicacao}
 \end{table}
 
-A implicação aparece textualmente de algumas maneiras; a mais comum delas sendo ``Se $P$, então $Q$''.
-No caso de a afirmação anterior ser, por exemplo, um problema, interpreta-se o $P$ como a sua hipótese, e $Q$, como a sua tese.
-Costuma-se escrever, também, nessa situação, $P \implies Q$ e reservar o $P \to Q$ para contextos puramente lógicos.
+A implicação aparece textualmente de algumas maneiras; a mais comum delas sendo \abreaspas Se $P$, então $Q$\fechaaspas.
+No caso de a afirmação anterior ser, por exemplo, um problema, interpreta-se o $P$ como a sua hipótese, e $Q$, como a sua tese. Costuma-se escrever, também, nessa situação, $P \implica Q$ e reservar o $P \implicalogico Q$ para contextos puramente lógicos.
 
 Para provar que uma implicação é verdadeira, o primeiro passo é considerar a hipótese $P$ como uma propriedade verdadeira.
-Consequentemente, nossa atenção se restringe somente às duas primeiras linhas da tabela-verdade de $P \to Q$.
-Assim, pela tabela, constatamos que, para alcançarmos nosso objetivo de provar que a afirmação ``Se $P$, então $Q$'' é verdadeira,
-precisamos mostrar que a tese $Q$ também é verdadeira.
+Consequentemente, nossa atenção se restringe somente às duas primeiras linhas da tabela-verdade de $P \implica Q$.
+Assim, pela tabela, constatamos que, para alcançarmos nosso objetivo de provar que a afirmação \entreaspas{Se $P$, então $Q$} é verdadeira, precisamos mostrar que a tese $Q$ também é verdadeira.
 
-Quando já está provado que ``Se $P$, então $Q$'' é verdadeira, 
-utilizamos esse resultado para concluir que $Q$ é verdadeira quando temos, também, que $P$ é verdadeira.
-Isso pode, mais uma vez, ser verificado pela tabela-verdade de $P \to Q$:
-na única linha em que $P \to Q$ e $P$ são verdadeiras, $Q$ também é.
+Quando já está provado que \entreaspas{Se $P$, então $Q$} é verdadeira, utilizamos esse resultado para concluir que $Q$ é verdadeira quando temos, também, que $P$ é verdadeira. Isso pode, mais uma vez, ser verificado pela tabela-verdade de $P \implica Q$: na única linha em que $P \implica Q$ e $P$ são verdadeiras, $Q$ também é.
 
-Outro conectivo lógico é o $\liff$, chamado de bicondicional ou bi-implicação.
-Da mesma forma que a implicação -- e os demais conectivos lógicos --, o valor-verdade da expressão $P \liff Q$, dadas duas proposições $P$ e $Q$, é totalmente determinado pelos valores-verdade dessas proposições.
+Outro conectivo lógico é o $\sselogico$, chamado de bicondicional ou bi-implicação.
+Da mesma forma que a implicação -- e os demais conectivos lógicos --, o valor-verdade da expressão $P \sselogico Q$, dadas duas proposições $P$ e $Q$, é totalmente determinado pelos valores-verdade dessas proposições.
 A relação se encontra na Tabela \ref{tbl:bi-implicacao}.
 
 \begin{table}[h]
-\caption{Tabela-verdade da bi-implicação.}
-\label{tbl:bi-implicacao}
-\centering
-\begin{tabular}{cc|c}
-$P$		& $Q$		& $P \liff Q$	\\ \hline
-V		& V			& V			\\
-V		& F			& F			\\
-F		& V			& F			\\
-F		& F			& V			\\	
-\end{tabular}
+	\centering
+	\begin{tabular}{cc|c}
+		$P$		& $Q$		& $P \sselogico Q$	\\ \hline
+		V		& V			& V			\\
+		V		& F			& F			\\
+		F		& V			& F			\\
+		F		& F			& V			\\	
+	\end{tabular}
+	\caption{Tabela-verdade da bi-implicação.}
+	\label{tbl:bi-implicacao}
 \end{table}
-%
-\noindent Pela tabela, pode-se notar que a expressão $P \liff Q$ é verdadeira quando $P$ e $Q$ têm o mesmo valor-verdade, e apenas nessa situação.
 
-De forma similar ao que ocorre na implicação, reserva-se o símbolo $\liff$ para contextos lógicos, utilizando o $\iff$ apenas em cenários menos formais.
-Textualmente, uma afirmação do tipo $P \iff Q$ costuma se manifestar como ``$P$ se, e somente se, $Q$''. 
-Isso começa a evidenciar um importante fato sobre a bi-implicação: ela pode ser definida como a conjunção de duas implicações.
-A frase ``$P$ se $Q$'' é equivalente a ``se $Q$, então $P$'', o que, conforme já visto, pode ser representado como $Q \implies P$.
-Ademais, ``$P$ somente se $Q$'' diz que $P$ só pode ser verdade se $Q$ também for, ou seja, $P \implies Q$. 
-As frases, quando juntas, expressam a noção de bi-condicionalidade.
+Pela tabela, pode-se notar que a expressão $P \sselogico Q$ é verdadeira quando $P$ e $Q$ têm o mesmo valor-verdade, e apenas nessa situação.
 
-Outra versão textual comum do $\iff$ é a sentença ``Para $P$, é necessário e suficiente que $Q$''.
-Assim como no caso do ``se, e somente se'', essa expressão carrega duas informações consigo.
-A frase ``Para $P$, é necessário que $Q$'' significa que a validade de $P$ só é possível na presença da validade de $Q$, isso é, $P \implies Q$.
-Por outro lado, ``Para $P$, é suficiente que $Q$'' indica que basta $Q$ ser verdade para $P$ também ser, ou seja, $Q \implies P$.
+De forma similar ao que ocorre na implicação, reserva-se o símbolo $\sselogico$ para contextos lógicos, utilizando o \entreaspas{$\sse$} apenas em cenários menos formais. Textualmente, uma afirmação do tipo $P \sse Q$ costuma se manifestar como ``$P$ se, e somente se, $Q$''. Isso começa a evidenciar um importante fato sobre a bi-implicação: ela pode ser definida como a conjunção de duas implicações. A frase ``$P$ se $Q$'' é equivalente a ``se $Q$, então $P$'', o que, conforme já visto, pode ser representado como $Q \implica P$. Ademais, ``$P$ somente se $Q$'' diz que $P$ só pode ser verdade se $Q$ também for, ou seja, $P \implica Q$. As frases, quando juntas, expressam a noção de bi-condicionalidade.
 
-Uma terceira forma de se apresentar a informação $P \iff Q$ é dizer que ``$P$ é equivalente a $Q$''.
-Pode-se justificar essa construção pela tabela-verdade de $P \liff Q$. 
-Conforme mencionado, $P \liff Q$ é verdade precisamente quando $P$ e $Q$ tem o mesmo valor-verdade.
-Em caso positivo, não existe uma diferença prática entre $P$ e $Q$.
-Assim, usa-se o termo ``equivalência'', que também indica que, quando se tem uma dessas proposições, se tem a outra, já que elas possuem o mesmo valor-verdade.
+Outra versão textual comum do $\sse$ é a sentença ``Para $P$, é necessário e suficiente que $Q$''. Assim como no caso do ``se, e somente se'', essa expressão carrega duas informações consigo. A frase ``Para $P$, é necessário que $Q$'' significa que a validade de $P$ só é possível na presença da validade de $Q$, isto é, $P \implica Q$. Por outro lado, ``Para $P$, é suficiente que $Q$'' indica que basta $Q$ ser verdade para $P$ também ser, ou seja, $Q \implica P$.
 
-Em todas as formas textuais vistas, o $\iff$ pôde ser desmembrado em dois $\implies$.
-Isso reflete diretamente na maneira como se prova afirmações do tipo $P \iff Q$.
-O método consiste em demonstrar, de forma independente, que $P \implies Q$ e que $Q \implies P$.
-Aqui, vale a discussão acerca de como provar afirmações com $\implies$.
-A diferença é que sempre se fazem necessárias duas provas desse tipo.
+Uma terceira forma de se apresentar a informação $P \sse Q$ é dizer que ``$P$ é equivalente a $Q$''. Pode-se justificar essa construção pela tabela-verdade de $P \sselogico Q$. Conforme mencionado, $P \sselogico Q$ é verdade precisamente quando $P$ e $Q$ tem o mesmo valor-verdade. Em caso positivo, não existe uma diferença prática entre $P$ e $Q$. Assim, usa-se o termo ``equivalência'', que também indica que, quando se tem uma dessas proposições, se tem a outra, já que elas possuem o mesmo valor-verdade.
 
-Explicados os usos do $\implies$  e do $\iff$ neste texto, podemos voltar a atenção à equivalência entre operadores e relações de conjuntos e conectivos lógicos.
-No restante desta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$.
-Considere, também, $A = \set {x \tq x \text{ satisfaz } P}$ e $B= \set {x \tq x \text{ satisfaz } Q}$.
+Em todas as formas textuais vistas, o $\sse$ pôde ser desmembrado em dois $\implica$. Isso reflete diretamente na maneira como se prova afirmações do tipo $P \sse Q$. O método consiste em demonstrar, de forma independente, que $P \implica Q$ e que $Q \implica P$. Aqui, vale a discussão acerca de como provar afirmações com $\implica$. A diferença é que sempre se fazem necessárias duas provas desse tipo.
 
-\begin{equivalence}[Inclusão e implicação] 
-$$ A \subset B \text{ é equivalente a } P \implies Q \text{.} $$
-\end{equivalence}
+Explicados os usos do $\implica$  e do $\sse$ neste texto, podemos voltar a atenção à equivalência entre operadores e relações de conjuntos e conectivos lógicos. No restante desta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$. Considere, também, $A = \conjunto{ x \tq \text{$x$ satisfaz $P$}}$ e $B = \conjunto{ x \tq \text{$x$ satisfaz $Q$}}$.
 
-\begin{equivalence}[Igualdade e bi-implicação] 
-$$ A = B \text{ é equivalente a } P \iff Q \text{.} $$
-\end{equivalence}
+\begin{proposition}[Inclusão e implicação] 
+	$A \contido B$ é equivalente a $P \implica Q$.
+\end{proposition}
+
+\begin{proposition}[Igualdade e bi-implicação] 
+	$A = B$ é equivalente a $P \sse Q$.
+\end{proposition}
 
 \begin{example}
-Analise as implicações abaixo:
-\begin{equation*}
-\begin{aligned}
-x^2+1=0 & \implies \left(x^2 +1 \right) \left( x^2-1 \right) = 0
-\cdot \left( x^2-1 \right) \\
-& \implies x^4 - 1 = 0 \\
-& \implies x^4 = 1 \\
-& \implies x \in \set {-1, 1}
-\end{aligned}
-\end{equation*}
-%
-Isso quer dizer que o conjunto solução de $x^2 +1 = 0$ é $\set{-1, 1}$?
+	Analise as implicações abaixo:
+	\begin{align*}
+        x^2+1=0 &\implica (x^2+1)(x^2-1) = 0 \vezes (x^2-1) \\
+                &\implica x^4 - 1 = 0 \\
+                &\implica x^4 = 1 \\
+                &\implica x \pertence \conjunto {-1, 1}
+	\end{align*}
+	Isso quer dizer que o conjunto solução de $x^2 +1 = 0$ é $\conjunto{-1, 1}$?
 \end{example}
 
 \begin{solution}
-O conjunto-solução de $x^2 + 1 = 0$ é $S = \set{x \in \R \tq x^2 + 1 = 0} = \emptyset$, o que implica que $S \ne \set{-1,1}$.
+	O conjunto-solução de $x^2 + 1 = 0$ é $S = \conjunto{ x \nos \reais \taisque x^2 + 1 = 0} = \vazio$, o que implica que $S \diferente \conjunto{-1, 1}$.
 \end{solution}
 
-\begin{equivalence}[Complementar e negação] 
-$A^C$ é equivalente a $\neg P$.
-\end{equivalence}
+\begin{proposition}[Complementar e negação] 
+	$A^C$ é equivalente a $\naologico P$.
+\end{proposition}
+
 Podemos combinar os itens \ref{prop:complementar:complementar-do-complementar} e \ref{prop:complementar:contrapositiva} da Proposição \ref{prop:complementar} e obter que:
-%
-$$ P \implies Q \sse \neg Q \implies \neg P \text{.} $$
-%
-Chamamos $Q \implies P$ de \textdef{recíproca} de $P \implies Q$, e $P \land \neg Q$ de \textdef{negação}\newline de $P \implies Q$. É dado um exemplo no Exercício \ref{exe:escrever-reciprocas}.
+\begin{center}
+    $P \implica Q$ se, e somente se, $\naologico Q \implica \naologico P$.
+\end{center}
+
+Chamamos $Q \implica P$ de \emph{recíproca} de $P \implica Q$, e $P \elogico \naologico Q$ de \emph{negação} de $P \implica Q$. É dado um exemplo no Exercício \ref{exe:escrever-reciprocas}.
 
 \begin{example}
-Observe as afirmações:
+	Observe as afirmações:
+	
+	\begin{itemize}
+		\item Todo número primo maior do que 2 é ímpar;
+		\item Todo número par maior do que 2 é composto.
+	\end{itemize}
 
-\begin{enumerate}
-	\item Todo número primo maior do que 2 é ímpar;
-	\item Todo número par maior do que 2 é composto.
-\end{enumerate}
-%
-Essas afirmações dizem exatamente a mesma coisa, ou seja, exprimem a mesma ideia; só que com diferentes termos. Podemos reescrevê-las na forma de implicações vendo claramente que uma é contrapositiva da outra, e todas estão sob a hipótese de que $n \in \N$, com $n > 2$:
-%
-\begin{nofleqn}{align*}
-n \text{ primo 	} & \implies n \text{ ímpar}\\
-\neg (\text{ }n \text{ ímpar } )& \implies \neg (\text{ }n \text{ primo } )\\
-n \text{ par } & \implies n \text{ composto}
-\end{nofleqn}
+	Essas afirmações dizem exatamente a mesma coisa, ou seja, exprimem a mesma ideia; só que com diferentes termos. Podemos reescrevê-las na forma de implicações vendo claramente que uma é contrapositiva da outra, e todas estão sob a hipótese de que $n \in \N$, com $n > 2$:    
+    \begin{align*}
+        \text{$n$ primo}                   &\implica \text{$n$ ímpar} \\
+        \text{$\naologico$( $n$ ímpar )}   &\implica \text{$\naologico$( $n$ primo )} \\
+        \text{$n$ par}                     &\implica \text{$n$ composto}
+    \end{align*}
 \end{example}
 
-\begin{equivalence}[União e disjunção]
-$A \cup B$ é equivalente a $P \lor Q$ ($P \text{ ou } Q$).
-\end{equivalence}
+\begin{proposition}[União e disjunção]
+	$A \uniao B$ é equivalente a $P \lor Q$ ($P \ou Q$).
+\end{proposition}
 
-\begin{equivalence}[Interseção e conjunção]
-$A \cap B$ é equivalente a $P \land Q$ ($P \text{ e } Q$).
-\end{equivalence}
+\begin{proposition}[Interseção e conjunção]
+	$A \inter B$ é equivalente a $P \elogico Q$ ($P \e Q$).
+\end{proposition}
 
 \begin{remark}
-O conectivo lógico \textit{ou} tem significado diferente do usado normalmente no português. Na linguagem coloquial, usamos $P$ \textit{ou} $Q$ sem permitir que sejam as duas coisas ao mesmo tempo. Analise a seguinte história:\newline
+    O conectivo lógico \textit{ou} tem significado diferente do usado normalmente no português. Na linguagem coloquial, usamos $P$ \textit{ou} $Q$ sem permitir que sejam as duas coisas ao mesmo tempo. Analise a seguinte história:
 
-\textit{Um obstetra que também era matemático acabara de realizar um parto quando o pai perguntou: ``É menino ou menina, doutor?''. E ele respondeu: ``sim''}.
+    \emph{Um obstetra que também era matemático acabara de realizar um parto quando o pai perguntou: ``É menino ou menina, doutor?''. E ele respondeu: ``sim''.}
 \end{remark}
 
-As equivalências entre as relações e os operadores da Teoria dos Conjuntos e conectivos da Lógica são resumidas na Tabela \ref{tbl:equiv-conj-logc}.
-
+As equivalências entre as relações e os operadores da Teoria dos Conjuntos e conectivos da Lógica são resumidas na Tabela~\ref{tbl:equiv-conj-logc}.
 \begin{table}[h]
-\begin{center}
-\caption{Equivalências entre as relações e operadores de conjuntos e conectivos lógicos.}
-\label{tbl:equiv-conj-logc}
-\begin{tabular}{|c|c|}
-	\hline
-	Operação/relação em Conjuntos & Fórmula de Lógica \\\hline
-	$A=B$ & $P \iff Q$ \\ \hline
-	$A \subset B$ & $P \implies Q$ \\ \hline
-	$A^C$ & $\neg P$ \\ \hline
-	$A \cup B$ & $P \lor Q$ \\ \hline
-	$A \cap B$ & $P \land Q$ \\
-	\hline
-\end{tabular}
-\end{center}
+	\centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Operação/relação em Conjuntos & Fórmula de Lógica \\ \hline
+        $A = B$                 	  & $P \sse Q$        \\ \hline
+        $A \contido B$            	  & $P \implica Q$    \\ \hline
+        $A\complementar$        	  & $\naologico P$    \\ \hline
+        $A \uniao B$              	  & $P \lor Q$        \\ \hline
+        $A \inter B$              	  & $P \elogico Q$    \\
+        \hline
+    \end{tabular}
+	\caption{Equivalências entre as relações e operadores de conjuntos e conectivos lógicos.}
+	\label{tbl:equiv-conj-logc}
 \end{table}
 
-\begin{problem}
-A polícia prende quatro homens, um dos quais cometeu um furto. Eles fazem as seguintes declarações:
-%
-\begin{itemize}[leftmargin=*]
-  \item Arnaldo: Bernaldo fez o furto.
-  \item Bernaldo: Cernaldo fez o furto.
-  \item Dernaldo: eu não fiz o furto.
-  \item Cernaldo: Bernaldo mente ao dizer que eu fiz o furto.
-\end{itemize}
-%
-Se sabemos que só uma destas declarações é a verdadeira, quem é culpado pelo furto?
-\end{problem}
+\caixote{Um problema de lógica}{
+	A polícia prende quatro homens, um dos quais cometeu um furto. Eles fazem as seguintes declarações:
+	\begin{itemize}
+		\item Arnaldo: Bernaldo fez o furto.
+		\item Bernaldo: Cernaldo fez o furto.
+		\item Dernaldo: eu não fiz o furto.
+		\item Cernaldo: Bernaldo mente ao dizer que eu fiz o furto.
+	\end{itemize}
+	Se sabemos que só uma destas declarações é a verdadeira, quem é culpado pelo furto?
+}

@@ -3,18 +3,18 @@
 \begin{definition}
     Seja $f: D \subset \R \to \R$ uma função.
 \begin{enumerate}[(i)]
-  \item $f$ é \textdef{limitada superiormente} se existe $M \in \R$ tal
+  \item $f$ é \emph{limitada superiormente} se existe $M \in \R$ tal
   que $f(x) \leq M$ para todo $x \in D$;
-  \item $f$ é \textdef{limitada inferiormente} se existe $M \in \R$ tal
+  \item $f$ é \emph{limitada inferiormente} se existe $M \in \R$ tal
   que $f(x) \geq M$ para todo $x \in D$;
-  \item $x_0 \in D$ é um \textdef{ponto de máximo absoluto} de $f$ se
+  \item $x_0 \in D$ é um \emph{ponto de máximo absoluto} de $f$ se
   $f(x_0) \geq f(x)$ para todo $x \in D$;
-  \item $x_0 \in D$ é um \textdef{ponto de mínimo absoluto} de $f$ se
+  \item $x_0 \in D$ é um \emph{ponto de mínimo absoluto} de $f$ se
   $f(x_0) \leq f(x)$ para todo $x \in D$;
-  \item $x_0 \in D$ é um \textdef{ponto de máximo local} de $f$ se
-  existe $r>0$ tal que $f(x_0) \geq f(x)$ para todo $x \in D \cap \paren{x_0 - r , x_0+r}$;
-  \item $x_0 \in D$ é um \textdef{ponto de mínimo local} de $f$ se
-  existe $r>0$ tal que $f(x_0) \leq f(x)$ para todo $x \in D \cap \paren{x_0 - r ,
+  \item $x_0 \in D$ é um \emph{ponto de máximo local} de $f$ se
+  existe $r>0$ tal que $f(x_0) \geq f(x)$ para todo $x \in D \inter \paren{x_0 - r , x_0+r}$;
+  \item $x_0 \in D$ é um \emph{ponto de mínimo local} de $f$ se
+  existe $r>0$ tal que $f(x_0) \leq f(x)$ para todo $x \in D \inter \paren{x_0 - r ,
   x_0+r}$.
 \end{enumerate}
 \end{definition}
@@ -74,7 +74,7 @@ Identifique, pelo gráfico, os intervalos de monotonicidade e os extremos locais
         \item A justificativa para a existência de um máximo local em $x=1{,}5$ é análoga à do item \ref{item:minimo-local};
         \item Em todo o intervalo $[5; 6]$, em que a função é constante, 
         os pontos são máximos locais e mínimos locais, exceto pelo fato de que não há mínimo local em $x=5$. 
-        Para qualquer $x_0\in (5;6]$, existe um intervalo $(x_0 - r; x_0+r)$ em torno de $x_0$ tal que $f(x)= f(x_0)$ para todo $x \in (x_0 - r; x_0+r) \cap D$, em que $D = \left(-1,6\right]$.
+        Para qualquer $x_0\in (5;6]$, existe um intervalo $(x_0 - r; x_0+r)$ em torno de $x_0$ tal que $f(x)= f(x_0)$ para todo $x \in (x_0 - r; x_0+r) \inter D$, em que $D = \left(-1,6\right]$.
         Note que $f(x)= f(x_0)$ implica tanto $f(x) \leq f(x_0)$ quanto $f(x_0)\leq f(x)$, 
         o que justifica a existência dos mínimos e máximos locais em $(5;6]$. 
         Quando $x_0=5$, conseguimos concluir que $f(x) \le f(x_0)$ mas não $f(x_0) \le f(x)$, 

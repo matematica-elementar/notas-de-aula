@@ -1,107 +1,90 @@
 \section{Inclusão}
 
 \begin{definition}[Relação de Inclusão]
-\label{def:subset}
-Considere dois conjuntos $A$ e $B$.
-Se for o caso que todo elemento de $A$ é, também, elemento de $B$, diz-se que $A$ é um \textdef{subconjunto} de $B$, que $A$ está \textdef{contido} em $B$, ou que $A$ é \textdef{parte} de $B$.
-Para indicar esse fato, usa-se a notação $A \subset B$.
+	\label{def:inclusao}
+	Considere dois conjuntos $A$ e $B$. Se for o caso que todo elemento de $A$ é, também, elemento de $B$, diz-se que $A$ é um \emph{subconjunto} de $B$, que $A$ está \emph{contido} em $B$, ou que $A$ é \emph{parte} de $B$. Para indicar esse fato, usa-se a notação $A \contido B$.
 
-\label{def:notsubset}
-Quando $A$ \textit{não} está contido em $B$,  utiliza-se a notação  $A \notsubset B$.
-Na prática, isso significa que existe pelo menos um elemento que está em $A$ mas não está em $B$.
-Em outras palavras, existe um elemento $x$ tal que $x \in A$ mas $x \notin B$.
+	\label{def:naoinclusao}
+	Quando $A$ \textit{não} está contido em $B$,  utiliza-se a notação  $A \naocontido B$. Na prática, isso significa que existe pelo menos um elemento que está em $A$ mas não está em $B$. Em outras palavras, existe um elemento $x$ tal que $x \em A$ mas $x \naopertence B$.
 \end{definition}
 
 \begin{remark}
-Também podemos escrever $B \supset A$ quando for o caso que $A \subset B$. Para essa situação, dizemos que $B$ \textdef{contém} $A$.
+	Também podemos escrever $B \contem A$ quando for o caso que $A \contido B$. Para essa situação, dizemos que $B$ \emph{contém} $A$.
 \end{remark}
 
 \begin{example}
-Considere $T$ o conjunto de todos os triângulos e $P$ o conjunto dos polígonos no plano. Como todo triângulo é um polígono podemos concluir que $T \subset P$.
-Observe também que $P \notsubset T$. Para poder concluir isso precisamos encontrar um elemento de $P$ que não seja um elemento de $T$. Ora, basta considerar um quadrado $q$ com lados de tamanho 1, como todo quadrado é um polígono, temos que $q \in P$, mas quadrados não são triangulos, então $q \notin T$.
+	Considere $T$ o conjunto de todos os triângulos e $P$ o conjunto dos polígonos no plano. Como todo triângulo é um polígono podemos concluir que $T \contido P$. Observe também que $P \naocontido T$. Para poder concluir isso precisamos encontrar um elemento de $P$ que não seja um elemento de $T$. Ora, basta considerar um quadrado $q$ com lados de tamanho 1, como todo quadrado é um polígono, temos que $q \pertence P$, mas quadrados não são triangulos, então $q \naopertence T$.
 \end{example}
 
 \begin{example}
-Na Geometria, uma reta, um plano e o espaço são conjuntos. Seus
-elementos são pontos. Quando dizemos que uma reta $r$ está no plano $\Pi$, estamos afirmando que $r$ está contida em $\Pi$ ou, equivalentemente, que $r$ é um subconjunto de $\Pi$, pois todos os pontos que pertencem a $r$ pertencem, também, a $\Pi$. Nesse caso, deve-se escrever $ r \subset \Pi$. Porém, não é correto dizer que $r$ pertence a $\Pi$, nem escrever $r \in \Pi$. Os
-elementos do conjunto $\Pi$ são pontos, não retas.
+	Na Geometria, uma reta, um plano e o espaço são conjuntos. Seus elementos são pontos. Quando dizemos que uma reta $r$ está no plano $\Pi$, estamos afirmando que $r$ está contida em $\Pi$ ou, equivalentemente, que $r$ é um subconjunto de $\Pi$, pois todos os pontos que pertencem a $r$ pertencem, também, a $\Pi$. Nesse caso, deve-se escrever $r \contido \Pi$. Porém, não é correto dizer que $r$ pertence a $\Pi$, nem escrever $r \pertence \Pi$. Os elementos do conjunto $\Pi$ são pontos, não retas.
 \end{example}
 
 \begin{example}
-Considere os conjuntos $N = \set{1, 2, 3, 4, 5, 6}$, $I = \set{1, 3, 5}$ e $P = \set{0, 2, 4, 6}$.
-Analisando o cenário, podemos concluir que:
-\begin{enumerate}
-\item
-$I \subset N$. Observe que todos os elementos de $I$ também são elementos de $N$.
-\item
-$P \notsubset N$. Observe que nem todos os elementos de $P$ são elementos de $N$, pois $0 \in P$ mas $0 \notin N$.
-\end{enumerate}
+	Considere os conjuntos $N = \conjunto{1, 2, 3, 4, 5, 6}$, $I = \conjunto{1, 3, 5}$ e $P = \conjunto{0, 2, 4, 6}$. Analisando o cenário, podemos concluir que:
+	\begin{enumerate}
+		\item $I \contido N$. Observe que todos os elementos de $I$ também são elementos de $N$.
+		\item $P \naocontido N$. Observe que nem todos os elementos de $P$ são elementos de $N$, pois $0 \pertence P$ mas $0 \naopertence N$.
+	\end{enumerate}
 \end{example}
 
-\begin{proposition}[Inclusão universal do $\emptyset$]
-\label{prop:emptyset1}
-Para todo conjunto $A$, tem-se que o \emptysetref{conjunto vazio} é subconjunto de $A$ (em símbolos: $\emptyset \subset A$).
+\begin{proposition}[Inclusão universal do $\vazio$]
+	\label{prop:inclusao-universal-vazio}
+	Para todo conjunto $A$, tem-se que o conjunto $\vazio$ é subconjunto de $A$ (em símbolos: $\emptyset \subset A$).
 \end{proposition}
 
 \begin{proof}
-Para chegarmos num absurdo, considere um conjunto $A$ tal que $\emptyset \notsubset A$.
-Logo, podemos concluir que existe um elemento $x$ tal que $x \in \emptyset$ mas $x \notin A$, pela \subsetref{definição de inclusão}.
-Mas, já sabemos que $x \notin \emptyset$ pela \emptysetref{definição do conjunto vazio}.
-O que nos leva a um absurdo, pois não pode acontecer que $x \in \emptyset$ e $x \notin \emptyset$ ao mesmo tempo.
-Portanto, podemos concluir que $\emptyset \subset A$.
+	Para chegarmos num absurdo, considere que existe um conjunto $A$ tal que $\vazio \naocontido A$. Logo, podemos concluir que existe um elemento $x$ tal que $x \pertence \vazio$ mas $x \naopertence A$, pela definição de inclusão. Mas, já sabemos que $x \naopertence \vazio$ pela definição do conjunto vazio. O que nos leva a um absurdo, pois não pode acontecer que $x \pertence \vazio$ e $x \naopertence \vazio$ ao mesmo tempo. Portanto, podemos concluir que $\vazio \contido A$.
 \end{proof}
 
 \begin{remark}
-Ao manter a arbitrariedade de um conjunto, qualquer conclusão relacionada a este conjunto valerá para todos os conjuntos.
+	Ao manter a arbitrariedade de um conjunto, qualquer conclusão relacionada a este conjunto valerá para todos os conjuntos. Foi o que fizemos com o conjunto $A$ na demonstração da Proposição~\ref{prop:inclusao-universal-vazio}.
 \end{remark}
 
 \begin{definition}[Inclusão Própria]
-Dizemos que $A \ne \emptyset$ é um \textdef{subconjunto próprio} de $B$ quando $A \subset B$ mas $A \neq B$.
+	Dizemos que $A \diferente \vazio$ é um \emph{subconjunto próprio} de $B$ quando $A \contido B$ mas $A \diferente B$.
 \end{definition}
 
 \begin{proposition}[Propriedades da inclusão]
-Para quaisquer conjuntos $A$, $B$ e $C$, são válidas as propriedades a seguir:
-
-\begin{enumerate}[i)]
-\item
-	\label{inclusao:reflexividade}
-	\textdef{Reflexividade}: $A \subset A$;
-\item
-	\label{inclusao:antissimetria}
-	\textdef{Antissimetria}: Se $A \subset B$ e $B \subset A$, então $A = B$;
-\item
-	\label{inclusao:transitividade}
-	\textdef{Transitividade}: Se $A \subset B$ e $B \subset C$, então $A \subset C$.
-\end{enumerate}
+	Para quaisquer conjuntos $A$, $B$ e $C$, são válidas as propriedades a seguir:
+	\begin{enumerate}
+		\item
+			\label{inclusao:reflexividade}
+			\emph{Reflexividade}: $A \contido A$;
+		\item
+			\label{inclusao:antissimetria}
+			\emph{Antissimetria}: Se $A \contido B$ e $B \contido A$, então $A = B$;
+		\item
+			\label{inclusao:transitividade}
+			\emph{Transitividade}: Se $A \contido B$ e $B \contido C$, então $A \contido C$.
+	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-	\ref{inclusao:reflexividade}
-	Seja $x \in A$ um elemento arbitrário.
-	Ora, como já temos que $x \in A$ podemos concluir que $A \subset A$.
+	Primeiramente, demonstremos o item~\ref{inclusao:reflexividade}. Seja $x \em A$ um elemento arbitrário. Ora, como já temos que $x \pertence A$ podemos concluir que $A \contido A$.
 
-	\ref{inclusao:antissimetria}
-	Sejam $A$ e $B$ conjuntos tais que $A \subset B$ e $B \subset A$. Suponha, por contradição, que $A \ne B$, ou seja, existe $x \in A$ tal que $x \notin B$ (1) ou existe $x \in B$ tal que $x \notin A$ (2). Ora, (1) é o mesmo que $A \notsubset B$, contradizendo $A \subset B$. Analogamente, (2) contradiz $B \subset A$. Portanto, $A = B$.
+	Segundamente, demonstremos o item~\ref{inclusao:antissimetria}. Sejam $A$ e $B$ conjuntos tais que $A \contido B$ e $B \contido A$. Suponha, por contradição, que $A \ne B$, ou seja, existe $x \em A$ tal que $x \naopertence B$ (1) ou existe $x \em B$ tal que $x \naopertence A$ (2). Ora, (1) é o mesmo que $A \naocontido B$, contradizendo $A \contido B$. Analogamente, (2) contradiz $B \contido A$. Portanto, $A = B$.
 
-	\ref{inclusao:transitividade}
-	Sejam $A$, $B$ e $C$ conjuntos tais que $A \subset B$ e $B \subset C$. Agora basta demonstrar que $A \subset C$. Para isso, considere $x \in A$ um elemento arbitrário e mostremos que $x \in C$. Como temos que $A \subset B$, podemos concluir que $x \in B$. E, como $x \in B$ e $B \subset C$, segue que $x \in C$. Portanto, $A \subset C$.
+	Por fim, demonstremos que vale o item~\ref{inclusao:transitividade}. Sejam $A$, $B$ e $C$ conjuntos tais que $A \contido B$ e $B \contido C$. Agora basta demonstrar que $A \contido C$. Para isso, considere $x \pertence A$ um elemento arbitrário e mostremos que $x \pertence C$. Como temos que $A \contido B$, podemos concluir que $x \pertence B$. E, como $x \pertence B$ e $B \contido C$, segue que $x \pertence C$. Portanto, $A \contido C$.
 \end{proof}
 
 \begin{definition}[Conjunto das Partes]
-\label{def:powerset}
-Dado um conjunto $A$, chamamos de \textdef{conjunto das partes} de $A$ o conjunto formado por todos os seus subconjuntos, e denotamo-lo $\powerset{A}$. Em símbolos:
-$$\powerset{A} = \set{X \tq X \subset A} $$
+	\label{def:powerset} % substituir label para def:conjunto-das-partes
+	Dado um conjunto $A$, chamamos de \emph{conjunto das partes} de $A$ o conjunto formado por todos os seus subconjuntos, e denotamo-lo $\partes A$. Em símbolos:
+	\[
+		\partes A = \conjunto{ X \taisque X \contido A}.
+	\]
 \end{definition}
 
 \begin{example}
-\label{exem-powerset-basico}
-Dado $A = \set{1,2,3}$, determine $\powerset A$.
+	\label{exem-powerset-basico}
+	Dado $A = \conjunto{1, 2, 3}$, determine $\partes A$.
 \end{example}
 
 \begin{solution}
-$\powerset{A} = \set{\emptyset, \set{1}, \set{2}, \set{3}, \set{1,2}, \set{2,3}, \set{1,3}, A}$.
+	$\partes A = \conjunto{\emptyset, \unitario{1}, \unitario{2}, \unitario{3}, \conjunto{1,2}, \conjunto{2,3}, \conjunto{1,3}, A}$.
 \end{solution}
 
 \begin{remark}
-Como o Exemplo~\ref{exem-powerset-basico} ilustra, o conjunto das partes de um determinado conjunto tem a particularidade de que todos os seus elementos também são conjuntos.
+	Como o Exemplo~\ref{exem-powerset-basico} ilustra, o conjunto das partes de um determinado conjunto tem a particularidade de que todos os seus elementos também são conjuntos.
 \end{remark}

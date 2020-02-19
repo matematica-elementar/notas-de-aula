@@ -1,44 +1,37 @@
 \section{Equação do 2° grau}
 
 \begin{definition}
-\label{def:eq-2-grau}
-A \textdef{equação do segundo grau} com coeficientes $a$, $b$ e $c$ é uma equação da forma 
-%
-\begin{align*}
-ax^2 + bx + c = 0,
-\end{align*}
-%
-\noindent onde $a, b, c \in \R$, $a \neq 0$ e $x$ é uma variável real a ser determinada.
+    \label{def:eq-2-grau}
+    A \emph{equação do segundo grau} com coeficientes $a$, $b$ e $c$ é uma equação da forma 
+    \[
+        ax^2 + bx + c = 0,
+    \]
+    onde $a, b, c \nos \reais$, $a \diferente 0$ e $x$ é uma variável real a ser determinada.
 \end{definition}
 
 \begin{example}
-\label{ex:sol-2-grau}
-Encontre as soluções de uma equação do segundo grau.
+    \label{ex:sol-2-grau}
+    Encontre as soluções de uma equação do segundo grau.
 \end{example}
 
 \begin{solution}
-Da Definição \ref{def:eq-2-grau}, sabemos que uma equação do segundo grau tem a seguinte forma:
-%
-\begin{align*}
-	ax^2 + bx + c = 0,
-\end{align*}
-%
-onde $a,b,c \in \R$, com $a \ne 0$. Manipulemos a equação para encontrar o valor de $x$:
-%
-\begin{align*}
-ax^2 + bx + c = 0 & \iff x^2+\frac{b}{a}x +\frac{c}{a}=0 \\ 
-	& \iff x^2+2\frac{b}{2a}x+\prn{\frac{b}{2a}}^2-\prn{\frac{b}{2a}}^2+\frac{c}{a}=0\\ 
-	& \iff \prn{x+\frac{b}{2a}}^2=\frac{b^2}{4a^2}-\frac{c}{a}=\frac{b^2 -4ac}{4a^2}\\ 
-	& \iff \abs{x+\frac{b}{2a}} = \sqrt{\frac{b^2-4ac}{4a^2}}\\ 
-	& \iff x+\frac{b}{2a}=\pm\sqrt{\frac{b^2-4ac}{4a^2}}=\frac{\pm\sqrt{b^2-4ac}}{\pm2a}=\pm\frac{\sqrt{b^2-4ac}}{2a}\\ 
-	& \iff x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\ 
-\end{align*}
-%	
-Portanto, quando $b^2-4ac \ge 0$, o conjunto-solução $S$ da equação será:
-%
-\begin{align*}
- S = \set{\dfrac{-b-\sqrt{b^2-4ac}}{2a}, \dfrac{-b+\sqrt{b^2-4ac}}{2a}}
-\end{align*}
+    Da Definição \ref{def:eq-2-grau}, sabemos que uma equação do segundo grau tem a seguinte forma:
+    \[
+        ax^2 + bx + c = 0,
+    \]
+    onde $a,b,c \in \R$, com $a \ne 0$. Manipulemos a equação para encontrar o valor de $x$:
+    \begin{align*}
+        ax^2 + bx + c = 0 & \sse x^2+\frac{b}{a}x +\frac{c}{a}=0 \\ 
+                          & \sse x^2+2\frac{b}{2a}x+\prn{\frac{b}{2a}}^2-\prn{\frac{b}{2a}}^2+\frac{c}{a}=0\\ 
+                          & \sse \prn{x+\frac{b}{2a}}^2=\frac{b^2}{4a^2}-\frac{c}{a}=\frac{b^2 -4ac}{4a^2}\\ 
+                          & \sse \abs{x+\frac{b}{2a}} = \sqrt{\frac{b^2-4ac}{4a^2}}\\ 
+                          & \sse x+\frac{b}{2a}=\pm\sqrt{\frac{b^2-4ac}{4a^2}}=\frac{\pm\sqrt{b^2-4ac}}{\pm2a}=\pm\frac{\sqrt{b^2-4ac}}{2a}\\ 
+                          & \sse x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\ 
+    \end{align*}
+    Portanto, quando $b^2-4ac \ge 0$, o conjunto-solução $S$ da equação será:
+    \begin{align*}
+        S = \conjunto{\dfrac {-b - \raiz{b^2 - 4ac}} {2a}, \dfrac{-b + \raiz{b^2 - 4ac}} {2a}}
+    \end{align*}
 \end{solution}
 
 \begin{onlineact}[\khan{https://pt.khanacademy.org/math/algebra/quadratics/quadratics-square-root/e/quadratics-by-taking-square-roots-with-steps}{Equações do segundo grau com cálculo de
@@ -50,71 +43,68 @@ Veja o desempenho na Missão Álgebra I -- Equações do segundo grau.
 \end{onlineact}
 
 \begin{definition}
-Chamamos de \textdef{discriminante} da equação do segundo grau a expressão $b^2-4ac$ e denotamos pela letra grega maiúscula $\Delta$ (lê-se delta).
+    Chamamos de \emph{discriminante} da equação do segundo grau a expressão $b^2 - 4ac$ e denotamos pela letra grega maiúscula $\Delta$ (lê-se delta).
 \end{definition}
 
 \begin{remark}
-O número de soluções de uma equação do segundo grau é totalmente determinado pelo sinal do seu discriminante, de forma tal que:
-%
-\begin{itemize}
-  \item Se $\Delta > 0$, existem duas soluções reais;
-  \item Se $\Delta = 0 $, existe uma solução real ($x_1 = x_2 =
-  -b/2a)$;
-  \item Se $\Delta < 0$, não existe solução real.
-\end{itemize}
+    O número de soluções de uma equação do segundo grau é totalmente determinado pelo sinal do seu discriminante, de forma tal que:
+    \begin{itemize}
+        \item Se $\Delta > 0$, existem duas soluções reais;
+        \item Se $\Delta = 0 $, existe uma solução real ($x_1 = x_2 = \frac{-b}{2a})$;
+        \item Se $\Delta < 0$, não existe solução real.
+    \end{itemize}
 \end{remark}
 
 \begin{example}
-Sabendo que $x$ é um número real que satisfaz a equação: 
-%
-\begin{align*}
-x = 1 + \frac 1 {1 +\frac 1 x},
-\end{align*}
-%
-\noindent determine os valores possíveis de $x$.
-
+    Sabendo que $x$ é um número real que satisfaz a equação:
+    \[
+        x = 1 + \frac 1 {1 + \frac 1 x},
+    \]
+    determine os valores possíveis de $x$.
 \end{example}
 
 \begin{solution}
-Manipulemos a equação:
-%
-\begin{align*}
-x = 1+\dfrac{1}{1+\dfrac{1}{x}} & \iff x\prn{1+\dfrac{1}{x}} = \prn{1+\dfrac{1}{x}}+1\\
-	& \iff x+1 = \dfrac{1}{x}+2\\
-	& \iff x^2+x=1+2x\\
-	& \iff x^2-x-1=0\\
-	& \iff x=\dfrac{1\pm\sqrt5}{2}
-\end{align*}
-%
-Logo, as soluções são $\prn{1-\sqrt5}/2$ e $\prn{1+\sqrt5}/2$.
+    Manipulemos a equação:
+    \begin{align*}
+        x = 1 + \dfrac 1 {1 + \frac 1 x} & \sse x \prn{1 + \dfrac 1 x } = \prn{ 1 + \dfrac 1 x }+1 \\
+                                         & \sse x + 1 = \dfrac 1 x + 2 \\
+                                         & \sse x^2 + x = 1 + 2x \\
+                                         & \sse x^2 - x - 1 = 0 \\
+                                         & \sse x = \dfrac{1 \pm\raiz 5} 2.
+    \end{align*}
+    Logo, as soluções são $\dfrac {1 - \raiz 5} 2$ e $\dfrac { 1 + \raiz 5 } 2$.
 \end{solution}
 
 \begin{remark}
-O número $\phi = \frac{\prn {1+\sqrt 5}}2$ é conhecido como razão áurea, número de ouro, proporção divina, entre outras denominações.
-Veja o episódio A Proporção Divina \link{https://www.youtube.com/watch?v=mfL6-g5mQw4}{parte 01} e \link{https://www.youtube.com/watch?v=xtsTXAwWF20&}{parte 02} do programa português Isto É Matemática.
+    O número $\phi = \frac {1 + \raiz 5} 2$ é conhecido como razão áurea, número de ouro, proporção divina, entre outras denominações.
+    Veja o episódio A Proporção Divina \link{https://www.youtube.com/watch?v=mfL6-g5mQw4}{parte 01} e \link{https://www.youtube.com/watch?v=xtsTXAwWF20&}{parte 02} do programa português Isto É Matemática.
 \end{remark}
 
 \begin{onlineact}[\khan{https://pt.khanacademy.org/math/algebra/quadratics/solving-quadratics-using-the-quadratic-formula/e/quadratic_equation}{Fórmula de Bhaskara}]
-Veja o desempenho na Missão Álgebra I -- Equações do segundo grau.
+    Veja o desempenho na Missão Álgebra I -- Equações do segundo grau.
 \end{onlineact}
 
 \begin{theorem}
-Os números $\alpha$ e $\beta$ são as raízes da equação do segundo grau:
-%
-\begin{align*}
-ax^2+ bx+c=0
-\end{align*}
-se, e somente se,
-\begin{align*}
-\alpha + \beta = \frac {-b} a \; \text{ e } \; \alpha \beta = \frac c a.
-\end{align*}
+    Os números $\alpha$ e $\beta$ são as raízes da equação do segundo grau:
+    \[
+        ax^2 + bx + c = 0
+    \]
+    se, e somente se,
+    \[
+        \alpha + \beta = \dfrac {-b} a \; \e \; \alpha \beta = \dfrac c a.
+    \]
 \end{theorem}
 
 \begin{proof}
-Sejam $\alpha$ e $\beta$ raízes da equação do 2\tdeg{} grau $ax^2+bx+c=0$. Do Exemplo \ref{ex:sol-2-grau}, temos:
-%
-\begin{align*}
-	& \alpha+\beta=\dfrac{-b+\sqrt\Delta}{2a}+\dfrac{-b-\sqrt\Delta}{2a}=\dfrac{-2b}{2a}=\dfrac{-b}{a}\\
-	& \alpha\beta=\dfrac{c}{a} \text{ (exercício)}
-\end{align*}
+    Sejam $\alpha$ e $\beta$ raízes da equação do 2\tdeg{} grau $ax^2 + bx + c = 0$. Do Exemplo~\ref{ex:sol-2-grau}, calculando $\alpha+\beta$, obtemos:
+    \[
+        \alpha+\beta = \dfrac{-b+\sqrt\Delta}{2a}+\dfrac{-b-\sqrt\Delta}{2a} = \dfrac{-2b}{2a}=\dfrac{-b}{a}.
+    \]
+    A demonstração de $\alpha\beta = \dfrac c a$ fica como exercício para o leitor.
+
+    Recíprocamente, se $\alpha+\beta = \dfrac {-b} a$ e $\alpha\beta = \dfrac c a$, então, da fatoração de $ax^2 + bx + c$, segue que:
+    \[
+        ax^2 + bx + c = a(x^2 + \frac {bx} a + \frac c a) = a(x - \alpha)(x - \beta) = 0.
+    \]
+    Logo, $\alpha$ e $\beta$ são raízes da equação do segundo grau.
 \end{proof}
