@@ -33,11 +33,21 @@
     Para quaisquer conjuntos $A$, $B$ e $C$, e fixado um universo $\U$, tem-se:
     \begin{enumerate}
         \item
+            \begin{enumerate}
+                \label{prop:uniao-e-intersecao-inclusao}
+                \item
+                    $A \contido {A \uniao B}$;
+                \item
+                    ${A \inter B} \contido A$.
+            \end{enumerate}
+
+        \item
             União/interseção com o universo:
             \begin{enumerate}
                 \item $A \uniao \universo = \universo$;
                 \item $A \inter \universo = A$.
             \end{enumerate}
+
         \item
             \emph{Comutatividade}:
             \begin{enumerate}
@@ -53,29 +63,18 @@
             \end{enumerate}
 
         \item
-            \begin{enumerate}
-                \label{prop:uniao-e-intersecao-inclusao}
-                \item
-                    \label{prop:uniao-inclusao}
-                    $A \contido \prn{A \uniao B}$;
-                \item
-                    \label{prop:intersecao-inclusao}
-                    $\prn{A \inter B} \contido A$.
-            \end{enumerate}
-
-        \item
             \emph{Distributividade}, de uma em relação à outra:
             \begin{enumerate}
-                \item $A \inter \left( B \uniao C \right) = \left(A \inter B \right) \uniao \left( A \inter C \right)$;
-                \item $A \uniao \left( B \inter C \right) = \left(A \uniao B \right) \inter \left( A \uniao C  \right)$.
+                \item $A \inter (B \uniao C) = (A \inter B) \uniao (A \inter C)$;
+                \item $A \uniao (B \inter C) = (A \uniao B) \inter (A \uniao C)$.
             \end{enumerate}
 
         \item
             \label{prop:demorgan}
             \emph{Leis de DeMorgan}:
             \begin{enumerate}
-                \item $\left( A \uniao B \right)^C = A^C \inter B^C$;
-                \item $\left(A \inter B \right)^C = A^C \uniao B^C$.
+                \item $(A \uniao B)^C = A^C \inter B^C$;
+                \item $(A \inter B)^C = A^C \uniao B^C$.
             \end{enumerate}
     \end{enumerate}
 \end{proposition}
@@ -83,45 +82,58 @@
 \begin{proof}
     Abaixo, seguem as demonstrações de cada propriedade.
     \begin{enumerate}
+        \item 	
+            \begin{enumerate}
+                \item
+                    Seja $x \em A$. Pela definição de união, segue que $x \pertence A \uniao B$. Portanto, $A \contido A \uniao B$;
+                \item
+                    Seja $x \em A \inter B$. Pela definição de interseção, segue que $x \pertence A$ e $x \pertence B$. Em particular, já temos que $x \pertence A$. Portanto, $A \inter B \contido A$.
+            \end{enumerate}
+            Em decorrência dessa propriedade, vamos tratar como imediatos que: se $x \pertence A$, então $x \pertence A \uniao B$; e se $x \pertence A \inter B$, então $x \pertence A$ (ou, caso convenha, $x \pertence B$).
+
         \item 
             \begin{enumerate}
-                \item Exercício.
-                \item Seja $x \em A$. Temos que $x \pertence \U$, logo, $x \pertence A \inter \U$. Segue, assim, que $A \contido A\inter \U$. A inclusão $A\inter \U\contido A$, por sua vez, é imediata. Portanto, $A\inter \U = A$.
+                \item
+                    Exercício.
+
+                \item
+                    Seja $x \em A$. Temos que $x \pertence \U$, logo, $x \pertence A \inter \U$. Segue, assim, que $A \contido A\inter \U$. A inclusão $A \inter \U \contido A$, por sua vez, é imediata pela propriedade~\ref{prop:uniao-e-intersecao-inclusao} da Proposição~\ref{prop:uniao-e-intersecao}. Portanto, $A \inter \U = A$.
             \end{enumerate}
         
         \item Exercício.
 
         \item
             \begin{enumerate}
-                \item Exercício.
                 \item
-                    Provemos que $A \inter (B \inter C) \contido (A \inter B) \inter C$. Seja $x \em A \inter (B \inter C)$, isto é, $x \in A$ e $x \in B \inter C$. De $x \in B \inter C$, temos $x \in B$ e $x \in C$. Como $x \in A$ e $x \in B$, segue que $x \in A \inter B$. Além disso, $x \in C$. Então, $x \in A \inter (B \inter C)$. Logo, $A \inter (B \inter C) \contido (A \inter B) \inter C$. \\
-                    A prova de que $A \inter (B \inter C) \supset (A \inter B) \inter C$, necessária para concluir a igualdade desejada, fica como exercício para o leitor.
+                    Exercício.
+
+                \item
+                    Provemos que $A \inter (B \inter C) \contido (A \inter B) \inter C$. Seja $x \em A \inter (B \inter C)$, isto é, $x \pertence A$ e $x \pertence B \inter C$. De $x \pertence B \inter C$, temos $x \pertence B$ e $x \pertence C$. Como $x \pertence A$ e $x \pertence B$, segue que $x \pertence A \inter B$. Além disso, $x \pertence C$. Então, $x \pertence (A \inter B) \inter C$. Logo, $A \inter (B \inter C) \contido (A \inter B) \inter C$.
+
+                    A prova de que $A \inter (B \inter C) \contem (A \inter B) \inter C$, necessária para concluir a igualdade desejada, fica como exercício para o leitor.
             \end{enumerate}
 
-        \item 	
+        \item
+            Exercício.
+
+        \item
+            Abaixo, seguem as demonstrações das leis de De Morgan.
             \begin{enumerate}
                 \item
-                    Seja $x \in A$. Pela definição de união, segue que $x \in A \uniao B$. Portanto, $A \contido \prn{A \uniao B}$;
-                \item
-                    Seja $x \in \prn{A \inter B}$. Pela definição de interseção, segue que $x\in A$ e $x \in B$. Em particular, já temos que $x \in A$. Portanto, $\prn{A \inter B} \contido A$.
-            \end{enumerate}
-            Em decorrência dessa propriedade, vamos tratar como imediatos que: se $x \in A$, então $x \in \prn{A \uniao B}$; e se $x \in \prn{A \inter B}$, então $x\in A$ (ou, caso convenha, $x\in B$).
+                    Inicialmente, demonstremos que $(A \uniao B)^C \contido A^C \inter B^C$. Do item~\ref{prop:uniao-e-intersecao-inclusao} da Proposição~\ref{prop:uniao-e-intersecao}, temos que $A \contido A \uniao B$. Segue do item \ref{prop:complementar:contrapositiva} da Proposição~\ref{prop:complementar} que $(A \uniao B)^C \contido A^C$ (I). De forma análoga, também temos que $(A \uniao B)^C \contido B^C$ (II). Seja agora $x \em (A \uniao B)^C$. Por (I), temos $x \em A^C$. Por (II), temos $x \em B^C$. Logo, $x \pertence A^C \inter B^C$. Portanto, $(A \uniao B)^C \contido A^C \inter B^C$.
 
-        \item Exercício.
+                    Finalmente, demonstremos que $A^C \inter B^C \contido (A \uniao B)^C$. Seja $x \em A^C \inter B^C$, ou seja, $x \pertence A^C$ e $x \pertence B^C$. Dessa forma, $x \naopertence A$ e $x \naopertence B$. Suponha, por contradição, que $x \pertence A \uniao B$. Dessa maneira, teríamos $x \pertence A$, o que contradiz $x \naopertence A$, ou $x \pertence B$, o que contradiz $x \naopertence B$. Logo, $x \naopertence A \uniao B$, ou seja, $x \pertence (A \uniao B)^C$. Assim, $A^C \inter B^C \contido (A \uniao B)^C$. Portanto, $(A \uniao B)^C = A^C \inter B^C$.
+                \item
+                    Primeiramente, demonstremos que $A^C \uniao B^C \contido (A \inter B)^C$. Observe que, pela propriedade~\ref{prop:uniao-e-intersecao-inclusao}, temos $A \inter B \contido A$, e, pelo item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar}, temos $A^C \contido (A \inter B)^C$ (I). De forma análoga, temos $B^C \contido (A \inter B)^C$ (II). Então, seja $x \in A^C \uniao B^C$, isto é, $x \in A^C$ ou $x \in B^C$. Caso que $x \in A^C$, podemos afirmar que $x \in (A \inter B)^C$ por (I). E, caso $x \in B^C $, por (II), também podemos afirmar que $x \in (A \inter B)^C$. Portanto, temos que $A^C \uniao B^C \contido (A \inter B)^C$. \\
+                    Finalmente, demonstremos que $(A \inter B)^C \contido A^C \uniao B^C$. Suponha, para chegar num absurdo, que $(A \inter B)^C \not\contido A^C \uniao B^C$. Então, existe $x \in (A \inter B)^C$ tal que $x \naopertence A^C \uniao B^C$. Logo, $x \naopertence A \inter B$. Temos 4 possibilidades para $x$:
+                    
+                    Caso $x \in A$ e $x \in B$: Então, $x \in A \inter B$, o que contradiz $x \naopertence A \inter B$.
 
-        \item Abaixo, seguem as demonstrações das leis de De Morgan.
-            \begin{enumerate}
-                \item
-                    Inicialmente, demonstremos que $(A \uniao B)^C \contido A^C \inter B^C$. Do item \ref{prop:uniao-inclusao} da propriedade \ref{prop:uniao-e-intersecao-inclusao}, temos que $A \contido A \uniao B$. Segue do item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar} que $(A \uniao B)^C \contido A^C$ (i). De forma análoga, também temos que $(A \uniao B)^C \contido B^C$ (ii). Seja agora $x \in (A \uniao B)^C$. Por (i), temos $x \in A^C$. Por (ii), temos $x \in B^C$. Logo, $x \in A^C \inter B^C$. Portanto, $(A \uniao B)^C \contido A^C \inter B^C$. \\
-                    Finalmente, demonstremos que $A^C \inter B^C \contido (A \uniao B)^C$. Seja $x \in A^C \inter B^C$, ou seja, $x \in A^C$ e $x \in B^C$. Dessa forma, $x \not\in A$ e $x \not\in B$. Suponha, por contradição, que $x \in A \uniao B$. Dessa maneira, teríamos $x \in A$, o que contradiz $x \not\in A$, ou $x \in B$, o que contradiz $x \not\in B$. Logo, $x \not\in A \uniao B$, ou seja, $x \in (A \uniao B)^C$. Assim, $A^C \inter B^C \contido (A \uniao B)^C$. Portanto, $(A \uniao B)^C = A^C \inter B^C$.
-                \item
-                    Primeiramente, demonstremos que $A^C \uniao B^C \contido (A \inter B)^C$. Observe que, pelo item \ref{prop:intersecao-inclusao} da propriedade \ref{prop:uniao-e-intersecao-inclusao}, temos $A \inter B \contido A$, e, pelo item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar}, temos $A^C \contido (A \inter B)^C$ (i). De forma análoga, temos $B^C \contido (A \inter B)^C$ (ii). Então, seja $x \in A^C \uniao B^C$, isto é, $x \in A^C$ ou $x \in B^C$. Caso que $x \in A^C$, podemos afirmar que $x \in (A \inter B)^C$ por (i). E, caso $x \in B^C $, por (ii), também podemos afirmar que $x \in (A \inter B)^C$. Portanto, temos que $A^C \uniao B^C \contido (A \inter B)^C$. \\
-                    Finalmente, demonstremos que $(A \inter B)^C \contido A^C \uniao B^C$. Suponha, para chegar num absurdo, que $(A \inter B)^C \not\contido A^C \uniao B^C$. Então, existe $x \in (A \inter B)^C$ tal que $x \not\in A^C \uniao B^C$. Logo, $x \not\in A \inter B$. Temos 4 possibilidades para $x$: \\
-                    Caso $x \in A$ e $x \in B$: Então, $x \in A \inter B$, o que contradiz $x \not\in A \inter B$. \\
-                    Caso $x \not\in A$ e $x \in B$: Então, $x \in A^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \not\in A^C \uniao B^C$.\\
-                    Caso $x \in A$ e $x \not\in B$: Então, $x \in B^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \not\in A^C \uniao B^C$.\\
-                    Caso $x \not\in A$ e $x \not\in B$: De $x \not\in $, temos $x \in A^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \not\in A^C \uniao B^C$.\\
+                    Caso $x \naopertence A$ e $x \pertence B$: Então, $x \in A^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.
+
+                    Caso $x \pertence A$ e $x \naopertence B$: Então, $x \in B^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.
+
+                    Caso $x \naopertence A$ e $x \naopertence B$: De $x \naopertence A$, temos $x \in A^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.\\
                     Sendo assim, como os 4 casos levam a um absurdo, podemos concluir que $(A \inter B)^C \contido A^C \uniao B^C$.
             \end{enumerate}
     \end{enumerate}
