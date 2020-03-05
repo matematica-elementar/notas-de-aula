@@ -14,13 +14,13 @@ A noção de complementar de um conjunto só faz sentido quando fixamos um \emph
 	\]
 \end{definition}
 
-\begin{proposition}
-	\label{prop:def-complementar}
-	Tem-se, para todo conjunto $A$, que:
-	\begin{center}
-		$x \naopertence \compl A$ se, e somente se, $x \pertence A$.
-	\end{center}
-\end{proposition}
+%\begin{proposition}
+%	\label{prop:def-complementar}
+%	Tem-se, para todo conjunto $A$, que:
+%	\begin{center}
+%		$x \naopertence \compl A$ se, e somente se, $x \pertence A$.
+%	\end{center}
+%\end{proposition}
 
 \begin{proof}
 	Exercício.
@@ -53,7 +53,9 @@ A noção de complementar de um conjunto só faz sentido quando fixamos um \emph
 \begin{proof}
 	Primeiramente, demonstremos que vale o item~\ref{prop:complementar:universo}. A inclusão $\vazio \contido \compl{\U}$ é imediata pois $\vazio$ é subconjunto de qualquer conjunto.  Provemos, agora, que $\compl{\U} \contido \vazio$. Suponha, por absurdo, que $\compl{\U} \naocontido \vazio$; ou seja, existe $x \em \compl{\U}$ tal que $x \naopertence \vazio$. Ora, se $x \pertence \compl{\U}$, então $x \naopertence \U$, o que é um absurdo. Logo, $\compl{\U} \contido \vazio$. Dos fatos de que $\vazio \contido \compl{\U}$ e $\compl{\U} \contido \vazio$, conclui-se que $\compl{\U} = \vazio$. A demonstração de que $\compl{\vazio} = \U$ fica como exercício para o leitor.
 
-	Em segundo lugar, demonstremos que vale o item~\ref{prop:complementar:complementar-do-complementar}. Para isso, provemos que $A \contido \compl{\prn{\compl{A}}}$ primeiro. Para tal, seja $x \em A$. Logo, $x \naopertence \compl{A}$, pela Proposição~\ref{prop:def-complementar}. Assim, $x \pertence \compl{\prn{\compl{A}}}$, usando, agora, a própria definição de complementar. Então, $A \contido \compl{\prn{\compl{A}}}$. A prova de que $\compl{\prn{\compl{A}}} \contido A$, item restante para podermos concluir que a igualdade desejada é válida, fica como exercício para o leitor.
+	Em segundo lugar, demonstremos que vale o item~\ref{prop:complementar:complementar-do-complementar}. Para isso, provemos que $A \contido \compl{\prn{\compl{A}}}$ primeiro. Para tal, seja $x \pertence A$. Temos duas possibilidades para a presença de $x$ no conjunto $\compl{A}$, a saber, $x \pertence \compl{A}$ e $x \naopertence \compl{A}$. Se $x \pertence \compl{A}$, segue que $x \naopertence A$, um absurdo, pois $x \pertence A$ por hipótese. Logo, $x \naopertence \compl{A}$. Assim, $x \pertence \compl{\prn{\compl{A}}}$, usando, agora, a própria definição de complementar. Então, $A \contido \compl{\prn{\compl{A}}}$. A prova de que $\compl{\prn{\compl{A}}} \contido A$, item restante para podermos concluir que a igualdade desejada é válida, fica como exercício para o leitor.
+
+	Em decorrência dessa propriedade, vamos tratar como imediato que, para todo conjunto $A$, $x \naopertence \compl A$ se, e somente se, $x \pertence A$.
 
 	Por fim, demonstremos que vale o item~\ref{prop:complementar:contrapositiva}. Para isso, sejam $A$, $B$ conjuntos tais que $A \contido B$. Além disso, seja $x \em \compl{B}$, o que implica em $x \naopertence B$. Temos duas possibilidades para a presença de $x$ no conjunto $A$, a saber, $x \pertence A$ e $x \naopertence A$. Se $x \pertence A$, teríamos $x \em B$ também pois $A \contido B$; um absurdo visto que já temos $x \naopertence B$. Logo, concluímos que $x \naopertence A$, ou seja, $x \pertence \compl{A}$. Segue, então, que $\compl{B} \contido \compl{A}$.
 \end{proof}
