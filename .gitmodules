@@ -1,0 +1,3 @@
+[submodule "macros"]
+	path = macros
+	url = https://github.com/matematica-elementar/macros
