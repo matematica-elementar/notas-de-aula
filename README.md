@@ -10,7 +10,7 @@ Após clonar o repositório, entre no diretório em algum shell e execute o coma
 make
 ```
 
-Também é possivel compilar o documento e, em seguida, visualizar com seu leitor de arquivos pdf padrão de seu sistema. Para isso, execute o seguinte comando:
+Também é possivel compilar o documento e, em seguida, o visualizar com o leitor de arquivos pdf padrão de seu sistema. Para isso, execute o seguinte comando:
 
 ```sh
 make view
