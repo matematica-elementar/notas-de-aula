@@ -240,9 +240,3 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
-
-# vs code configuration
-.vscode
-
-# build directory
-build/

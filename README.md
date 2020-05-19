@@ -7,10 +7,14 @@ Este repositório mantém as notas de aula da disciplina Matemática Elementar d
 Após clonar o repositório, entre no diretório em algum shell e execute o comando abaixo para produzir o documento em formato pdf.
 
 ```sh
-make pdf
+make
 ```
 
-Também é possivel executar somente o comando `make` para compilar e abrir o arquivo no leitor de pdf padrão do seu sistema.
+Também é possivel compilar o documento e, em seguida, visualizar com seu leitor de arquivos pdf padrão de seu sistema. Para isso, execute o seguinte comando:
+
+```sh
+make view
+```
 
 ## Autores
 - Prof. Antonio Igor Silva de Oliveira [@tonhaunm](https://github.com/tonhaunm)
