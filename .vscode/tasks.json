@@ -4,14 +4,32 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "make",
+            "label": "Compilar Notas de Aula",
             "type": "shell",
             "command": "make view",
             "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
+            "group": "build"
+        },
+        {
+            "label": "Atualizar Macros",
+            "type": "shell",
+            "command": "make macros && git add macros && git commit -m 'Submódulo Macros atualizado'",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Limpar Arquivos Auxiliares",
+            "type": "shell",
+            "command": "make clean",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Limpar Tudo",
+            "type": "shell",
+            "command": "make cleanall",
+            "problemMatcher": [],
+            "group": "build"
+        },
     ]
 }
