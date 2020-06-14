@@ -1,9 +1,17 @@
 \section{Pertinência}
 
-Na Seção \ref{sec:intro}, entendemos o que é um conjunto e como podemos defini-lo.
+Na Seção \ref{sec:intro}, entendemos o que é um conjunto e como podemos descrevê-lo.
 Agora, teremos o poder de relacionar objetos a conjuntos perguntando se um dado objeto está em um conjunto.
-Como já falamos sobre, só temos uma resposta possível dentre sim e não.
-Dados um objeto $a$ e um conjunto $A$, utilizamos a notação $a \pertence A$ para dizer que $a$ pertence ao conjunto $A$, e $a \naopertence A$ significa que $a$ não pertence a $A$.
+Como já falamos sobre, só temos uma resposta possível dentre sim e não. O que nos permite a seguinte definição:
+\begin{definition}[Relação de Pertinência]
+    \label{def:pertinencia}
+    Dados um objeto $x$ e um conjunto $A$, se for o caso de $x$ ser um elemento de $A$, dizemos que $x$ \emph{pertence} a $A$. Para denotar esse fato, escrevemos $x \pertence A$.
+
+    \label{def:naopertinencia}
+    Quando $x$ \textit{não} pertence a $A$, denotamos por $x \naopertence A$.
+\end{definition}
+
+Não é correto dizer que $x$ está \entreaspas{contido} ou é \entreaspas{parte} de $A$, esses termos são usados em matemática com outro sentido, como veremos na Definição~\ref{def:inclusao}.
 
 \begin{example}
     Considere $P$ e $V$ conforme definido nos Exemplos~\ref{ex-vogais} e~\ref{ex-primos-pares}, respectivamente. Sendo assim, temos que $\texttt e \pertence V$ e $3 \naopertence P$.
@@ -16,14 +24,14 @@ Dados um objeto $a$ e um conjunto $A$, utilizamos a notação $a \pertence A$ pa
 Ainda na Seção~\ref{sec:intro} \nameref{sec:intro}, vimos que dois conjuntos iguais $A$ e $B$ possuem, necessariamente, os mesmos elementos, o que implica que são diferentes quando um possui algum elemento que o outro não possui. Com a notação de pertinência, isto é o mesmo que dizer que existe $x \em A$ tal que $x \naopertence B$ ou que existe $x \em B$ tal que $x \naopertence A$.
 
 \begin{example}
-    Os conjuntos $\N$ (números naturais) e $\Z$ (números inteiros), abordados com mais detalhe no Capítulo \ref{cap:conjuntos-numericos}, são diferentes. Note que $-1 \pertence \Z$ mas $-1 \naopertence \N$, por exemplo, o que prova que esses conjuntos são diferentes.
+    Os conjuntos $\N$ (números naturais) e $\Z$ (números inteiros), abordados com mais detalhes no Capítulo \ref{cap:conjuntos-numericos}, são diferentes. Note que $-1 \pertence \Z$ mas $-1 \naopertence \N$, por exemplo, o que prova que esses conjuntos são diferentes.
 \end{example}
 
 As noções de conjuntos e elementos não são mutuamente exclusivas como, por exemplo, a paridade nos números naturais. Nos exemplos a seguir, veremos conjuntos cujos elementos também são conjuntos.
 
 \begin{example}
     \label{exe:conjuntos-de-conjuntos-explicito}
-    Considere o conjunto $A = \set{\set{1,2},\set{2}, 1}$. Observe que existem elementos em $A$ que são conjuntos. Note que:
+    Considere o conjunto $A = \conjunto{\conjunto{1, 2},\unitario{2}, 1}$. Observe que existem elementos em $A$ que são conjuntos. Note que:
     \begin{enumerate}
         \item $\conjunto{1, 2} \pertence A$
         \item $\unitario{2} \pertence A$
@@ -51,3 +59,5 @@ Agora, com a Definição~\ref{def:emptyset}, o Exercício~\homeworkref{exe:vazio
 \begin{example}
     Quais outros conjuntos você conhece? Que tal pensar sobre o conjunto $A = \conjunto{ x \talque x \naopertence A}$?
 \end{example}
+
+Esta \entreaspas{definição} de conjunto não faz sentido, resultando num paradoxo, apesar de muito importante para o desenvolvimento da teoria de conjuntos. Sua descoberta é atribuída ao matemático britâncio Bertrand Russel (1872--1970) e é conhecido por \emph{Paradoxo de Russel} ou \emph{Paradoxo do barbeiro}, que você pode rever no vídeo \href{https://youtu.be/UI1xR_AECrU}{\texttt{Este vídeo está mentindo}}.

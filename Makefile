@@ -1,11 +1,11 @@
-.PHONY: default pdf view clean cleanall
+.PHONY: default view pdf clean cleanall macros
 
-default: view
+default: pdf
 
-pdf: 
+pdf: macros
 	latexmk -pdf
 
-view:
+view: macros
 	latexmk -pdf -pv
 
 clean:
@@ -13,3 +13,7 @@ clean:
 
 cleanall:
 	latexmk -C
+
+macros:
+	git submodule update --init --recursive
+	git submodule foreach git pull origin master
