@@ -12,10 +12,14 @@ onde $a,b \in \R$, $a \neq 0$ e $x$ é um número real a ser encontrado.
 
 \begin{proposition}[Propriedades]
 \label{prop:props-eq}
-Sejam $a, b, c \in \R$. Os seguintes valem:
+Sejam $a, b, c, d \in \R$. Os seguintes valem:
 \begin{enumerate}
-	\item $a=b \implies a+c = b+c$;
-	\item $a=b \implies ac = bc$.
+	\item 
+	\label{eq:soma} 
+	Se $a = b$ e $c = d$, então $a + c = b + d$. Em particular, vale a seguinte implicação $a=b \implies a+c = b+c$;
+	\item 
+	\label{eq:multiplicacao}
+	Se $a = b$ e $c = d$, então $a \cdot c = b \cdot d$. Em particular, vale a seguinte implicação $a=b \implies ac = bc$.
 \end{enumerate}
 \end{proposition}
 
@@ -27,9 +31,9 @@ Resolva a equação $5x-3=6$.
 Utilizaremos as propriedades dadas na Proposição \ref{prop:props-eq} para resolver a equação.
 %
 \begin{align*}
-5x-3=6 \iff & 5x -3+3=6+3 \tag*{$\left(\text{i., com }c = 3\right) $}\\
+5x-3=6 \iff & 5x -3+3=6+3 \tag*{$\left(\text{\ref{eq:soma} com }c = 3\right) $}\\
 		 \iff & 5x =9 \tag*{(Aritmética)}\\ 
-		 \iff & \frac{5x}{5} =\frac 9 5 \tag*{$\left(\text{ii., com com } c = \frac 1 5 \right) $}\\
+		 \iff & \frac{5x}{5} =\frac 9 5 \tag*{$\left(\text{\ref{eq:multiplicacao}, com com } c = \frac 1 5 \right) $}\\
 		 \iff & x =\frac 9 5 
 \end{align*}
 \end{solution}
