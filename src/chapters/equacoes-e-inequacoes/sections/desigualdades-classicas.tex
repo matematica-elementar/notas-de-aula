@@ -47,7 +47,7 @@ Além disso, a igualdade acontece se, e somente se, $a=b$.
 \end{theorem}
 
 \begin{proof}
-Sejam $a, b \in R_+$. Para provar o teorema, basta aplicar o Teorema \ref{theorem:ineq-prod-quad} com $x = \sqrt a$ e $y = \sqrt b$.
+Sejam $a, b \in \R_+$. Para provar o teorema, basta aplicar o Teorema \ref{theorem:ineq-prod-quad} com $x = \sqrt a$ e $y = \sqrt b$.
 \end{proof}
 
 \begin{theorem}[Desigualdade das médias aritmética e geométrica]
@@ -70,12 +70,12 @@ Para quaisquer $n \in \nnats$ e $a_1, a_2, \dots , a_n \in \R_+^*$, vale:
 \begin{proof}
 Sejam $a_1, a_2, \dots, a_n \in \R_+ ^*$. Considere $b_i = \frac 1 {a_i}$ para todo $i \in \set{1, 2, \dots, n}$. Usando o Teorema \ref{theorem:ineq-avg-ari-geo} com todos os $b_i$, tem-se que:
 %
-\begin{align*}
-\sqrt[n]{b_1 \cdot \dots \cdot b_n } \le \frac {b_1 + \dots + b_n } n & \iff \frac n {b_1 + \dots + b_n } \le \frac 1 {\sqrt[n]{b_1 \cdot \dots \cdot b_n }} \\
-& \iff \frac n {\frac 1 {a_1} + \dots + \frac n {a_n}} \le \frac 1 {\sqrt[n]{\frac 1 {a_1 \cdot \dots \cdot a_n}}} \\ 
-& = \frac 1 {\frac 1 {\sqrt[n]{a_1 \cdot \dots \cdot a_n}}}\\ 
-& =  \sqrt[n]{a_1 \cdot \dots \cdot a_n}
-\end{align*}
+\begin{eqnarray*}
+\sqrt[n]{b_1 \cdot \dots \cdot b_n } \le \frac {b_1 + \dots + b_n } n & \iff \frac n {b_1 + \dots + b_n } & \le \frac 1 {\sqrt[n]{b_1 \cdot \dots \cdot b_n }} \\
+& \iff \frac n {\frac 1 {a_1} + \dots + \frac n {a_n}} & \le \frac 1 {\sqrt[n]{\frac 1 {a_1 \cdot \dots \cdot a_n}}} \\ 
+& & = \frac 1 {\frac 1 {\sqrt[n]{a_1 \cdot \dots \cdot a_n}}} \\ 
+& & =  \sqrt[n]{a_1 \cdot \dots \cdot a_n}
+\end{eqnarray*}
 \end{proof}
 
 \begin{theorem}[Desigualdade de Cauchy-Schwarz]

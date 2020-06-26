@@ -32,7 +32,7 @@ Resolva as equações
 \begin{solution}
 \begin{enumerate}[(a)]
 	\item[]
-	\item Note que:
+	\item Usaremos o método de eliminação do módulo pela definição. Note que:
 	%
 	\begin{align*}
 		\modu{2x-5} = 
@@ -54,16 +54,16 @@ Resolva as equações
 	Se $x<5/2$, teremos:
 	%
 	\begin{align*}
-		\modu{2x-5}=3 &\iff -\prn{2x-5}=3 \\
-					  &\iff -2x=2 \\
-					  &\iff x=1 
+		\modu{2x-5}=3 &\iff -\prn{2x-5} = 3 \\
+					  &\iff -2x = -2 \\
+					  &\iff x = 1 
 	\end{align*}
 	%
 	Como $x=1<5/2$, então $1 \in S$.
 
 	Das análises dos dois casos, concluímos que o conjunto solução é $S=\set{1,4}$.
 
-	\item Observe que:
+	\item Novamente, usaremos o método de eliminação do módulo pela definição. Observe que:
 	%
 	\begin{align*}
 		\modu{2x-3}= 
@@ -93,12 +93,12 @@ Resolva as equações
 
 	Das análises dos dois casos, concluímos que o conjunto solução é $S=\set{-2}$.
 
-	\item Note que:
+	\item Usaremos o método de partição em intervalos. Note que:
 	%
 	\begin{align*}
 		& \modu{3-x}= 
 		\begin{cases}
-			3-x,    & \text{se } 3-x \ge 0 \iff x \ne 3 \\
+			3-x,    & \text{se } 3-x \ge 0 \iff x \le 3 \\
 			-(3-x), & \text{se } 3-x < 0 \iff x > 3
 		\end{cases}\\
 		& \modu{x+1}= 
@@ -156,7 +156,7 @@ Sejam $x \in \R$, $a\in \R^*_+ $.
   \item $-\modu x \leq x \leq \modu x$.
 \end{enumerate}
 %
-Os resultados (ii) e (iii) também são válidos para os casos com $\le$ ou $\ge$.
+Os resultados (ii) e (iii) também são válidos para os casos com $\le$ e $\ge$, respectivamente.
 \end{proposition}
 
 \begin{example}
@@ -174,7 +174,7 @@ Resolva as inequações:
 	\item[]
 	\item Exercício.
 	\item Exercício.
-	\item Note que:
+	\item Usaremos novamente o método da partição em intervalos. Note que:
 	%
 	\begin{align*}
 		& \modu{3-x}= 
@@ -194,7 +194,7 @@ Resolva as inequações:
 		%
 		\begin{align*}
 			\modu{3-x}-\modu{x+1}\le4 & \iff 3-x-\left[-\prn{x+1}\right]\le 4\\
-				-					  & \iff 4 \le 4 \ \ \ \ \text{para todo } x \in \R
+									  & \iff 4 \le 4 \ \ \ \ \text{para todo } x \in \R
 		\end{align*}
 		%
 		A interseção das restrições para este caso é calculada na Figura \ref{fig:08-28-cut1}.
