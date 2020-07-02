@@ -10,7 +10,7 @@ Definem-se, além disso, os seguintes termos:
 \item \emph{Imagem} de $x$, dado qualquer $x \in X$, para o único elemento $y \in Y$ que satisfaz $y = f(x)$;
 \item \emph{Imagem} de $f$ para o conjunto $f\prn X = \set{y \in Y \tq y = f \prn x \text{ para algum } x \in X }$, ou seja, o conjunto das imagens dos elementos de $X$.
 
-Confira o exemplo a seguir:
+Confira a ilustração a seguir:
 \begin{center}
     \importtikz{funcao-exemplo-imagem}
 \end{center}
@@ -21,14 +21,14 @@ Observe que o conjunto imagem de $f$, por ser constituído de elementos de $Y$, 
 %\begin{remark}
 %\label{rem:def-alternativa-funcao}
 De certa forma, uma função pode ser vista como um terno constituído por: \emph{domínio}, \emph{contradomínio} e \emph{lei de associação} (dos elementos do domínio com os do contradomínio). 
-Precisa-se desses três elementos para que uma função seja bem-definida. 
+Precisa-se desses três elementos para que uma função seja bem-definida. Ademais, vale reforçar que, para que uma função seja igual a outra, elas devem possuir os mesmos domínios, contradomínios e leis de associação.
 
 A definição alternativa a seguir também poderia ser adotada:
 {\it \label{def:funcao-alternativa} Uma relação $f: X \to Y$ é uma \emph {função} se satisfaz as seguintes condições:
 %
 \begin{enumerate}[(I)]
-  \item Estar bem-definida em todo elemento do domínio, isto é, os elementos do domínio devem corresponder à pelo menos um elemento do contradomínio;
-  \item Os elementos do domínio não devem corresponder a mais de um elemento do contradomínio, ou seja, devem corresponder no máximo um elemento.
+  \item Cada elemento do domínio deve corresponder a pelo menos um elemento do contradomínio;
+  \item Cada elemento do domínio não deve corresponder a mais de um elemento do contradomínio, ou seja, deve corresponder a, no máximo, um elemento.
 \end{enumerate}}
 %\end{remark}
 
@@ -41,7 +41,7 @@ Sejam $X = \set{x_1, x_2}$, $Y = \set{y_1, y_2}$ e a relação $f : X \to Y$ def
 Qual(is) o(s) problema(s) com essa ``função''?
 \end{example}
 \begin{solution}
-Temos dois problemas, o primeiro é que, pelo gráfico, temos que $f(x_1) = y_1$ e $f(x_1) = y_2$, e com isso existem dois valores possíveis para $f(x_1)$. O segundo é que $x_2$ não foi mapeado em nenhum elemento de $Y$, sendo assim não há um valor para $f(x_2)$.
+Há dois motivos para essa relação não ser uma função. Inicialmente, observe que $f(x_1) = y_1$ e $f(x_1) = y_2$ mas $y_1 \neq y_2$. Ademais, $x_2$ não foi associado a nenhum elemento de $Y$, ou seja, não existe um elemento $f(x_2) \in Y$.
 \end{solution}
 
 

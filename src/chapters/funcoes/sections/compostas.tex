@@ -43,13 +43,18 @@ Pode-se representar a função $p \circ q$ com o seguinte diagrama:
 %
 \begin{equation*}
 \begin{array}{cccccc}
-p \circ q : & R_+ & \to     & \R \subset \R & \to     & \R_+ \\
+p \circ q : & \R_+ & \to     & \R \subset \R & \to     & \R_+ \\
 		  &  x  & \mapsto & \sqrt x       & \mapsto & \prn{\sqrt x}^2 = x.
 \end{array}
 \end{equation*}
 %
 Do diagrama, conclui-se que $p \circ q = \identity{\R_+}$.
 \end{solution}
+
+\begin{proposition}[Associatividade da composição de funções]
+	Considere $f : X \to Y $, $g : U \to V $ e $h: A \to B $ funções, com $Y \contido U$ e $V \contido A$. Vale a seguinte igualdade:
+	$$f \circ \paren{g \circ h} = \paren{f \circ g} \circ h.$$ 
+\end{proposition}
 
 \begin{onlineact}
 	\khan{https://pt.khanacademy.org/math/algebra2/manipulating-functions/function-composition/e/compose-functions}{Encontre Funções Compostas}.
