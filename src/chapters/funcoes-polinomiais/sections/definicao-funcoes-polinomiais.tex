@@ -67,6 +67,39 @@ Isso não contradiz a Propisição \ref{prop:fatoracao-polinomios},
 já que o grau de uma função polinomial não está definido para a função identicamente nula.
 \end{remark}
 
+\begin{theorem}[Teorema de raízes racionais] 
+\label{teo:raizes-racionais}
+    Seja $r(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$ uma função polinomial de grau $n$ e coeficientes inteiros. Se $\frac p q$ é uma fração irredutível e raiz de $r (x)$, então $p$ é divisor de $a_0$ e $q$ é divisor de $a_n$.
+\end{theorem}
+
+O Teorema de raízes racionais (\ref{teo:raizes-racionais}) nos permite encontrar facilmente as raízes racionais de um polinômio de coeficientes inteiros, caso exista alguma. Basta listar os divisores $p$ de $a_0$, os divisores $q$ de $a_n$ e testar se $r \paren {\frac p q} = 0$ para todas as possíveis frações $\frac p q$. Caso haja alguma raiz racional de $r(x)$, ela estará entre as frações obtidas.
+
+\begin{example}
+    Encontre todas as raízes reais do polinômio $p(x) = 2x^4 + 3x^3 + 6x^2 + 12x -8$.
+\end{example}
+
+\begin{solution}
+    Considere a função polinomial $p(x) = 2x^4 + 3x^3 + 6x^2 + 12x -8$. Inicialmente, calculemos as possíveis raízes racionais de $p(x)$. Para tanto, listemos os divisores inteiros de:
+    \begin{itemize}
+        \item $a_0 = -8$: $\pm 8$, $\pm 4$, $\pm 2$ e $\pm 1$;
+        \item $a_4 = 2$: $\pm 2$ e $\pm 1$.
+    \end{itemize}
+    Assim, pelo Teorema de raízes racionais (\ref{teo:raizes-racionais}), os candidatos à raiz racional de $p(x)$ são $\pm 4$, $\pm 8$, $\pm 2$, $\pm 1$ e $\pm \frac 1 2$. Obtidos através da divisão dos divisores de $a_0$ pelos divisores de $a_4$.
+
+    Após calcular $p(x)$ para esses candidatos, teremos que somente $-2$ e $\frac 1 2$ são as raízes racionais de $p(x)$. (Verifique!)
+
+    Segue da Proposição \ref{prop:fatoracao-polinomios} que
+    \begin{align*}
+        p(x) & = \paren{x - \frac 1 2} \paren{x+2} q(x) \\
+            & = \paren{x - \frac 1 2} \paren{x+2} \paren{2x^2 + 8}. \tag{divisão de polinômios}
+    \end{align*} 
+
+    Resta-nos calcular as raízes de $q(x) = 2x^2 + 8$. Teremos
+    $$2x^2 + 8 = 0 \sse x^2 = -4.$$
+
+    Dessa forma, $q(x)$ não possui raiz real e, portanto, as raízes reais de $p(x)$ são $-2$ e $\frac 1 2$.
+\end{solution}
+
 \begin{proposition}[Fórmula de Interpolação de Lagrange]
 Dados $n+1$ números reais distintos $x_0, x_1 , \dots , x_n$ e
 fixados arbitrariamente $y_0, y_1, \dots, y_n$ reais, existe
