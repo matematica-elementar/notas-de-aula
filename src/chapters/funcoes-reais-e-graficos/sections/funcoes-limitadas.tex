@@ -15,9 +15,14 @@
   existe $r>0$ tal que $f(x_0) \geq f(x)$ para todo $x \in D \inter \paren{x_0 - r , x_0+r}$;
   \item $x_0 \in D$ é um \emph{ponto de mínimo local} de $f$ se
   existe $r>0$ tal que $f(x_0) \leq f(x)$ para todo $x \in D \inter \paren{x_0 - r ,
-  x_0+r}$.
+  x_0+r}$;
+  \item $x_0 \in D$ é um \emph{extremo absoluto} (respctivamente, \emph{local}) de $f$ se $x_0$ é um ponto de máximo ou mínimo absoluto (respctivamente, local) de $f$.
 \end{enumerate}
 \end{definition}
+
+\begin{remark}
+	No contexto da definição anterior, quando $x_0$ é um ponto de máximo (ou mínimo) de $f$, é comum dizermos que o ponto $\paren {x_0 , f(x_0)}$ é um ponto de máximo (ou mínimo), fazendo referência ao ponto do gráfico de $f$. Ademais, podemos dizer que há um máximo (ou mínimo) em $x_0$ e que $f(x_0)$ é o valor máximo (ou mínimo) da função $f$. Tais termos podem se referir a extremos absolutos ou locais.
+\end{remark}
 
 \begin{example}
 	A função $h : \left( -1 ; 6 \right] \to \R$, cujo gráfico é esboçado
@@ -64,7 +69,7 @@ Identifique, pelo gráfico, os intervalos de monotonicidade e os extremos locais
 		\item $2$ não deve fazer parte do intervalo de decrescimento $(2; 4]$, 
 		pois há uma bola aberta nesse intervalo. 
 		Se $2$ pertencesse ao intervalo, teríamos, devido à definição de função decrescente,
-		que $2<2{,}1$ implicaria em $2 = h(2) < h(2{,}1) = 2{,}9$. 
+		que $2<2{,}1$ implicaria em $2 = h(2) > h(2{,}1) = 2{,}9$. 
 		Essa implicação claramente é falsa;
 		\item \label{item:minimo-local} O fato de que há um mínimo local quando $x = 4$ se dá pois $4$ é o maior valor de um intervalo de decrescimento e o menor de um intervalo de crescimento. 
 		Em outras palavras, em $x=4$, a função que estava decrescendo em $(2;4]$ passa a crescer em $[4;5]$,

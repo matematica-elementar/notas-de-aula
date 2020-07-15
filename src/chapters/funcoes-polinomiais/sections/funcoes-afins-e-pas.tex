@@ -24,10 +24,10 @@ se $f$ for monótona e transformar qualquer PA $\paren{x_1, x_2,
 	Logo:
 	%
 	\begin{align*}
-		y_{n+1}-y_n &= a(x_{n+1})+\cancel b - (ax_n+\cancel b) \\ &= a(x_{n+1}-x_n) \\ &= ar.
+		y_{n+1}-y_n &= ax_{n+1}+\cancel b - (ax_n+\cancel b) \\ &= a(x_{n+1}-x_n) \\ &= ar.
 	\end{align*}
 	
-	Assim, $(y_i)_{i\in\N^*}$ é uma PA.
+	Assim, $(y_i)_{i\in\N^*}$ é uma PA, pois $ar$ é um valor constante.
 
 	Suponha, reciprocamente, que $f$ é monótona e transforma qualquer
 	PA $\paren{x_1, x_2, \dots , x_i, \dots}$ numa PA com termo geral $y_i = f(x_i)$, com $i \in
@@ -38,9 +38,7 @@ se $f$ for monótona e transformar qualquer PA $\paren{x_1, x_2,
 	Pelo Teorema \ref{def:teorema-fundamental-proporcionalidade}, basta provar que 
 	$g(nx) = ng(x)$ para todo $n \in \Z$ e todo $x \in \R$.
 
-	Note que $g(x) = f(x) - f(0)$. Além disso, se a sequência $\prn{f(x_1), f(x_2), \dots, f(x_i), \dots}$
-	é uma PA de razão $r$, a sequência $\prn{f(x_1) - f(0), f(x_2) - f(0), \dots, f(x_i) - f(0), \dots}$ também é 
-	uma PA de razão $r$. Dessa forma, podemos concluir que $g$ também transforma uma PA em outra.
+	Note que $g(x) = f(x) - f(0)$. Seja agora $(x_i)_{i\in\N^*}$ uma PA. Segue que $(f(x_i))_{i\in\N^*}$ é uma PA de razão, digamos,  $r$. Assim, a sequência $(f(x_i)-f(0))_{i\in\N^*} = (g(x_i))_{i\in\N^*}$ também é uma PA de razão $r$. Dessa forma, podemos concluir que $g$ também transforma uma PA em outra.
 
 	Considere a PA $\prn{0, x, 2x, 3x, \dots}$. Temos que $\prn{g(0), g(x), g(2x), g(3x), \dots}$
 	também é uma PA, com razão $g(x)-g(0)$. No entanto, $g(0) = f(0)-f(0) = 0$, o que implica que a PA tem
@@ -69,6 +67,10 @@ se $f$ for monótona e transformar qualquer PA $\paren{x_1, x_2,
 
 	
  \end{proof}
+
+\begin{remark}
+	Na Khan Academy, a definição de função linear é igual à definição de função afim aqui apresentada. Essa definição trata como função linear qualquer uma em que seu gráfico é uma reta (ou pontos colineares). Atenção para essa diferença nas atividades online que envolvam esse tipo de função.
+\end{remark}
 
 \begin{onlineact}
 	\khan{https://pt.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-linear-functions-modeling/e/constructing-and-interpreting-linear-functions}{Problemas de Modelos de Funções Lineares}.
