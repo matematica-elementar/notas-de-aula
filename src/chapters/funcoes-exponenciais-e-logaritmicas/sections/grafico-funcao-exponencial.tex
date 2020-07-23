@@ -12,11 +12,11 @@
 \end{example}
 
 \begin{remark}
-	Quando as bases de duas funções exponenciais são uma o inverso multiplicativo da outra, o gráfico de uma das funções consiste em uma reflexão do da outra. Em outras palavras, se $f:\reais \to \preais$ tal que $f(x) = a^x $ para certo $a > 0$, então a função $g:\reais \to \preais$ com regra $g(x) = \frac 1 a$ é tal que:
+	Quando as bases de duas funções exponenciais são uma o inverso multiplicativo da outra, o gráfico de uma das funções consiste em uma reflexão do gráfico da outra. Em outras palavras, se $f:\reais \to \preais$ é uma função exponencial tal que $f(x) = a^x $, então a função $g:\reais \to \preais$ com regra $g(x) = \paren{\frac 1 a}^x$ é tal que:
 	\[
-		g(x) = \frac 1 a = a^{-1} = f(-1),    
+		g(x) = \paren{\frac 1 a}^x = a^{-x} = f(-x),    
 	\]
-	e, conforme visto na Seção \ref{sec:dilatacao-e-reflexao}, o gráfico de $g$ é obtível a partir do $f$ refletindo-o em relação ao eixo $y$. Ademais, note que, como $a > 0$ e $a \ne 1$, temos que:
+	e, conforme visto na Seção \ref{sec:dilatacao-e-reflexao}, o gráfico de $g$ é obtível a partir do gráfico de $f$ refletindo-o em relação ao eixo $y$. Ademais, note que, como $a > 0$ e $a \ne 1$, temos que:
 	\[
 		a > 1 \iff 0 < \frac{1}{a} < 1.
 	\]
@@ -26,10 +26,10 @@
 	O crescimento exponencial supera o de qualquer polinômio. Ao compararmos, por exemplo, as funções $f(x) = 2^x$ e $p(x)=x^{10}$, temos que:
 	\begin{align*}
 		0<x<1{,}077 & \implies  2^x > x^{10} \\
-		1{,}077 < x < 58{,}77 & \implies  x^{10} > 2^x \\
-		x>58{,}77 & \implies  2^x > x^{10}
+		1{,}078 < x < 58{,}77 & \implies  x^{10} > 2^x \\
+		x>58{,}78 & \implies  2^x > x^{10}
 	\end{align*}
-	Na Imagem~\ref{img:polinomial-vs-exponencial}, são mostrados os gráficos das funções. Pode-se perceber que, a partir de certo valor de $x$,o valor da função exponencial fica maior que o da polinomial. 
+	Na Imagem~\ref{img:polinomial-vs-exponencial}, são mostrados os gráficos das funções. Pode-se perceber que, a partir de certo valor de $x$, o valor da função exponencial fica maior que o da polinomial. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.30]{\imgdirfromsection/polinomial-vs-exponencial.png}

@@ -7,12 +7,12 @@
 \begin{proof}
     Sejam $f(x)=ax+b$ uma função afim e $P_1 = \prn{x_1, f(x_1)}$, $P_2 = \prn{x_2, f(x_2)}$
     e $P_3 = \prn{x_3, f(x_3)}$ pontos de seu gráfico tais que $x_1 < x_2$ e $x_2 < x_3$. 
-    Provemos que esses pontos são colineares, ou seja, $\dist(P_1, P_3) = \dist(P_1, P_2) + \dist(P_2, P_3)$.
+    Provemos que esses pontos são colineares, ou seja, $\dist(P_1, P_3) = \dist(P_1, P_2) + \dist(P_2, P_3)$, onde $\dist (P_i, P_j)$ é a distância entre os pontos $P_i$ e $P_j$.
     Para isso, calculemos os valores de cada uma dessas três distâncias:
     %
     \begin{align*}
-        \dist(P_1, P_2) &= \sqrt{\prn{ax_2+\cancel{b}-(ax_1+\cancel{b})}^2 + \prn{x_2-x_1}^2} \\
-        &= \sqrt{\prn{a(x_2-x_1)}^2+(x_2-x_1)^2} \\
+        \dist(P_1, P_2) &= \sqrt{\colche{ax_2+\cancel{b}-(ax_1+\cancel{b})}^2 + \prn{x_2-x_1}^2} \\
+        &= \sqrt{\colche{a(x_2-x_1)}^2+(x_2-x_1)^2} \\
         &= \sqrt{(a^2+1)(x_2-x_1)^2}\\
         &= (x_2-x_1)\sqrt{a^2+1}
     \end{align*}
