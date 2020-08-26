@@ -1,0 +1,173 @@
+\section{Conjuntos e Lógica}
+
+Na lógica clássica, uma proposição é uma afirmação ou sentença que é obrigatoriamente verdadeira ou falsa, não podendo ser as duas coisas simultaneamente. Esses dois possíveis graus de verdade (1 ou 0, verdadeiro ou falso) de uma proposição são chamados de valor-verdade. Dizemos que a lógica clássica é bi-valorada por admitir apenas dois valores verdade. 
+
+Como visto na Seção \ref{sec:op}, objetos de um memso tipo podem ser operados a  fim de obtermos outros objetos daquele tipo (operações com números e com conjuntos, por exemplo). Algo semelhante acontece com as proposições. Os chamados operadores operadores lógicos geram uma proposição a partir de uma ou mais proposições dadas e também são conhecidos como conectivo lógicos.
+ 
+Nesta seção vamos conhecer alguns conectivos (ou operadores) lógicos e entender como eles se relacionam com outros objetos matemáticos.
+
+O primeiro deles é a implicação, denotada no contexto da lógica por $\implicalogico$.  Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \implicalogico Q$ (lê-se $P$ implica $Q$ ou se $P$ então $Q$). O valor-verdade de $P \implicalogico Q$ é completamente determinado pelos valores-verdade de $P$ e $Q$. A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c}
+		$P$		& $Q$		& $P \implicalogico Q$ \\ \hline
+		V		& V			& V			           \\
+		V		& F			& F			           \\
+		F		& V			& V			           \\
+		F		& F			& V			           \\	
+	\end{tabular}
+	\caption{Tabela-verdade da implicação.}
+	\label{tbl:implicacao}
+\end{table}
+
+Perceba que a proposição $P\implicalogico Q$ só assume o valor-verdade falso no caso em que $P$ é verdadeira e $Q$ é falsa. Para ilustrar esse fato, considere a seguinte proposição: Se a turma obtiver 100\% de aprovação, então os professores pagarão um churrasco para todos. Em que situação podemos concluir a falsidade dessa afirmação? 
+Para chegarmos a uma resposta, considere a afirmação sobre a aprovação como nossa proposição $P$ e a afirmação sobre o churrasco como nossa proposição $Q$. Assim, a proposição em questão é equivalente a $P\implicalogico Q$. 
+Agora analise o que significa cada uma das combinações possiveis de valores-verdade dessas proposições
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c}
+		$P$ ou aprovação		& $Q$ ou churrasco 		& $P \implicalogico Q$ \\ \hline
+		V		& V			& V			           \\
+		V		& F			& F			           \\
+		F		& V			& V			           \\
+		F		& F			& V			           \\	
+	\end{tabular}
+	\caption{Tabela-verdade da implicação.}
+	\label{tbl:implicacao}
+\end{table}
+
+Apenas no caso em que a turma obtiver 100\% de aprovação mas os professores não pagarem o churrasco podemos dizer que a proposição $P \implicalogico Q$ é falsa. Em qualquer outro caso a afirmação é verdadeira (qualquer caso de não aprovação ou no caso em que aprovação e churrasco são verdadeiras).
+
+
+Na matemática é comum que implicações apareçam em enunciados na forma \abreaspas Se $P$, então $Q$\fechaaspas.
+No caso de a afirmação anterior ser, por exemplo, um problema ou um resultado a ser demonstrado, interpreta-se o $P$ como a sua hipótese, e $Q$, como a sua tese. Costuma-se escrever, também, nessa situação, $P \implica Q$ e reservar o $P \implicalogico Q$ para contextos puramente lógicos.
+
+Para provar que uma implicação é verdadeira de forma direta, o primeiro passo é considerar a hipótese $P$ como uma propriedade verdadeira. Nesse caso nossa atenção se restringe somente às duas primeiras linhas da tabela-verdade de $P \implica Q$.
+Assim, pela tabela, constatamos que, para alcançarmos nosso objetivo de provar que a afirmação \entreaspas{Se $P$, então $Q$} é verdadeira, precisamos mostrar que a tese $Q$ também é verdadeira.
+
+Outra maneira de demonstrar a veracidade de uma proposição do tipo $P \implica Q$ é o método de contrapositiva. Esse método consiste em negar a tese, ou seja, considerar a proposição $Q$ como sendo falsa. Se a partir disso conseguirmos garantir que a hipótese (ou proposição $P$) deve também ser falsa, podemos concluir que $P \implica Q$ é verdadeira, pois esse é o único valor-verdade possível nessa situação. 
+
+Quando já está provado que \entreaspas{Se $P$, então $Q$} é verdadeira, utilizamos esse resultado para concluir que $Q$ é verdadeira quando temos, também, que $P$ é verdadeira. Isso pode, mais uma vez, ser verificado pela tabela-verdade de $P \implica Q$: na única linha em que $P \implica Q$ e $P$ são verdadeiras, $Q$ também é.
+
+Outro conectivo lógico é o $\sselogico$, chamado de bicondicional ou bi-implicação.
+Da mesma forma que a implicação -- e os demais conectivos lógicos --, o valor-verdade da expressão $P \sselogico Q$, dadas duas proposições $P$ e $Q$, é totalmente determinado pelos valores-verdade dessas proposições.
+A relação se encontra na Tabela \ref{tbl:bi-implicacao}.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c}
+		$P$		& $Q$		& $P \sselogico Q$	\\ \hline
+		V		& V			& V			\\
+		V		& F			& F			\\
+		F		& V			& F			\\
+		F		& F			& V			\\	
+	\end{tabular}
+	\caption{Tabela-verdade da bi-implicação.}
+	\label{tbl:bi-implicacao}
+\end{table}
+
+Pela tabela, pode-se notar que a expressão $P \sselogico Q$ é verdadeira quando $P$ e $Q$ têm o mesmo valor-verdade, e apenas nessa situação.
+
+De forma similar ao que ocorre na implicação, reserva-se o símbolo $\sselogico$ para contextos lógicos, utilizando o \entreaspas{$\sse$} apenas em cenários menos formais. Textualmente, uma afirmação do tipo $P \sse Q$ costuma se manifestar como ``$P$ se, e somente se, $Q$''. Isso começa a evidenciar um importante fato sobre a bi-implicação: ela pode ser definida como a conjunção de duas implicações. A frase ``$P$ se $Q$'' é equivalente a ``se $Q$, então $P$'', o que, conforme já visto, pode ser representado como $Q \implica P$. Ademais, ``$P$ somente se $Q$'' diz que $P$ só pode ser verdade se $Q$ também for, ou seja, $P \implica Q$. As frases, quando juntas, expressam a noção de bi-condicionalidade.
+
+Outra versão textual comum do $\sse$ é a sentença ``Para $P$, é necessário e suficiente que $Q$''. Assim como no caso do ``se, e somente se'', essa expressão carrega duas informações consigo. A frase ``Para $P$, é necessário que $Q$'' significa que a validade de $P$ só é possível na presença da validade de $Q$, isto é, $P \implica Q$. Por outro lado, ``Para $P$, é suficiente que $Q$'' indica que basta $Q$ ser verdade para $P$ também ser, ou seja, $Q \implica P$.
+
+Uma terceira forma de se apresentar a informação $P \sse Q$ é dizer que ``$P$ é equivalente a $Q$''. Pode-se justificar essa construção pela tabela-verdade de $P \sselogico Q$. Conforme mencionado, $P \sselogico Q$ é verdade precisamente quando $P$ e $Q$ tem o mesmo valor-verdade. Em caso positivo, não existe uma diferença prática entre $P$ e $Q$. Assim, usa-se o termo ``equivalência'', que também indica que, quando se tem uma dessas proposições, se tem a outra, já que elas possuem o mesmo valor-verdade.
+
+Em todas as formas textuais vistas, o $\sse$ pôde ser desmembrado em dois $\implica$. Isso reflete diretamente na maneira como se prova afirmações do tipo $P \sse Q$. O método consiste em demonstrar, de forma independente, que $P \implica Q$ e que $Q \implica P$. Aqui, vale a discussão acerca de como provar afirmações com $\implica$. A diferença é que sempre se fazem necessárias duas provas desse tipo.
+
+Explicados os usos do $\implica$  e do $\sse$ neste texto, podemos voltar a atenção à equivalência entre operadores e relações de conjuntos e conectivos lógicos. No restante desta seção, considere $P$ e $Q$ propriedades aplicáveis aos elementos de $\U$. Considere, também, $A = \conjunto{ x \tq \text{$x$ satisfaz $P$}}$ e $B = \conjunto{ x \tq \text{$x$ satisfaz $Q$}}$.
+
+\begin{proposition}[Inclusão e implicação] 
+	$A \contido B$ é equivalente a $P \implica Q$.
+\end{proposition}
+
+\begin{proposition}[Igualdade e bi-implicação] 
+	$A = B$ é equivalente a $P \sse Q$.
+\end{proposition}
+
+\begin{example}
+	Analise as implicações abaixo:
+	\begin{align*}
+        x^2+1=0 &\implica (x^2+1)(x^2-1) = 0 \vezes (x^2-1) \\
+                &\implica x^4 - 1 = 0 \\
+                &\implica x^4 = 1 \\
+                &\implica x \pertence \conjunto {-1, 1}
+	\end{align*}
+	Isso quer dizer que o conjunto solução de $x^2 +1 = 0$ é $\conjunto{-1, 1}$?
+\end{example}
+
+\begin{solution}
+	O conjunto-solução de $x^2 + 1 = 0$ é $S = \conjunto{ x \nos \reais \taisque x^2 + 1 = 0} = \vazio$, o que implica que $S \diferente \conjunto{-1, 1}$.
+\end{solution}
+
+\begin{proposition}[Complementar e negação] 
+	$A^C$ é equivalente a $\naologico P$.
+\end{proposition}
+
+Podemos combinar os itens \ref{prop:complementar:complementar-do-complementar} e \ref{prop:complementar:contrapositiva} da Proposição \ref{prop:complementar} e obter que:
+\begin{center}
+    $P \implica Q$ se, e somente se, $\naologico Q \implica \naologico P$.
+\end{center}
+
+Chamamos $Q \implica P$ de \emph{recíproca} de $P \implica Q$, e $P \elogico \naologico Q$ de \emph{negação} de $P \implica Q$. É dado um exemplo no Exercício \ref{exe:escrever-reciprocas}.
+
+\begin{example}
+	Observe as afirmações:
+	
+	\begin{itemize}
+		\item Todo número primo maior do que 2 é ímpar;
+		\item Todo número par maior do que 2 é composto.
+	\end{itemize}
+
+	Essas afirmações dizem exatamente a mesma coisa, ou seja, exprimem a mesma ideia; só que com diferentes termos. Podemos reescrevê-las na forma de implicações vendo claramente que uma é contrapositiva da outra, e todas estão sob a hipótese de que $n \in \N$, com $n > 2$:    
+    \begin{align*}
+        \text{$n$ primo}                   &\implica \text{$n$ ímpar} \\
+        \text{$\naologico$( $n$ ímpar )}   &\implica \text{$\naologico$( $n$ primo )} \\
+        \text{$n$ par}                     &\implica \text{$n$ composto}
+    \end{align*}
+\end{example}
+
+\begin{proposition}[União e disjunção]
+	$A \uniao B$ é equivalente a $P \lor Q$ ($P \ou Q$).
+\end{proposition}
+
+\begin{proposition}[Interseção e conjunção]
+	$A \inter B$ é equivalente a $P \elogico Q$ ($P \e Q$).
+\end{proposition}
+
+\begin{remark}
+    O conectivo lógico \textit{ou} tem significado diferente do usado normalmente no português. Na linguagem coloquial, usamos $P$ \textit{ou} $Q$ sem permitir que sejam as duas coisas ao mesmo tempo. Analise a seguinte história:
+
+    \emph{Um obstetra que também era matemático acabara de realizar um parto quando o pai perguntou: ``É menino ou menina, doutor?''. E ele respondeu: ``sim''.}
+\end{remark}
+
+As equivalências entre as relações e os operadores da Teoria dos Conjuntos e conectivos da Lógica são resumidas na Tabela~\ref{tbl:equiv-conj-logc}.
+\begin{table}[h]
+	\centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Operação/relação em Conjuntos & Fórmula de Lógica \\ \hline
+        $A = B$                 	  & $P \sse Q$        \\ \hline
+        $A \contido B$            	  & $P \implica Q$    \\ \hline
+        $A\complementar$        	  & $\naologico P$    \\ \hline
+        $A \uniao B$              	  & $P \lor Q$        \\ \hline
+        $A \inter B$              	  & $P \elogico Q$    \\
+        \hline
+    \end{tabular}
+	\caption{Equivalências entre as relações e operadores de conjuntos e conectivos lógicos.}
+	\label{tbl:equiv-conj-logc}
+\end{table}
+
+\caixote{Um problema de lógica}{
+	A polícia prende quatro homens, um dos quais cometeu um furto. Eles fazem as seguintes declarações:
+	\begin{itemize}
+		\item Arnaldo: Bernaldo fez o furto.
+		\item Bernaldo: Cernaldo fez o furto.
+		\item Dernaldo: eu não fiz o furto.
+		\item Cernaldo: Bernaldo mente ao dizer que eu fiz o furto.
+	\end{itemize}
+	Se sabemos que só uma destas declarações é a verdadeira, quem é culpado pelo furto?
+}
