@@ -34,22 +34,24 @@ Agora analise o que significa cada uma das combinações possiveis de valores-ve
 		F		& V			& V			           \\
 		F		& F			& V			           \\	
 	\end{tabular}
-	\caption{Tabela-verdade da implicação.}
-	\label{tbl:implicacao}
+	\caption{Tabela-verdade do exemplo de implicação.}
+	\label{tbl:eximplicacao}
 \end{table}
 
-Apenas no caso em que a turma obtiver 100\% de aprovação mas os professores não pagarem o churrasco podemos dizer que a proposição $P \implicalogico Q$ é falsa. Em qualquer outro caso a afirmação é verdadeira (qualquer caso de não aprovação ou no caso em que aprovação e churrasco são verdadeiras).
+Apenas no caso em que a turma obtiver 100\% de aprovação mas os professores não pagarem o churrasco podemos dizer que a proposição $P \implicalogico Q$ é falsa (em português, só seria mentira nesse caso). Em qualquer outro caso a afirmação é verdadeira (qualquer caso de não aprovação ou no caso em que aprovação e churrasco são verdadeiras).
 
 
 Na matemática é comum que implicações apareçam em enunciados na forma \abreaspas Se $P$, então $Q$\fechaaspas.
 No caso de a afirmação anterior ser, por exemplo, um problema ou um resultado a ser demonstrado, interpreta-se o $P$ como a sua hipótese, e $Q$, como a sua tese. Costuma-se escrever, também, nessa situação, $P \implica Q$ e reservar o $P \implicalogico Q$ para contextos puramente lógicos.
 
-Para provar que uma implicação é verdadeira de forma direta, o primeiro passo é considerar a hipótese $P$ como uma propriedade verdadeira. Nesse caso nossa atenção se restringe somente às duas primeiras linhas da tabela-verdade de $P \implica Q$.
+Para provar que uma implicação é verdadeira de forma direta, o primeiro passo é considerar a hipótese $P$ como uma propriedade verdadeira. Nesse caso nossa atenção se restringe somente às duas primeiras linhas da tabela-verdade \ref{tbl:implicacao} de $P \implicalogico Q$.
 Assim, pela tabela, constatamos que, para alcançarmos nosso objetivo de provar que a afirmação \entreaspas{Se $P$, então $Q$} é verdadeira, precisamos mostrar que a tese $Q$ também é verdadeira.
 
-Outra maneira de demonstrar a veracidade de uma proposição do tipo $P \implica Q$ é o método de contrapositiva. Esse método consiste em negar a tese, ou seja, considerar a proposição $Q$ como sendo falsa. Se a partir disso conseguirmos garantir que a hipótese (ou proposição $P$) deve também ser falsa, podemos concluir que $P \implica Q$ é verdadeira, pois esse é o único valor-verdade possível nessa situação. 
+Outra maneira de demonstrar a veracidade de uma proposição do tipo $P \implica Q$ é o método de contrapositiva. Esse método consiste em negar a tese, ou seja, considerar a proposição $Q$ como sendo falsa. Se a partir disso conseguirmos garantir que a hipótese (ou proposição $P$) deve também ser falsa, podemos concluir que $P \implicalogico Q$ é verdadeira, pois esse é o único valor-verdade possível nessa situação como vemos na última linha da tabela-verdade \ref{tbl:implicacao}. 
 
-Quando já está provado que \entreaspas{Se $P$, então $Q$} é verdadeira, utilizamos esse resultado para concluir que $Q$ é verdadeira quando temos, também, que $P$ é verdadeira. Isso pode, mais uma vez, ser verificado pela tabela-verdade de $P \implica Q$: na única linha em que $P \implica Q$ e $P$ são verdadeiras, $Q$ também é.
+Quando já está provado que \entreaspas{Se $P$, então $Q$} é verdadeira, utilizamos esse resultado para concluir que $Q$ é verdadeira sempre que $P$ é verdadeira e dizemos que $P$ é condição suficiente para  $Q$. Isso pode, mais uma vez, ser verificado pela tabela-verdade \ref{tbl:implicacao} de $P \implicalogico Q$: na única linha em que $P \implicalogico Q$ e $P$ são verdadeiras, $Q$ também é. Por outro lado, isso também significa que, no caso em que $P \implicalogico Q$ é verdadeira, a proposição $P$ não será verdadeira a menos que a proposição $Q$ também seja. Por isso dizemos que $Q$ é condição necessária para $P$.
+
+Por fim, a penúltima linha da tabela \ref{tbl:implicacao} nos mostra o caso em que $P \implicalogico Q$ é verdadeira, $P$ é falsa e $Q$ é verdadeira. Isso significa que $Q$ não é suficiente para $P$ e $P$ não é necessária para $Q$. 
 
 Outro conectivo lógico é o $\sselogico$, chamado de bicondicional ou bi-implicação.
 Da mesma forma que a implicação -- e os demais conectivos lógicos --, o valor-verdade da expressão $P \sselogico Q$, dadas duas proposições $P$ e $Q$, é totalmente determinado pelos valores-verdade dessas proposições.
