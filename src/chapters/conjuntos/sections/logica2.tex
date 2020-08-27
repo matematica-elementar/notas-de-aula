@@ -1,12 +1,12 @@
 \section{Conjuntos e Lógica}
 
-Na lógica clássica, uma proposição é uma afirmação ou sentença que é obrigatoriamente verdadeira ou falsa, não podendo ser as duas coisas simultaneamente. Esses dois possíveis graus de verdade (1 ou 0, verdadeiro ou falso) de uma proposição são chamados de valor-verdade. Dizemos que a lógica clássica é bi-valorada por admitir apenas dois valores verdade. 
+Na lógica clássica, uma proposição é uma afirmação ou sentença que é obrigatoriamente verdadeira ou falsa, não podendo ser as duas coisas simultaneamente. Esses dois possíveis graus de verdade (1 ou 0, verdadeiro ou falso) de uma proposição são chamados de valor-verdade. Dizemos que a lógica clássica é bi-valorada por admitir apenas dois valores-verdade. 
 
-Como visto na Seção \ref{sec:op}, objetos de um memso tipo podem ser operados a  fim de obtermos outros objetos daquele tipo (operações com números e com conjuntos, por exemplo). Algo semelhante acontece com as proposições. Os chamados operadores operadores lógicos geram uma proposição a partir de uma ou mais proposições dadas e também são conhecidos como conectivo lógicos.
+Como visto na Seção \ref{sec:op}, objetos de um memso tipo podem ser operados a  fim de obtermos outros objetos daquele tipo (operações com números e com conjuntos, por exemplo). Algo semelhante acontece com as proposições. Os chamados operadores lógicos geram uma proposição a partir de uma ou mais proposições dadas e também são conhecidos como conectivo lógicos.
  
 Nesta seção vamos conhecer alguns conectivos (ou operadores) lógicos e entender como eles se relacionam com outros objetos matemáticos.
 
-O primeiro deles é a implicação, denotada no contexto da lógica por $\implicalogico$.  Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \implicalogico Q$ (lê-se $P$ implica $Q$ ou se $P$ então $Q$). O valor-verdade de $P \implicalogico Q$ é completamente determinado pelos valores-verdade de $P$ e $Q$. A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
+O primeiro deles é a implicação, denotada no contexto da lógica por $\implicalogico$.  Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \implicalogico Q$ (lê-se $P$ implica $Q$). O valor-verdade de $P \implicalogico Q$ é completamente determinado pelos valores-verdade de $P$ e $Q$. A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
 
 \begin{table}[h]
 	\centering
@@ -21,9 +21,9 @@ O primeiro deles é a implicação, denotada no contexto da lógica por $\implic
 	\label{tbl:implicacao}
 \end{table}
 
-Perceba que a proposição $P\implicalogico Q$ só assume o valor-verdade falso no caso em que $P$ é verdadeira e $Q$ é falsa. Para ilustrar esse fato, considere a seguinte proposição: Se a turma obtiver 100\% de aprovação, então os professores pagarão um churrasco para todos. Em que situação podemos concluir a falsidade dessa afirmação? 
+Perceba que a proposição $P\implicalogico Q$ só assume o valor-verdade falso no caso em que $P$ é verdadeira e $Q$ é falsa. Para ilustrar esse fato, considere a seguinte proposição, em liguagem natural: Se a turma obtiver 100\% de aprovação, então os professores pagarão um churrasco para todos. Em que situação podemos concluir a falsidade dessa afirmação? 
 Para chegarmos a uma resposta, considere a afirmação sobre a aprovação como nossa proposição $P$ e a afirmação sobre o churrasco como nossa proposição $Q$. Assim, a proposição em questão é equivalente a $P\implicalogico Q$. 
-Agora analise o que significa cada uma das combinações possiveis de valores-verdade dessas proposições
+Agora analise o que significa cada uma das combinações possiveis de valores-verdade dessas proposições:
 
 \begin{table}[h]
 	\centering
@@ -47,7 +47,7 @@ No caso de a afirmação anterior ser, por exemplo, um problema ou um resultado 
 Para provar que uma implicação é verdadeira de forma direta, o primeiro passo é considerar a hipótese $P$ como uma propriedade verdadeira. Nesse caso nossa atenção se restringe somente às duas primeiras linhas da tabela-verdade \ref{tbl:implicacao} de $P \implicalogico Q$.
 Assim, pela tabela, constatamos que, para alcançarmos nosso objetivo de provar que a afirmação \entreaspas{Se $P$, então $Q$} é verdadeira, precisamos mostrar que a tese $Q$ também é verdadeira.
 
-Outra maneira de demonstrar a veracidade de uma proposição do tipo $P \implica Q$ é o método de contrapositiva. Esse método consiste em negar a tese, ou seja, considerar a proposição $Q$ como sendo falsa. Se a partir disso conseguirmos garantir que a hipótese (ou proposição $P$) deve também ser falsa, podemos concluir que $P \implicalogico Q$ é verdadeira, pois esse é o único valor-verdade possível nessa situação como vemos na última linha da tabela-verdade \ref{tbl:implicacao}. 
+Outra maneira de demonstrar a veracidade de uma proposição do tipo $P \implica Q$ é o método de contrapositiva. Esse método consiste em negar a tese, ou seja, considerar a proposição $Q$ como sendo falsa. Se a partir disso conseguirmos garantir que a hipótese (ou proposição $P$) deve também ser falsa, podemos concluir que $P \implica Q$ é verdadeira, pois esse é o único valor-verdade possível nessa situação como vemos na última linha da tabela-verdade \ref{tbl:implicacao}. 
 
 Quando já está provado que \entreaspas{Se $P$, então $Q$} é verdadeira, utilizamos esse resultado para concluir que $Q$ é verdadeira sempre que $P$ é verdadeira e dizemos que $P$ é condição suficiente para  $Q$. Isso pode, mais uma vez, ser verificado pela tabela-verdade \ref{tbl:implicacao} de $P \implicalogico Q$: na única linha em que $P \implicalogico Q$ e $P$ são verdadeiras, $Q$ também é. Por outro lado, isso também significa que, no caso em que $P \implicalogico Q$ é verdadeira, a proposição $P$ não será verdadeira a menos que a proposição $Q$ também seja. Por isso dizemos que $Q$ é condição necessária para $P$.
 
