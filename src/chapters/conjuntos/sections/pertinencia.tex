@@ -8,7 +8,7 @@ Como já falamos sobre, só temos uma resposta possível dentre sim e não. O qu
     Dados um objeto $x$ e um conjunto $A$, se for o caso de $x$ ser um elemento de $A$, dizemos que $x$ \emph{pertence} a $A$. Para denotar esse fato, escrevemos $x \pertence A$.
 
     \label{def:naopertinencia}
-    Quando $x$ \textit{não} pertence a $A$, denotamos por $x \naopertence A$.
+    Quando $x$ não é um elemento de $A$ dizemos que $x$ \emph{não pertence} a $A$, o que denotamos por $x \naopertence A$.
 \end{definition}
 
 Não é correto dizer que $x$ está \entreaspas{contido} ou é \entreaspas{parte} de $A$, esses termos são usados em matemática com outro sentido, como veremos na Definição~\ref{def:inclusao}.
@@ -21,7 +21,7 @@ Não é correto dizer que $x$ está \entreaspas{contido} ou é \entreaspas{parte
     Considere $L$ como sendo o conjunto de todas as letras do alfabeto latino. Sabendo que as vogais do conjunto $V$ fazem parte desse alfabeto, podemos concluir que $\texttt a, \texttt e, \texttt i , \texttt o , \texttt u  \pertence L$. Também sabemos que a letra $\texttt j$ faz parte do alfabeto, isto é, $\texttt j \pertence L$. Contudo, como $\texttt j$ não é uma vogal, podemos concluir que $\texttt j \naopertence V$.
 \end{example}
 
-Ainda na Seção~\ref{sec:intro} \nameref{sec:intro}, vimos que dois conjuntos iguais $A$ e $B$ possuem, necessariamente, os mesmos elementos, o que implica que são diferentes quando um possui algum elemento que o outro não possui. Com a notação de pertinência, isto é o mesmo que dizer que existe $x \em A$ tal que $x \naopertence B$ ou que existe $x \em B$ tal que $x \naopertence A$.
+Ainda na Seção~\ref{sec:intro}, vimos que dois conjuntos iguais $A$ e $B$ possuem, necessariamente, os mesmos elementos, o que implica que são diferentes quando existe pelo menos um elemento que pertence a apenas um dos dois conjuntos. Com a notação de pertinência, isto é o mesmo que dizer que existe $x \em A$ tal que $x \naopertence B$ ou que existe $x \em B$ tal que $x \naopertence A$.
 
 \begin{example}
     Os conjuntos $\N$ (números naturais) e $\Z$ (números inteiros), abordados com mais detalhes no Capítulo \ref{cap:conjuntos-numericos}, são diferentes. Note que $-1 \pertence \Z$ mas $-1 \naopertence \N$, por exemplo, o que prova que esses conjuntos são diferentes.
