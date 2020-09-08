@@ -2,11 +2,11 @@
 
 Na lógica clássica, uma proposição é uma afirmação ou sentença que é obrigatoriamente verdadeira ou falsa, não podendo ser as duas coisas simultaneamente. Esses dois possíveis graus de verdade (1 ou 0, verdadeiro ou falso) de uma proposição são chamados de valor-verdade. Dizemos que a lógica clássica é bi-valorada por admitir apenas dois valores-verdade. 
 
-Como visto na Seção \ref{sec:op}, objetos de um memso tipo podem ser operados a  fim de obtermos outros objetos daquele tipo (operações com números e com conjuntos, por exemplo). Algo semelhante acontece com as proposições. Os chamados operadores lógicos geram uma proposição a partir de uma ou mais proposições dadas e também são conhecidos como conectivo lógicos.
+Como visto na Seção \ref{sec:op}, objetos de um mesmo tipo podem ser operados a  fim de obtermos outros objetos daquele tipo (operações com números e com conjuntos, por exemplo). Algo semelhante acontece com as proposições. Os chamados operadores lógicos geram uma proposição a partir de uma ou mais proposições dadas e também são conhecidos como conectivo lógicos.
  
 Nesta seção vamos conhecer alguns conectivos (ou operadores) lógicos e entender como eles se relacionam com outros objetos matemáticos.
 
-O primeiro deles é a implicação, denotada no contexto da lógica por $\implicalogico$.  Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \implicalogico Q$ (lê-se $P$ implica $Q$). Na liguagem natural (pra nós, no português) a proposição $P\implicalogico Q$ é equivalente a proposição "se $P$, então $Q$. O valor-verdade de $P \implicalogico Q$ é completamente determinado pelos valores-verdade de $P$ e $Q$. A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
+O primeiro deles é a implicação, denotada no contexto da lógica por $\implicalogico$.  Ela constrói, a partir de duas proposições $P$ e $Q$, uma terceira proposição $P \implicalogico Q$ (lê-se $P$ implica $Q$). Na liguagem natural (pra nós, no português) a proposição $P\implicalogico Q$ é equivalente a proposição \entreaspas{se $P$, então $Q$}. O valor-verdade de $P \implicalogico Q$ é completamente determinado pelos valores-verdade de $P$ e $Q$. A relação exata pode ser consultada na Tabela \ref{tbl:implicacao}, denominada tabela-verdade.
 
 \begin{table}[h]
 	\centering
@@ -72,11 +72,11 @@ A relação se encontra na Tabela \ref{tbl:bi-implicacao}.
 
 Pela tabela, pode-se notar que a expressão $P \sselogico Q$ é verdadeira quando $P$ e $Q$ têm o mesmo valor-verdade, e apenas nessa situação.
 
-De forma similar ao que ocorre na implicação, reserva-se o símbolo $\sselogico$ para contextos lógicos, utilizando o \entreaspas{$\sse$} apenas em cenários menos formais. Textualmente, uma afirmação do tipo $P \sse Q$ costuma se manifestar como ``$P$ se, e somente se, $Q$''. Isso começa a evidenciar um importante fato sobre a bi-implicação: ela pode ser definida como a conjunção de duas implicações. A frase ``$P$ se $Q$'' é equivalente a ``se $Q$, então $P$'', o que, conforme já visto, pode ser representado como $Q \implica P$. Ademais, ``$P$ somente se $Q$'' diz que $P$ só pode ser verdade se $Q$ também for, ou seja, $P \implica Q$. As frases, quando juntas, expressam a noção de bi-condicionalidade.
+De forma similar ao que ocorre na implicação, reserva-se o símbolo $\sselogico$ para contextos lógicos, utilizando o \entreaspas{$\sse$} apenas em cenários menos formais. Textualmente, uma afirmação do tipo $P \sse Q$ costuma se manifestar como \entreaspas{$P$ se, e somente se, $Q$}. Isso começa a evidenciar um importante fato sobre a bi-implicação: ela pode ser definida como a conjunção de duas implicações. A frase \entreaspas{$P$ se $Q$} é equivalente a \entreaspas{se $Q$, então $P$}, o que, conforme já visto, pode ser representado como $Q \implica P$. Ademais, \entreaspas{$P$ somente se $Q$} diz que $P$ só pode ser verdade se $Q$ também for, ou seja, $P \implica Q$. As frases, quando juntas, expressam a noção de bi-condicionalidade.
 
-Outra versão textual comum do $\sse$ é a sentença ``Para $P$, é necessário e suficiente que $Q$''. Assim como no caso do ``se, e somente se'', essa expressão carrega duas informações consigo. A frase ``Para $P$, é necessário que $Q$'' significa que a validade de $P$ só é possível na presença da validade de $Q$, isto é, $P \implica Q$. Por outro lado, ``Para $P$, é suficiente que $Q$'' indica que basta $Q$ ser verdade para $P$ também ser, ou seja, $Q \implica P$.
+Outra versão textual comum do $\sse$ é a sentença \entreaspas{Para $P$, é necessário e suficiente que $Q$}. Assim como no caso do \entreaspas{se, e somente se}, essa expressão carrega duas informações consigo. A frase \entreaspas{Para $P$, é necessário que $Q$} significa que a validade de $P$ só é possível na presença da validade de $Q$, isto é, $P \implica Q$. Por outro lado, \entreaspas{Para $P$, é suficiente que $Q$} indica que basta $Q$ ser verdade para $P$ também ser, ou seja, $Q \implica P$.
 
-Uma terceira forma de se apresentar a informação $P \sse Q$ é dizer que ``$P$ é equivalente a $Q$''. Pode-se justificar essa construção pela tabela-verdade de $P \sselogico Q$. Conforme mencionado, $P \sselogico Q$ é verdade precisamente quando $P$ e $Q$ tem o mesmo valor-verdade. Em caso positivo, não existe uma diferença prática entre $P$ e $Q$. Assim, usa-se o termo ``equivalência'', que também indica que, quando se tem uma dessas proposições, se tem a outra, já que elas possuem o mesmo valor-verdade.
+Uma terceira forma de se apresentar a informação $P \sse Q$ é dizer que \entreaspas{$P$ é equivalente a $Q$}. Pode-se justificar essa construção pela tabela-verdade de $P \sselogico Q$. Conforme mencionado, $P \sselogico Q$ é verdade precisamente quando $P$ e $Q$ tem o mesmo valor-verdade. Em caso positivo, não existe uma diferença prática entre $P$ e $Q$. Assim, usa-se o termo \entreaspas{equivalência}, que também indica que, quando se tem uma dessas proposições, se tem a outra, já que elas possuem o mesmo valor-verdade.
 
 Em todas as formas textuais vistas, o $\sse$ pôde ser desmembrado em dois $\implica$. Isso reflete diretamente na maneira como se prova afirmações do tipo $P \sse Q$. O método consiste em demonstrar, de forma independente, que $P \implica Q$ e que $Q \implica P$. Aqui, vale a discussão acerca de como provar afirmações com $\implica$. A diferença é que sempre se fazem necessárias duas provas desse tipo.
 
@@ -143,7 +143,7 @@ Chamamos $Q \implica P$ de \emph{recíproca} de $P \implica Q$, e $P \elogico \n
 \begin{remark}
     O conectivo lógico \textit{ou} tem significado diferente do usado normalmente no português. Na linguagem coloquial, usamos $P$ \textit{ou} $Q$ sem permitir que sejam as duas coisas ao mesmo tempo. Analise a seguinte história:
 
-    \emph{Um obstetra que também era matemático acabara de realizar um parto quando o pai perguntou: ``É menino ou menina, doutor?''. E ele respondeu: ``sim''.}
+    \emph{Um obstetra que também era matemático acabara de realizar um parto quando o pai perguntou: \entreaspas{É menino ou menina, doutor?}. E ele respondeu: \entreaspas{sim}.}
 \end{remark}
 
 As equivalências entre as relações e os operadores da Teoria dos Conjuntos e conectivos da Lógica são resumidas na Tabela~\ref{tbl:equiv-conj-logc}.
