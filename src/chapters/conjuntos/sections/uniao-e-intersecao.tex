@@ -69,13 +69,6 @@
 				\item $A \uniao (B \inter C) = (A \uniao B) \inter (A \uniao C)$.
 			\end{enumerate}
 
-		\item
-			\label{prop:demorgan}
-			\emph{Leis de DeMorgan}:
-			\begin{enumerate}
-				\item $(A \uniao B)^C = A^C \inter B^C$;
-				\item $(A \inter B)^C = A^C \uniao B^C$.
-			\end{enumerate}
 	\end{enumerate}
 \end{proposition}
 
@@ -116,29 +109,7 @@
 		\item
 			Exercício.
 
-		\item
-			Abaixo, seguem as demonstrações das leis de De Morgan.
-			\begin{enumerate}
-				\item
-					Inicialmente, demonstremos que $(A \uniao B)^C \contido A^C \inter B^C$. Do item~\ref{prop:uniao-e-intersecao-inclusao} da Proposição~\ref{prop:uniao-e-intersecao}, temos que $A \contido A \uniao B$. Segue do item \ref{prop:complementar:contrapositiva} da Proposição~\ref{prop:complementar} que $(A \uniao B)^C \contido A^C$ (I). De forma análoga, também temos que $(A \uniao B)^C \contido B^C$ (II). Seja agora $x \em (A \uniao B)^C$. Por (I), temos $x \em A^C$. Por (II), temos $x \em B^C$. Logo, $x \pertence A^C \inter B^C$. Portanto, $(A \uniao B)^C \contido A^C \inter B^C$.
-
-					Finalmente, demonstremos que $A^C \inter B^C \contido (A \uniao B)^C$. Seja $x \em A^C \inter B^C$, ou seja, $x \pertence A^C$ e $x \pertence B^C$. Dessa forma, $x \naopertence A$ e $x \naopertence B$. Suponha, por contradição, que $x \pertence A \uniao B$. Dessa maneira, teríamos $x \pertence A$, o que contradiz $x \naopertence A$, ou $x \pertence B$, o que contradiz $x \naopertence B$. Logo, $x \naopertence A \uniao B$, ou seja, $x \pertence (A \uniao B)^C$. Assim, $A^C \inter B^C \contido (A \uniao B)^C$. Portanto, $(A \uniao B)^C = A^C \inter B^C$.
-				\item
-					Primeiramente, demonstremos que $A^C \uniao B^C \contido (A \inter B)^C$. Observe que, pela propriedade~\ref{prop:uniao-e-intersecao-inclusao}, temos $A \inter B \contido A$, e, pelo item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar}, temos $A^C \contido (A \inter B)^C$ (I). De forma análoga, temos $B^C \contido (A \inter B)^C$ (II). Então, seja $x \in A^C \uniao B^C$, isto é, $x \in A^C$ ou $x \in B^C$. Caso que $x \in A^C$, podemos afirmar que $x \in (A \inter B)^C$ por (I). E, caso $x \in B^C $, por (II), também podemos afirmar que $x \in (A \inter B)^C$. Portanto, temos que $A^C \uniao B^C \contido (A \inter B)^C$. \\
-					Finalmente, demonstremos que $(A \inter B)^C \contido A^C \uniao B^C$. Suponha, para chegar num absurdo, que $(A \inter B)^C \not\contido A^C \uniao B^C$. Então, existe $x \in (A \inter B)^C$ tal que $x \naopertence A^C \uniao B^C$. Logo, $x \naopertence A \inter B$. Temos 4 possibilidades para $x$:
-					
-					Caso $x \in A$ e $x \in B$: Então, $x \in A \inter B$, o que contradiz $x \naopertence A \inter B$.
-
-					Caso $x \naopertence A$ e $x \pertence B$: Então, $x \in A^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.
-
-					Caso $x \pertence A$ e $x \naopertence B$: Então, $x \in B^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.
-
-					Caso $x \naopertence A$ e $x \naopertence B$: De $x \naopertence A$, temos $x \in A^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.\\
-					Sendo assim, como os 4 casos levam a um absurdo, podemos concluir que $(A \inter B)^C \contido A^C \uniao B^C$.
-			\end{enumerate}
 	\end{enumerate}
 \end{proof}
 
-\begin{onlineact}
-	\khan{https://pt.khanacademy.org/math/statistics-probability/probability-library/basic-set-ops/e/basic_set_notation}{Notação Básica de Conjunto}.
-\end{onlineact}
+

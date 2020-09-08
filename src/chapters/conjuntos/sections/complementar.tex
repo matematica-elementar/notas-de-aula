@@ -34,16 +34,68 @@ A noção de complementar de um conjunto só faz sentido quando fixamos um \emph
 			$\prn{A\complementar}\complementar = A$ (todo conjunto é complementar do seu complementar);
 		\item
 			\label{prop:complementar:contrapositiva}
-			Se $A \contido B$, então $\compl{B} \contido \compl{A}$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro). 
+			Se $A \contido B$, então $\compl{B} \contido \compl{A}$ (se um conjunto está contido em outro, seu complementar contém o complementar desse outro).
+			
+		\item
+			\label{prop:demorgan}
+			\emph{Leis de DeMorgan}:
+			\begin{enumerate}
+				\item $(A \uniao B)^C = A^C \inter B^C$;
+				\item $(A \inter B)^C = A^C \uniao B^C$.
+			\end{enumerate} 
 	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-	Primeiramente, demonstremos que vale o item~\ref{prop:complementar:universo}. A inclusão $\vazio \contido \compl{\U}$ é imediata pois $\vazio$ é subconjunto de qualquer conjunto.  Provemos, agora, que $\compl{\U} \contido \vazio$. Suponha, por absurdo, que $\compl{\U} \naocontido \vazio$; ou seja, existe $x \em \compl{\U}$ tal que $x \naopertence \vazio$. Ora, se $x \pertence \compl{\U}$, então $x \naopertence \U$, o que é um absurdo. Logo, $\compl{\U} \contido \vazio$. Dos fatos de que $\vazio \contido \compl{\U}$ e $\compl{\U} \contido \vazio$, conclui-se que $\compl{\U} = \vazio$. A demonstração de que $\compl{\vazio} = \U$ fica como exercício para o leitor.
+	\begin{enumerate}
+		\item 
+		Para mostrarmos que $\compl\U = \vazio$, note que a inclusão $\vazio \contido \compl{\U}$ é imediata pois $\vazio$ é subconjunto de qualquer conjunto.  Provemos, agora, que $\compl{\U} \contido \vazio$. Suponha, por absurdo, que $\compl{\U} \naocontido \vazio$; ou seja, existe $x \em \compl{\U}$ tal que $x \naopertence \vazio$. Ora, se $x \pertence \compl{\U}$, então $x \naopertence \U$, o que é um absurdo. Logo, $\compl{\U} \contido \vazio$. Dos fatos de que $\vazio \contido \compl{\U}$ e $\compl{\U} \contido \vazio$, conclui-se que $\compl{\U} = \vazio$. 
+			
+		A demonstração de que $\compl{\vazio} = \U$ fica como exercício para o leitor.
+		
+		\item		
+		Para mostrar que $\prn{A\complementar}\complementar = A$ provemos que $A \contido \compl{\prn{\compl{A}}}$ primeiro. Seja $x \pertence A$. Temos duas possibilidades para a presença de $x$ no conjunto $\compl{A}$, a saber, $x \pertence \compl{A}$ e $x \naopertence \compl{A}$. Se $x \pertence \compl{A}$, segue que $x \naopertence A$, um absurdo, pois $x \pertence A$ por hipótese. Logo, $x \naopertence \compl{A}$. Assim, $x \pertence \compl{\prn{\compl{A}}}$, usando, agora, a própria definição de complementar. Então, $A \contido \compl{\prn{\compl{A}}}$. A prova de que $\compl{\prn{\compl{A}}} \contido A$, item restante para podermos concluir que a igualdade desejada é válida, fica como exercício para o leitor.
+		
+		Em decorrência dessa propriedade, vamos tratar como imediato que, para todo conjunto $A$, $x \naopertence \compl A$ se, e somente se, $x \pertence A$.
 
-	Em segundo lugar, demonstremos que vale o item~\ref{prop:complementar:complementar-do-complementar}. Para isso, provemos que $A \contido \compl{\prn{\compl{A}}}$ primeiro. Para tal, seja $x \pertence A$. Temos duas possibilidades para a presença de $x$ no conjunto $\compl{A}$, a saber, $x \pertence \compl{A}$ e $x \naopertence \compl{A}$. Se $x \pertence \compl{A}$, segue que $x \naopertence A$, um absurdo, pois $x \pertence A$ por hipótese. Logo, $x \naopertence \compl{A}$. Assim, $x \pertence \compl{\prn{\compl{A}}}$, usando, agora, a própria definição de complementar. Então, $A \contido \compl{\prn{\compl{A}}}$. A prova de que $\compl{\prn{\compl{A}}} \contido A$, item restante para podermos concluir que a igualdade desejada é válida, fica como exercício para o leitor.
+		\item
+		Demonstremos a seguir que $A \contido B \implica \compl{B} \contido \compl{A}$. Para isso, sejam $A$, $B$ conjuntos tais que $A \contido B$. Além disso, seja $x \em \compl{B}$, o que implica em $x \naopertence B$. Temos duas possibilidades para a presença de $x$ no conjunto $A$, a saber, $x \pertence A$ e $x \naopertence A$. Se $x \pertence A$, teríamos $x \em B$ também pois $A \contido B$; um absurdo visto que já temos $x \naopertence B$. Logo, concluímos que $x \naopertence A$, ou seja, $x \pertence \compl{A}$. Segue, então, que $\compl{B} \contido \compl{A}$.
 
-	Em decorrência dessa propriedade, vamos tratar como imediato que, para todo conjunto $A$, $x \naopertence \compl A$ se, e somente se, $x \pertence A$.
+		\item
+		A seguir demonstraremos as Leis de DeMorgan		
+			\begin{enumerate}
+				\item 
+				Para mostrar que $(A \uniao B)^C = A^C \inter B^C$, demonstremos inicialmente que $(A \uniao B)^C \contido A^C \inter B^C$. Do item~\ref{prop:uniao-e-intersecao-inclusao} da Proposição~\ref{prop:uniao-e-intersecao}, temos que $A \contido A \uniao B$. Segue do item \ref{prop:complementar:contrapositiva} da Proposição~\ref{prop:complementar} que $(A \uniao B)^C \contido A^C$ (I). De forma análoga, também temos que $(A \uniao B)^C \contido B^C$ (II). Seja agora $x \em (A \uniao B)^C$. Por (I), temos $x \em A^C$. Por (II), temos $x \em B^C$. Logo, $x \pertence A^C \inter B^C$. Portanto, $(A \uniao B)^C \contido A^C \inter B^C$.
 
-	Por fim, demonstremos que vale o item~\ref{prop:complementar:contrapositiva}. Para isso, sejam $A$, $B$ conjuntos tais que $A \contido B$. Além disso, seja $x \em \compl{B}$, o que implica em $x \naopertence B$. Temos duas possibilidades para a presença de $x$ no conjunto $A$, a saber, $x \pertence A$ e $x \naopertence A$. Se $x \pertence A$, teríamos $x \em B$ também pois $A \contido B$; um absurdo visto que já temos $x \naopertence B$. Logo, concluímos que $x \naopertence A$, ou seja, $x \pertence \compl{A}$. Segue, então, que $\compl{B} \contido \compl{A}$.
+				Finalmente, demonstremos que $A^C \inter B^C \contido (A \uniao B)^C$. Seja $x \em A^C \inter B^C$, ou seja, $x \pertence A^C$ e $x \pertence B^C$. Dessa forma, $x \naopertence A$ e $x \naopertence B$. Suponha, por contradição, que $x \pertence A \uniao B$. Dessa maneira, teríamos $x \pertence A$, o que contradiz $x \naopertence A$, ou $x \pertence B$, o que contradiz $x \naopertence B$. Logo, $x \naopertence A \uniao B$, ou seja, $x \pertence (A \uniao B)^C$. Assim, $A^C \inter B^C \contido (A \uniao B)^C$. Portanto, $(A \uniao B)^C = A^C \inter B^C$.
+
+				\item 
+				Para mostrar que $(A \inter B)^C = A^C \uniao B^C$, primeiramente demonstremos que $A^C \uniao B^C \contido (A \inter B)^C$. Observe que, pela propriedade~\ref{prop:uniao-e-intersecao-inclusao}, temos $A \inter B \contido A$, e, pelo item \ref{prop:complementar:contrapositiva} da proposição \ref{prop:complementar}, temos $A^C \contido (A \inter B)^C$ (I). De forma análoga, temos $B^C \contido (A \inter B)^C$ (II). Então, seja $x \in A^C \uniao B^C$, isto é, $x \in A^C$ ou $x \in B^C$. Caso que $x \in A^C$, podemos afirmar que $x \in (A \inter B)^C$ por (I). E, caso $x \in B^C $, por (II), também podemos afirmar que $x \in (A \inter B)^C$. Portanto, temos que $A^C \uniao B^C \contido (A \inter B)^C$. \\
+				
+				Finalmente, demonstremos que $(A \inter B)^C \contido A^C \uniao B^C$. Suponha, para chegar num absurdo, que $(A \inter B)^C \not\contido A^C \uniao B^C$. Então, existe $x \in (A \inter B)^C$ tal que $x \naopertence A^C \uniao B^C$. Logo, $x \naopertence A \inter B$. Temos 4 possibilidades para $x$:
+					
+				Caso $x \in A$ e $x \in B$: Então, $x \in A \inter B$, o que contradiz $x \naopertence A \inter B$.
+
+				Caso $x \naopertence A$ e $x \pertence B$: Então, $x \in A^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.
+
+				Caso $x \pertence A$ e $x \naopertence B$: Então, $x \in B^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.
+
+				Caso $x \naopertence A$ e $x \naopertence B$: De $x \naopertence A$, temos $x \in A^C$. Daí, $x \in A^C \uniao B^C$, o que contradiz $x \naopertence A^C \uniao B^C$.\\
+				Sendo assim, como os 4 casos levam a um absurdo, podemos concluir que $(A \inter B)^C \contido A^C \uniao B^C$.
+			\end{enumerate}	
+	\end{enumerate}
 \end{proof}
+
+\begin{onlineact}
+	\khan{https://pt.khanacademy.org/math/statistics-probability/probability-library/basic-set-ops/e/basic_set_notation}{Notação Básica de Conjunto}.
+\end{onlineact}
+
+\begin{tve}
+	\link{https://drive.google.com/file/d/1yPkh9A2mGmRdfR7a4ZaSIHQt9I_3qbEx/view?usp=sharing}{Propriedades de União e Interseção}.
+\end{tve}
+\begin{tve}
+	\link{https://drive.google.com/file/d/1FlgqAqmRjWBZWLXoYLWwnTXsQ3rtS_64/view?usp=sharing}{Propriedades de União, Interseção e Leis de DeMorgan}.
+\end{tve}
+\begin{tve}
+	\link{https://drive.google.com/file/d/1ESmH33q8Yj3u9bYQweznMGK7bM0GZoqy/view?usp=sharing}{Propriedades do Complementar de um conjunto}.
+\end{tve}
