@@ -28,6 +28,12 @@
 	\end{align*}
 \end{solution}
 
+Algumas propriedades das operações de união e interseção de conjuntos dizem respeito a um conjunto chamado de \emph{conjunto universo}, que denotaremos por $\U$. Esse conjunto deve ser fixado a fim de que fique claro quais são os possíveis objetos que podem ser elementos dos conjuntos a serem abordados. Uma vez fixado $\universo$, todos os elementos considerados pertencerão a $\U$ e todos os conjuntos serão subconjuntos de $\U$. 
+
+\begin{example}
+	Na geometria plana, $\universo$ é o plano onde os elementos são pontos, e todos os conjuntos são constituídos por pontos desse plano. As retas servem como exemplos desses conjuntos; portanto, são subconjuntos de $\U$ (não elementos!).
+\end{example}
+
 \begin{proposition}[Propriedades da união e interseção]
 	\label{prop:uniao-e-intersecao}
 	Para quaisquer conjuntos $A$, $B$ e $C$, e fixado um universo $\U$, tem-se:
@@ -42,10 +48,17 @@
 			\end{enumerate}
 
 		\item
-			União/interseção com o universo:
+			União/interseção com o conjunto universo:
 			\begin{enumerate}
 				\item $A \uniao \universo = \universo$;
 				\item $A \inter \universo = A$.
+			\end{enumerate}
+		
+		\item
+			União/interseção com o conjunto vazio:
+			\begin{enumerate}
+				\item $A \uniao \vazio = A$;
+				\item $A \inter \vazio = \vazio$.
 			\end{enumerate}
 
 		\item
@@ -93,6 +106,8 @@
 					Seja $x \em A$. Temos que $x \pertence \U$, logo, $x \pertence A \inter \U$. Segue, assim, que $A \contido A\inter \U$. A inclusão $A \inter \U \contido A$, por sua vez, é imediata pela propriedade~\ref{prop:uniao-e-intersecao-inclusao} da Proposição~\ref{prop:uniao-e-intersecao}. Portanto, $A \inter \U = A$.
 			\end{enumerate}
 		
+		\item Exercício.
+
 		\item Exercício.
 
 		\item

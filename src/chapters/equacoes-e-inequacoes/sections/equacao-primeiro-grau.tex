@@ -1,14 +1,43 @@
 \section{Equação do 1° grau}
 
 \begin{definition}
-Uma \emph{equação do primeiro grau} na variável $x$ é uma expressão da forma
+Uma \emph{equação do primeiro grau} é uma expressão da forma
 %
 \begin{align*}
 ax+b=0,
 \end{align*}
 %
-onde $a,b \in \R$, $a \neq 0$ e $x$ é um número real a ser encontrado.
+onde $x$ é um número real a ser encontrado, que chamamos de \emph{incógnita}, e $a,b\in \R$ são constantes e $a \neq 0$.
 \end{definition}
+
+\begin{example}
+Escreva em forma de expressões cada passo da brincadeira da Introdução, chamando de $x$ o número escolhido:
+\begin{enumerate}[label=\textbf{\arabic*}.]
+	\item Escolha um número;
+	\item Multiplique esse número por 6;
+	\item Some 12;
+	\item Divida por 3;
+	\item Subtraia o dobro do número que você escolheu;
+	\item O resultado é igual a 4.
+\end{enumerate}
+\label{eq:brinc}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}[label=\textbf{\arabic*}.]
+	\item[]
+	\item $x$
+	\item $6x$
+	\item $6x+12$
+	\item $\frac{6x+12}{3}$
+	\item $\frac{6x+12}{3} - 2x$
+	\item $\frac{6x+12}{3} - 2x = 4$ 
+\end{enumerate}
+\end{solution}
+
+A expressão $\frac{6x+12}{3} - 2x = 4$ é uma equação de primeiro grau.
+
+Para resolver uma equação, ou seja, encontrar os valores que a incógnita pode assumir de modo que a igualdade seja verdadeira, vamos utilizar algumas propriedades enunciadas a seguir:
 
 \begin{proposition}[Propriedades]
 \label{prop:props-eq}
@@ -38,29 +67,7 @@ Utilizaremos as propriedades dadas na Proposição \ref{prop:props-eq} para reso
 \end{align*}
 \end{solution}
 
-\begin{example}
-Escreva em forma de expressões cada passo da brincadeira da Introdução:
-\begin{enumerate}[label=\textbf{\arabic*}.]
-	\item Escolha um número;
-	\item Multiplique esse número por 6;
-	\item Some 12;
-	\item Divida por 3;
-	\item Subtraia o dobro do número que você escolheu;
-	\item O resultado é igual a 4.
-\end{enumerate}
-\end{example}
 
-\begin{solution}
-\begin{enumerate}[label=\textbf{\arabic*}.]
-	\item[]
-	\item $x$
-	\item $6x$
-	\item $6x+12$
-	\item $\frac{6x+12}{3}$
-	\item $\frac{6x+12}{3} - 2x$
-	\item $\frac{6x+12}{3} - 2x = 4$
-\end{enumerate}
-\end{solution}
 
 \begin{remark}
 Deve-se ter  cuidado ao efetuar divisões em ambos os lados de uma equação para não cometer o erro de dividir os lados por zero. Do contrário, pode-se derivar absurdos matemáticos. A seguir, temos um exemplo de ``prova'' de que $1=2$:
@@ -77,6 +84,41 @@ Qual o erro?
 \begin{onlineact}
 	\khan{https://pt.khanacademy.org/math/cc-sixth-grade-math/cc-6th-equations-and-inequalities/cc-6th-super-yoga/e/model-with-one-step-equations-and-solve}{Modelo com equações de primeiro grau e resolução}.
 \end{onlineact}
+
+
+Já temos todas as ferramentas necessárias para entender as duas charadas propostas na Seção \ref{eq:intro}, introdução desse capítulo.
+
+\begin{example}
+Qual o número cujo dobro somado com sua quinta parte é igual a 121? 
+\end{example}
+
+\begin{solution}
+O primeiro passo para resolver essa charada é dar um nome a essa quantidade desconhecida. Chamaremos ela de $x$. Alguns outros números relativos a $x$ aparecem no enunciado: Seu dobro, ou seja, $2x$, e sua quinta parte, que escrevemos como $\frac{1}{5}x$ ou ainda $\frac{x}{5}$. A charada resume-se, então, a encontrar o número $x$ tal que $$2x + \frac{x}{5}  = 121.$$
+
+\begin{align*}
+	2x + \frac{x}{5}  = 121 \iff & \frac{10x + x}{5}  = 121 \tag*{(Aritmética)}\\ 
+		 \iff & \frac{11x}{5}  = 121 \tag*{(Aritmética)}\\ 
+		 \iff & 11x = 605 \tag*{$\left(\text{\ref{eq:multiplicacao}, com com } c = 5 \right) $}\\
+		 \iff & x = 55 \tag*{$\left(\text{\ref{eq:multiplicacao}, com com } c = \frac 1 {11} \right) $}
+\end{align*}
+\end{solution}
+
+\begin{example}
+	Por que a brincadeira do Exemplo \ref{eq:brinc} sempre funciona?
+\end{example}
+
+\begin{solution}
+	A essa altura você já deve ter testado os passos da brincadeira com alguns valores e percebeu que, de fato, o resultado final é sempre 4. Mas por que isso acontece? Vamos analisar a partir do lado esquerdo da equação obtida de acordo com o passo a passo da brincadeira, ou seja, $$\frac{6x+12}{3} - 2x = 4.$$
+
+	\begin{align*}
+		\frac{6x+12}{3} - 2x = & 2x + 4 - 2x  \tag*{(Aritmética)}\\ 
+			= & 4 \tag*{(Aritmética)}		
+	\end{align*}
+	Perceba que, uma vez resolvidas as operações do lado esquerdo da equação, ela não depende mais do valor de $x$. Essa é a razão pela qual, independentemente do valor escolhido pelo interlocutor, a igualdade $\frac{6x+12}{3} - 2x = 4$ será sempre verdadeira.
+\end{solution}
+
+No exemplo a seguir a nossa incógnita $x$ representa um dígito do sisetema de numeração posicional de base 10 (o que estamos acostumados a utilizar). Portanto, $x \in \set{0,1,\ldots, 9}$ e a posição em que ele se apresenta no número é relevante na hora de resolver o problema. 
+
 
 % Exemplo 5
 \begin{example}
