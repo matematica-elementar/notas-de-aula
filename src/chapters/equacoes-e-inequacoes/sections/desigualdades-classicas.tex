@@ -7,6 +7,40 @@ Para iniciar, apresentamos algumas desigualdades simples mas famosas, válidas p
   \item $\modu {a+b} \le \modu a + \modu b$ (desigualdade triangular).
 \end{itemize}
 
+Essa última desigualdade, a chamada \emph{Desigualdade Triangular}, tem até em seu nome um apelo geométrico. Por que será que a chamamos de desigualdade triangular?
+
+Antes de entender esse fato, chamo atenção para uma interpretação geométrica do módulo de um número real. 
+
+Seja $x\in \R$ um número real qualquer. Podemos interpretar $\modu x$ como a distância de $x$ até a origem (ou zero) da reta dos números reais. Módulos e distâncias (ou comprimentos) tem uma relação intrínseca não só na reta, mas também no plano. Nesse ambiente, ao invés de tratarmos com números em uma reta, tratamos com vetores, representados por setas, cujos módulos coincidem exatamente com o seu comprimento. 
+
+Tratar dos módulos desses elementos está além do escopo deste material. Mas, para entendermos o significado geométrico dessa desigualdade, vamos assumir que, dados dois vetores $a$ e $b$ no plano, o terceiro que com eles forma um triângulo é o vetor soma $a+b$. Levando isso em consideração, a desigualdade triangular, que diz que $$\modu {a+b} < \modu a +\modu b,$$ significa que o tamanho de qualquer um dos lados de um triângulo é menor que a soma do tamanho dos demais lados.
+
+Na imagem abaixo, então, temos que são válidas as três desigualdades:
+\begin{align*}
+	a <  & b+c \\
+    b <  & a+c \\
+    c <  & a+b, 
+\end{align*}
+
+onde $a, b$ e $c$ são as medidas dos lados do triângulo.
+
+\label{fig:destri1}
+\begin{figure}[H]
+\includegraphics[scale=0.25]{\imgdirfromsection/DesTriang1.png}
+\centering
+\end{figure}
+
+Para verificar que, de fato, essas desigualdades devem ser satisfeitas em um triângulo, vamos levar em consideração o maior lado do triângulo acima e traçar circulos centrados em cada uma de suas extremidades de modo que a soma dos raios seja menor que o comprimento do lado em questão.
+
+\label{fig:destri2}
+\begin{figure}[H]
+\includegraphics[scale=0.25]{\imgdirfromsection/DesTriang2.png}
+\centering
+\end{figure}
+
+Note que quaisquer dois segmentos partindo de $A$ e de $C$, cuja soma dos comprimentos seja menor que o comprimento do segmento $AC$ não poderão formar com $AC$ um triangulo. Na imagem, temos $d+e < b$ e, portanto, não é possível ter um triângulo.
+
+
 \begin{theorem}
 \label{theorem:ineq-prod-quad}
 Para quaisquer $x, y \in \R$, vale:
@@ -125,7 +159,7 @@ Considere um triângulo retângulo como o da Figura \ref{fig:rect-triangle}.
 %
 \label{fig:rect-triangle}
 \begin{figure}[H]
-\includegraphics{\imgdirfromsection/03-triangle.png}
+\includegraphics[scale=0.25]{\imgdirfromsection/03-triangle.png}
 \centering
 \end{figure}
 %
