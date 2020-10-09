@@ -198,7 +198,7 @@ Para quaisquer $a_1, a_2, \dots , a_n \in \R_+$, vale:
 
 \begin{proof}
 	Provemos, inicialmente, que a desigualdade é válida quando $n$ é uma potência de 2.
-	Para tal, seja $n = 2^m$, com $m \in \N$.
+	Para tal, seja $n = 2^m$, com $m \in \naturais$.
 	Usaremos o Princípio da Indução Finita em $m$.
 
 	\begin{itemize}
@@ -228,19 +228,19 @@ Para quaisquer $a_1, a_2, \dots , a_n \in \R_+$, vale:
 	Dessa forma, a desigualdade vale quando $n$ é uma potência de 2.
 
 	Provemos, agora, o caso geral.
-	Para tanto, seja $n \in \N$ arbitrário.
-	Tomemos o menor $m \in \N$ tal que $n \le 2^m$.
+	Para tanto, seja $n \in \naturais\naonulos$ arbitrário.
+	Tomemos o menor $m \in \naturais$ tal que $n \le 2^m$.
 	Além disso, definamos $L = \sqrt[n]{a_1 \cdot \ldots \cdot a_n}$.
 	Pelo que acabamos de provar, é válido que:
 
 	$$
-	\frac{a_1 + \ldots + a_n + \overbrace{L+\ldots + L}^{2^m - n \text{ vezes}}}{2^m} \ge \sqrt[2^m]{a_1 \cdot \ldots +\cdot a_n \cdot L^{2^m-n}}
+	\frac{a_1 + \ldots + a_n + \overbrace{L+\ldots + L}^{2^m - n \text{ vezes}}}{2^m} \ge \sqrt[2^m]{a_1 \cdot \ldots \cdot a_n \cdot L^{2^m-n}}
 	$$
 
 	No entanto, note que:
 	%
 	\begin{align*}
-		\sqrt[2^m]{a_1 \cdot \ldots +\cdot a_n \cdot L^{2^m-n}} & = \sqrt[2^m]{L^n \cdot L^{2^m-n}} \\ & = \sqrt[2^m]{L^{2^m}} \\ & = L
+		\sqrt[2^m]{a_1 \cdot \ldots \cdot a_n \cdot L^{2^m-n}} & = \sqrt[2^m]{L^n \cdot L^{2^m-n}} \\ & = \sqrt[2^m]{L^{2^m}} \\ & = L
 	\end{align*}
 	
 	Assim,
@@ -250,5 +250,5 @@ Para quaisquer $a_1, a_2, \dots , a_n \in \R_+$, vale:
 		& \implies \frac{a_1 + \ldots + a_n}{n} \ge \sqrt[n]{a_1 \cdot \ldots \cdot a_n}
 	\end{align*}
 
-	Portanto, a desigualdade é válida para todo $n \in N$.
+	Portanto, a desigualdade é válida para todo $n \in \naturais\naonulos$.
 \end{proof}
