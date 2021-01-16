@@ -25,9 +25,25 @@ formação dada (indicando domínio e contradomínio, provavelmente sendo precis
 
 \begin{exercise}
 Considere a  função $f:  \N^*  \to      \Z $ tal que $$f(n) =
-\begin{cases} \frac {-n} 2, \text{ se $n$ é par} \\ \frac {n-1} 2, \text{ se $n$ é
-ímpar} \end{cases}.$$ Mostre que $f$ é bijetiva. O que você pode
+\begin{cases} 
+  \frac {-n} 2, & \text{ se $n$ é par} \\ 
+  \frac {n-1} 2, & \text{ se $n$ é ímpar} 
+\end{cases}.$$ 
+Mostre que $f$ é bijetiva. O que você pode
 concluir com esse resultado?
+\end{exercise}
+
+\begin{exercise}
+  Sejam $a, b \in \mathbb R$ tais que $a < b$. Definimos o \emph{intervalo aberto de $a$ a $b$}, denotado por $(a, b)$, como sendo o seguinte subconjunto de $\mathbb R$:
+$$ (a,b) = { x \in \mathbb R ; \ a < x < b }.$$
+
+Considere a função $f : (0,1) \to \mathbb R$ tal que
+$$f(x) =
+\begin{cases} 
+  \dfrac 1 x - 2, & \text{ se $x \leq \dfrac 1 2$} \\
+  2 - \dfrac 1 {1 - x} , & \text{ se $x > \dfrac 1 2$}
+\end{cases}.$$
+Mostre que $f$ é bijetiva.
 \end{exercise}
 
 \begin{exercise}
@@ -38,6 +54,16 @@ satisfazendo a Definição \ref{def:funcao-inversa}, então $g_1 = g_2$.\\
 possuem mesmos domínios, contradomínios e seus valores são iguais em
 todos os elementos do domínio. Assim, procure mostrar que $g_1 (y) =
 g_2 (y)$, para todo $y \in Y$.
+\end{exercise}
+
+\begin{exercise}
+  Considere as funções $f: X \to Y$ e $g: Y \to Z$. Demonstre, ou refute com um contraexemplo, as afirmações abaixo:
+\begin{enumerate}[(a)]
+\item Se $f$ e $g$ são injetivas, então $(g \circ f)$ é injetiva;
+\item Se $(g \circ f)$ é injetiva então $f$ e $g$ são injetivas;
+\item Se $f$ e $g$ são sobrejetivas, então $(g \circ f)$ é sobrejetiva;
+\item Se $(g \circ f)$ é sobrejetiva então $f$ e g são sobrejetivas.
+\end{enumerate}
 \end{exercise}
 
 \begin{exercise}

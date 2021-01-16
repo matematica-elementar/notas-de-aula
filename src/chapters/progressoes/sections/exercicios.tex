@@ -38,29 +38,6 @@ que admita os números 32, 227 e 942 como termos da progressão.
 \end{exercise}
 
 \begin{exercise}
-    Em um quadrado mágico (Exemplo \ref{ex:quadrado-magico-3x3}),
-chamamos de constante mágica o valor da soma de quaisquer uma das
-linhas, colunas ou diagonais. Calcule a constante mágica de um
-quadrado mágico $n \times n$.
-\end{exercise}
-
-
-%\Ex{Podem os números $\sqrt 2$, $\sqrt 3$ e $\sqrt 5 $ pertencer a
-%uma mesma PA?}
-
-
-\begin{exercise}
-Suprimindo um dos elementos do conjunto $\set{1, 2, \dots , n}$,
-a média aritmética dos elementos restantes é $16{,}1$. Determine o
-valor de $n$ e qual foi o elemento suprimido.    
-\end{exercise}
-
-%\Ex{Um bem, cujo valor hoje é de R\$ 8000,00, desvaloriza-se de tal
-%forma que seu valor daqui a 4 anos será de R\$ 2000,00. Supondo
-%constante a desvalorização anual, qual será o valor do bem daqui a 3
-%anos? }
-
-\begin{exercise}
     O gordinho jaguatirica e Júnio vão jogar um  jogo com as
 seguintes regras:
 \begin{itemize}
@@ -86,6 +63,31 @@ Se sim, quem pode e qual é essa estratégia?
 vencer o jogo se a condição de vitória for 62 e $A =\set{3, 4, 5, 6,
 7}$. 
 \end{exercise}
+
+\begin{exercise}
+    Em um quadrado mágico (Exemplo \ref{ex:quadrado-magico-3x3}),
+chamamos de constante mágica o valor da soma de quaisquer uma das
+linhas, colunas ou diagonais. Calcule a constante mágica de um
+quadrado mágico $n \times n$.
+\end{exercise}
+
+\begin{exercise}
+    Calcule a soma de todos os inteiros que divididos por $11$ dão resto $7$ e estão compreendidos entre $200$ e $400$.
+\end{exercise}
+%\Ex{Podem os números $\sqrt 2$, $\sqrt 3$ e $\sqrt 5 $ pertencer a
+%uma mesma PA?}
+
+
+\begin{exercise}
+Suprimindo um dos elementos do conjunto $\set{1, 2, \dots , n}$,
+a média aritmética dos elementos restantes é $16{,}1$. Determine o
+valor de $n$ e qual foi o elemento suprimido.    
+\end{exercise}
+
+%\Ex{Um bem, cujo valor hoje é de R\$ 8000,00, desvaloriza-se de tal
+%forma que seu valor daqui a 4 anos será de R\$ 2000,00. Supondo
+%constante a desvalorização anual, qual será o valor do bem daqui a 3
+%anos? }
 
 \begin{exercise}
     Descontos sucessivos de 10\% e 20\% equivalem a um desconto
@@ -183,6 +185,35 @@ solo, ela recupera apenas $\frac 4 9 $ da altura anterior.
 \begin{exercise}
 	Demonstre, por indução, a fórmula do somatório dos $n$ primeiros termos de uma PG:
 	\[S_n = a_1 \cdot \frac{1-q^n}{1-q}.\]
+\end{exercise}
+
+\begin{exercise}\label{ex:espiral}
+    Uma espiral é formada por semicírculos em torno do eixo $x$ conforme ilustra a imagem abaixo. O primeiro semicírculo liga a origem ao ponto $(a_1, 0)$, o segundo semicírculo liga o ponto $(a_1, 0)$ ao $(a_2, 0)$, e assim sucessivamente.
+    \begin{figure}[H]
+        \centering
+        \label{fig:exercicio-espiral}
+        \includegraphics[width=15cm]{\imgdirfromsection/exercicio-espiral.png}
+		\caption{Espiral de semicírculos.}
+    \end{figure}
+    \begin{enumerate}[a)]
+        \item Se o diâmetro do primeiro semicírculo é igual a 1 e os seguintes são a metade do anterior, escreva uma PG $(d_1, d_2, d_3 , \dots)$, determinando razão e termo geral $d_n$, onde $d_n$ é a medida do diâmetro do $n$-ésimo semicírculo;
+        \item Determine uma PG $(b_1, b_2, b_3 , \dots)$, incluindo razão e termo geral $b_n$, de tal forma que $b_1 = a_1$ e $b_i = a_i - a{i-1}$ para todo $i \geq 2$;
+        \item Calcule $a_n$ em função de $n$.
+        \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Uma \aspas{espiral} é montada em um quadriculado escrevendo os números naturais não nulos como na figura abaixo. Considere a sequência que aparece ao longo da seta com os números $(1, 3, 13, 31, \dots , a_n, \dots)$.
+    \begin{figure}[H]
+        \centering
+        \label{fig:exercicio-espiral}
+        \includegraphics[width=7cm]{\imgdirfromsection/exercicio-espiral_de_numeros.png}
+		\caption{Espiral de números.}
+    \end{figure}
+\begin{enumerate}[a)]
+\item A sequência $(d_n)_{n \in \N^\ast}$, definida por $d_n = a_{n+1} - a_n$ para todo $n \in \N^\ast$, é uma PA. Determine essa PA indicando sua razão e seu termo geral.
+\item Obtenha uma fórmula para $a_n$, com $n \in \N^\ast$.
+\end{enumerate}
 \end{exercise}
 
 %\begin{exercise}

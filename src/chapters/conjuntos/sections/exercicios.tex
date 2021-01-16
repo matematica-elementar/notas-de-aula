@@ -51,6 +51,11 @@
 \end{exercise}
 
 \begin{exercise}
+  Sejam $A$, $B$ e $C$ conjuntos. Mostre que 
+  $$A \inter B = B \inter C \sse (A \uniao B) \inter C =(A \inter B) \uniao (A \inter C). $$
+\end{exercise}
+
+\begin{exercise}
   Sejam $A$, $B$ e $C$ conjuntos. Determine uma condição necessária e suficiente para que se tenha 
   \[
     A \uniao (B \inter C) = (A \uniao B) \inter C.
@@ -68,16 +73,27 @@
   \[
     B \menos A = \conjunto{ x \tq x \pertence B \e x \naopertence A}.
   \]
-  Mostre que
+  Dados conjuntos $A$, $B$ e $C$ arbitrários, mostre que
   \begin{enumerate}[a)]
     \item $B \menos A = B \inter \compl A$;
     \item $(B \menos A) \uniao A = B \uniao A$;
     \item $\compl{(B \menos A)} = B\complementar \uniao A$;
+    \item $A \uniao \paren{ B \menos C } = \paren{A \uniao B } \menos \paren{C \menos A }$;
+    \item $A \inter A^C = \vazio$;
+    \item $A \menos \paren{B \inter C } = \paren{A \menos B } \uniao \paren{A \menos C }$;
+    \item $A \menos \paren{ A \inter B } = A \menos B$;
     \item $B \menos A = \vazio$ se, e somente se, $B \contido A$;
     \item $B \menos A = B$ se, e somente se, $A \inter B = \vazio$;
     \item Vale a igualdade $B \menos A = A \menos B$ se, e somente se, $A = B$;
     \item Há uma condição necessária e suficiente para que se tenha \[A \menos (B \menos C) = (A \menos B) \menos C.\]
   \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  Dados dois conjuntos $A$ e $B$, define-se a \emph{diferença simétrica} de $A$ por $B$, denotada por $A \bigtriangleup B$, como sendo o conjunto formado por todos os elementos que estão \emph{exatamente} em um dos dois conjuntos. Isto é,
+$$A \bigtriangleup B = \left( A \menos B \right) \cup \left( B \menos A \right).$$
+
+Mostre que $A \bigtriangleup B = A$ se, e somente se, $B = \vazio$.
 \end{exercise}
 
 \begin{exercise}
@@ -138,6 +154,20 @@
     \item Alguns filósofos são matemáticos.
   \end{enumerate}
   Tomando as cinco primeiras afirmativas como hipóteses, verifique quais das afirmativas restantes são necessariamente verdadeiras.
+\end{exercise}
+
+\begin{exercise}
+  Em uma caixa fechada havia 5 bolas, Manoel abriu a caixa, vizualizou as bolas e declarou
+  \begin{center}
+    \aspas{Se tem uma bola preta então tem uma bola branca.}
+  \end{center}
+
+Em seguida, Márcio colocou a mão na caixa puxando uma bola branca, e Maurício, ao perceber, gritou
+  \begin{center}
+    \aspas{Então tem uma bola preta!}
+  \end{center}
+
+Supondo que Manoel está dizendo a verdade, o que podemos afirmar sobre a declaração de Maurício?
 \end{exercise}
 
 \begin{exercise}

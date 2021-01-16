@@ -14,7 +14,7 @@ crescente se $a>1$ e decrescente se $0<a<1$.
 Uma alga cresce de modo que, em cada dia, ela cobre uma superfície de área
 igual ao dobro da coberta no dia anterior.
 %
-\begin{enumerate}[(a)]
+\begin{enumerate}[a)]
   \item Defina uma função do tipo exponencial que modele o problema.
   \item Se uma alga cobre a superfície de um lago em 100 dias, 
   qual é o número de dias necessários para que três algas, da 
@@ -50,23 +50,60 @@ $f(x) = b \cdot a^x$?
 \end{exercise}
 
 \begin{exercise}
+    Uma aplicação rende a \emph{juros compostos} se o rendimento diário é somado ao capital inicial para o cálculo dos juros dos dias seguintes.
+    
+    Edson faz uma aplicação que rende juros $j>0$ em um mês. Ou seja, se ele investiu um capital inicial $c_0$, então ao fim de 1 mês, Edson poderia resgatar $c = c_0(1+j)$, igual à situação do Exercício \ref{exercicio:juros-simples}.
+    \begin{enumerate}[a)]
+        \item Caso a aplicação renda juros composto, defina uma função do tipo exponencial que calcule o capital $c_c$ em função do tempo $t$ (em meses) da aplicação;
+        \item Suponha que Edson precisará resgatar todo o dinheiro da aplicação em um tempo $t$ menor que um mês. É mais vantajoso aplicar com juros simples ou com juros compostos? Compare com a função criada no Exercício \ref{exercicio:juros-simples} e utilize a Desigualdade de Bernoulli enunciada abaixo.
+
+        \emph{Desigualdade de Bernoulli:}
+        Seja $a \in \R$ tal que $a \geq -1$. Seja também $b \in \R$.
+        
+         Caso $0 < b < 1$. Então $$(1+a)^b \leq 1 + ab.$$
+        
+         Caso seja $b<0$ ou $b>1$, então $$(1+a)^b \geq 1 + ab.$$
+        
+         Em ambos os casos, a igualdade só é satisfeita quando $a=0$.
+        \item A conclusão do item anterior também é válida caso o tempo de aplicação fosse mais de 1 mês?
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Certa cidade teve seus casos de covid-19 perfeitamente monitorados durante $n$ dias. Observou-se que a sequência formada pela quantidade de casos acumulados a cada dia estavam em PG de razão $q>1$.
+     \begin{enumerate}[a)]
+        \item Se no primeiro dia foi detectado $1$ caso, expresse o termo geral da PG no $i$-ésimo dia do monitoramento;
+        \item Defina uma função do tipo exponencial (podendo ser uma translação ou uma dilatação de uma função do tipo exponencial) com domínio $[1, n]$ que modele o problema. Existe alguma função que não seja do tipo exponencial, ou seja, que não se encaixe na descrição anterior, que satisfaça o termo geral do item (a) para todo $i \pertence \conjunto{1, 2, ..., n}$? Justifique.
+        \item Estime em que momento do monitoramento a cidade passou a ter uma quantidade $y$ de casos.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
     Use as aproximações $\log 2 \approx 0,301$, $\log 3 \approx
 0,477$ e $\log 5 \approx 0,699$ para obter valores aproximados para:
-\begin{enumerate}[(a)]
+\begin{enumerate}[a)]
   \item $\log 9$;
+  \item $\log18$;
   \item $\log 40$;
+  \item $\log50$;
   \item $\log 200$;
   \item $\log 3000$;
   \item $\log 0{,}003$;
-  \item $\log 0{,}81$.
+  \item $\log 0{,}81$;
+  \item O(s) valor(es) de $x$ que satisfaz(em) a equação $2^x=3$;
+  \item O(s) valor(es) de $x$ que satisfaz(em) a equação $5^x=2$.
 \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Mostre que $$\log_{b^n}a^n = \log_{b}a$$ para todo $a, b, n \in \R_+^\ast $ e $b\neq 1$.
 \end{exercise}
 
 \begin{exercise}
     Uma interpretação do logaritmo decimal é sua relação com a
 \sub{ordem de grandeza}, isto é, com o número de algarismos na
 representação decimal. As questões a seguir exploram essa relação.
-\begin{enumerate}[(a)]
+\begin{enumerate}[a)]
   \item Considere o número $x = 58.932{,}1503$. Qual é a parte inteira de $\log x$?
   \item Considere $x>1$ um número real cuja parte inteira tem $k$ algarismos.
   Use que a função logarítmica é crescente para mostrar que a parte inteira
@@ -85,7 +122,7 @@ o seu crescimento médio variava de acordo com a fórmula $A = 40
 \cdot 1{,}1^t$, onde a altura média $A$ é medida em centímetros e o
 tempo $t$ em anos. Sabendo-se que $\log 2 \approx 0{,}30$ e $\log 11
 \approx 1{,}04$, determine:
-\begin{enumerate}[(a)]
+\begin{enumerate}[a)]
   \item A altura média, em centímetros, de uma planta dessa espécie
   aos 3 anos de vida;
   \item A idade, em anos, na qual a planta tem uma altura média de
