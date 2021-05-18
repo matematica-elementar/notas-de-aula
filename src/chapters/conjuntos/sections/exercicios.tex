@@ -85,8 +85,20 @@
     \item $B \menos A = \vazio$ se, e somente se, $B \contido A$;
     \item $B \menos A = B$ se, e somente se, $A \inter B = \vazio$;
     \item Vale a igualdade $B \menos A = A \menos B$ se, e somente se, $A = B$;
-    \item Há uma condição necessária e suficiente para que se tenha \[A \menos (B \menos C) = (A \menos B) \menos C.\]
   \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  Em um fórum de dúvidas sobre o jogo de LoL, os desenvolvedores explicaram como escolhem o campeão de um jogador quando este solicita a troca do campeão no modo ARAM. O novo campeão é escolhido aleatoriamente em um conjunto formado por $$\left(A \setminus B \right) \setminus C.$$
+  O conjunto $A$ é o conjunto dos campeões do jogo, $B$ representa o conjunto dos campeões que já estão sendo utilizados por outros jogadores e $C$ é formado pelos campeões proibidos para aquela partida por qualquer que seja o motivo.  \begin{enumerate}[a)]
+    \item Mostre que $$\left(A \setminus B \right) \setminus C = A \setminus \left( B \cup C \right).$$ Conclua se há ou não a possibilidade de aparecer um campeão que esteja sendo utilizado por outro jogador no momento da troca. 
+    \item Se o conjunto inicial fosse substituído por $$ A \setminus \left( B \setminus C \right),$$ o resultado seria o mesmo? Justifique.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  Considere $A$, $B$ e $C$ conjuntos quaisquer. Determine uma condição necessária e suficiente para que se tenha
+  $$A \setminus \paren{B \setminus C} = \paren{A \setminus B} \setminus C.$$
 \end{exercise}
 
 \begin{exercise}
@@ -94,6 +106,15 @@
 $$A \bigtriangleup B = \left( A \menos B \right) \cup \left( B \menos A \right).$$
 
 Mostre que $A \bigtriangleup B = A$ se, e somente se, $B = \vazio$.
+\end{exercise}
+
+\begin{exercise}
+  Dados $A$ e $B$ conjuntos quaisquer, analise as afirmações abaixo. Caso seja verdadeira, prove-a. Caso ela seja falsa, dê exemplos de conjuntos e utilize-os para demonstrar que a afirmativa nem sempre ocorre:
+
+  \begin{enumerate}[a)]
+    \item Se $A \triangle B = A^C \cup B^C$, então $A = \mathcal U$;
+    \item A recíproca da afirmação do item anterior é válida.
+  \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
