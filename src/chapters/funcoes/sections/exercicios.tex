@@ -25,10 +25,10 @@ formação dada (indicando domínio e contradomínio, provavelmente sendo precis
 
 \begin{exercise}
 Considere a  função $f:  \N^*  \to      \Z $ tal que $$f(n) =
-\begin{cases} 
-  \frac {-n} 2, & \text{ se $n$ é par} \\ 
-  \frac {n-1} 2, & \text{ se $n$ é ímpar} 
-\end{cases}.$$ 
+\begin{dcases} 
+  \dfrac {-n} 2, & \text{ se $n$ é par} \\ 
+  \dfrac {n-1} 2, & \text{ se $n$ é ímpar} 
+\end{dcases}.$$ 
 Mostre que $f$ é bijetiva. O que você pode
 concluir com esse resultado?
 \end{exercise}
@@ -39,11 +39,19 @@ $$ (a,b) = { x \in \mathbb R ; \ a < x < b }.$$
 
 Considere a função $f : (0,1) \to \mathbb R$ tal que
 $$f(x) =
-\begin{cases} 
+\begin{dcases} 
   \dfrac 1 x - 2, & \text{ se $x \leq \dfrac 1 2$} \\
   2 - \dfrac 1 {1 - x} , & \text{ se $x > \dfrac 1 2$}
-\end{cases}.$$
+\end{dcases}.$$
 Mostre que $f$ é bijetiva.
+\end{exercise}
+
+\begin{exercise}
+    Considere a função $f: \R^\ast \to \R^\ast_+$ tal que $f(x) = \dfrac{1}{1+x^2}$. Responda as seguintes perguntas apresentando as respectivas justificativas.
+    \begin{enumerate}[a)]
+        \item $f$ é injetiva?
+	\item $f$ é sobrejetiva?
+    \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
@@ -82,8 +90,17 @@ são subconjuntos de $X$:
 \end{exercise}
 
 \begin{exercise}
+    Seja $f: X \to Y$ uma função. Mostre se cada afirmativa abaixo é verdadeira ou falsa dando suas respectivas justificativas.
+
+    \begin{enumerate}[a)]
+        \item Se $A$ e $B$ são subconjuntos de $X$, então $$f \left( A \setminus B \right) \subset f(A) \setminus f(B).$$
+        \item  Se $A$ e $B$ são subconjuntos de $X$, então $$f \left( A \setminus B \right) \supset f(A) \setminus f(B).$$
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
     Seja $f: X \to Y$ uma função. Dado $y \in Y$, definimos a
-\sub{contraimagem} ou \sub{imagem inversa} de $y$ como sendo o
+\emph{contraimagem} ou \emph{imagem inversa} de $y$ como sendo o
 seguinte subconjunto de $X$: $$ f^{-1}(y) = \set{x \in X \tq
 f(x)=y}.$$
 \begin{enumerate}[(a)]
@@ -98,7 +115,7 @@ f(x)=y}.$$
 
 \begin{exercise}
     Seja $f: X \to Y$ uma função. Dado $A \subset Y$, definimos a
-\sub{contraimagem} ou \sub{imagem inversa} de $A$ como sendo o
+\emph{contraimagem} ou \emph{imagem inversa} de $A$ como sendo o
 seguinte subconjunto de $X$: $$ f^{-1}(A) = \set{x \in X \tq f(x)\in
 A}.$$ Mostre, para quaisquer subconjuntos $A$ e $B$ de $Y$, que
 \begin{enumerate}[(a)]
