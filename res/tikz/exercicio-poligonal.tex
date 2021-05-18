@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+	\node [circle,inner sep=1pt,fill,label=$A$] (A) at (4,0) {};
+	\node [circle,inner sep=1pt,fill,label=$B$] (B) at (-4,0) {};
+	\node [circle,inner sep=1pt,fill,label=$C$] (C) at (-4,4) {};
+	\draw[black, thick] (C) -- (A);
+	\draw[black, thick] (B) -- (A);
+
+	\coordinate (P1) at (-3, 3.5);
+	\coordinate (P2) at ($(B)!(P1)!(A)$);
+	\coordinate (P3) at ($(C)!(P2)!(A)$);
+	\coordinate (P4) at ($(B)!(P3)!(A)$);
+	\coordinate (P5) at ($(C)!(P4)!(A)$);
+	\coordinate (P6) at ($(B)!(P5)!(A)$);
+	\coordinate (P7) at ($(C)!(P6)!(A)$);
+	\coordinate (P8) at ($(B)!(P7)!(A)$);
+	\coordinate (P9) at ($(C)!(P8)!(A)$);
+	\coordinate (P10) at ($(B)!(P9)!(A)$);
+	\coordinate (P11) at ($(C)!(P10)!(A)$);
+
+	\draw[black, thick] (P1) -- (P2) node[midway, anchor=east] {$a$};
+	\draw[black, thick] (P2) -- (P3) node[midway, above,xshift=-3pt] {$b$};
+	\draw[black, thick] (P3) -- (P4);
+	\draw[black, thick] (P4) -- (P5);
+	\draw[black, thick] (P5) -- (P6);
+	\draw[black, thick] (P6) -- (P7);
+	\draw[black, thick] (P7) -- (P8);
+	\draw[black, thick] (P8) -- (P9);
+	\draw[black, thick] (P9) -- (P10);
+	\draw[black, thick, dotted, shorten >= .7cm] (P10) -- (P11);
+
+	\tkzMarkRightAngle[draw=black,size=.2](P1,P2,B);
+	\tkzMarkRightAngle[draw=black,size=.2](P2,P3,C);
+	\tkzMarkRightAngle[draw=black,size=.2](P3,P4,B);
+	\tkzMarkRightAngle[draw=black,size=.2](P4,P5,C);
+	\tkzMarkRightAngle[draw=black,size=.2](P5,P6,B);
+	\tkzMarkRightAngle[draw=black,size=.2](P6,P7,C);
+	\tkzMarkRightAngle[draw=black,size=.2](P7,P8,B);
+	\tkzMarkRightAngle[draw=black,size=.2](P8,P9,C);
+	\tkzMarkRightAngle[draw=black,size=.2](P9,P10,B);
+\end{tikzpicture}
